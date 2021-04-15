@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "626361",
+    "ThreadId": "261032",
+    "Html": "\r\n<p>Hello.Help me please.<br>\r\nI created simple scene for application augment reality.<br>\r\nI called SaveSceneGraph for save<br>\r\nLater i try to load a scene called function LoadSceneGraph. Nodes was loaded, but shape material don't apply to shape. Therefore to a lighting isn't applied.</p>\r\n<p>And loaded MarkerNode don't identify, because markerConfig don't save.</p>\r\n<p>Where i make a mistake?&nbsp;</p>\r\n<p>And one more questions.<br>\r\nI &nbsp;want to save markerConfig of MarkerNode . Do you have any idea how do it?If inherit MarkerNode in other assembly then LoadSceneGraph don't load my MarkerNode in Sc .<br>\r\nThank you. Sorry for my English.&nbsp;</p>\r\n<p><img src=\"http://img824.imageshack.us/img824/6375/modelpl.png\" alt=\"\"></p>\r\n",
+    "PostedDate": "2011-06-11T06:47:23.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "626561",
+    "ThreadId": "261032",
+    "Html": "<p>LoadSceneGraph and SaveSceneGraph are not implemented completely yet, so it'll be buggy if you use it.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-06-12T06:08:24.187-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "626564",
+    "ThreadId": "261032",
+    "Html": "<p>Thanks.</p>\r\n<p>=)</p>",
+    "PostedDate": "2011-06-12T06:25:25.623-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

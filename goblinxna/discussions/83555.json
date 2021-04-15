@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "287265",
+    "ThreadId": "83555",
+    "Html": "<p>I am working on a project similar to the labyrinth marble game.&nbsp; I am attempting to change either the direction of gravity or the direction of a force according to the tilt of the markers.</p>\r\n<p>I am stuck trying to convert the rotation (quaternion) into the proper direction (vector3).&nbsp; I'm sorry, but my physics isn't very good.</p>\r\n<p>I can get the rotation of a markenode via markerNode.WorldTransformation.Decompose(out markerScale,out markerRot, out markerTrans);.&nbsp; However, I'm not sure how to use this resulting quaternion.&nbsp; Can someone point me in the right direction?</p>\r\n<p>The end result i want is either the proper direction of gravity or the direction to apply a force to the marble so it will roll in the expected direction (needing a vector3 when all is said and done).</p>\r\n<p>Thanks!</p>",
+    "PostedDate": "2010-02-08T11:55:37.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "287307",
+    "ThreadId": "83555",
+    "Html": "<p>Update:&nbsp; I got this working when the camera is directly above the ground marker.&nbsp; My problem was trying to &quot;zero-out&quot; the angle of the camera when it was at a different angle.&nbsp; I've given up that idea&nbsp; - when assuming the camera is overhead, all is well.</p>",
+    "PostedDate": "2010-02-08T13:55:03.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "615617",
+    "ThreadId": "83555",
+    "Html": "<p>Can you maybe post the code? I'm really curious how you made it, cause I'm out of ideas :)</p>",
+    "PostedDate": "2011-05-19T16:54:58.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

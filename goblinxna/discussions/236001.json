@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "526888",
+    "ThreadId": "236001",
+    "Html": "\r\n<p>Hi, I'm using Goblin XNA, but when I run Tutorial 8, Visual Studio 9 give me a problem with ALVARWrapper DLL.\r\n<span id=\"x_result_box\" lang=\"en\"><span>It says he can not connect to this dll.</span></span></p>\r\n<p><span lang=\"en\"><span>Can someone help me!!</span></span></p>\r\n",
+    "PostedDate": "2010-11-25T03:10:33.11-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "528594",
+    "ThreadId": "236001",
+    "Html": "\r\n<p>Please check out this thread&nbsp;<a href=\"http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=73134\">http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=73134</a></p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-29T19:49:29.003-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "528691",
+    "ThreadId": "236001",
+    "Html": "\r\n<p>Another question....</p>\r\n<p>I am a student of University of Salento (Lecce, Italy). I would to know if I can freely use Goblin XNA(v3.4) for my thesis project.</p>\r\n<p>In addition I would to know, if ARtag library, has time costraints like ALVAR.</p>\r\n<p>Thanks for availability and for your attention</p>\r\n",
+    "PostedDate": "2010-11-30T01:15:18.717-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "529055",
+    "ThreadId": "236001",
+    "Html": "\r\n<p>Yes, you can use Goblin free for whatever you like. The only license fee is the marker tracking library if you're doing commercial stuff.</p>\r\n<p>Both ARTag and ALVAR has time constraints.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-30T13:58:55.087-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

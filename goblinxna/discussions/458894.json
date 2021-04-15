@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1098455",
+    "ThreadId": "458894",
+    "Html": "I implemented your library last night, I love the animation of 3d models, it works quite well, a little bit of a rubber man effect on my 3d model, but i suspect thats becaause of my ratio and pivot points.\r<br />\n<br />\nNow I know that XNA will be discontinued April 2014, with the phoenix being MonoGame, now can I assume that MonoGame like Mono.Net is a straight(ish) port of XNA, so if I choose to swap my XNA libraries out for the MonoGame ones in the future, what are the chances this 3d engine will work with MonoGame or does MonoGame contain features this project also contains?\r<br />\n<br />\nThe last checkin for this project was over 12 months ago, is it going to be continued in a view to work with MonoGame or should I assume this project's interest died with XNA?\r<br />\n<br />\n<br />\nIan<br />\n",
+    "PostedDate": "2013-09-24T03:04:32.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

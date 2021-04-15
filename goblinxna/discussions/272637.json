@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "672025",
+    "ThreadId": "272637",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I encountered this error &quot;Unable to load DLL 'ALVARWrapper.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)&quot; when debugging at line 360 AlvarMarkerTracker.cs</p>\r\n<p>&nbsp; int ret = ALVARDllBridge.alvar_init_camera(configFilename, img_width, img_height);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>if (ret &lt; 0)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>Log.Write(&quot;camera calibration file is either not specified or not found&quot;);</p>\r\n<p>I was able to see video using CameraCalibration tool. I have copied the AlvarWrapper.dll file which I used for CameraCalibration into Tutorial8 but to no avail</p>\r\n",
+    "PostedDate": "2011-09-14T19:56:07.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

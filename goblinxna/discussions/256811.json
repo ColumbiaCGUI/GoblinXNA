@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "609223",
+    "ThreadId": "256811",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I was busy installing GoblinXNA, when I came across a hitch. Alvar1.4 requires me to use Visual C&#43;&#43; 2008 to compile the source into alvarwrapper.dll<br>\r\nI lost my image for Visual Studio 2008, but I still have C# 2008 installed. I also have the Visual Studio 2010 image. But alas, Alvar wants me to open it in 2008. If I try to convert it to 2010 I eventually hit an error when building dll. I have slow internet,\r\n so it'd take me a week or so to download the image once more, which I don't really want to do.</p>\r\n<p>TL;DR: Can someone upload the dll file, so I can just put it in the unmanaged directory?</p>\r\n<p>Thanks,<br>\r\nNaartjie&nbsp;</p>\r\n",
+    "PostedDate": "2011-05-08T11:16:19.183-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "609412",
+    "ThreadId": "256811",
+    "Html": "<p>You'll need visual studio 2008 for all the current releases of goblin XNA anyway. There's no way to run goblin in vs2010 without using the closed beta. If youre not experienced with goblin at all, i'd recommend you to stick with the 2008 version as theres still some small issues with the new version. (shadowmapping for example).</p>\r\n<p>Can't you just download the visual c++ express edition? its a 300mb download or something.</p>",
+    "PostedDate": "2011-05-09T01:37:28.377-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "609415",
+    "ThreadId": "256811",
+    "Html": "<p>I already have Visual C# 2008, just not the other ones. You'll note that I said I have slow internet. Even 300mb will take about a day to download. Sigh, I guess I'll just have to download it then.<br />I still don't understand why&nbsp;someone&nbsp;can't just upload the dll.&nbsp;</p>",
+    "PostedDate": "2011-05-09T01:43:13.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "609488",
+    "ThreadId": "256811",
+    "Html": "<p>After *finally* downloading it, I get this error when trying to compile :/</p>\r\n<p>1&gt;------ Build started: Project: ALVARWrapper1.4, Configuration: Debug Win32 ------1&gt;Compiling...1&gt;cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release1&gt;MarkerDetectorWrapper.cpp1&gt;c:\\users\\MYUSERNAME\\documents\\goblinxna\\goblinxnav3.5\\wrappers\\alvarwrapper1.4\\alvarwrapper\\markerdetectorwrapper.cpp(36) : fatal error C1083: Cannot open include file: 'MarkerDetector.h': No such file or directory1&gt;Build log was saved at \"file://c:\\Users\\MYUSERNAME\\Documents\\goblinxna\\GoblinXNAv3.5\\wrappers\\ALVARWrapper1.4\\ALVARWrapper\\Debug\\BuildLog.htm\"1&gt;ALVARWrapper1.4 - 1 error(s), 1 warning(s)========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========</p>",
+    "PostedDate": "2011-05-09T05:25:33.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "609497",
+    "ThreadId": "256811",
+    "Html": "<p>You need to double check the references to alvar in your linker settings. By defeault it still links to the location of odan's system, and he refers to alvar pro. You'll need to relocate them to the place you installed alvar and refer to the include, platform and pro folders of your alvar installation.</p>",
+    "PostedDate": "2011-05-09T05:42:30.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "609520",
+    "ThreadId": "256811",
+    "Html": "<p>How do I do this?</p>",
+    "PostedDate": "2011-05-09T06:21:20.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "609523",
+    "ThreadId": "256811",
+    "Html": "<p>Right-click on the alvarwrapper-project and select properties. Then select configuration properties, and check everything in C/C++ and Linker. Then you should be allright</p>",
+    "PostedDate": "2011-05-09T06:25:33.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "609534",
+    "ThreadId": "256811",
+    "Html": "<p>Thanks.</p>",
+    "PostedDate": "2011-05-09T06:40:40.003-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "609537",
+    "ThreadId": "256811",
+    "Html": "<p>Well I just can't seem to compile Alvarwrapper.dll properly. Can't you just upload it? It would save me a great deal of time trying to get it to work.</p>",
+    "PostedDate": "2011-05-09T06:51:42.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "610820",
+    "ThreadId": "256811",
+    "Html": "<p>Did you still get the same error?</p>\n<p>Even if i would send the wrapper to you, there's still a big chance that you still cant operate anyting with goblin. Did you manage to run any of the alvar samples? It's recommended to just compile the thing yourself, as it's a great learning experience,  and an important step in understanding goblin.</p>\n<p>Goblin isn't as simple as FlarToolkit for flash for example.</p>",
+    "PostedDate": "2011-05-11T03:10:53.45-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

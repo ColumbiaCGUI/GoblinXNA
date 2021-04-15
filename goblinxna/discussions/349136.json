@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "812312",
+    "ThreadId": "349136",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>How to get my ball to interact with the marker? when i throw the ball using mouse click, it will stop at a point floating in the air without touching the marker. I couldn't get around this problem few days already. What &nbsp;do i need to check?</p>\r\n",
+    "PostedDate": "2012-03-18T21:26:33.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812318",
+    "ThreadId": "349136",
+    "Html": "<p>You will need to have a good understanding of how physics and objects in the AR scene work together. You can take look at how to do that kind of interaction in ARDomino which is in projects directory of the distribution package. For some explanations, please search through this discussion forum.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-18T21:46:34.15-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812319",
+    "ThreadId": "349136",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>ohanoda wrote:</strong><br />\r\n<p>You will need to have a good understanding of how physics and objects in the AR scene work together. You can take look at how to do that kind of interaction in ARDomino which is in projects directory of the distribution package. For some explanations, please  search through this discussion forum.</p>\r\n<p>Ohan</p>\r\n</blockquote>\r\n<p>thanks....yes I am doing my research now on ARDominos</p>",
+    "PostedDate": "2012-03-18T21:48:20.063-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "813825",
+    "ThreadId": "349136",
+    "Html": "<p>Is it true? If I put the ballNode under the parent node and not under the marker node this will happen</p>",
+    "PostedDate": "2012-03-21T19:21:38.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

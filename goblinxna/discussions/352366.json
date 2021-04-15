@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "824073",
+    "ThreadId": "352366",
+    "Html": "\r\n<p><span>Please</span><span>&nbsp;</span><span>I want to find</span><span>&nbsp;</span><span>a solution</span><span>&nbsp;</span><span>to control</span><span>&nbsp;</span><span>markers</span><span>.</span><span>&nbsp;</span><span>I</span><span>&nbsp;</span><span>see\r\n in</span><span>&nbsp;</span><span>the tutorials</span><span>&nbsp;</span><span>3D objects</span><span>&nbsp;</span><span>is not dependent</span><span>&nbsp;</span><span>markers</span><span>&nbsp;</span><span>it</span><span>&nbsp;</span><span>is alway</span><span>&nbsp;</span><span>the\r\n center of the</span><span>&nbsp;</span><span>page</span><span>.</span><span>&nbsp;</span><span>I</span><span>&nbsp;</span><span>want</span><span>&nbsp;</span><span>to</span><span>&nbsp;</span><span>know how</span><span>&nbsp;</span><span>fair</span><span>&nbsp;</span><span>that\r\n every</span><span>3D object</span><span>&nbsp;</span><span>will be displayed</span><span>&nbsp;</span><span>over a</span><span>&nbsp;</span><span>marker</span><span>&nbsp;</span><span>to</span><span>&nbsp;</span><span>specify</span><span>&nbsp;</span><span>a\r\n page that contains</span><span>&nbsp;</span><span>several markers</span><br>\r\n<span>Please</span><span>&nbsp;</span><span>I</span><span>&nbsp;</span><span>need your help</span><span>&nbsp;</span><span>thank you</span></p>\r\n",
+    "PostedDate": "2012-04-15T12:37:23.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "825458",
+    "ThreadId": "352366",
+    "Html": "<p>Sorry, but I don't quite understand your question</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-04-18T08:02:47.14-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "825741",
+    "ThreadId": "352366",
+    "Html": "<p>Well, sir my project is an <span class=\"hps\">educational brochure(game for children between 3 and 5 years) with augmented reality&nbsp;<span class=\"hps\">contains about 3 pages, in the first page i want to do a puzzle game(simple image).</span></span></p>\r\n<p><span class=\"hps\"><span class=\"hps\">so, i have a problem with the detection of markers, you know of course in&nbsp;the puzzle game each piece of&nbsp;image must appears on a marker, and then the child must reacts with markers and make a correct picture.</span></span></p>\r\n<p><span class=\"hps\"><span class=\"hps\">the langage is C# , <span class=\"hps\">library GoblinXna&nbsp; </span></span></span></p>\r\n<p><span class=\"hps\"><span class=\"hps\">I hope that you understand me now Mr Ohan, thanks.</span></span></p>",
+    "PostedDate": "2012-04-18T18:44:08.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

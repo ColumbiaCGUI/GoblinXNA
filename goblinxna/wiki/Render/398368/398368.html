@@ -1,0 +1,241 @@
+<div class="wikidoc">
+<p><span style="font-family:'Century Schoolbook'; line-height:19px">WELCOME</span></p>
+<div>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">This tutorial will discuss &quot;Tutorial8 - Optical Marker Tracking&quot; from the tutorials included in your GoblinXNA
+ directory. This document will elaborate on the various settings that diverge from the &quot;Hello, World&quot; tutorial: setting up the camera, setting up the patterns, and attaching graphical objects and behaviors to the patterns.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">THE ALVAR LIBRARY</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">ALVAR is the library we will use to identify patterns with our camera so that we can assign the placement
+ of generated graphics to the physical objects that display these patterns. Created by the VTT Technical Research Centre of Finland, it has been designed so that a camera can identify its patterns readily. Stark contrast between black and white in the pattern
+ as well as unique shapes aid it in distinguishing its patterns from the shapes and colors of the background scene.
+</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">A full description of the ALVAR project can be found at
+<a href="http://virtual.vtt.fi/virtual/proj2/multimedia/alvar.html"><span style="color:blue">http://virtual.vtt.fi/virtual/proj2/multimedia/alvar.html</span></a>.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">THE ENVIRONMENT</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">To setup the environment we must install everything in the right order. First you must install the general
+ environment - you have accomplished this if you ran Tutorial 1 successfully. For this tutorial you will also need ALVAR. GoblinXNA's installation guide discusses this installation in detail. Make sure to read through the whole paragraph before attempting to
+ follow the instructions.</span></p>
+<p style="margin-top:0in; margin-right:0in; margin-bottom:10.0pt; margin-left:.5in; line-height:150%; text-autospace:none">
+<span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Obtain the ALVAR tracking library (basic version) from the VTT Technical Research Centre website:
+<a href="http://virtual.vtt.fi/virtual/proj2/multimedia/alvar.html"><span style="color:blue">http://virtual.vtt.fi/virtual/proj2/multimedia/alvar.html</span></a>. This library is free only for trial and non-commercial use. (A professional version of the library,
+ with additional features, is available for commercial use by contacting alvar.info@vtt.fi.) First, install ALVAR 1.4.0 and download and install OpenCV 1.0, which is required for running ALVAR 1.4.0. (You will need to restart your computer after installing
+ OpenCV 1.0. to make sure that your path environment variable is set correctly.) Then, open ALVARWrapper1.4.sln under the GoblinXNA\wrappers\ALVARWrapper1.4 directory (You will need either Visual Studio 2008 Professional Edition or Visual C&#43;&#43; 2008 Express Edition
+ to open this solution file as well as ALVAR project files). Compile this project and copy the generated ALVARWrapper.dll from the GoblinXNA\wrappers\ALVARWrapper1.4\Release directory to the GoblinXNA\dlls\unmanaged directory. When you compile, make sure that
+ the &ldquo;Additional Include Directories&rdquo; under Configurations Properties
+</span><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Times New Roman&quot;">&rarr;</span><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;"> C/C&#43;&#43;
+</span><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Times New Roman&quot;">&rarr;</span><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;"> General and the &ldquo;Additional Library Directories&rdquo; under Configurations
+ Properties </span><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Times New Roman&quot;">&rarr;</span><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;"> Linker
+</span><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Times New Roman&quot;">&rarr;</span><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;"> General in the project settings have the correct path for the ALVAR 1.4.0
+ and OpenCV 1.0 installations. Finally, copy the alvar140.dll and alvarplatform140.dll from the Alvar1.4.0\bin\msvc90 directory to the GoblinXNA\dlls\unmanaged directory, and cv100.dll, cvaux100.dll, cvcam100.dll, cxcore100.dll, and highgui100.dll from the
+ OpenCV\bin directory to the GoblinXNA\dlls\unmanaged directory.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">If you have problems with header files not being found, make sure you have included all the necessary directories
+ containing those files in your project's Headers folder.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Then make sure to read the README.pdf located in the Tutorial 8 directory. (Mine is located in &quot;\GoblinXNAv3.5\tutorials\Tutorial8
+ - Optical Marker Tracking\&quot;.) It explains that you must create the calib.xml file before proceeding. This step is important, since a calib.xml file not created using your own camera will not likely work.<span>&nbsp;
+</span>On this site are two tutorials that will walk you through the two different ways to complete the process.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">THE APPLICATION</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">The real objects we will be using as physical reference points for our application are two arrays of ALVAR
+ patterns called the &quot;ground&quot; and the &quot;toolbar&quot;. The ground is a 4x7 array of symbols that have been provided to you as a pdf file called &quot;groundALVAR.pdf&quot;, located in &quot;\GoblinXNAv3.5\tutorials\Tutorial8 - Optical Marker Tracking&quot;. The toolbar is a simple set
+ of two symbols provided named toolbarALVAR.pdf. These arrays can be printed - the ground on 14x8.5 &quot;legal&quot; sized paper, and the toolbar on something smaller. For optimal pattern recognition it is then recommended that these pages be glued to cardboard or foam-core,
+ allowing the patterns to be presented as clearly as possible and without the distortion caused by folding or bending.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><em><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Note that you can produce your own arrays of markers using the MarkerLayout tool provided with GoblinXNA.
+ Instructions for using this tool are provided at the end of this tutorial.</span></em></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">The tutorial's application will display a sphere and a cube. When the ground array is present, both objects
+ will appear on top of that array. When the toolbar array is present, the cube will instead appear on top of the toolbar.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">THE CODE</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">First, open the Tutorials solution in your GoblinXNA directory (<em>e.g.
+</em>mine is located at C:\Users\Colin\Documents\GoblinXNAv3.5\tutorials\Tutorials.sln, and I am using Visual Studio 2008). Once it is opened, navigate to &quot;Tutorial8 - Optical Marker Tracking&quot; and open that project. Then open Tutorial8.cs to see the main body
+ of custom code, including very helpful explanations.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">The first thing to notice about the code is that there are new objects and methods being created that allow
+ you to (1) register the physical <strong>camera,</strong> (2) establish the <strong>
+marker arrays </strong>as objects in the program, and (3) attach <strong>visual artifacts
+</strong>to those objects and overlay them in your camera's display window. </span>
+</p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">The first two items are configured in the new SetupMarkerTracking() method.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">REGISTERING THE CAMERA</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Examine the first section of code in SetupMarkerTracking().</span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;; color:blue">private</span><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;">
+<span style="color:blue">void</span> SetupMarkerTracking()</span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;">{</span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// Create our video capture device that uses DirectShow library. Note that
+</span></span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// the combinations of resolution and frame rate that are allowed depend on
+</span></span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// the particular video capture device. Thus, setting incorrect resolution
+</span></span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// and frame rate values may cause exceptions or simply be ignored, depending
+</span></span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// on the device driver. The values set here will work for a Microsoft VX 6000
+</span></span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// and many other webcams.</span></span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span><span style="color:#2b91af">DirectShowCapture</span> captureDevice = <span style="color:blue">
+new</span> <span style="color:#2b91af">DirectShowCapture</span>();</span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span>captureDevice.InitVideoCapture(0, <span style="color:#2b91af">FrameRate</span>._30Hz,
+<span style="color:#2b91af">Resolution</span>._640x480, </span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:#2b91af">ImageFormat</span>.R8G8B8_24, <span style="color:blue">
+false</span>);</span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// Add this video capture device to the scene so that it can be used for</span></span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// the marker tracker</span></span></p>
+<p style="text-autospace:none"><span style="font-size:9.0pt; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;
+</span>scene.AddVideoCaptureDevice(captureDevice);</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">First, DirectShow is an C&#43;&#43; API provided by Microsoft that provides media streaming on the Windows
+ platform. DirectShowNET is an opensource library that allows .NET applications to access the DirectShow libraries. GoblinXNA then provides the
+<em>DirectShowCapture</em> class to work with DirectShowNET. All of this allows the
+<em>InitVideoCapture</em> method to set the configuration of the camera. The settings shown here work for most webcams; if you have trouble you should cross-check the specifications of your camera. Finally,
+<em>AddVideoCaptureDevice </em>makes the camera available to our 3d scene processing and rendering class.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">ESTABLISHING THE MARKERS</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:#2b91af">IMarkerTracker</span> tracker = <span style="color:blue">
+null</span>;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:blue">&nbsp;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:blue">#if</span><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"> USE_ARTAG</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:gray"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:#00b050">// Create an optical marker tracker that uses ARTag library</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:gray"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;">tracker
+<span style="color:gray">= </span><span style="color:#004dbb">new </span><span style="color:#4f81bd">ARTagTracker</span><span style="color:gray">();</span></span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:gray"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:#00b050">// Set the configuration file to look for the marker specifications</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:gray"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;">tracker.InitTracker(638.052f, 633.673f, captureDevice.Width,</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>captureDevice.Height, <span style="color:#004dbb">false</span>, <span style="color:#c0504d">
+&quot;ARTag.cf&quot;</span>);</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:blue">#else</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// Create an optical marker tracker that uses ALVAR library</span></span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>tracker = <span style="color:blue">new</span> <span style="color:#2b91af">
+ALVARMarkerTracker</span>();</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>((<span style="color:#2b91af">ALVARMarkerTracker</span>)tracker).MaxMarkerError = 0.02f;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>tracker.InitTracker(captureDevice.Width, captureDevice.Height, </span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:#a31515">&quot;calib.xml&quot;</span>, 9.0);</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:blue">#endif</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:blue">&nbsp;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// Set the marker tracker to use for our scene</span></span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>scene.MarkerTracker = tracker;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// Display the camera image in the background. Note that this parameter</span></span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:green"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>// should be set after adding at least one video capture device to the </span>
+</p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:green"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>// Scene class.</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>scene.ShowCameraImage = <span style="color:blue">true</span>;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">This code allows the ALVAR marker tracker to recognize patterns, given the idiosyncratic distortions,
+ gamma, etc. of your camera. Then, you add the marker tracker to the scene object.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">The next step is to define the parameters of our unique ground array. These are laid out in the
+ following code: </span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:blue">private</span><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;">
+<span style="color:blue">void</span> CreateGround()</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;">{</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:#2b91af">GeometryNode</span> groundNode = <span style="color:blue">
+new</span> <span style="color:#2b91af">GeometryNode</span>(<span style="color:#a31515">&quot;Ground&quot;</span>);</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:blue">#if</span><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"> USE_ARTAG</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:gray"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundNode.Model = new Box(85, 66, 0.1f);</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:blue">#else</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundNode.Model = <span style="color:blue">new</span> <span style="color:#2b91af">
+Box</span>(95, 59, 0.1f);</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:blue">#endif</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// Set this ground model to act as an occluder so that it appears
+</span></span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;; color:green"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>// transparent</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundNode.IsOccluder = <span style="color:blue">true</span>;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// Make the ground model to receive shadow casted by other objects with</span></span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:green">// CastShadows set to true</span></span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundNode.Model.ReceiveShadows = <span style="color:blue">true</span>;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:#2b91af">Material</span> groundMaterial = <span style="color:blue">
+new</span> <span style="color:#2b91af">Material</span>();</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundMaterial.Diffuse = <span style="color:#2b91af">Color</span>.Gray.ToVector4();</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundMaterial.Specular = <span style="color:#2b91af">Color</span>.White.ToVector4();</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundMaterial.SpecularPower = 20;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundNode.Material = groundMaterial;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundMarkerNode.AddChild(groundNode);</span></p>
+<p style="line-height:115%; text-autospace:none"><span style="font-size:9.0pt; line-height:115%; font-family:&quot;Courier New&quot;">}</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">ATTACHING VIRTUAL ARTIFACTS TO PHYSICAL OBJECTS</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Then note that in the CreateObjects() method a configuration file is used to define the patterns'
+ placements on the ground object:</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:9.0pt; line-height:150%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundMarkerNode = <span style="color:blue">new</span> <span style="color:#2b91af">
+MarkerNode</span>(scene.MarkerTracker,<br>
+<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="color:#a31515">&quot;ALVARGroundArray.xml&quot;</span>);</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">This XML file is found in your Tutorial 8 root folder (the same place where you copied calib.xml.)</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Farther down that method a sphere node is added to the ground. What this means is that changes
+ to the ground's position will be inherited by the sphere.</span></p>
+<p style="line-height:150%; text-autospace:none"><span style="font-size:9.0pt; line-height:150%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>scene.RootNode.AddChild(groundMarkerNode);</span></p>
+<p style="line-height:150%; text-autospace:none"><span style="font-size:9.0pt; line-height:150%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>groundMarkerNode.AddChild(sphereTransNode);</span></p>
+<p style="line-height:150%; text-autospace:none"><span style="font-size:9.0pt; line-height:150%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>sphereTransNode.AddChild(sphereNode);</span></p>
+<p style="line-height:150%; text-autospace:none"><span style="font-size:9.0pt; line-height:150%; font-family:&quot;Courier New&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">The same steps are used to create a toolbar. However, the box will jump from the ground array
+ to the toolbar only when the toolbar is visible in the scene. This is accomplished with an if-else test to see if the toolbar has appeared. If the toolbar is visible then make this transformation:</span></p>
+<p style="line-height:150%; text-autospace:none"><span style="font-size:9.0pt; line-height:150%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>shiftVector = <span style="color:blue">new</span> <span style="color:#2b91af">
+Vector3</span>(4, -4, 4);</span></p>
+<p style="line-height:150%; text-autospace:none"><span style="font-size:9.0pt; line-height:150%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:#2b91af">Matrix</span> mat = <span style="color:#2b91af">
+Matrix</span>.CreateTranslation(shiftVector) * </span></p>
+<p style="line-height:150%; text-autospace:none"><span style="font-size:9.0pt; line-height:150%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>toolbarMarkerNode.WorldTransformation * </span></p>
+<p style="line-height:150%; text-autospace:none"><span style="font-size:9.0pt; line-height:150%; font-family:&quot;Courier New&quot;"><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span><span style="color:#2b91af">Matrix</span>.Invert(groundMarkerNode.WorldTransformation);</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">WRAP-UP</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">The ALVAR library and patterns are important allies for making Goblin XNA a tool for building
+ augmented reality applications. Especially when using a head-mounted display device such as the iWear VR920 coupled with an attached camera for relaying the pattern positions, you have powerful AR capabilities with minimal code.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span lang="EN" style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+</div>
+</div><div class="ClearBoth"></div>

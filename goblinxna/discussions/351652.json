@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "821496",
+    "ThreadId": "351652",
+    "Html": "\r\n<p><span>When</span><span>&nbsp;I&nbsp;</span><span>using</span><span>&nbsp;</span><span>the</span><span>&nbsp;</span><span>translation and rotation</span><span>&nbsp;</span><span>together</span><span>&nbsp;</span><span>my model</span><span>&nbsp;</span><span>suffers\r\n a</span><span>&nbsp;</span><span>distortion in</span><span>&nbsp;</span><span>an&nbsp;</span><span>axis.</span><span>&nbsp;</span><span>I read in</span><span>&nbsp;</span><span>the manual</span><span>&nbsp;that before the&nbsp;</span><span>version 3.4</span><span>&nbsp;</span><span>the\r\n transformations</span><span>&nbsp;</span><span>were made in</span><span>&nbsp;</span><span>reverse order</span><span>, I'm using</span><span>&nbsp;</span><span>4.0.</span><span>&nbsp;</span><span>Any suggestions</span><span>?</span></p>\r\n",
+    "PostedDate": "2012-04-09T04:27:14.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "822076",
+    "ThreadId": "351652",
+    "Html": "<p>The problem appears when i use a tree with a MarkerNode -&gt; TransformNode -&gt; GeometryNode. The Geometry Node appears distorted when I apply a rotation in the TransformNode...</p>",
+    "PostedDate": "2012-04-10T11:06:28.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "825447",
+    "ThreadId": "351652",
+    "Html": "<p>There shouldn't be any skewing problems for scaling as it's been handled correctly since 3.4.&nbsp;<span>MarkerNode -&gt; TransformNode -&gt; GeometryNode is a very common usage of MarkerNode, and a rotation should not distort the geometry. It might be simply a perceptual distortion.&nbsp;</span></p>\r\n<p><span>Ohan</span></p>",
+    "PostedDate": "2012-04-18T07:52:33.42-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "826371",
+    "ThreadId": "351652",
+    "Html": "<p>Ok, the library it's ok, it's my problem, I had a confussion using Quaternions.&nbsp;</p>\r\n<p>Thx for the help!</p>\r\n<p>&nbsp;</p>\r\n<p>Ruben</p>",
+    "PostedDate": "2012-04-20T01:32:01.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

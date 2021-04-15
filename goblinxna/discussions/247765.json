@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "572833",
+    "ThreadId": "247765",
+    "Html": "\r\n<p>I have been using Tutorial 8 to test using markers/marker arrays&nbsp;that I have generated myself. I have been trying to use the ALVARConfig.txt file that gets generated when you run the MarkerLayout tool without changing any of the variables (It creates\r\n a layout with markers 0 - 3). When I run the program using either&nbsp; ALVARGroundArray.xml or Toolbar.txt for the MarkerNode it works fine, but if I sub in the ALVARConfig.txt file, the program runs, but the box and the sphere don't appear. The program doesn't\r\n seem to recognize the configuration files that I create myself. Do you know why this is happening?</p>\r\n<p>Also, whenever I run the MarkerLayout tool, the configuration file has 4 box-like characters at the end. I thought they might have been the problem so I tried deleting them, but it still didn't work. Anyway, if you could shed some light on this that would\r\n be great!</p>\r\n<p>Thanks!</p>\r\n",
+    "PostedDate": "2011-02-27T09:30:25.123-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "574559",
+    "ThreadId": "247765",
+    "Html": "<p>Hi,</p>\r\n<p>I had the same problem but I wanted to use my individual markers instead of ALVARGroundArray.xml or Toolbar.txt. What I did was that I created my own markers using the tool in ALVAR&nbsp;samplemarkerdetector and then I modified the Tutorial 8 identify these markers I have created.&nbsp;</p>\r\n<p>e.g If you create a marker with ID 0 using the tool in ALVAR , I modified the tutorial as&nbsp;&nbsp;groundMarkerNode = new MarkerNode(scene.MarkerTracker, 0); and for a marker with ID 1 it would be&nbsp;groundMarkerNode = new MarkerNode(scene.MarkerTracker, 1); .</p>\r\n<p>Im still a beginner to Goblin and I hope this helps.</p>\r\n<p>Cheers,</p>\r\n<p>Janidu</p>",
+    "PostedDate": "2011-03-02T10:59:19.577-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "575321",
+    "ThreadId": "247765",
+    "Html": "<p>Thank you! I was eventually going to use single markers and your code worked perfectly. Thanks!</p>",
+    "PostedDate": "2011-03-03T16:47:52.997-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "576091",
+    "ThreadId": "247765",
+    "Html": "<p>We will have a documentation on this sometime soon regarding creating your custom marker and configuration.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-05T12:40:45.917-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "682110",
+    "ThreadId": "275319",
+    "Html": "\r\n<p>Hi,</p>\r\n<p><span>I'm starting</span>&nbsp;<span>to use</span>&nbsp;<span>GoblinXNA</span>&nbsp;<span>and I have some&nbsp;</span><span>problems with</span>&nbsp;<span>the installation guide</span><span>.</span></p>\r\n<p><span><span>following the steps</span>&nbsp;<span>of the&nbsp;</span><span>installation guide</span><span>:</span><br>\r\n</span></p>\r\n<p><em>First, install ALVAR 1.5.0 and download and install OpenCV 1.0, which is required for running ALVAR 1.5.0. (You will need to restart your computer after installing OpenCV 1.0. to make sure that your path environment variable is set correctly.) Then,\r\n open ALVARWrapper1.5.sln under the GoblinXNAv3.6\\wrappers\\ALVARWrapper1.5 directory (You will need either Visual Studio 2008 Professional Edition or Visual C&#43;&#43; 2008 Express Edition to open this solution file, as well as ALVAR project files). Compile this project\r\n and copy the generated ALVARWrapper.dll from the GoblinXNAv3.6\\wrappers\\ALVARWrapper1.5\\Release directory to the GoblinXNAv3.6\\dlls\\unmanaged directory.</em></p>\r\n<p><span>In my</span>&nbsp;<span>project folder</span>&nbsp;<span>does not appear\r\n</span><span>the Release</span>&nbsp;<span>directory, but</span>&nbsp;<span>instead</span>&nbsp;<span>displays the</span><span>Debug</span>&nbsp;<span>folder</span>,&nbsp;<span>inside which</span>&nbsp;<span>there is&nbsp;</span><span>ALVARWrapper1.5.dll</span>.&nbsp;<span>But</span>&nbsp;in&nbsp;<span>the\r\n installation guide</span>&nbsp;I&nbsp;read<span>&nbsp;that needs</span>&nbsp;<span>the</span>&nbsp;<span>ALVARWrapper.dll</span>.&nbsp;</p>\r\n<p><span>How can I</span>&nbsp;<span>solve this&nbsp;</span><span>problem?</span></p>\r\n<p>&nbsp;</p>\r\n<p><span>Silva</span></p>\r\n",
+    "PostedDate": "2011-10-10T07:22:34.96-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684309",
+    "ThreadId": "275319",
+    "Html": "<p>See&nbsp;<a href=\"http://goblinxna.codeplex.com/discussions/273820\">http://goblinxna.codeplex.com/discussions/273820</a></p>",
+    "PostedDate": "2011-10-14T08:15:03.27-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "580302",
+    "ThreadId": "249673",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>We'd like to distribute a closed beta version of Goblin XNA 4.0 for those who are interested in testing their applications with XNA 4.0.&nbsp;</p>\r\n<p>Please send an email to ohan@cs.columbia.edu if you're interested in, and please report me any bugs you find.</p>\r\n<p>Thanks</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-03-14T14:18:13.82-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "586817",
+    "ThreadId": "249673",
+    "Html": "<p><span id=\"result_box\" lang=\"en\"><span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">hello</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">my</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">name</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">is</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">fernando</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">chile</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">Yevenes</span><span title=\"Haz clic para obtener traducciones alternativas\">'m</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">with a friend</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">we are</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">looking</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">at reality</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">augmented</span><span title=\"Haz clic para obtener traducciones alternativas\">, sorry</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">if my</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">English is</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">bad</span><span title=\"Haz clic para obtener traducciones alternativas\">,</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">my</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">friend we</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">meet once</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">a week</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">to</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">study</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">XNA</span><span title=\"Haz clic para obtener traducciones alternativas\">, day,</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">usually</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">Saturday</span><span title=\"Haz clic para obtener traducciones alternativas\">,</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">I</span><span title=\"Haz clic para obtener traducciones alternativas\">'m</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">programmer</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">for 6 years</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">,</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">well</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">I hope to</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">find out about</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">this</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">error</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">any</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">greetings</span><br /><br /> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">fernando</span> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">Yevenes</span><br /> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">zeroyevi@hotmail.com</span><br /><br /> <span class=\"hps\" title=\"Haz clic para obtener traducciones alternativas\">http://grupos.emagister.com/alumnos/3/1/4/0/1/foto_3140151b.jpg</span></span></p>",
+    "PostedDate": "2011-03-25T21:14:16.38-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601692",
+    "ThreadId": "249673",
+    "Html": "<p>Goblin XNA 4.0 beta test.</p>\r\n<p>I can compile and run this beta version ok with all the tutorial except Tutorial 8. Here is the error that I have and don't know how to pass this.</p>\r\n<p>Tutorial 8:</p>\r\n<p>When compile in debug mode, I have the output on console as:</p>\r\n<p>Alvar Library 1.5.0<br />Copyright 2008-2010 VTT Technical Research Centre of Finland<br />Compiled on Windows 5.1 x86 on Jan&nbsp; 4 2011<br />Licensed to Public (00000000000000000000)<br />Day 108/365 of usage period for this licence</p>\r\n<p>Then it throw an exception called \"AccessViolationException\"</p>\r\n<p>Attempted to read or write protected memory. This is often an indication that other memory is corrupt.</p>\r\n<p>This is happen at line 420 of ALVARMarkerTracker.cs:</p>\r\n<p>ALVARDllBridge.alvar_add_multi_marker(markerConfigName);</p>\r\n<p>Any clue how to fix this?</p>\r\n<p>Thank you so much for your great work</p>",
+    "PostedDate": "2011-04-22T13:18:57.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601718",
+    "ThreadId": "249673",
+    "Html": "<p>Further track down to the above issue, it seems that the method alvar_add_multi_marker() is defined in ALVARDllBridge.cs as an external method coming from ALVARWrapper.dll.</p>\r\n<p>&nbsp;</p>\r\n<p>This ALVARWrapper.dll is a result when compile from ALVARWrapper1.5.</p>\r\n<p>&nbsp;</p>\r\n<p>Although, I compile ALVARWrapper1.5 successfully, but the ALVARWrapper.dll does have problem???</p>\r\n<p>Continue... search for the root cause!!!</p>",
+    "PostedDate": "2011-04-22T14:40:56.673-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601744",
+    "ThreadId": "249673",
+    "Html": "<p>Question</p>\r\n<p>One more level to the wrapper code, there is an odd thing as:</p>\r\n<p>The method alvar_add_multi_marker() declared in MarkerDetectorWrapper.cpp has a signature as:</p>\r\n<p>__declspec(dllexport) void alvar_add_multi_marker(int num_ids, int* ids, char* filename)</p>\r\n<p>But when it is re-declared in ALVARDllBridge.cs, it becomes:</p>\r\n<p>public static extern void alvar_add_multi_marker(String filename);</p>\r\n<p>I don't really understand this?</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2011-04-22T15:49:42.507-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601765",
+    "ThreadId": "249673",
+    "Html": "<p>It's hard to tell what the problem might be.&nbsp; AccessViolationException usually means you have a version mismatch between your executables.&nbsp; Are you sure you installed OpenCV1.0 and not 2.x?&nbsp; Currently, Alvar is developed to work with an older version of OpenCV.&nbsp; It seems like you have Alvar 1.5, which is correct.</p>",
+    "PostedDate": "2011-04-22T18:02:58.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601767",
+    "ThreadId": "249673",
+    "Html": "<p>I just realized that for closedBeta4.0 version, the wrapper needs to be the latest version (not the version on SVN, which is for 3.5.1). Please replace the alvar_add_multi_marker function with the following code and recompile the wrapper:</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>__declspec(<span style=\"color: blue;\">dllexport</span>) <span style=\"color: blue;\">void</span> alvar_add_multi_marker(<span style=\"color: blue;\">char</span>* filename)\r\n\t{\r\n\t\tMultiMarker marker;\r\n\t\t<span style=\"color: blue;\">if</span>(strstr(filename, <span style=\"color: #a31515;\">\".xml\"</span>) != NULL)\r\n\t\t\tmarker.Load(filename, FILE_FORMAT_XML);\r\n\t\t<span style=\"color: blue;\">else</span>\r\n\t\t\tmarker.Load(filename);\r\n\t\tmultiMarkers.push_back(marker);\r\n\t}\r\n</pre>\r\n</div>\r\n</p>",
+    "PostedDate": "2011-04-22T18:14:45.397-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601798",
+    "ThreadId": "249673",
+    "Html": "<p>Thank Ohan, you save me a ton of time!</p>\n<p>The update function get me over to this stuck point. The ALVARGroundArray.xml and Toolbar.txt shifted with Tutorial 8 doesn't work, I regenerate these two files using the markerlayout tool, then I can pass the above stuck point.</p>\n<p>But then come to other stuck point located at line 546 of ALVARMarkerTracker.cs. This time it is alvar_detect_marker(). I just wonder if we need to update this function also in the wrapper?</p>\n<p>In side this function, there is a called to Detect() at line 193 that pass 6 parameters while the definition of this function is in MarkerDetector.h which need to have 8 parameters?</p>\n<p>Thanks for shed me a light.</p>\n<p>@mengu: I do have both OpenCV1.0 and OpenCV2.x since the later is required by tutorial 13 I think. And yes, I'm running Alvar1.5 for Goblin xna 4.0 beta.</p>",
+    "PostedDate": "2011-04-22T22:51:37.897-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "602450",
+    "ThreadId": "249673",
+    "Html": "<p>I think I got it since I miss one of your suggestion about alvar1.5.0. I need to compile this on VS2008 not in 2010.</p>\r\n<p>And with this, it works great now. I don't need to update Detect() function.</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you so much guys</p>",
+    "PostedDate": "2011-04-25T08:42:18.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "602816",
+    "ThreadId": "249673",
+    "Html": "<p>Ah great, I can finally migrate my project to 4.0 :).</p>\r\n<p>Would be nice to have the wrapper in vc2010 too.</p>",
+    "PostedDate": "2011-04-26T02:45:13.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "661848",
+    "ThreadId": "249673",
+    "Html": "<p>Hi ohanoda!</p>\r\n<p>im wondering if i can obtain Goblin xna 4.0 beta for testing it... im really surprised about the performance of Goblin Xna 3.6 . Thank you for share your knowledge and help people <span id=\"result_box\" class=\"short_text\" lang=\"en\"><span class=\"hps\">developing things in Goblin.</span></span></p>\r\n<p><span class=\"short_text\" lang=\"en\"><span class=\"hps\">Carlos A. Knopel</span></span></p>\r\n<p><span class=\"short_text\" lang=\"en\"><span class=\"hps\">carlitoskh@hotmail.com<br /></span></span></p>",
+    "PostedDate": "2011-08-22T17:48:53.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "664955",
+    "ThreadId": "249673",
+    "Html": "<p>Sorry, we're not distributing the beta anymore, please wait for the public release. It'll happen sometime in September (may late Sep or early Oct depending on my schedule).</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-08-29T10:58:48.477-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

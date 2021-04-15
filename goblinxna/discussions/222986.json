@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "478297",
+    "ThreadId": "222986",
+    "Html": "<p>When are we moving to XNA 4 and Windows Phone 7? :)</p>",
+    "PostedDate": "2010-08-09T14:43:34.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "479744",
+    "ThreadId": "222986",
+    "Html": "Whenever the official release (not the Beta) of XNA 4 comes out.\r\n\r\nOhan",
+    "PostedDate": "2010-08-12T08:17:49.87-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496550",
+    "ThreadId": "222986",
+    "Html": "<p>XNA 4.0 is already released :</p>\r\n<p>Link to download: <a href=\"http://www.microsoft.com/downloads/en/details.aspx?FamilyID=9ac86eca-206f-4274-97f2-ef6c8b1f478f\">Microsoft XNA Game Studio 4.0</a></p>\r\n<p>It's supporting Visual Studio 2010 :) so we waiting for Ohan Oda for next move.</p>",
+    "PostedDate": "2010-09-21T08:39:56.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496552",
+    "ThreadId": "222986",
+    "Html": "<p>i've been using it for past 2 month, so thanks for letting me know ;))</p>",
+    "PostedDate": "2010-09-21T08:41:49.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496556",
+    "ThreadId": "222986",
+    "Html": "<p>how can you used it before ? It was released on 16 september 2010. Previously it was XNA 4.0 CTP without PC support.</p>",
+    "PostedDate": "2010-09-21T08:44:30.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496558",
+    "ThreadId": "222986",
+    "Html": "<p>they had BETA for quite a while which didn't have a support for XBOX, but now it is ready to go! enjoy coding! :)</p>",
+    "PostedDate": "2010-09-21T08:47:16.373-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496863",
+    "ThreadId": "222986",
+    "Html": "<p>I will make a final release for XNA 3.1 version of Goblin XNA sometime in late September of early October, and will make another release with XNA 4.0.</p>\r\n<p>But I've heard XNA 4.0 changed the APIs a lot, so I would expect I need to modify many things in Goblin XNA before it works with 4.0.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-22T00:10:09.037-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "543689",
+    "ThreadId": "222986",
+    "Html": "\r\n<p>I'm eagerly waiting for an upgrade to 4.0. My existing project uses .Net 4.0 and rihgt now I'm not able to use Goblin XNA in VS2010 as VS2010 won't support GS3.1.</p>\r\n<p>I hope you will be releasing a new version pretty soon.</p>\r\n",
+    "PostedDate": "2011-01-04T06:04:24.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

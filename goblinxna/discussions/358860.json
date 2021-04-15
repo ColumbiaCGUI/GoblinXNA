@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "846534",
+    "ThreadId": "358860",
+    "Html": "\r\n<p>I'm facing a problem in my GoblinXNA program which is the screen resolution, if im using 480*640 everything is fine and my application is working perfectly</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>captureDevice.InitVideoCapture(0, FrameRate._60Hz, Resolution._640x480, ImageFormat.R8G8B8_24, <span style=\"color:blue\">false</span>);\n</pre>\r\n</div>\r\n<p><br>\r\nbut if i change that to 800x600 or 1280x1024 like this:</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>captureDevice.InitVideoCapture(0, FrameRate._60Hz, Resolution._800x600, ImageFormat.R8G8B8_24, <span style=\"color:blue\">false</span>);\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p><br>\r\ni get an exception</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>GoblinXNA.GoblinException was unhandled      Message=Could not start video stream    Could not setup graph    Error HRESULT E_FAIL has been returned <span style=\"color:blue\">from</span> a call to a COM component.      Source=GoblinXNA      StackTrace:           at GoblinXNA.Device.Capture.DirectShowCapture.StartupVideo(UCOMIMoniker mon) <span style=\"color:blue\">in</span> C:\\GoblinXNAv4.0\\src\\Device\\Capture\\DirectShowCapture.cs:line 576           at GoblinXNA.Device.Capture.DirectShowCapture.InitVideoCapture(Int32 videoDeviceID, FrameRate framerate, Resolution resolution, ImageFormat format, Boolean grayscale) <span style=\"color:blue\">in</span> C:\\GoblinXNAv4.0\\src\\Device\\Capture\\DirectShowCapture.cs:line 276           at Se.HInitialize(Scene scene) <span style=\"color:blue\">in</span> C:\\Se\\H.cs:line 119           at Se.App.Initialize() <span style=\"color:blue\">in</span> C:\\Se\\App.cs:line 96           at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)           at Microsoft.Xna.Framework.Game.Run()           at Se.Program.Main(String[] args) <span style=\"color:blue\">in</span> C:\\Se\\Program.cs:line 15      InnerException: \n</pre>\r\n</div>\r\n<p></p>\r\n<p>any idea how to solve this?<br>\r\nThank you</p>\r\n",
+    "PostedDate": "2012-06-08T05:08:25.917-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "846572",
+    "ThreadId": "358860",
+    "Html": "<p>I managed to fix the problem by Changing the&nbsp;resolution in&nbsp;DirectShowCapture.cs to 1280x720</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you</p>",
+    "PostedDate": "2012-06-08T06:28:45.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

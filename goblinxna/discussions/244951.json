@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "561847",
+    "ThreadId": "244951",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I've been working on a application which uses GoblinXNA for a while, and it had done a great job for months, untill yesterday. Suddenly, code that had been in place for months stopped functioning.</p>\r\n<p>I used to run it in debug mode because my dlls were somewhat messed up in the release folder, but now when I use the .exe &nbsp;in the debug folder, the application starts, the webcam turns on, and then nothing, the application shuts down. When running it\r\n in debug mode in visual studio however, I got the following error:</p>\r\n<p>&nbsp;</p>\r\n<p>LoaderLock was detected</p>\r\n<p>Attempting managed execution inside OS Loader lock. Do not attempt to run managed code inside a DllMain or image initialization function since doing so can cause the application to hang.</p>\r\n<p>&nbsp;</p>\r\n<p>This error was thrown at the line</p>\r\n<p>tracker.InitTracker(captureDevice.Width, captureDevice.Height, &quot;calib.xml&quot;, 9.0);</p>\r\n<p>&nbsp;</p>\r\n<p>Removing LoaderLock from the exceptions that shuld be thrown in debug-&gt;Exceptions, gave the same result as running the .exe, the application started, the webcam turned on, and then nothing happened.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Now for the weird part. I had the application on 2 computers, I had done changes on one of them, and this problem started appearing, but it also started appearing on the computer on which I had made no changes at all (since the last time I ran it). So suddenly,\r\n both applications start crashing on the same day, while they had worked before, and without any contact between the two computers.</p>\r\n<p>Thank you for your time,</p>\r\n<p>Ephel</p>\r\n<p>&nbsp;</p>\r\n<p>Edit:</p>\r\n<p>I tested it out a bit and thought about it, and my logical conclusion was that either a windows update or a expired license was the cause of this, what else could destroy the program on 2 computers at once? I turned out to be right about the license. Setting\r\n back the system time to last month fixed the problem.</p>\r\n<p>However, this fix is not a nice one by any stretch of the imagination, and now I'm wondering if it's actually legal.&nbsp;</p>\r\n<p>So is there any way for you to tell what licence has expired (I'm assuming Alvar because of the calib.xml in the line that threw the error, but can't be sure) and how I could fix this legally?&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-02-07T04:18:30.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "562124",
+    "ThreadId": "244951",
+    "Html": "\r\n<p>I'm pretty sure your ALVAR license expired. Which version of ALVAR are you using?</p>\r\n<p>If you're using 1.4.0, it should still be working.</p>\r\n<p>We will have a wrapper for 1.5.0 in the next release.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-02-07T11:04:45.577-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "563127",
+    "ThreadId": "244951",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I was using GoblinXNA3.4 and ALVAR 1.3.0, and encountered the same problem. You mentioned about that 1.4.0 should still be working, so I updated to GoblinXNA3.5, along with ALVAR 1.4.0, and still am encountering the same problem.</p>\r\n",
+    "PostedDate": "2011-02-08T23:51:58.75-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "563202",
+    "ThreadId": "244951",
+    "Html": "\r\n<p>Hmmm.... Anyone in our lab and classes use ALVAR 1.4.0 downloaded from VTT website, and it seems to work fine for them.</p>\r\n<p>Anyone else is having expiration problem for 1.4.0?</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-02-09T02:37:59.543-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Hello, I need help with \nSTEP 4 – for tutorial 8\nI tried compile wrapper and still same error \nmarkerdetector.h not found.\n\nSame idea\nI tried w7/ w8 \nno difference \nVs2010 xna 4.0 goblin 4.1\nAlvar 2.0 opencv 2.4.0",
+    "LastUpdatedDate": "2014-02-28T12:30:41.89-08:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "goblinxna",
+    "ReportedDate": "2014-02-28T12:30:41.89-08:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "markerdetector.h not found",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 9235
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

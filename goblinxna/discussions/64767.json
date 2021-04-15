@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "220543",
+    "ThreadId": "64767",
+    "Html": "<p>Hi,</p>\r\n<p>I would like to know how can I load 2D textures to the race car from Tutorial 12, I tried this in VehicleCreator.cs :</p>\r\n<p>Material carMat = new Material();<br>carMat.Diffuse = Color.LightBlue.ToVector4();<br>carMat.Specular = Color.White.ToVector4();<br>carMat.SpecularPower = 10;<br>carMat.Texture = Content.Load&lt;Texture2D&gt;(&quot;cooltexture&quot;);&nbsp;&nbsp; &lt;--- this is where the error occurs</p>\r\n<p>And got this error:</p>\r\n<p>Error&nbsp;&nbsp; &nbsp;1&nbsp;&nbsp; &nbsp;The name 'Content' does not exist in the current context</p>\r\n<p>Regards,</p>\r\n<p>Emerson</p>",
+    "PostedDate": "2009-08-06T15:06:06.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "221157",
+    "ThreadId": "64767",
+    "Html": "<p>Hi Emerson,</p>\r\n<p>Content is a property of a Game class, so you can't directly access Content property from outside of Game (in this case, it's Tutorial12.cs) class. From outside of Game class, you should use State.Content. State class is a static class in Goblin and you can access both Device and Content property of the Game class through State class.</p>\r\n<p>Also, if you are simply assigning a texture to the race car which uses Box geometry as its body, you won't see any textures since Box does not allow texture mapping. In that case, you need to create your own PrimitiveShape and correctly assing the texture coordinates (see Tutorial 7 for making your custom shape with textures). Another way is to use an existing .x or .fbx model that contains texture, and in this case, you should simply set Model.UseInternalMaterial to true instead of assigning your own Material (see Tutorial 2).</p>\r\n<p>&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-08-08T14:17:28.593-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "221848",
+    "ThreadId": "64767",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>Thanks for the reply. I've tried something different. I added to VehicleCreator.cs a new parameter &quot;public static RaceCar AddRaceCar(Scene scene, TransformNode parentTrans, ContentManager Content)&quot;. That solved my problem. Next I tried to add a .fbx for the tires but now I don't know where exactly I add the code to modify its scale and rotation. I've added in RaceCar.cs this:</p>\r\n<p>public RaceCar(Object container, NewtonPhysics engine): base(container)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.engine = engine;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tireTransNode = new TransformNode[4];<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int i = 0; i &lt; 4; i++)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tireTransNode[i] = new TransformNode();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tireTransNode[i].Scale = new Vector3(0.0001f, 0.0001f, 0.0002f);&nbsp;&nbsp;&nbsp;&nbsp; &lt;- new line!<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p>However, no change is made. The tires appears bigger than it should be and also it's not in the correct orientation. What could the problem be??</p>\r\n<p>&nbsp;</p>\r\n<p>Emerson</p>",
+    "PostedDate": "2009-08-10T20:48:22.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227505",
+    "ThreadId": "64767",
+    "Html": "<p>Sorry for late reply. I just realized you posted new one.</p>\r\n<p>I haven't tried modifying the scale or orientation of a tire which is not a primitive shape (which is used to represent the tire model in the tutorial), so I may have some bugs. I will look into that problem.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-08-25T08:27:51.493-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "813688",
+    "ThreadId": "349519",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>If you had problem having the collision work correctly in Tutorial 8, that was due to the wrong Toolbar.txt config file. I just noticed this problem today, and I have replaced the toolbar config with the correct one. Now the size of the markers in both ALVARGroundArray\r\n and ALVARToolbar config files should match (Toolbar.txt has been replaced with ALVARToolbar.xml). The code and config files are updated both in the SVN repository and the downloadable zip file. If you experienced this problem before, please re-download the\r\n zip file or update your SVN folder.</p>\r\n<p>Thanks</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2012-03-21T12:35:33.92-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

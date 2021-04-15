@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "832206",
+    "ThreadId": "354544",
+    "Html": "<p>Hi,&nbsp;</p>\n<p>today I decided to install goblinXNA on my second pc. I followed the instruction and when i tried to run DominoGame, visual studio send me back this message:</p>\n<p>\"unable to load ALVARWrapper.dll, Impossible to find the module.\" I installed everything correctly, as a matter of fact the program works on my laptop.</p>\n<p>best regard</p>\n<p>&nbsp;</p>\n<p>salvo</p>",
+    "PostedDate": "2012-05-04T07:34:20.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "833143",
+    "ThreadId": "354544",
+    "Html": "<p>There are several threads in this discussion that talk about the possible cause and solution, so please search them.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-05-07T15:03:54.777-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "163454",
+    "ThreadId": "48936",
+    "Html": "Is it possible for GoblinXNA to process multiple identical markers ? In ARToolkit, a loop through all the found instances of a marker is used to render them all. I did check the docs of the MarkerNode but didn't find any property of &quot;instance count&quot; kind. So what's the way to implement this feature ?<br>\r\n",
+    "PostedDate": "2009-03-02T03:38:14.78-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "163598",
+    "ThreadId": "48936",
+    "Html": "In ARToolkit, you can recognize multiple instance of same marker, but not in ARTag. For ARTag, there should be only 1 instance of marker ID in a configuration file, otherwise, ARTag gets confused. It's mentioned in the readme.txt file in Tutorial 8.<br>\r\n<br>\r\nohan\r\n",
+    "PostedDate": "2009-03-02T14:22:45.28-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "163674",
+    "ThreadId": "48936",
+    "Html": "I think I didn't make my question very clear by using the word &quot;instance&quot;. I'm not talking about using different configurations for the same marker, but about being able to recognize that there are more than one markers of the same type on the screen - i.e. being able to render two identical &quot;towers&quot; if there are two &quot;tower&quot; markers seen by the camera. I'm doing some kinda city simulation so I want the ability to place multiple identical buildings.<br>\r\n",
+    "PostedDate": "2009-03-02T19:06:24.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "164479",
+    "ThreadId": "48936",
+    "Html": "It's not possible with ARTag. If there are more than two instances of same marker in the image, the object you associate with the marker will switch between those markers since ARTag just tells you whether the marker exists or not in the image, but it gets confused if it sees more than two of the same type in the image. You should associate your &quot;towers&quot; with multiple different markers if  you want to show identical &quot;tower&quot; in the scene. ARTag doesn't provide the same features as ARToolkit.\r\n",
+    "PostedDate": "2009-03-04T11:56:14.733-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "815856",
+    "ThreadId": "350138",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I want to use the toolbar as a navigator to the 3DUI(Groundmarker). For example, when I rotate the toolbar the Object on the ground would rotate at the same time. Thus I would like to know is there any function to get the position and orientation of the\r\n toolbar?</p>\r\n",
+    "PostedDate": "2012-03-26T19:35:42.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816257",
+    "ThreadId": "350138",
+    "Html": "<p>toolbarMarkerNode.WorldTransformation.Decompose(.......) method will decompose the marker transformation into translation, rotation, and scale</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-27T13:31:43.497-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816751",
+    "ThreadId": "350138",
+    "Html": "<p>Thanks a lot!</p>",
+    "PostedDate": "2012-03-28T12:15:53.533-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816977",
+    "ThreadId": "350138",
+    "Html": "<p>Hi,</p>\r\n<p>I try to make the selected object move in X axis when the toolbar moves and wrote below:</p>\r\n<p>Vector3 x = new Vector3();</p>\r\n<p>Vector3 y = new Vector3();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>Quaternion outRotation;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>toolbarMarkerNode.WorldTransformation.Decompose(out x, out outRotation, out y);</p>\r\n<p>sphereTransNode.Translation.X = x.X;</p>\r\n<p>But there is an error called \"Cannot modify the return value of 'GoblinXNA.SceneGraph.TransformNode.Translation' because it is not a variable<span>&nbsp;\"</span></p>\r\n<p><span>Could u explain for me why that happen and how could I fix it?</span></p>",
+    "PostedDate": "2012-03-29T00:13:47.157-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "817303",
+    "ThreadId": "350138",
+    "Html": "<p>That's C# thing that you can't modify property's member field, so you need to modify .Translation itself. All of your questions are C# and XNA related, and I prefer not to answer questions that are not specific to GoblinXNA.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-29T10:54:09.647-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

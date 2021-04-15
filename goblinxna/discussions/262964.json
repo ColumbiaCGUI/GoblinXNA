@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "633622",
+    "ThreadId": "262964",
+    "Html": "<p>Hallo!</p>\n<p>I want to create an AR application, with the following features:</p>\n<p>The user wears a pair of Vuzix VR920 (with the inertial tracker enabled) and there is a virtual hand+arm model that follows camera's rotation.</p>\n<p>So far I have created a camera, I rotate the camera using the built in tracker (of the glasses) and the hand model does the same rotation around the camera..</p>\n<p>The thing is, I want to add some marker tracking, so that the virtual hand can collide wuth a virtual model that sits on top of the marker&nbsp;and pick it up..</p>\n<p>However when I add marker tracking things mess up.. and my hand jumbs around for no apparent reason..</p>\n<p>Do you have any suggestion to make life easier?</p>",
+    "PostedDate": "2011-06-27T09:58:34.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

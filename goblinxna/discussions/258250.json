@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "615230",
+    "ThreadId": "258250",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I'm using a logitech quickcam pro c910 (and a 9000) as development devices, but i can't set the resolution of them higher than 800x600. Actually that resolution is sharp enough for me, but it's still the wrong aspect ratio. So i wonder if it's possible to\r\n crop the captured video image before i display it to the scene. If i have my application in a different resolution than my camera image, the scenegraph just scales the image to fill the screen.&nbsp;</p>\r\n<p>I'm not afraid to alter the source code for goblin, but considering future upgrades i'd rather not change anything just yet.</p>\r\n<p>cheers,</p>\r\n<p>Freek Jan</p>\r\n",
+    "PostedDate": "2011-05-19T07:18:20.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "621136",
+    "ThreadId": "258250",
+    "Html": "<p>Are you doing any tracking with the video image with wrong aspect ration? If so, does it track?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-05-31T19:34:33.36-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

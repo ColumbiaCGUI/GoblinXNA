@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "483543",
+    "ThreadId": "224486",
+    "Html": "<p>Hey,</p>\r\n<p>&nbsp;</p>\r\n<p>I' was looking for a AR library with good performance&nbsp;in the .NET space.<br>Goblin XNA is just what I needed.<br>The goal is to display a 3D model on a single AR Tag nothing really fancy I think.&nbsp;</p>\r\n<p>But I'm a bit confused about the pricing for the AR Libraries.</p>\r\n<p>Avalar is only a 356 trial.<br>When I used it, it already started from day 188 ?<br>I contacted the Avalar and discovered that the library has a really expensive price for only a one year of usage.</p>\r\n<p>I didn't try ARTag because it doesn't have a public download.<br>Will buying the book &quot;Augmented Reality: A Practical Guide&quot; give me unrestricted usage of the library ?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance !</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-08-23T04:07:26.983-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "483848",
+    "ThreadId": "224486",
+    "Html": "<p>Nope, buying the book won't give you unrestricted usage of ARTag, and I don't think ARTag even has commercial license.</p>\r\n<p>ARToolkit is another choice, and it's cheaper than Alvar if the price is a concern. You just need to write the wrapper yourself and plug in to Goblin just like ARTagTracker or ALVARMarkerTracker.</p>\r\n<p>We know ARToolkit works with Goblin, but we're not distributing anything related to it due to its GPL license.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-08-23T16:34:58.31-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "502854",
+    "ThreadId": "224486",
+    "Html": "<p>same as me, i download alvar library nad it already started at 2xx day !</p>\r\n<p>maybe i can trick it by re-download alvar lib using different email (never tried it but seems it possible...)</p>",
+    "PostedDate": "2010-10-06T00:32:44.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "504945",
+    "ThreadId": "224486",
+    "Html": "<p>It seems like it counts from whenever they built those .lib files not from when you downloaded for installed.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-10T00:19:38.73-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

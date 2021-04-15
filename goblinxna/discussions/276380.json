@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "686121",
+    "ThreadId": "276380",
+    "Html": "\r\n<p>so i added a Transform Node with a geometry node child to the scene (not attached to a marker Node) and i transform it however i need after i am done transforming it the user hits the spacebar key and i want a sphere to appear &quot;on&quot; it so i have another geometry\r\n node (sphere) and i add it to the Previous as a child and try and set an initial velocity and nothing happens. if i add the same node to a marker node the sphere appears and flys off. everything has been added to the physics engine any ideas?</p>\r\n",
+    "PostedDate": "2011-10-18T19:12:15.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "686586",
+    "ThreadId": "276380",
+    "Html": "<p>alright so after some more experimentation i found the root of the problem i think is with newton Physics in tutorial 5 (the simple physics with spheres) when you are spawning the spheres if they are spawned to far away physics do not seem to effect them ie</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp; pileTrans.Translation = new Vector3(2 * j + (float)rand.NextDouble()/5, 2*i + 5f + (i + 1) * 0.05f, 0 + 0.01f * i + (float)rand.NextDouble()/5);</p>\r\n<p>is the initial vector for the translations but if we change it to&nbsp;</p>\r\n<p>&nbsp; pileTrans.Translation = new Vector3(2 * j + (float)rand.NextDouble()/5, 2*i + 5f + (i + 1) * 0.05f, &nbsp;-82 + 0.01f * i + (float)rand.NextDouble()/5);</p>\r\n<p>then the pile just sits there and hovers as far as i can tell changing the z variable to around 81 is where it appears to cut off i am wondering how to make this range larger is it goblin or newton</p>\r\n<p>adding to a marker node no matter the distance seems to still work thank you for your help</p>",
+    "PostedDate": "2011-10-19T14:52:19.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "686678",
+    "ThreadId": "276380",
+    "Html": "<p>check out the WorldSize property of NewtonPhysics.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-19T22:38:20.133-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "686946",
+    "ThreadId": "276380",
+    "Html": "<p>when i try and change the size by&nbsp;</p>\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; NewtonPhysics Physics = new NewtonPhysics();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space: pre;\"> </span>&nbsp; &nbsp;&nbsp;Physics.UseBoundingBox = true;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space: pre;\"> </span>&nbsp; &nbsp;&nbsp;Physics.WorldSize = new BoundingBox(new Vector3(-150,-150,-150),new Vector3(150,150,150));<br />&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; scene.PhysicsEngine = Physics;</p>\r\n<p>&nbsp;</p>\r\n<p>every time i run i get&nbsp;</p>\r\n<p>'System.AccessViolationException' occurred in GoblinXNA.dll</p>",
+    "PostedDate": "2011-10-20T08:49:09.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "687192",
+    "ThreadId": "276380",
+    "Html": "<p>you need to call initialize method first</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-20T18:07:26.07-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

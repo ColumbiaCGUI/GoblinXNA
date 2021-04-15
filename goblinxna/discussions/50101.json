@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "167702",
+    "ThreadId": "50101",
+    "Html": "Hi, I'm currently working on a project that has to run on xbox360, but contains quite some UI stuff. <br>\r\nI saw that this engine contains a GUI part. Does this part work on xbox360, and is it allowed to take it out of this package and use only this part of the engine?<br>\r\n<br>\r\nkind greetings, Bart<br>\r\n",
+    "PostedDate": "2009-03-13T05:12:19.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167871",
+    "ThreadId": "50101",
+    "Html": "Hi Bart,<br>\r\n<br>\r\nAs long as you abide the license terms, you can take out the GUI parts from the package.<br>\r\n<br>\r\nI haven't tested under Xbox360 yet, so I can't guarantee that it will work under Xbox, but since the GUI parts are written completely in managed environment, theoretically it should work under Xbox 360 as well. However, the GUI parts were written assuming keyboard and mouse inputs are used, so the event handling is done through keyboard and mouse. If you're going to use it for Xbox, you need to rewrite the event handling part using the Xbox controller interface.<br>\r\n <br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-13T12:34:03.867-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "168467",
+    "ThreadId": "50101",
+    "Html": "sounds fair enough, thanks a lot Ohan.<br>\r\n",
+    "PostedDate": "2009-03-16T02:16:59.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

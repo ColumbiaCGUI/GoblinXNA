@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "516489",
+    "ThreadId": "233335",
+    "Html": "\r\n<p>hi there <br>\r\n<br>\r\nfirst i downloaded goblin from this site <br>\r\nhttp://www.cs.columbia.edu/~eaddy/goblin/#downloads<br>\r\ni dont know if its old version or what</p>\r\n<pre>&gt; i have problem running the code on vc# express 2008  that i dont   <br>&gt; know how to include those files in (common directory ) in vc#<br>&gt; which doesnt have this option (Projects-&gt;VC&#43;&#43; Directories-&gt;Executable files:)<br>&gt; is there a way i can run it on express versions or i should install   <br>&gt; the one that support all .net language<br><br>thanks in advance<br>Ahmed</pre>\r\n",
+    "PostedDate": "2010-11-03T08:10:57.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "516683",
+    "ThreadId": "233335",
+    "Html": "\r\n<p>It's a different project from Goblin XNA even though we're using the same project name. If you intend to use Goblin XNA, you should download from this site.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-03T14:24:29.117-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

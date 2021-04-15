@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "639462",
+    "ThreadId": "264426",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>When i try to run my project in Goblin XNA, &nbsp;i have the following problem :&nbsp;</p>\r\n<p><strong>Alvar Library 1.4.0 Copyright &lt;c&gt; UTT 2008-2010</strong></p>\r\n<p><strong>Compiled on Windows 5.1 x86 &lt; Jul 7 2010 &gt;</strong></p>\r\n<p><strong>Day 366/365 of usage periodo for this version</strong></p>\r\n<p><strong>[ EXPIRED ]</strong></p>\r\n<p><strong><br>\r\n</strong></p>\r\n<p>Expired ?</p>\r\n<p><span title=\"Clique para mostrar traduções alternativas\">I saw</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">that some</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">dlls</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">are\r\n with</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">the modification date</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">on</span><span title=\"Clique para mostrar traduções alternativas\">07/07/2010</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">(</span><span title=\"Clique para mostrar traduções alternativas\">alvar140.dll</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">and</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">alvarplataform140.dll</span><span title=\"Clique para mostrar traduções alternativas\">)</span><br>\r\n<br>\r\n<span title=\"Clique para mostrar traduções alternativas\">What to do?</span><br>\r\n<span title=\"Clique para mostrar traduções alternativas\">Thank you very much</span></p>\r\n",
+    "PostedDate": "2011-07-08T07:14:24.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "639673",
+    "ThreadId": "264426",
+    "Html": "<p>We will release v3.6 soon (end of next week), and it will contain ALVAR wrapper for 1.5.0.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-07-08T13:41:58.47-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "639741",
+    "ThreadId": "264426",
+    "Html": "<p>By the way, the wrapper for ALVAR 1.5.0 is available on the SVN. See the \"Source Code\" section.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-07-08T16:37:40.063-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "639850",
+    "ThreadId": "264426",
+    "Html": "<p>Hi</p>\r\n<p>Thank you very much ohanoda,&nbsp;Good work ! =D</p>\r\n<p>henriquefirewall</p>",
+    "PostedDate": "2011-07-09T06:22:26.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "641730",
+    "ThreadId": "264426",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>&nbsp;</p>\r\n<p>I also have the same problem like <a class=\"UserProfileLink\" href=\"http://www.codeplex.com/site/users/view/henriquefirewall\">henriquefirewall</a>, any update for this? of any clue how to fix this.</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you so much for your great work.</p>\r\n<p><br />Truyenle</p>",
+    "PostedDate": "2011-07-13T08:15:45.383-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

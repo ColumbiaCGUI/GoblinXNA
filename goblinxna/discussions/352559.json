@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "824888",
+    "ThreadId": "352559",
+    "Html": "\r\n<p>I am trying to get my graphical UI to render on the screen of an AR scene based on Tutorial 8. For some reason it won't render though. I've done this several times on just XNA games but it won't work with Goblin. I'm guessing it has something to do with\r\n a conflict with the UI renderer for Goblin.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>        <span style=\"color:blue\">protected</span> <span style=\"color:blue\">override</span> <span style=\"color:blue\">void</span> Draw(GameTime gameTime)\r\n        {\r\n            GraphicsDevice.Clear(Color.White);\r\n            spriteBatch.Begin();\r\n            Vector2 pos = <span style=\"color:blue\">new</span> Vector2(200, 200);\r\n            spriteBatch.Draw(SpriteTexture, pos, Color.White);\r\n            spriteBatch.End();\r\n\r\n            scene.Draw(gameTime.ElapsedGameTime, gameTime.IsRunningSlowly);\r\n        }\r\n    }\r\n</pre>\r\n</div>\r\n<p></p>\r\n",
+    "PostedDate": "2012-04-17T07:25:08.06-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "825465",
+    "ThreadId": "352559",
+    "Html": "<p>scene.Draw(....) will clear the background internally using GraphicsDevice.Clear method, so if you want to add any of your UI graphics on top of the 3D objects rendered by the scene graph, use scene.RenderBeforeUICallback or&nbsp;scene.RenderAfterUICallback properties to set the delegate function to be called at the appropriate phase of the render pipeline. For some explanations see the API documentation and the User Manual under the \"User Interface\" -&gt; \"2D GUI\" section.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-04-18T08:09:06.413-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "826629",
+    "ThreadId": "352559",
+    "Html": "<p>Thank you for your reply.&nbsp;</p>",
+    "PostedDate": "2012-04-20T11:30:13.93-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

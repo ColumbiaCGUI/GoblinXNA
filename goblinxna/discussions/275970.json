@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "684508",
+    "ThreadId": "275970",
+    "Html": "\r\n<p>Hi again Ohan,&nbsp;</p>\r\n<p>&nbsp;so this is my question: How can i insert an image as button in my 2DGUI ? or it must be a button with a texture? b/c i search in the Goblin.chm and i found something called backTexture (button Properties)...but it doesnt work at all.. so when i create\r\n a G2DButton i found that i can write button1.Texture, but how can i work with that propertie? is that propertie useful to add an image to the button (jpg, png , etc) ?</p>\r\n<p>I hope you can help me!</p>\r\n",
+    "PostedDate": "2011-10-14T16:37:54.983-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "686193",
+    "ThreadId": "275970",
+    "Html": "<p>i solved it!&nbsp;<br /><br />4 anybody who is interested... is really simple.</p>\r\n<p>1.- Create variable Texture2D. <em>Texture2D texture;</em></p>\r\n<p><em>2.- </em>In your 2DGUI function put this:&nbsp;&nbsp;<em>texture = Texture2D.FromFile(GraphicsDevice, \"your/path/image.jpg\");</em></p>\r\n<p><em>3.- </em>Finally u must assign the texture to a button or whatever u want... for example:<em>&nbsp;G2DButton button = new G2DButton(\"\"); button.Texture2D = texture;</em></p>\r\n<p>Bye!</p>",
+    "PostedDate": "2011-10-18T23:43:23.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

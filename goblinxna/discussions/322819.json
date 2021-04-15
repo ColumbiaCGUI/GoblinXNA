@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "774771",
+    "ThreadId": "322819",
+    "Html": "\r\n<p>I am having trouble with the 2D buttons. For some reason they show up don't work. I can not click on them. Any idea?</p>\r\n<p>her is the code i have for the button</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>PauseFrame = <span style=\"color:blue\">new</span> G2DPanel();\r\n            PauseFrame.Bounds = <span style=\"color:blue\">new</span> Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);\r\n            PauseFrame.Border = GoblinEnums.BorderFactory.LineBorder;\r\n            PauseFrame.Transparency = 0.98f;  <span style=\"color:green\">// Ranges from 0 (fully transparent) to 1 (fully opaque)</span>\r\n            PauseFrame.BackgroundColor = Color.Black;\r\n\r\n G2DButton Reset = <span style=\"color:blue\">new</span> G2DButton(<span style=\"color:#a31515\">&quot;Reset&quot;</span>);\r\n            Reset.TextFont = font;\r\n            Reset.Bounds = <span style=\"color:blue\">new</span> Rectangle((graphics.PreferredBackBufferWidth / 2), (graphics.PreferredBackBufferHeight - 50), 256, 50);\r\n            Reset.ActionPerformedEvent &#43;= <span style=\"color:blue\">new</span> ActionPerformed(HandleResetActionsPerformed);\r\n            PauseFrame.AddChild(Reset);\r\n\r\n scene.UIRenderer.Add2DComponent(PauseFrame);\r\n\r\n\r\n\r\n        <span style=\"color:blue\">private</span> <span style=\"color:blue\">void</span> HandleResetActionsPerformed(<span style=\"color:blue\">object</span> source)\r\n        {\r\n            <span style=\"color:green\">//do something</span>\r\n        }\r\n\r\n</pre>\r\n</div>\r\n<p></p>\r\n",
+    "PostedDate": "2012-02-17T05:40:43.267-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "776176",
+    "ThreadId": "322819",
+    "Html": "<p>Which version of Goblin are you using? The code looks correct. Does the button get highlighted if your mouse is over the button?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-17T12:26:15.02-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "789160",
+    "ThreadId": "322819",
+    "Html": "<p>i am using 3.6&nbsp;</p>\r\n<p>no it doesnt get highlighted.&nbsp;</p>",
+    "PostedDate": "2012-02-21T03:50:55.407-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "790310",
+    "ThreadId": "322819",
+    "Html": "<p>Tutorial 3 works fine, right? If you're not seeing the highlight, it's most likely your app is not receiving the mouse move event for some reason. You probably want to check if your XNA receives mouse event using the XNA's mouse states.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-21T08:27:28.92-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "802820",
+    "ThreadId": "322819",
+    "Html": "<p>well i figured it out. it was a strange problem. the problem was with the Content. I have a timer class that counts down from some number. For some reason I made it inherit from XNA game class. So it had its own Content. And when I created a new instance of this Timer in my game, it caused the buttons to act weird.</p>",
+    "PostedDate": "2012-02-28T13:14:20.82-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

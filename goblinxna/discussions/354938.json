@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "833479",
+    "ThreadId": "354938",
+    "Html": "<p>Hello all,</p>\n<p>Alvar 2.0 already has markerless detector, has anyone use it?</p>\n<p>I'm not very good in c++, trying to look AlvarWrapper1.5 source code and has no idea how to make the AlvarWrapper2.0.&nbsp;</p>\n<p>anyone kind to share?</p>\n<p>&nbsp;</p>",
+    "PostedDate": "2012-05-08T07:34:44.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "833989",
+    "ThreadId": "354938",
+    "Html": "<p>Looking at the AlvarWrapper1.5 project only have few lines codes.</p>\r\n<p>but trying to understand and add alvar2.0 markerlessDectector is complicated.</p>\r\n<p>is there any guidelines I can follow and learn on&nbsp;how to make AlvarWrapper2?</p>",
+    "PostedDate": "2012-05-09T07:14:19.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "837083",
+    "ThreadId": "354938",
+    "Html": "<p>Hi! I'm very interested in this discussion too. Recently I have read that they are going to publish the wrapper for ALVAR 2.0 (during May).<br />I guessed they was waiting for an stable version of the ALVAR 2.0 library. I hope they do it soon because it's a good tool for development.</p>",
+    "PostedDate": "2012-05-16T01:58:18.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "838289",
+    "ThreadId": "354938",
+    "Html": "<p>Just to let you know that we have already wrapped 2.0 including their feature-based tracker. We'll release it after they release their 'release' version since the compilation instruction will change quite a bit from their beta version. However, please be warned that as of beta version, the feature-based tracking is not very stable compared to their marker-based tracking. For ALVAR, I would suggest sticking with their marker-based tracking since it's much better than any other libraries, but for feature-based one, unless they will have lots of improvements for their actual release, I wouldn't say it's very useful.</p>",
+    "PostedDate": "2012-05-18T15:13:55.547-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "842815",
+    "ThreadId": "354938",
+    "Html": "<p>Hi Ohanoda, thank you for your good work and time !</p>\r\n<p>I am also interested into testing Alvar 2.0 mixed up with Goblin XNA.</p>\r\n<p>I would like to know when will AlvarWrapper2.0 be released ?</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2012-05-30T14:00:44.817-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843447",
+    "ThreadId": "354938",
+    "Html": "<p>Just realized that they released non-beta version of ALVAR 2.0 on May 29th. I will release ALVARWrapper2.0 by the end of June, and it will work on VS 2010 so that you don't need to install VS 2008 anymore.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-01T01:39:45.58-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843501",
+    "ThreadId": "354938",
+    "Html": "<p>Alright thanks a lot !</p>",
+    "PostedDate": "2012-06-01T05:01:03.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "854215",
+    "ThreadId": "354938",
+    "Html": "<p>It's been released</p>",
+    "PostedDate": "2012-06-27T01:22:00.273-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "854375",
+    "ThreadId": "354938",
+    "Html": "<p>Thanks for the release !</p>\r\n<p>I have problems trying to run Tutorial 8. I get the following error :</p>\r\n<p>Unable to load DLL 'ALVARWrapper.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)</p>\r\n<p><br />I compiled ALVARWrapper2.0 following the Installation Guide directives and copied ALVARWrapper.dll in the unmanaged folder as mentionned.</p>\r\n<p>Do you have any idea what could be the problem here ?</p>",
+    "PostedDate": "2012-06-27T07:13:53.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "854465",
+    "ThreadId": "354938",
+    "Html": "<p>Have you copied other dlls mentioned in the installation guide to appropriate folders?</p>",
+    "PostedDate": "2012-06-27T09:54:32.07-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "854496",
+    "ThreadId": "354938",
+    "Html": "<p>Thank you for your reply.</p>\r\n<p>I did copy the libraries to the appropriate folders, but I double checked and noticed that I took the OpenCV libraries from the Alvar 2.0 installation instead than from the OpenCV 2.4 installation (the sizes are different). I changed them and it's now working properly !</p>",
+    "PostedDate": "2012-06-27T10:25:12.733-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

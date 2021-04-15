@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "821325",
+    "ThreadId": "351589",
+    "Html": "\r\n<p>Hi, im currently getting an error on tutorial 8 and wondered if anyone could help</p>\r\n<p>the error is an NullReferenceException was unhandled its to do with the AddChild on the BranchNode class, which i believe traces back to somewhere in the createobjects function but i cant seem to locate the issue.</p>\r\n<p>any help would be greatly appreciated</p>\r\n",
+    "PostedDate": "2012-04-08T09:17:22.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "821329",
+    "ThreadId": "351589",
+    "Html": "<p>I found what the issue was, no worries.</p>",
+    "PostedDate": "2012-04-08T09:41:18.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

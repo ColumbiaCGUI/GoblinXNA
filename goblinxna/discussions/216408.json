@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "456838",
+    "ThreadId": "216408",
+    "Html": "<p>&nbsp;</p>\r\n<p>HI</p>\r\n<p>My project has characters with more than 59 bones, almost 150 :(<br> <br> Is this a hard limit or is it possible to increase it&nbsp; changing values in SkinnedModelProcessor.cs&nbsp; by recompiling the source?<br> <br> The bone count limit of 59 is embedded in SkinnedModel.fx. (MaxBones 59) Do I need to just need to change this or write a new skinnedModel fx file?&nbsp; If so, do you have any recommendations on a good way to do this?<br> <br> Thanks!</p>\r\n<p>Pragya</p>",
+    "PostedDate": "2010-06-17T10:12:58.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "457896",
+    "ThreadId": "216408",
+    "Html": "<p>There is a similar post on the XNA forum (<a href=\"http://forums.xna.com/forums/t/14515.aspx\">http://forums.xna.com/forums/t/14515.aspx</a>)</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-06-20T23:42:28.76-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "421699",
+    "ThreadId": "206618",
+    "Html": "<p>Hello there</p>\r\n<p>I wonder how can I control transparency of a specific model either textured or just geometry.</p>\r\n<p>I tried like below.</p>\r\n<p>node.Model.Shader = new GloblinXNA.Shaders.SimpleEffectShader();</p>\r\n<p>BasicEffect effect = node.Model.Shader.CurrentEffect as BasicEffect;</p>\r\n<p>effect.Alpha = 0.5f;</p>\r\n<p>effect.GraphicsDevice.RenderState.AlphaBlendEnable = true;</p>\r\n<p>&nbsp;</p>\r\n<p>But it shows only 100% opaque model which don't have texture.</p>\r\n<p>Does anyone have ideas?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance :)</p>",
+    "PostedDate": "2010-03-21T12:07:28.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "421961",
+    "ThreadId": "206618",
+    "Html": "<p>There is a bug in v3.3 for that, and it's fixed in v3.4. Please wait for v3.4 release.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-21T19:58:35.427-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

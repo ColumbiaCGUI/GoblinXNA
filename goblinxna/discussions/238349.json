@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "535672",
+    "ThreadId": "238349",
+    "Html": "\r\n<p>Hi, I have some problems when I call the MouseEnteredEvent()...</p>\r\n<p>I used these instruction</p>\r\n<p>b is a G2DButton</p>\r\n<p>b.MouseEnteredEvent &#43;= new MouseEntered(b_MouseEnteredEvent);</p>\r\n<p>void b_MouseEnteredEvent()<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; label1.Text = &quot;Hello!&quot;;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p><span id=\"x_result_box\" lang=\"en\"><span>Sometimes it does and sometimes not</span></span></p>\r\n<p>I saw in G2DComponent.cs file a comment that said:</p>\r\n<p>&nbsp;// FIXME: need fix for enter and exit event for boundary cases!!</p>\r\n<p>Instead if I use the MouseDraggedEvent for a button it Works!</p>\r\n<p>Why??? Thanks for attention!</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2010-12-14T09:50:01.573-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "535683",
+    "ThreadId": "238349",
+    "Html": "\r\n<p>Yes, the enter and exit algorithm has a problem, so if you need stable one, you shouldn't use those events.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-12-14T10:10:05.327-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

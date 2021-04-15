@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "697728",
+    "ThreadId": "279337",
+    "Html": "<p>hi ohan I am trying to make my game are adjustable.</p>\n<p>i ask the user to put the groundmarker then I keep it's worldtransformation.</p>\n<p>img src=\"http://i.imgur.com/Nk29i.png</p>\n<p>then user removes the groundmarker, and using the toolbarmarker sets the game area.</p>\n<p>the problem is, it is not always level.</p>\n<p>http://i.imgur.com/Z42bm.png</p>\n<p>http://i.imgur.com/GqG73.png</p>\n<p>also the box moves up or down instead of size&nbsp;increasing&nbsp;in y axis. the x axis works fine. though.so the problem is that when i move the toolbar marker further away from camera the red box moves up instead of sticking on the ground.</p>\n<p>here is a video</p>\n<p>http://tinypic.com/r/33wvdj8/5</p>\n<p>here is how i do it</p>\n<p>&nbsp;if (MaxX &lt; setupMarkerNode.WorldTransformation.M41) &nbsp; &nbsp; &nbsp; &nbsp;//setupMarkerNode is the small toolbarMarker &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\n<p>MaxX = (int)setupMarkerNode.WorldTransformation.M41;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>if (MinX &gt; setupMarkerNode.WorldTransformation.M41)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>MinX = (int)setupMarkerNode.WorldTransformation.M41;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>if (MaxY &lt; setupMarkerNode.WorldTransformation.M42)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>MaxY = (int)setupMarkerNode.WorldTransformation.M42;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>if (MinY &gt; setupMarkerNode.WorldTransformation.M42)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>MinY = (int)setupMarkerNode.WorldTransformation.M42;</p>\n<p>&nbsp;</p>\n<p>Matrix mat = groundNodeTransformation; &nbsp;//groundNodeTransformation is groundMarkerNode.Worldtransformation which is saved when space is pressed</p>\n<p>mat.M41 = (MaxX + MinX)/2;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>mat.M42 = (MaxY + MinY)/2;</p>\n<p>boxNode.Model = new Box((MaxX - MinX), (MaxY - MinY), 2); &nbsp;//boxNode is the red box</p>\n<p>boxTransNode.WorldTransformation = mat;</p>\n<p>&nbsp;</p>\n<p>do you have any suggestions to do this better. i am basically trying to do what these guys are doing btw 0:08 - 0:30 (without the height, for now)</p>\n<p><a href=\"http://www.youtube.com/watch?v=vrB27YPE8nI\">http://www.youtube.com/watch?v=vrB27YPE8nI</a></p>\n<p>&nbsp;</p>\n<p>thanks for your help.</p>",
+    "PostedDate": "2011-11-14T01:53:53.167-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "702014",
+    "ThreadId": "279337",
+    "Html": "<p>do you have any advice? i would really appreciate.&nbsp;</p>",
+    "PostedDate": "2011-11-22T14:00:19.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "702027",
+    "ThreadId": "279337",
+    "Html": "<p>I don't have much time now, so I can only respond to those posts that I have answer right away without thinking or looking into details.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-11-22T14:31:42.25-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "707116",
+    "ThreadId": "279337",
+    "Html": "<p>if you get anytime later, please have a look.&nbsp;</p>\r\n<p>we are using goblin for our senior design project, and i would really appreciate your help.</p>\r\n<p>thanks.&nbsp;</p>",
+    "PostedDate": "2011-12-04T02:16:33.877-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

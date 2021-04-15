@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "168996",
+    "ThreadId": "50427",
+    "Html": "Hi, I was wondering how the focus of the UI items is handled. The focus property is internal, but I can't find out how it then is decided wether or not a certain object must have the focus. <br>\r\nI'm trying to find out as I'm implementing the code to navigate through it using a gamepad.<br>\r\nCheers<br>\r\nBart<br>\r\n<br>\r\nedit: nevermind, I've just changed the code, needed to do so anyway as each component needed to be able to have children anyway in my case. I've made the property public and change it myself when needed using events.<br>\r\n",
+    "PostedDate": "2009-03-17T05:56:12.753-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

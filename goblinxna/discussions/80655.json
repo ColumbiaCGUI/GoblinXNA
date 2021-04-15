@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "276589",
+    "ThreadId": "80655",
+    "Html": "<p>Dear All:</p>\r\n<p>When I&nbsp;<span style=\"font-size:small;font-family:Calibri\"><span style=\"font-size:small;font-family:Calibri\">debug&nbsp;the SampleCamCalib project to generate a calibration file. </span></span></p>\r\n<p><span style=\"font-size:small;font-family:Calibri\"><span style=\"font-size:small;font-family:Calibri\">Then will show this:</span></span></p>\r\n<p><span style=\"font-size:xx-small\">\r\n<p>1&gt;SampleCamCalib.obj : error LNK2019: unresolved external symbol _cvCircle referenced in function &quot;void __cdecl videocallback(struct _IplImage *)&quot; (?videocallback@@YAXPAU_IplImage@@@Z)</p>\r\n<p>1&gt;SampleCamCalib.obj : error LNK2019: unresolved external symbol &quot;__declspec(dllimport) public: void __thiscall alvar::Camera::ProjectPoints(class std::vector&lt;struct CvPoint3D64f,class std::allocator&lt;struct CvPoint3D64f&gt; &gt; &amp;,class alvar::Pose *,class std::vector&lt;struct CvPoint2D64f,class std::allocator&lt;struct CvPoint2D64f&gt; &gt; &amp;)&quot; (__imp_?ProjectPoints@Camera@alvar@@QAEXAAV?$vector@UCvPoint3D64f@@V?$allocator@UCvPoint3D64f@@@std@@@std@@PAVPose@2@AAV?$vector@UCvPoint2D64f@@V?$allocator@UCvPoint2D64f@@@std@@@4@@Z) referenced in function &quot;void __cdecl videocallback(struct _IplImage *)&quot; (?videocallback@@YAXPAU_IplImage@@@Z)</p>\r\n<p>1&gt;SampleCamCalib.obj : error LNK2019: unresolved external symbol &quot;__declspec(dllimport) public: void __thiscall alvar::Camera::CalcExteriorOrientation(class std::vector&lt;struct CvPoint3D64f,class std::allocator&lt;struct CvPoint3D64f&gt; &gt; &amp;,class std::vector&lt;struct CvPoint2D64f,class std::allocator&lt;struct CvPoint2D64f&gt; &gt; &amp;,class alvar::Pose *)&quot; (__imp_?CalcExteriorOrientation@Camera@alvar@@QAEXAAV?$vector@UCvPoint3D64f@@V?$allocator@UCvPoint3D64f@@@std@@@std@@AAV?$vector@UCvPoint2D64f@@V?$allocator@UCvPoint2D64f@@@std@@@4@PAVPose@2@@Z) referenced in function &quot;void __cdecl videocallback(struct _IplImage *)&quot; (<a href=\"mailto:?videocallback@@YAXPAU_IplImage@@@Z\">?videocallback@@YAXPAU_IplImage@@@Z</a>)</p>\r\n<p>what does it mean? is my webcam problem? or missing other header file?</p>\r\n<p>Thanks for your help</p>\r\n<p>Alex</p>\r\n</span><span style=\"font-size:small;font-family:Calibri\"></span></p>",
+    "PostedDate": "2010-01-13T01:01:54.54-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "277447",
+    "ThreadId": "80655",
+    "Html": "<p>Hmm... never seen this problem before. Maybe it's better to directly ask VTT(www.vtt.fi/multimedia/alvar.html) since it's a project from ALVAR distribution.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-01-14T21:11:11.913-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

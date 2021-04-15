@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "426110",
+    "ThreadId": "207951",
+    "Html": "<p>I just found out that the generated .txt for ALVAR has incorrect information. The location where indicates the marker sizes actually indicates the status which I'm still unclear what exactly they are (waiting for reply from VTT), so if those numbers are non-integer, your generated .txt configuration won't work. This will be fixed for v3.4 release.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-31T10:43:07.577-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

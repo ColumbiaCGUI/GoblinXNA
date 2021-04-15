@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "636888",
+    "ThreadId": "263786",
+    "Html": "\r\n<p>Hi, i need some help on the collision. The reason is when i use these lines of code on my 3d model.&nbsp;But the model&nbsp;won't detect the ground. Is there any other way to create collision detection</p>\r\n<pre>\tNewtonMaterial physMat2 = new NewtonMaterial();\r\n            // Gound to ball material interaction\r\n            physMat2.MaterialName1 = &quot;Ground&quot;;\r\n            physMat2.MaterialName2 = &quot;Domino&quot;;\r\n            physMat2.Elasticity = 0.7f;\r\n            physMat2.ContactProcessCallback = delegate(Vector3 contactPosition,\r\n                Vector3 contactNormal, float contactSpeed,\r\n                float colObj1ContactTangentSpeed, float colObj2ContactTangentSpeed,\r\n                Vector3 colObj1ContactTangentDirection,\r\n                Vector3 colObj2ContactTangentDirection)\r\n            {\r\n                if (contactSpeed &gt; 3f)\r\n                {\r\n                    Console.Write(&quot;11 \\n&quot;);\r\n                }\r\n\r\n            };\r\n            ((NewtonPhysics)scene.PhysicsEngine).AddPhysicsMaterial(physMat2);</pre>\r\n<pre>&nbsp;</pre>\r\n<pre>&#65279;FYI, i did set interactable, collidable, addToPhysicxEngine and pickable to true.</pre>\r\n",
+    "PostedDate": "2011-07-04T02:20:45.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

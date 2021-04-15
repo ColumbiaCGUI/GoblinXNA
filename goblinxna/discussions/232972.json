@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "515186",
+    "ThreadId": "232972",
+    "Html": "\r\n<p>Hi</p>\r\n<p>I'm tring to receive a shadow on a box with an transparency below 1.0, does somebody has done this befor? I'am using Goblin XNA 3.4</p>\r\n<p>thanks for your replys!</p>\r\n<p>Chris</p>\r\n",
+    "PostedDate": "2010-10-31T12:25:46.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515577",
+    "ThreadId": "232972",
+    "Html": "\r\n<p>We don't support shadow rendering on semi-transparent objects because it's more complicated to cast shadows correctly through semi-transparent objects. If you want to have that kind of behavior, you need to implement your own shader.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-01T13:25:42.53-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

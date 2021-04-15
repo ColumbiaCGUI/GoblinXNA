@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "703732",
+    "ThreadId": "280935",
+    "Html": "<p>Hi,</p>\n<p>&nbsp; &nbsp;I am new to Goblin XNA. Can some body help me on the following.</p>\n<p>I have a sphere model and ground marker. The sphere model should appear just on top of the the Ground Marker and when the marker is moved&nbsp;</p>\n<p>the sphere should move along on the screen. Currently what happens is the sphere appear on different location.</p>\n<p>&nbsp;</p>\n<p>Following is my code.</p>\n<p>&nbsp;</p>\n<p>GeometryNode sphereNode = new GeometryNode(\"Sphere\");&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>sphereNode.Model = new Sphere(3, 20, 20);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>sphereNode.AddToPhysicsEngine = true;<br /> Material sphereMaterial = new Material();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>sphereMaterial.Diffuse = new Vector4(0, 0.5f, 0, 1);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>sphereMaterial.Specular = Color.White.ToVector4();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>sphereMaterial.SpecularPower = 10;<br /> sphereNode.Material = sphereMaterial;<br /> _monsterTransformNode6 = new TransformNode&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>{ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>Translation = new Vector3(0,0,0)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>};</p>\n<p>_monsterTransformNode6.AddChild(sphereNode);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\n<p>_monsterGroundMarker6.AddChild(_monsterTransformNode6);</p>\n<p>&nbsp;</p>\n<p>Thanks.</p>",
+    "PostedDate": "2011-11-26T16:32:36.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "703734",
+    "ThreadId": "280935",
+    "Html": "<p>you can update the positioning of the sphere by using the marker worldtransformation matrix in the Draw() method</p>\n<p>try this</p>\n<p>&nbsp;</p>\n<pre>if (marker.MarkerFound)\n            {\n                Vector3 fixObject = new Vector3(0,0,0);\n                Matrix mat = Matrix.CreateTranslation(fixObject) *\n                   marker.WorldTransformation;\n\n                // Modify the transformation in the physics engine\n                ((NewtonPhysics)scene.PhysicsEngine).SetTransform(groundNode.Physics, mat);\n            }\n</pre>\n<p>&nbsp;</p>\n<p>put this code before base.Draw</p>\n<p>hope this helps</p>",
+    "PostedDate": "2011-11-26T17:09:32.91-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "703744",
+    "ThreadId": "280935",
+    "Html": "<p>Arrezes,&nbsp; &nbsp;</p>\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp;Thanks for your support. I could see it moving but I am still not ableto achieve what I am intended to do.<br />I want the sphere to appear just on top of the marker and move along with the markerwhen I physically move the marker. Now the sphere appears some where else on the screen.&nbsp;When I move the marker, the sphere moves but not on the same pace. At some point the&nbsp;marker starts overtaking the sphere on the screen.</p>\r\n<p><br />Thanks.</p>",
+    "PostedDate": "2011-11-26T19:16:04.267-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "703758",
+    "ThreadId": "280935",
+    "Html": "<p>Can some one help on this please?</p>",
+    "PostedDate": "2011-11-26T22:38:33.093-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "703761",
+    "ThreadId": "280935",
+    "Html": "<p>Assuming your marker node is already added to the scene's root node, if you do not intend to perform physics simulation, you should NOT set AddToPhysicsEngine to true. It should appear on top of the marker as it is. Also, you probably want to shift the sphere 3 up toward Z direction so that it will appear exactly on top of the marker.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-11-26T23:10:40.707-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

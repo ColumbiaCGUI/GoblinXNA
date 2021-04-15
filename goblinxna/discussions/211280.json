@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "437985",
+    "ThreadId": "211280",
+    "Html": "<p>Hello.</p>\r\n<p>I am trying to make an application which will show only a 3D model controlled by a marker. But I don't want to show an image from my webcam. How can I do this?</p>\r\n<p>I just tried to &nbsp;set Scene's&nbsp;ShowCameraImage property to false, but my app stopped with exception:</p>\r\n<p>System.NullReferenceException was unhandled<br> Message=&quot;Object reference not set to an instance of an object.&quot;<br> Source=&quot;GoblinXNA&quot;<br> StackTrace:<br> at GoblinXNA.Device.Capture.DirectShowCapture.GetImageTexture(Int32[] returnImage, IntPtr&amp; imagePtr)<br> at GoblinXNA.SceneGraph.Scene.UpdateTrackerAndImage()<br> at GoblinXNA.SceneGraph.Scene.UpdateTracker()<br> at GoblinXNA.SceneGraph.Scene.Draw(GameTime gameTime)<br> at Microsoft.Xna.Framework.Game.Draw(GameTime gameTime)</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-02T00:41:40.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "438064",
+    "ThreadId": "211280",
+    "Html": "<p>You can change this -&nbsp;</p>\r\n<p><span style=\"font-size:small\"><span style=\"font-size:small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\">bool</span></span></span><span style=\"font-family:Courier New;font-size:x-small\"><span style=\"font-family:Courier New;font-size:x-small\"> useStaticImage = </span></span><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\">false</span></span></span><span style=\"font-family:Courier New;font-size:x-small\"><span style=\"font-family:Courier New;font-size:x-small\">;</span></span></span></span></p>\r\n<p>- to true, and then change the name of the image used to a static image of your own making. Don't forget to make the static image the same size as your camera resolution.</p>\r\n<p>Colin</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family:Courier New;font-size:x-small\">&nbsp;</span></p>",
+    "PostedDate": "2010-05-02T10:58:47.52-07:00",
+    "UserRole": "Editor",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "438066",
+    "ThreadId": "211280",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>dcoli wrote:</strong><br>\r\n<p>You can change this -&nbsp;</p>\r\n<p><span style=\"font-size:small\"><span style=\"font-size:small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\">bool</span></span></span><span style=\"font-family:Courier New;font-size:x-small\"><span style=\"font-family:Courier New;font-size:x-small\"> useStaticImage = </span></span><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\"><span style=\"font-family:Courier New;color:#0000ff;font-size:x-small\">false</span></span></span><span style=\"font-family:Courier New;font-size:x-small\"><span style=\"font-family:Courier New;font-size:x-small\">;</span></span></span></span></p>\r\n<p>- to true, and then change the name of the image used to a static image of your own making. Don't forget to make the static image the same size as your camera resolution.</p>\r\n<p>Colin</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family:Courier New;font-size:x-small\">&nbsp;</span></p>\r\n</blockquote>\r\n<p>&nbsp;Oops, I think the static image is already set to true, so you just need to change the name of the image.</p>",
+    "PostedDate": "2010-05-02T11:00:48.49-07:00",
+    "UserRole": "Editor",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "438108",
+    "ThreadId": "211280",
+    "Html": "<p>Hi,</p>\r\n<p>Thanks for pointing this out. I just found out that I forgot one line of code:</p>\r\n<p>Please add the following if condition right before Marsha.Copy(grabbededImage, ....) on line 253 in DirectShowCapture.cs:</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">if</span>(returnedImage != <span style=\"color:blue\">null</span>)\r\n</pre>\r\n</div>\r\n</p>\r\n<p>Then, recompile Goblin XNA.</p>\r\n<p>This will fix the problem.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-05-02T15:07:55.297-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

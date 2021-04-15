@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "507039",
+    "ThreadId": "230853",
+    "Html": "<p>Hi,</p>\r\n<p>Two questions:</p>\r\n<p>1. Is there a way to store the streaming video with the AR, as well as a video prior to rendering AR?</p>\r\n<p>2. Is there a class/function in v3.4 or the next version to render text, rather than geometric shapes, when a marker is detected?</p>\r\n<p>Thanks.</p>",
+    "PostedDate": "2010-10-13T22:54:15.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "507673",
+    "ThreadId": "230853",
+    "Html": "<p>1. There is probably a way, but we don't support those in our package, so you need to implement yourself. For video prior to AR, the updated User Manual will have an explanation of how to do it in v3.5 (the updated User Manual will be released in a few weeks)</p>\r\n<p>2. 3D text has been supported since v3.3 (if I remember correctly). See tutorial 9 for how to render 3D text. If you want 2D text rendered on the marker, then just prepare a Texture2D with the text you want to render and put it on a polygonal mesh using PrimitiveModel (in v3.5) or Model (in v3.4). For creating your own mesh, see tutorial 7. We don't currently support dynamically generated 2D text on Texture2D.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-15T03:46:33.327-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

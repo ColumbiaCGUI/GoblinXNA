@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "445918",
+    "ThreadId": "213439",
+    "Html": "<p>Hi,</p>\r\n<p>I'm new using Goblin XNA.&nbsp;&nbsp;&nbsp; I've just install everything required.&nbsp;&nbsp; Most of the tutorials run in Alvar and Goblin XNA.</p>\r\n<p>My problem is&nbsp;with the tutorial 8.&nbsp;&nbsp; It fails at the following&nbsp;line:&nbsp;&nbsp;</p>\r\n<p><span style=\"font-size:x-small\"><strong>ALVARDllBridge.alvar_add_multi_marker(ids.Length, ids, markerConfigName);</strong></span></p>\r\n<p>The parameters seems to be ok.</p>\r\n<p>I think it's related to the only bug I have running the samples in Alvar:&nbsp; SampleMultiMarkerBundle</p>\r\n<p>When I run it, it crashs saying &quot;Vector subscript out of range&quot;...&nbsp; (In the vector librairy of C++).</p>\r\n<p>Do&nbsp;I need to run &quot;SimpleCamCalibMarker&quot;?&nbsp;&nbsp; They talk about it in the Alvar documentation, but the application&nbsp;IS NOT in the list of samples I have (after generate.bat has compiled the samples).</p>\r\n<p>In advance, thanks!</p>\r\n<p>S&eacute;bastien</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-21T08:58:18.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "446005",
+    "ThreadId": "213439",
+    "Html": "Hmm.... that sounds strange. Please make sure that you use the right version of ALVAR (1.3.0) and the wrapper code (ALVARWrapper1.3).\r\n\r\nThe SimpleCamCalibMarker should be as long as I know. If it's missing, please contact VTT. \r\n\r\nI don't think SampleMultiMarkerBundle works with basic version of ALVAR. I think they only allow it in pro version.\r\n\r\nOhan",
+    "PostedDate": "2010-05-21T13:02:36.887-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "446168",
+    "ThreadId": "213439",
+    "Html": "<p>Hi,</p>\r\n<p>Ok... I'm sure I have the right version of Alvar (1.3.0).&nbsp;&nbsp;</p>\r\n<p>I'm using the ALVARWrapper1.3:&nbsp; It generate ALVARWrapper1.3.dll (but the Goblin project look for ALVARWrapper.dll!&nbsp;&nbsp; I have to rename this dll).</p>\r\n<p>I'll try to find out the SimpleCamCalibMarker.&nbsp; It must be usefull to generate something like a configuration file...&nbsp;&nbsp;</p>\r\n<p>Since I plan de teach Augmented Reality to a college groupe in computer science in next september, I could be active on this forum in the next months.&nbsp;&nbsp;</p>\r\n<p>Thank you for your reply!&nbsp; I appriciate it!&nbsp;&nbsp;</p>\r\n<p>S&eacute;bastien</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-22T07:17:42.157-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "447411",
+    "ThreadId": "213439",
+    "Html": "<p>Hi Ohanoda,</p>\r\n<p>Well!&nbsp; I've learned several things since the last time!&nbsp;&nbsp;&nbsp; Ok, now everything is fine with Alvar (compile and run all), and in Goblin, I can run all the tutorial!&nbsp;&nbsp; Great!</p>\r\n<p>The only problem is when I try to run AR Dominos...&nbsp;&nbsp; I can generate the solution.&nbsp;&nbsp; But it fails when this line is executed (DominoGame.cs):</p>\r\n<p><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">&lt;font size=&quot;2&quot;&gt;\r\n<p>tracker.InitTracker(captureDevice.Width, captureDevice.Height,</p>\r\n&lt;/font&gt;<span style=\"color:#a31515;font-size:x-small\"><span style=\"color:#a31515;font-size:x-small\">&quot;calib.xml&quot;</span></span><span style=\"font-size:x-small\">, 9.0);</span></span></span></span></p>\r\n<p>It says &quot;DLL NOT FOUND EXCEPTION&quot;.&nbsp;&nbsp;</p>\r\n<p>Although, the AlvarWrapper.dll is in Goblin/bin (it worked with tutorial 8).&nbsp; The object &quot;tracker&quot; has been declared.&nbsp;&nbsp; The&nbsp;captureDevice is initialised.&nbsp;&nbsp; And Calib.xml&nbsp;is valid.</p>\r\n<p>The link to the AlvarWrapper.dll in Goblin/bin is OK in the project.</p>\r\n<p>Any idea?</p>\r\n<p>In advance, thanks!</p>\r\n<p>S&eacute;bastien</p>\r\n<p>&nbsp;&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-25T21:30:39.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "447796",
+    "ThreadId": "213439",
+    "Html": "<p>Ok. Got it.&nbsp;&nbsp; We have to change the execution path&nbsp;to Goblin/bin instead of ARDominos/bin/release.</p>\r\n<p>Great! :-)</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-26T11:58:26.253-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

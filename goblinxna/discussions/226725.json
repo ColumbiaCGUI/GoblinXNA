@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "491661",
+    "ThreadId": "226725",
+    "Html": "<p>Hello,</p>\r\n<p>I'm trying to set different textures on different cube faces, i.e. i want to set the image a.jpg on top face and b.jpg on front face and so on. Since now, i can draw a texture on a single side of the cube.</p>\r\n<p>Best regards,</p>\r\n<p>crash</p>",
+    "PostedDate": "2010-09-10T01:25:09.757-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "492092",
+    "ThreadId": "226725",
+    "Html": "<p>Just create 6 separate quads and assign different texture to each of them, or put&nbsp;all of the textures in one image file, and use texture coordinates to assign them appropriately.&nbsp;</p>\r\n<p>Otherwise, you need to create a .x or .fbx file that has those textures on each face since the ModelMesh class can contain separate textures for each ModelMeshPart.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-10T22:01:26.383-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "492658",
+    "ThreadId": "226725",
+    "Html": "<p>Setting the images in one file and paste it on the cube faces is the same thing I was supposed to do, but there's a problem; if i want to set the texture on the left, up and right faces i have to set TextureCoordinate points which correspond to the down face. As a result, the texture image containing the 3 images would be attached on the down face only without &quot;passing&quot; by the 3 cube faces. Is that right?</p>\r\n<p>I paste here my code to let you all understand my situation:</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>       // Create 8 vertex positions that will be assigned to those 24 vertices\r\n            Vector3 v0 = new Vector3(-halfExtent.X, -halfExtent.Y, -halfExtent.Z);\r\n            Vector3 v1 = new Vector3(halfExtent.X, -halfExtent.Y, -halfExtent.Z);\r\n            Vector3 v2 = new Vector3(-halfExtent.X, halfExtent.Y, -halfExtent.Z);\r\n            Vector3 v3 = new Vector3(halfExtent.X, halfExtent.Y, -halfExtent.Z);\r\n            Vector3 v4 = new Vector3(halfExtent.X, halfExtent.Y, halfExtent.Z);\r\n            Vector3 v5 = new Vector3(-halfExtent.X, halfExtent.Y, halfExtent.Z);\r\n            Vector3 v6 = new Vector3(halfExtent.X, -halfExtent.Y, halfExtent.Z);\r\n            Vector3 v7 = new Vector3(-halfExtent.X, -halfExtent.Y, halfExtent.Z);\r\n            \r\n            Vector2 t0 = <span style=\"color:blue\">new</span> Vector2(0, 0);\r\n            Vector2 t1 = <span style=\"color:blue\">new</span> Vector2(textCoord.X, 0);\r\n            Vector2 t2 = <span style=\"color:blue\">new</span> Vector2(0, textCoord.Y);\r\n            Vector2 t3 = <span style=\"color:blue\">new</span> Vector2(textCoord.X, textCoord.Y);\r\n\r\n            vertices[0].Position = v0; vertices[1].Position = v1;\r\n            vertices[2].Position = v2; vertices[3].Position = v3;\r\n\r\n            vertices[4].Position = v0; vertices[5].Position = v7;\r\n            vertices[6].Position = v2; vertices[7].Position = v5;\r\n\r\n            vertices[8].Position = v4; vertices[9].Position = v5;\r\n            vertices[10].Position = v7; vertices[11].Position = v6;\r\n\r\n            vertices[12].Position = v4; vertices[13].Position = v3;\r\n            vertices[14].Position = v1; vertices[15].Position = v6;\r\n\r\n            vertices[16].Position = v2; vertices[17].Position = v4;\r\n            vertices[18].Position = v5; vertices[19].Position = v3;\r\n\r\n            vertices[20].Position = v0; vertices[21].Position = v1;\r\n            vertices[22].Position = v6; vertices[23].Position = v7;\r\n\r\n            <span style=\"color:green\">// Assign the texture coordinates </span>\r\n            vertices[8].TextureCoordinate = t2;\r\n            vertices[9].TextureCoordinate = t0;\r\n            vertices[10].TextureCoordinate = t1;\r\n            vertices[11].TextureCoordinate = t3;\r\n\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-09-13T01:16:15.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

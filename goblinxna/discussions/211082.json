@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "437325",
+    "ThreadId": "211082",
+    "Html": "<p>I have one sphere, and i want to rotate it. I can rotate it that by adding angle parameter like in Tutorial2 example.</p>\r\n<p>But, problem is because it is always rotating around (0,0), and i want to move axis of rotation on coordinates i want.</p>\r\n<p>When i translate it in CreateObject () on lets say (10,0), all i get is radius of rotation = 10;</p>\r\n<p>Ball translation in CreateObject():</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>ballTransNode2.Translation = <span style=\"color:blue\">new</span> Vector3(15, 15, 10);\r\nballTransParentNode = <span style=\"color:blue\">new</span> TransformNode(); \r\nkockaTransParentNode.Translation = Vector3.Zero;\r\n\r\n</pre>\r\n</div>\r\n</p>\r\n<p>Ball rotation in Update():</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>dxmov += gameTime.ElapsedGameTime.TotalSeconds * rotspeed;\r\nballTransParentNode.Rotation = Quaternion.CreateFromAxisAngle(Vector3.UnitZ, (<span style=\"color:blue\">float</span>)(dxmov));\r\n</pre>\r\n</div>\r\nI guess i'm missing something very simple...</p>",
+    "PostedDate": "2010-04-29T14:35:56.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437367",
+    "ThreadId": "211082",
+    "Html": "<p>Just assign the point you want the object to rotate around to ballTransParentNode.Translation</p>\r\n<p>&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-04-29T17:34:41.91-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437883",
+    "ThreadId": "211082",
+    "Html": "<p>Heh...i knew it was something obvious...</p>\r\n<p>Thanks.</p>",
+    "PostedDate": "2010-05-01T10:30:56.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

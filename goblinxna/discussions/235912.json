@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "526578",
+    "ThreadId": "235912",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>When I try to run tutorial 13 or any program at that, the camera displays the video with the AR in a new window on the screen. Is there a way to have that window remain while also having the video streamed to the goggles display? The only solution I've found\r\n is to clone the screen so I can visualize it on both. But I don't care to see my computer screen on the goggles. I want to only see the camera view on my goggles and a camera view in its own window on my computer.</p>\r\n<p>I'd appreciate any help you can give me.</p>\r\n<p>Thanks,</p>\r\n<p>Natalie</p>\r\n",
+    "PostedDate": "2010-11-24T11:12:42.57-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "526676",
+    "ThreadId": "235912",
+    "Html": "\r\n<p>Hmm... I don't know how to do that, but you will have to play with your graphics card setting to do such configuration.</p>\r\n<p>I always clone the display and run the program in full-screen mode when I use the goggles.&nbsp;</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-24T16:34:59.843-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

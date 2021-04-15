@@ -1,0 +1,122 @@
+[
+  {
+    "Id": "161030",
+    "ThreadId": "48264",
+    "Html": "<strong>I'm encountering a problem with Tutorial 8 :</strong><br>\r\n<br>\r\n<br>\r\nUnhandled Exception: System.DllNotFoundException: Unable to load DLL 'ARTagWrapp<br>\r\ner.dll': The referenced assembly is not installed on your system. (Exception fro<br>\r\nm HRESULT: 0x800736B3)<br>\r\n&nbsp;&nbsp; at GoblinXNA.Device.Vision.Marker.ARTagDllBridge.init_artag_wrapped(Int32 wid<br>\r\nth, Int32 height, Int32 bpp)<br>\r\n&nbsp;&nbsp; at GoblinXNA.Device.Vision.Marker.MarkerTracker.InitTracker(Single camera_fx,<br>\r\n&nbsp;Single camera_fy, String sArrayFilename) in J:\\downloads\\FYP2\\GoblinXNA\\src\\Dev<br>\r\nice\\Vision\\Marker\\MarkerTracker.cs:line 293<br>\r\n&nbsp;&nbsp; at GoblinXNA.SceneGraph.Scene.InitMarkerTracker(Single camera_fx, Single came<br>\r\nra_fy, String sArrayFilename) in J:\\downloads\\FYP2\\GoblinXNA\\src\\SceneGraph\\Scen<br>\r\ne.cs:line 1533<br>\r\n&nbsp;&nbsp; at Tutorial8___Optical_Marker_Tracking.Tutorial8.SetupMarkerTracking() in J:\\<br>\r\ndownloads\\FYP2\\GoblinXNA\\tutorials\\Tutorial8 - Optical Marker Tracking\\Tutorial8<br>\r\n.cs:line 121<br>\r\n&nbsp;&nbsp; at Tutorial8___Optical_Marker_Tracking.Tutorial8.Initialize() in J:\\downloads<br>\r\n\\FYP2\\GoblinXNA\\tutorials\\Tutorial8 - Optical Marker Tracking\\Tutorial8.cs:line<br>\r\n63<br>\r\n&nbsp;&nbsp; at Microsoft.Xna.Framework.Game.Run()<br>\r\n&nbsp;&nbsp; at Tutorial8___Optical_Marker_Tracking.Program.Main(String[] args) in J:\\down<br>\r\nloads\\FYP2\\GoblinXNA\\tutorials\\Tutorial8 - Optical Marker Tracking\\Program.cs:li<br>\r\nne 14<br>\r\n<br>\r\nUnhandled Exception: System.DllNotFoundException: Unable to load DLL 'ARTagWrapp<br>\r\ner.dll': The referenced assembly is not installed on your system. (Exception fro<br>\r\nm HRESULT: 0x800736B3)<br>\r\n&nbsp;&nbsp; at GoblinXNA.Device.Vision.Marker.ARTagDllBridge.close_artag_wrapped()<br>\r\n&nbsp;&nbsp; at GoblinXNA.Device.Vision.Marker.MarkerBase.Dispose() in J:\\downloads\\FYP2\\G<br>\r\noblinXNA\\src\\Device\\Vision\\Marker\\MarkerBase.cs:line 267<br>\r\n&nbsp;&nbsp; at GoblinXNA.SceneGraph.Scene.Dispose(Boolean disposing) in J:\\downloads\\FYP2<br>\r\n\\GoblinXNA\\src\\SceneGraph\\Scene.cs:line 1878<br>\r\n&nbsp;&nbsp; at Microsoft.Xna.Framework.GameComponent.Dispose()<br>\r\n&nbsp;&nbsp; at Microsoft.Xna.Framework.Game.Dispose(Boolean disposing)<br>\r\n&nbsp;&nbsp; at Microsoft.Xna.Framework.Game.Dispose()<br>\r\n&nbsp;&nbsp; at Tutorial8___Optical_Marker_Tracking.Program.Main(String[] args) in J:\\down<br>\r\nloads\\FYP2\\GoblinXNA\\tutorials\\Tutorial8 - Optical Marker Tracking\\Program.cs:li<br>\r\nne 14<br>\r\n<br>\r\n<br>\r\n<br>\r\n<strong>May you suggest any way to fix this problem ? Thanks.</strong><br>\r\n",
+    "PostedDate": "2009-02-23T10:09:35.837-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "161076",
+    "ThreadId": "48264",
+    "Html": "Hi zzz47,<br>\r\n<br>\r\nActually, this is an issue with the ARTag distribution. We realized this problem a while ago, and asked Mark Fiala (the developper of ARTag) to fix this problem. The problem is that if you have only VS 2008 installed, it won't work because the ARTagWrapper.dll is not compiled under VS 2008, and it depends on some of the libraries included with VS 2005. If you have both VS 2005 &amp; 2008 installed, then you won't see this error message. We have a solution for this, but we're waiting for Mark Fiala's response on this issue.<br>\r\n<br>\r\nThanks<br>\r\nOhan\r\n",
+    "PostedDate": "2009-02-23T11:57:45.843-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "161174",
+    "ThreadId": "48264",
+    "Html": "Hi ohanoda,<br>\r\n<br>\r\nThe problem is that I'm having both VS 05 and VC# Express 08 installed on my PC, so the fact that this problem still crops up is quite a puzzle. Can you let me know your current solution to this problem ?<br>\r\n<br>\r\nThanks<br>\r\n",
+    "PostedDate": "2009-02-23T15:32:41.523-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "161303",
+    "ThreadId": "48264",
+    "Html": "Hi zzz47,<br>\r\n<br>\r\nOk, then it sounds like it's just a linking error. Do you have the ARTagWrapper.dll in the /bin directory? If so, is the property of ARTagWrapper.dll in the solution explorer set to &quot;copy if newer&quot; in the output option?<br>\r\n<br>\r\nThe solution I mentioned before is that we wrapped the ARTag C++ library ourselves and compiled under VS 2008. Then the ARTagWrapper.dll works fine using standalone VS 2008 installation. But from what I see from the error message (I didn't see the error message in details before, so I assumed the problem was VS 2008 issue), it sounds like it's not this VS 2008 issue since it's a different error message. It sounds like a linking error.<br>\r\n<br>\r\nohan\r\n",
+    "PostedDate": "2009-02-24T00:19:51.09-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "161364",
+    "ThreadId": "48264",
+    "Html": "Hi ohanoda,<br>\r\n<br>\r\nI've put the artagwrapper.dll in the bin directory since the very beginning (otherwise the error message will be &quot;specified module not found&quot;, NOT &quot;referenced assembly is not installed&quot;), and I've changed its output property to &quot;copy if newer&quot; as you suggested, and still the same error message appears. I've also tried installing all the 2005 and 2008 redistributable packages but nothing has worked yet. Can you give me your copy of artagwrapper.dll then ? I need to get this up and running for a demo soon.<br>\r\n<br>\r\nThanks<br>\r\n",
+    "PostedDate": "2009-02-24T04:04:08.76-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167863",
+    "ThreadId": "48264",
+    "Html": "I'm having the same problem with ARTagWrapper.dll. It looks like the pathname is correct in the GoblinXNA code, and the ARTagWrapper.dll object within the project is also pointing to the right location. Finally, in the debug a file that ends with FileList.txt shows a list of translated (absolute) paths for libraries and other assets, and within their ARTagWrapper.dll is correctly pathed.<br>\r\n<br>\r\nThe only other similarity is that I only have the Visual Studio 2005 debugger, and I'm also running the C# Express Edition.<br>\r\n<br>\r\nColin<br>\r\n",
+    "PostedDate": "2009-03-13T12:11:01.273-07:00",
+    "UserRole": "Editor",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167869",
+    "ThreadId": "48264",
+    "Html": "Hi Colin,<br>\r\n<br>\r\nThis dll issue should be solved soon once Mark updates their distribution package with a .dll that works under VS 2008. If it's urgent to use the AR features in Goblin XNA, please contact me directly.<br>\r\n<br>\r\nThanks<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-13T12:28:14.87-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "171169",
+    "ThreadId": "48264",
+    "Html": "Hi,<br>\r\n<br>\r\nI'm having the same problem but i'm using vista 64, will it work on vista 64? I'll try to install VS 2005 too.<br>\r\n",
+    "PostedDate": "2009-03-23T21:45:32.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "171446",
+    "ThreadId": "48264",
+    "Html": "Hi Tasso,<br>\r\n<br>\r\nWe've never tested under Vista 64, but theoretically, it should work. We've only tested under XP 32, XP 64, and Vista 32. Please let me know if it doesn't work.<br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-24T12:10:44.247-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "171997",
+    "ThreadId": "48264",
+    "Html": "I'm getting a somewhat similar problem running under Vista X64. I have VS2008 and have later installed VS2005 Express for good measure. The error I get is this:<br>\r\n<blockquote>Unable to load DLL 'ARTagWrapper.dll': The application has failed to\r\nstart because its side-by-side configuration is incorrect. Please see\r\nthe application event log for more detail. (Exception from HRESULT:\r\n0x800736B1)<br>\r\n</blockquote>I've run out of ideas... Any news on the new dll?<br>\r\n<br>\r\nRegards<br>\r\nMichael<br>\r\n",
+    "PostedDate": "2009-03-25T12:13:56.867-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172423",
+    "ThreadId": "48264",
+    "Html": "For those who has problem with the ARTagWrapper.dll that came with the ARTag distribution, please contact me directly to resolve this issue. <br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-26T10:30:22.477-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172536",
+    "ThreadId": "48264",
+    "Html": "Hi Ohan,<br>\r\n<br>\r\nI installed VS 2005 and it worked, but when I run Tutorial 8 it shows that ARTag Dll is expired and I searched for a new version but I didn't find.<br>\r\n<br>\r\nTasso.<br>\r\n",
+    "PostedDate": "2009-03-26T15:00:11.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172549",
+    "ThreadId": "48264",
+    "Html": "Hi Tasso,<br>\r\n<br>\r\nWhen did you download the ARTag SDK from <a href=\"http://www.artag.net/sdk_download/artag_sdk_download.php\">http://www.artag.net/sdk_download/artag_sdk_download.php</a> ? The SDK should be updated if you downloaded it after 2/1/2009. If you still have the code to download, please try to download an updated version.<br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-26T15:55:01.857-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "186810",
+    "ThreadId": "48264",
+    "Html": "hi,<br>\r\n<br>\r\ncan anyone please provide me <strong>artag sdk</strong>? on the web there are some issues or smat download currently not available.<br>\r\n<br>\r\nplease if anyone have it mail me on my email: mania_usi@hotmail.com<br>\r\n<br>\r\nregards;<br>\r\nUzy\r\n",
+    "PostedDate": "2009-05-04T23:15:23.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "233965",
+    "ThreadId": "48264",
+    "Html": "<p>Hello everyone,</p>\r\n<p>I'm checking in to see if the problem with the MS C# 2008 problem has been resolved. I'm having the exact same issue as Friism.</p>\r\n<p>Thanks,</p>\r\n<p>&nbsp;</p>\r\n<p>Ggilmann</p>",
+    "PostedDate": "2009-09-12T19:37:05.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

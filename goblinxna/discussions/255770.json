@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "605132",
+    "ThreadId": "255770",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>Im running an Goblin XNA application that is invoked from WPF. Everything works fine. However when I exit from the Goblin App and when I run the application back again from the WPF. The following exception is thrown and thats the code are that its making\r\n to. Its actually the source code of UI2DRenderer. Any idea why this is happening?. I would really appriciate some help :)</p>\r\n<p>Object reference not set to an instance of an object.</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre> <span style=\"color:blue\">public</span> <span style=\"color:blue\">static</span> <span style=\"color:blue\">void</span> Flush(<span style=\"color:blue\">bool</span> clear, <span style=\"color:blue\">int</span> shiftAmount)\r\n        {\r\n            <span style=\"color:blue\">if</span> (spriteBatch == <span style=\"color:blue\">null</span>)\r\n                spriteBatch = <span style=\"color:blue\">new</span> SpriteBatch(State.Device);\r\n\r\n            <span style=\"color:green\">// Start rendering with alpha blending mode, and render back to front</span>\r\n            spriteBatch.Begin(SpriteBlendMode.AlphaBlend, SpriteSortMode.Immediate, SaveStateMode.None);\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-04-29T19:58:05.94-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605161",
+    "ThreadId": "255770",
+    "Html": "<p>Which reference is null, is it State.Device?&nbsp; If so, it would seem like for some reason this Flush function is getting called before the State.InitGoblin (that's where State.Device gets assigned).&nbsp; Please step through your program to make sure that State.InitGoblin is called before you reach this point.&nbsp; If that doesn't solve it, please post a StackTrace from your exception; that may help diagnose the problem.</p>",
+    "PostedDate": "2011-04-29T23:14:11.357-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "605222",
+    "ThreadId": "255770",
+    "Html": "<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>Hi,<br /><br />Thanks for the reply. It seems that spritebatch is not re-initilized by the UI2DRenderer. <br />I have taken a snapshot of the exception http://img543.imageshack.us/i/exception.png/<br /><br /> at Microsoft.Xna.Framework.Graphics.RenderState.set_CullMode(CullMode value)\r\n   at Microsoft.Xna.Framework.Graphics.SpriteBatch.SetRenderState()\r\n   at Microsoft.Xna.Framework.Graphics.SpriteBatch.Begin(SpriteBlendMode blendMode, SpriteSortMode sortMode, SaveStateMode stateMode, Matrix transformMatrix)\r\n   at Microsoft.Xna.Framework.Graphics.SpriteBatch.Begin(SpriteBlendMode blendMode, SpriteSortMode sortMode, SaveStateMode stateMode)\r\n   at GoblinXNA.UI.UI2D.UI2DRenderer.Flush(Boolean clear, Int32 shiftAmount) <span style=\"color: blue;\">in</span> E:\\GoblinXNAv3.5\\GoblinXNAv3.5\\src\\UA first chance exception of type <span style=\"color: #a31515;\">'System.InvalidOperationException'</span> occurred <span style=\"color: blue;\">in</span> Microsoft.Xna.Framework.dll\r\nA first chance exception of type <span style=\"color: #a31515;\">'System.NullReferenceException'</span> occurred <span style=\"color: blue;\">in</span> Microsoft.Xna.Framework.dll\r\nI\\UI2D\\UI2DRenderer.cs:line 638\r\n   at GoblinXNA.UI.UIRenderer.Draw(Single elapsedTime, Boolean clear, Boolean renderRightEye) <span style=\"color: blue;\">in</span> E:\\GoblinXNAv3.5\\GoblinXNAv3.5\\src\\UI\\UIRenderer.cs:line 393\r\n   at GoblinXNA.SceneGraph.Scene.RenderScene(Boolean renderUI) <span style=\"color: blue;\">in</span> E:\\GoblinXNAv3.5\\GoblinXNAv3.5\\src\\SceneGraph\\Scene.cs:line 2401\r\n   at GoblinXNA.SceneGraph.Scene.RenderScene() <span style=\"color: blue;\">in</span> E:\\GoblinXNAv3.5\\GoblinXNAv3.5\\src\\SceneGraph\\Scene.cs:line 2345\r\n   at GoblinXNA.SceneGraph.Scene.Draw(GameTime gameTime) <span style=\"color: blue;\">in</span> E:\\GoblinXNAv3.5\\GoblinXNAv3.5\\src\\SceneGraph\\Scene.cs:line 2706\r\n   at Microsoft.Xna.Framework.Game.Draw(GameTime gameTime)\r\n   at GT_Goblin.AR.Reality.Draw(GameTime gameTime) <span style=\"color: blue;\">in</span> E:\\Guitar_Tutor_Codebase\\Guitar Tutor\\Guitar Tutor\\XNA\\AR\\Reality.cs:line 343<br /><br /><br />Thanks <br /></pre>\r\n</div>\r\n</p>",
+    "PostedDate": "2011-04-30T05:10:57.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

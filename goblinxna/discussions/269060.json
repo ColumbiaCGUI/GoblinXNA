@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "658119",
+    "ThreadId": "269060",
+    "Html": "\r\n<p>Hi, I am using the tutorial 8 sample, and the collision between the box and the sphere it's working fine. Now, I need to add some other objects to the scene that are not related to a marker. I am able to add some spheres to the scene, but I am not able to\r\n detect the collision between this spheres and the objects on the markers (for example, collision between the box on the toolbar and one of these spheres marker independent).</p>\r\n<p>How can I do this?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance!!</p>\r\n",
+    "PostedDate": "2011-08-14T15:32:32.867-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "658629",
+    "ThreadId": "269060",
+    "Html": "<p>Please&nbsp;read this post (http://goblinxna.codeplex.com/discussions/207594) first to understand the configuration.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-08-15T18:17:22.237-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "658638",
+    "ThreadId": "269060",
+    "Html": "<p>Ohan, thanks for the reply. I already red the post you mention, but I couldn't get it. It talks about two markers, and in my case, one is on a marker and the other one isn't on a marker (it's an object&nbsp;hanging on the scene.RootNode).&nbsp;Maybe the case is the same, but I still don't get it.</p>\r\n<p>Here I got:</p>\r\n<p><span style=\"color: #0000ff;\">sphereNode_st.Model = new Sphere(3, 60, 60); </span><br /><span style=\"color: #0000ff;\">sphereNode_st.AddToPhysicsEngine = true; </span><br /><span style=\"color: #0000ff;\">sphereNode_st.Physics.Shape = ShapeType.Sphere; </span></p>\r\n<p><span style=\"color: #0000ff;\">TransformNode sphereTransNode_st = new TransformNode(); </span><br /><span style=\"color: #0000ff;\">sphereTransNode_st.Scale = new Vector3(0.9f, 0.9f, 0.9f); </span><br /><span style=\"color: #0000ff;\">sphereTransNode_st.Translation = new Vector3(-10, -10, -120); </span></p>\r\n<p><span style=\"color: #0000ff;\">Material sphereMaterial_st = new Material(); </span><br /><span style=\"color: #0000ff;\">sphereMaterial_st.Diffuse = new Vector4(0.5f, 0, 0, 1); </span><br /><span style=\"color: #0000ff;\">sphereMaterial_st.Specular = Color.White.ToVector4(); </span><br /><span style=\"color: #0000ff;\">sphereMaterial_st.SpecularPower = 10;</span><br /><span style=\"color: #0000ff;\">sphereNode_st.Material = sphereMaterial_st;</span></p>\r\n<p><span style=\"color: #0000ff;\">scene.RootNode.AddChild(sphereTransNode_st);</span><br /><span style=\"color: #0000ff;\">sphereTransNode_st.AddChild(sphereNode_st);</span></p>\r\n<p>And then I call the collision like you do:</p>\r\n<p><span style=\"color: #0000ff;\">NewtonPhysics.CollisionPair pair = new NewtonPhysics.CollisionPair(sphereNode_st.Physics, boxNode.Physics);</span><br /><span style=\"color: #0000ff;\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ((NewtonPhysics)scene.PhysicsEngine).AddCollisionCallback(pair, BoxSphereCollision);&nbsp;</span></p>\r\n<p><span style=\"color: #0000ff;\">&nbsp;</span></p>\r\n<p><span style=\"color: #000000;\">Obviously, I am missing someting, because I can see the collision, but the event is not firing, but when I collide the sphere and the box from the tutorial, it works Ok.</span></p>\r\n<p><span style=\"color: #000000;\">Can you give me a little explanation so I can understand what the problem is and how to solve it?</span></p>\r\n<p><span style=\"color: #000000;\">&nbsp;</span></p>\r\n<p><span style=\"color: #000000;\">Thanks&nbsp;a lot.</span></p>",
+    "PostedDate": "2011-08-15T18:59:13.097-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "659152",
+    "ThreadId": "269060",
+    "Html": "<p>The idea is the same in the post. The basic concept is that there is only one physics world and if you want to make the collision work properly, you need to associate the coordinate into one single space. Anything attached to a marker has its own coordinate system  that does not affect movements in the physics space (by design). So even if you move around a box attached on a marker, it stays at a fixed location in the physics space.</p>\n<p>Now, to make both the visualization and physics simulation correct, the best way I would suggest is to NOT attach your virtual object on the marker, but instead, attach it directly to the root node of the scene and updates its transform through NewtonPhysics.SetTransform  method in the Draw(...) call with the MarkerNode.WorldTransformation (make sure that you add this marker node to the root node of the scene so that it's updated properly) just like the tutorial. Then it should provide you with proper collision event.</p>\n<p>Ohan&nbsp;</p>",
+    "PostedDate": "2011-08-16T17:27:49.497-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "661214",
+    "ThreadId": "269060",
+    "Html": "<p>Excellent!! Thank you&nbsp;very much Ohan, that was it.</p>",
+    "PostedDate": "2011-08-21T09:14:31.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

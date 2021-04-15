@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "256656",
+    "ThreadId": "74995",
+    "Html": "<p>I am trying to use animation with skinnedModel, (dude.fbx).</p>\r\n<p>I wanna know how to use animation with goblinXNA V3.0.</p>\r\n<p>should I use 'xnanimation.dll' file??</p>\r\n<p>I will looking forward to your reply,</p>\r\n<p>and always thank you, Ohan&nbsp; :-)</p>",
+    "PostedDate": "2009-11-13T02:09:53.59-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "257182",
+    "ThreadId": "74995",
+    "Html": "<p>Hi,</p>\r\n<p>Model animation is not officially supported in the current release yet. We have an old version of XNAnimation working for internal use, but I believe there is a new version of XNAnimation available, and I haven't tested it yet. We may or may not officially support animation in the future release, so if you need it soon, it's probably better that you try to incorporate the animation library to Goblin yourself. Probably the best way to do this is to create your own AnimatedModel which extends Model class, AnimatedModelLoader which implements IModelLoader, and AnimatedModelShader which extends Shader class using the animation library.</p>\r\n<p>Thanks</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-11-14T21:47:01.693-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "257478",
+    "ThreadId": "74995",
+    "Html": "<p>If your taking votes, I vote you support&nbsp;animation&nbsp;in the future :)</p>",
+    "PostedDate": "2009-11-16T05:13:47.48-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

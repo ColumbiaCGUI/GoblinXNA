@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "742549",
+    "ThreadId": "295204",
+    "Html": "\r\n<p>ok, i browse through ted.com, and i see this:</p>\r\n<p>http://www.ted.com/talks/marco_tempest_the_augmented_reality_of_techno_magic.html</p>\r\n<p>so, my question is:</p>\r\n<p>1. is it possible for us to make this kind of application using goblinXNA?</p>\r\n<p>2. do any of you have any idea how to make this kind of application?</p>\r\n<p>&nbsp;</p>\r\n<p>thx... :)</p>\r\n<div id=\"_mcePaste\" style=\"left:-10000px; top:0px; width:1px; height:1px; overflow:hidden\">\r\n<img src=\"\" alt=\"\"></div>\r\n",
+    "PostedDate": "2012-02-05T23:37:40.66-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "742602",
+    "ThreadId": "295204",
+    "Html": "<p>that was really cool. thanks for sharing i suppose you can do some of that.</p>\r\n<p>you can use a ground array to display the animations on. but i dont know how you can do those animations. i guess they need to be pre-recorded video files.&nbsp;</p>\r\n<p>and instead of using a pen, you can use a &nbsp;toolbar marker type marker (something small).&nbsp;</p>\r\n<p>so let say you have a pre-recorded walking man, and a stable man figure. your program will see that there is a gap in the ground, so it will show the man walking and moving and stopping at the gap at that point it will show a stable figure. then using your small marker, you draw a line between the gap, and your program knows the gap is filled, then you play the pre-recorded video and the man continues to walk on your ground array.&nbsp;</p>\r\n<p>something like that should work i guess.</p>",
+    "PostedDate": "2012-02-06T00:18:00.603-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

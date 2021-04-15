@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "244062",
+    "ThreadId": "71556",
+    "Html": "<pre>Hi there, I am working in a augmented reality game and I have the following problem:<br><br>My program is a game, where all players move in an specific platform using their cameras to see the &quot;world&quot;.<br>Initially, players saw what the computer camera was showing, detecting the different markers that were shown (shows a virtual object over each marker)<br>Then I tried to make an aditional view for the user (besides the &quot;Camera View&quot;) that consists in a &quot;Map view&quot;,<br>where the player sees from above the hole game platform. For this purpose, what I do is the following:<br><br>- When the user selects the &quot;Map option&quot;, I save the 'Scene.RootNode' in an auxiliar variable.<br>- Then, I replace the Scene.RootNode for a new RootNode, where I add all the logic of the map view.<br>- Afterwards, when the user selects to go back to the &quot;Camera View&quot;, I replace the scene.RootNode for the auxiliar variable.<br><br> However, when I&acute;m trying my program, the following happens:<br><br>- The program starts by default in the &quot;Camera View&quot;. I show a marker to the camera, and an object is shown above the marker (expected result).<br>- Then, I go to the &quot;Map View&quot;, and everything is going as expected.<br>- Later, when I choose to go back to the &quot;Camera View&quot;, I show the same marker to the camera, and the object is not there !!!!<br><br>I&acute;ve debugged my project including the goblin library, and I noticed that the marker is recognized by the program, but it doesn&acute;t shows the<br>spaceship associated to that marker. <br>Also, this happens only to objects that are beside marker nodes because an object with only transform nodes above it doesn't have this problem and are shown allways,<br>as should be.<br>Any idea why? Is there anything I have to do when I give the scene a new RootNode that allready has a &quot;node tree&quot; below it, and in this &quot;tree&quot; there are marker nodes?<br><br>Thank you for your time!<br></pre>",
+    "PostedDate": "2009-10-09T16:37:33.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "244257",
+    "ThreadId": "71556",
+    "Html": "<p>Thanks for letting me know the problem.&nbsp;</p>\r\n<p>I've never tested replacing the root node that contains a marker node, but probably there is something that I never thought of.</p>\r\n<p>I'll try what you did, and see if I can fix the problem.</p>\r\n<p>Hopefully, I can include the fix in v3.3 which is expected to be released by the end of next week.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-10T15:09:06.133-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "246220",
+    "ThreadId": "71556",
+    "Html": "<p>Hi,</p>\r\n<p>Sorry, but I didn't have time to look into the problem yet, so it's not included in the v3.3, but I will update when I fix the problem.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-15T13:38:00.587-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "246316",
+    "ThreadId": "71556",
+    "Html": "<p>Ok, thank you anyway. I'll be waiting for that update ;)</p>",
+    "PostedDate": "2009-10-15T18:02:22.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

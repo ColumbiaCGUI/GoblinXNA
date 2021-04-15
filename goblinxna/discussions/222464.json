@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "476513",
+    "ThreadId": "222464",
+    "Html": "I received the following error message when trying to compile GoblinXNA v3.4 with ALVAR v1.3.0 and OpenCV v1.0.\r\n\r\nI ran the ALVARWrapper 1.3.0 project and successfully built the dll.\r\nI placed the dll in the corresponding output directory (as well as all dlls from the alvar libraries).\r\nI also placed all dlls from OpenCV v1.0 in the corresponding output directory.\r\n\r\n\r\nHowever, I am still receiving the following message:\r\n\r\n\r\n<br><br>\r\nSystem.DllNotFoundException was unhandled<br>\r\n  Message=&quot;Unable to load DLL 'ALVARWrapper.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)&quot;<br>\r\n  Source=&quot;GoblinXNA&quot;<br>\r\n  TypeName=&quot;&quot;<br>\r\n  StackTrace:<br>\r\n       at GoblinXNA.Device.Vision.ALVARDllBridge.alvar_init_camera(String calibFile, Int32 width, Int32 height)<br>\r\n       at GoblinXNA.Device.Vision.Marker.ALVARMarkerTracker.InitTracker(Object[] configs) in C:\\user\\GoblinXNAv3.4\\GoblinXNAv3.4\\src\\Device\\Vision\\Marker\\ALVARMarkerTracker.cs:line 360<br>\r\n       at Tutorial8___Optical_Marker_Tracking.Tutorial8.SetupMarkerTracking() in C:\\user\\GoblinXNAv3.4\\GoblinXNAv3.4\\GoblinXNAv3.4\\tutorials\\Tutorial8 - Optical Marker Tracking\\Tutorial8.cs:line 193<br>\r\n       at Tutorial8___Optical_Marker_Tracking.Tutorial8.Initialize() in C:\\user\\GoblinXNAv3.4\\GoblinXNAv3.4\\GoblinXNAv3.4\\tutorials\\Tutorial8 - Optical Marker Tracking\\Tutorial8.cs:line 110<br>\r\n       at Microsoft.Xna.Framework.Game.Run()<br>\r\n       at Tutorial8___Optical_Marker_Tracking.Program.Main(String[] args) in C:\\user\\GoblinXNAv3.4\\GoblinXNAv3.4\\GoblinXNAv3.4\\tutorials\\Tutorial8 - Optical Marker Tracking\\Program.cs:line 14<br>\r\n  InnerException: <br>\r\n\r\n\r\n\r\n\r\nSo, I now have the following dlls in my output directory and the goblinXNA output directory:<br>\r\n- alvar130.dll<br>\r\n- alvar130d.dll<br>\r\n- alvarplatform130.dll<br>\r\n- alvarplatform130d.dll<br>\r\n- ALVARWrapper.dll<br>\r\n- cv100.dll<br>\r\n- cvaux100.dll<br>\r\n- cvcam100.dll<br>\r\n- cxcore100.dll<br>\r\n- cxts001.dll<br>\r\n- DShowNET.dll<br>\r\n- GoblinXNA.dll<br>\r\n- highgui100.dll<br>\r\n- libguide40.dll<br>\r\n- Lidgren.Network.dll<br>\r\n- ml100.dll<br>\r\n- msvcm90.dll<br>\r\n- msvcp90.dll<br>\r\n- msvcr90.dll<br>\r\n- Newton.dll<br>\r\n- NewtonWrapper.dll<br>\r\n- Nuclex.Fonts.Content.TrueTypeImporter.dll<br>\r\n- Nuclex.Fonts.dll<br>\r\n- SkinnedModelPipeline.dll<br>\r\n<br>\r\n<br>\r\n<br>\r\nAm I missing something?  Why wouldn't it be able to load the ALVARWrapper.dll?\r\n\r\n",
+    "PostedDate": "2010-08-04T09:39:09.53-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "479741",
+    "ThreadId": "222464",
+    "Html": "That's all DLLs you need.\r\n\r\nHowever, it seems like depending on the machines, you may also need additional DLLs, and you can find out which dlls are missing by using the dependency walker: depends.exe (please google it). \r\n\r\nAlso, make sure you have restarted your machine after installing OpenCV 1.0.\r\n\r\nOhan",
+    "PostedDate": "2010-08-12T08:15:31.51-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "479956",
+    "ThreadId": "222464",
+    "Html": "After using the dependency walker, I was able to fix the problems and get everything running just fine.  Thank you very much for your time and help!<br><br><div>On Thu, Aug 12, 2010 at 8:15 AM, ohanoda <span dir=ltr>&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"margin:0 0 0 .8ex;border-left:1px #ccc solid;padding-left:1ex\">   <div> <p>From: ohanoda</p> <div>That's all DLLs you need.\r\n\r\nHowever, it seems like depending on the machines, you may also need additional DLLs, and you can find out which dlls are missing by using the dependency walker: depends.exe (please google it). \r\n\r\nAlso, make sure you have restarted your machine after installing OpenCV 1.0.\r\n\r\nOhan</div> <div> <p>Read the <a href=\"http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=222464&ANCHOR#Post479741\">full discussion online</a>.</p> <p>To add a post to this discussion, reply to this email (<a href=\"mailto:goblinxna@discussions.codeplex.com?subject=[goblinxna:222464]\">goblinxna@discussions.codeplex.com</a>)</p>\r\n <p>To start a new discussion for this project, email <a href=\"mailto:goblinxna@discussions.codeplex.com\">goblinxna@discussions.codeplex.com</a></p> <p>You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/thread/unsubscribe/222464\">unsubscribe</a> on CodePlex.com.</p>\r\n <p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at CodePlex.com</p> </div> </div> </blockquote></div><br>",
+    "PostedDate": "2010-08-12T18:01:23.803-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515157",
+    "ThreadId": "222464",
+    "Html": "\r\n<p>@ManInTheSuit: Could you explain what you did to solve the problem, I'm having the same trouble.</p>\r\n<p>Thanks!</p>\r\n",
+    "PostedDate": "2010-10-31T09:34:46.487-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "519831",
+    "ThreadId": "222464",
+    "Html": "\r\n<p>@fanfanprovok: you should run dependency walker with &quot;ALVARWrapper.dll&quot; (doesn't matter the version, 1.3 or 1.4) and see wich dll files are failing. Put this dll in bin directory of your project (ex: project/bin/release or project/bin/debug) and recompile\r\n it.&nbsp;Note that these missing dll must be in the same directory. alvarwrapper.dll</p>\r\n",
+    "PostedDate": "2010-11-10T01:22:55.397-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

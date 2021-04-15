@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "611664",
+    "ThreadId": "257363",
+    "Html": "\r\n<p>I have tried making some of my objects selectable in my application, but i dont get any result when i click something.</p>\r\n<p>The steps i've taken:</p>\r\n<ol>\r\n<li>create a scene </li><li>add physics engine to the scene </li><li>setup marker tracking </li><li>add groundmarker node. </li><li>create a transformation container with a scale (0.015 as my object i huge) </li><li>import several objects from an fbx file. </li><li>for some nodes i made them pickable, made their physics.shape either box or convexhull and set the .AddToPhysicsEngine value on true (some do not need to be pickable)\r\n</li><li>then i added them to the transformation container </li><li>and add the container to the groundmarker node. </li><li>the source for the pick handler is equal to that of the sample in tutorials. </li></ol>\r\n<p>But when i click anywhere in the scene, i always get the text nothing selected in the upper left corner. The list of selected objects also has 0 elements (so the message is correct).</p>\r\n<p>Could the problem be that objects are in a transNode, which is on a markerNode? Or could there be a problem with my alghorithm with creating a camera somewhere earlier (did something nifty to show a dialog box when there are several camera's attached.)</p>\r\n",
+    "PostedDate": "2011-05-12T06:54:52.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "621138",
+    "ThreadId": "257363",
+    "Html": "<p>When you move the markers, the objects added to the physics world do not move (which is by design). So to make the clicking work correctly, you will need to multiply your State.ViewMatrix with the markerNode.WorldTransformation for the Unproject method (when getting the near and far point for the ray casting).&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-05-31T19:38:13.427-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "621140",
+    "ThreadId": "257363",
+    "Html": "<p>See ARDomino project under projects/ which does very similar thing.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-05-31T19:38:49.5-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "917081",
+    "ThreadId": "257363",
+    "Html": "<p>Dear&nbsp;fjhamming!</p>\r\n<p>I've got the same problem, i think the scaling causes the problem...</p>",
+    "PostedDate": "2012-09-25T01:02:53.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

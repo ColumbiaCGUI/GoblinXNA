@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1436420",
+    "ThreadId": "642083",
+    "Html": "I'm primarily concerned with running Tutorial 8. I followed all instructions for installing ALVAR and ALVARWrapper2.0 and managed to build ALVARWrapper2.0.sln in Visual Studio 2013 to create the dll. However, when running the tutorials in Visual Studio 2013 it was unable to run them due to incompatibility. So, I downloaded Visual Studio 2010 and ran them there. I tried running Tutorial8 - Optical Marker Tracking - Windowsv10.csproj, Tutorial8 - Optical Marker Tracking - Windows.csproj, as well as Tutorials (Windows).sln and Tutorials (Windows)v10.sln and all of them give the same error - the project type is not supported by this installation. Has anyone else had this problem? Thanks in advance.<br />\n<br />\nEdit: Solved by properly installing Microsoft XNA Game Studios for Windows 8<br />\n",
+    "PostedDate": "2015-07-28T16:43:03.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

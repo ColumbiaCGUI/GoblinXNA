@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "491574",
+    "ThreadId": "226696",
+    "Html": "<p>Since I recognize that there are many people having trouble with the SampleCamCalib project that comes with ALVAR distribution, I will add a tool in Goblin XNA that performs the camera calibration and generates the calib.xml file in the next release.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-09T20:30:42.5-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "492743",
+    "ThreadId": "226696",
+    "Html": "<p>i'm creating tutorial for generating calib.xml</p>\r\n<p><a href=\"http://azerdark.wordpress.com/2010/09/13/how-to-generating-calib-xml-using-alvar/\">http://azerdark.wordpress.com/2010/09/13/how-to-generating-calib-xml-using-alvar/</a></p>\r\n<p>i hope it'll help :D</p>",
+    "PostedDate": "2010-09-13T05:48:59.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "493054",
+    "ThreadId": "226696",
+    "Html": "<p>That's cool!!</p>\r\n<p>I'll be creating a C# version so that it will be no longer necessary to build ALVAR for Goblin XNA, and simply use their dlls.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-13T16:23:27.527-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

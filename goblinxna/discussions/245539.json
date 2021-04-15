@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "564290",
+    "ThreadId": "245539",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>Im trying to build an Augmented Reality Project to teach various guitar lessons. I need to track the guitar in a camera feed and then identify frets and strings on the guitar. Ive been trying out ARToolkit and was discouraged since the project is no longer\r\n supported. Will it be possible to build this project using Goblin XNA. I could rely on marker based tracking If feature tracking is not supported. Any Input would be greatly appreciated.</p>\r\n<p>Thank you,</p>\r\n<p>Kind Regards,</p>\r\n<p>Janidu Wanigasuriya</p>\r\n",
+    "PostedDate": "2011-02-10T16:33:05.323-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "565032",
+    "ThreadId": "245539",
+    "Html": "<p>Yes, you should be able to use Goblin XNA for any type of AR application development. Feature tracking is currently not supported.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-02-11T22:17:25.13-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

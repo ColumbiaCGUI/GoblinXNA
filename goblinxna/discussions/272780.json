@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "672543",
+    "ThreadId": "272780",
+    "Html": "\r\n<p>is there a way to make objects with constant speed? or give them some force? or manually set their velocity? i set the initiallinearvelocity when the game starts and for collisionpairs i made static and kinetic energy equal to zero. however the object still\r\n slows down after a while.&nbsp;</p>\r\n",
+    "PostedDate": "2011-09-15T22:44:32.283-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "673425",
+    "ThreadId": "272780",
+    "Html": "<p>There's some damping value set in Newton. I forgot the exact property name, but if you take look at GeometryNode.Physics property's sub-properties, you will see some properties named with something \"Damping\". Try to set those to zeros. I think it should work, but don't remember exactly.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-18T17:53:02.54-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

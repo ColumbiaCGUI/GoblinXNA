@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "836560",
+    "ThreadId": "355820",
+    "Html": "\r\n<p>Can anyone tell me what to do if the alvar.h file has gone missing as this error is preventing the successful compilation of &nbsp;AlvarWrapper.sln</p>\r\n",
+    "PostedDate": "2012-05-15T03:21:38.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "837963",
+    "ThreadId": "355820",
+    "Html": "<p>if you've deleted the ALVAR download package then re-download it again and follow the installation guidelines.</p>",
+    "PostedDate": "2012-05-17T20:35:26.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

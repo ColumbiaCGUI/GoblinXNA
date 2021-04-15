@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "531288",
+    "ThreadId": "237183",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I'm using ALvar and Vuzix IWear with CamAR. I have an x amount of markers added to a scene, but only a subset of those markers are actually visible to the camera in a particular frame. Assuming I do not know which markers are visible, is there a function\r\n that would return a list of only those markers detected?&nbsp;Should I be using Process_Image() from AlvarMarkerTracker?&nbsp;</p>\r\n<p>Also, if I want to be able to detect a marker, but I do not want an image such as a Geometry node rendered, how would I go about disabling those images? Should I just disable the children of that node?&nbsp;</p>\r\n<p>Essentially what I am trying to accomplish is that only after detecting marker A, will geometric nodes be rendered on top of markers B, C and D.</p>\r\n<p>Thanks.</p>\r\n",
+    "PostedDate": "2010-12-05T03:49:39.97-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "532740",
+    "ThreadId": "237183",
+    "Html": "\r\n<p>You shouldn't call ProcessImage() yourself since it needs to be called at correct timing assuming that you track those markers through MarkerNode in the scene graph. There is no function that returns a list of all visible markers, but you can figure out\r\n which ones are visible by checking the MarkerNode.Found property for each marker node you've added assuming each marker node handles one marker, but not multi-marker. In the case of multi-marker, you need to register each marker ID through IMarkerTracker.AssociateMarker(...)\r\n and save the returned ID so that you can later check whether that ID is found in the video by calling IMarkerTracker.FindMarker(...) method.</p>\r\n<p>You can set GeometryNode.Enabled to false if you don't want to render them. Alternatively, you can set it's opacity (GeometryNode.Material.Diffuse.W) to 0.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-12-08T01:12:26.047-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

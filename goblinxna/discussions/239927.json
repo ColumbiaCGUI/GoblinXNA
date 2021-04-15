@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "541820",
+    "ThreadId": "239927",
+    "Html": "\r\n<p>I want to send a file from a server application to a client application...can i do this with the Lindgren network library???</p>\r\n",
+    "PostedDate": "2010-12-29T11:10:06.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "542037",
+    "ThreadId": "239927",
+    "Html": "\r\n<p>Yes, just read in your file as bytes and send it over.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-12-29T23:20:57.17-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

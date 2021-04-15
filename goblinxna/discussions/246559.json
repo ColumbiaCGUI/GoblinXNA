@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "568225",
+    "ThreadId": "246559",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I'm developing an Augmented Reality system based on Goblin. I'm planing to do some vision based processing using Opencv. I would be grateful If anyone can tell me how to call opencv functions within goblin.</p>\r\n<p>Thanks for your time.</p>\r\n",
+    "PostedDate": "2011-02-17T15:14:05.2-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "568312",
+    "ThreadId": "246559",
+    "Html": "<p>We have OpenCV 2.1 incorporated with Goblin XNA already, and we plan to release it for v3.6, but we wrapped only those functions we needed for our research, so you will still need to wrap certain functions yourself if you need them, but we basically wrap  most of the basic functionalities plus some advanced ones. We plan to release v3.6 sometime in mid 2011 (around May or June).</p>\n<p>If you want to start wrapping yourself, you first need to know how to call C functions from C#, and it's irrelevant whether you're using it with Goblin. We have OpenCVCapture which is an OpenCV version of IVideoCapture implementation, but you can still use  DirectShowCapture to pass image to OpenCV functions. The advantage of using OpenCVCapture is that it retrieves the image in IplImage structure, so we don't need to convert direct show video format to openCV video format. The only limitation is that it caps  at 30 FPS for some reason, while DirectShow implementation doesn't have this cap. &nbsp;</p>\n<p>Ohan</p>",
+    "PostedDate": "2011-02-17T19:19:18.027-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "593084",
+    "ThreadId": "246559",
+    "Html": "<p>Is there a way of calling opencv functions from the current release of Goblin.</p>\n<p>&nbsp;</p>\n<p>Thanks,</p>\n<p>Janidu</p>",
+    "PostedDate": "2011-04-06T13:20:55.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

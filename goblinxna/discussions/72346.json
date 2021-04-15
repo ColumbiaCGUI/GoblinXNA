@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "247033",
+    "ThreadId": "72346",
+    "Html": "<p>Anyone else having this issue?</p>\r\n<p>I cant even get it to work on tutorial 8?</p>\r\n<p>Everything was working just fine before upgrading to 3.3.&nbsp;</p>\r\n<p>In tutorial 8 I set&nbsp;markerLibrary = MarkerLibrary.ARTag; is there anything else that needs to be changed? Loads just fine, no errors, I see the cam video just cant detect any markers.</p>",
+    "PostedDate": "2009-10-18T07:23:33.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "247150",
+    "ThreadId": "72346",
+    "Html": "<p>Probably you're using the old ground board? Please see if the marker board you're using is the same as the current marker board used for Tutorial 8 with ARTag. It's called ground.pdf.</p>",
+    "PostedDate": "2009-10-18T22:01:00.48-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "248267",
+    "ThreadId": "72346",
+    "Html": "<p>Ohan, I am having the same problem with ARTag in the new version and also with ALVAR. The program builds and runs fine, and I am using the corresponding markers for ARTag and ALVAR, but when I point the camera to the marker, nothing appears in the screen. Any idea what could be the problem?&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-21T13:11:26.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "248943",
+    "ThreadId": "72346",
+    "Html": "<p>I'm using ALMAR and I'm having the same problem in tutorial 8, the markers are not recognised.</p>",
+    "PostedDate": "2009-10-23T03:56:49.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "249411",
+    "ThreadId": "72346",
+    "Html": "<p>Hi all,</p>\r\n<p>Sorry for late reply. Just got back from ISMAR conference.</p>\r\n<p>I just looked into the problem, and it seems like there was a little problem when I did copy &amp; paste from our internal Goblin code to the distribution code for Scene.cs file. There is no problem in the tutorial 8 code.</p>\r\n<p>I will fix this problem as soon as possible.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-24T23:15:20.733-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "249543",
+    "ThreadId": "72346",
+    "Html": "<p>Hi all,</p>\r\n<p>I just uploaded a new GoblinXNAv3.3.zip file that includes the fix in the Scene.cs code. I forgot to copy two lines of codes. You can either re-download this zip file, or get the updated Scene.cs from the SVN repository accessible under &quot;Source Code&quot;.</p>\r\n<p>Also, please note that if you're using ARTag, due to a memory conflict for accessing the openGL matrix using ARTag's code with my multi-threaded code, you will need to set State.IsMultiCore to false in order to see the objects overlaid on the ground marker. This used not to be the case since I was updating the marker transformation in the main-loop instead of multi-threaded code, but now I moved the marker update codes to multi-threaded code so that I can eliminate the delay between the marker update and video image update.</p>\r\n<p>As you will notice, without the multi-threading, it runs much slower, so we strongly recommend to switch to ALVAR from ARTag as it is being actively developed and there is a commercial license for ALVAR. If you insist on using ARTag, and would like to have it run faster with multi-threading, then you should comment out lines 1805~1815 and add replace lines 1171~1172 to markerNode.Update(0) in Scene.cs. However, you will see some delays between the marker position and the video image.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-25T14:14:04.22-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

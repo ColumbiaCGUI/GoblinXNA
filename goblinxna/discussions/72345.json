@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "247029",
+    "ThreadId": "72345",
+    "Html": "<p>I just realized that there is a new release for ALVAR, and it uses OpenCV 2.0 instead of 1.0 now. The wrappr I included in the distribution is for ALVAR 1.1.0 which is their initial release, so the wrapper may not compile (I haven't had time to check yet). Also, you should be installing OpenCV 2.0 instead of 1.0 if you're using version 1.1.83 of ALVAR.</p>\r\n<p>I may or may not have time to check the new release until I get back from ISMAR 09, which ends on 10/22, so please be aware that the wrapper may not compile. I will update the wrapper as soon as I get time, and will post information here.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-18T06:49:50.25-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "248280",
+    "ThreadId": "72345",
+    "Html": "<p>ALVAR 1.2.0 has been released, and apparently the wrapper doesn't compile to me. I'm using OpenCV 2.0, by the way, and even after changing the paths to my ALVAR and OpenCV installations I keep getting a linking error:</p>\r\n<p>LINK : fatal error LNK1181: cannot open input file 'alvar.lib'</p>\r\n<p>Is there anything I can do to fix this?</p>\r\n<p>Jocchan</p>",
+    "PostedDate": "2009-10-21T13:40:27.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "249116",
+    "ThreadId": "72345",
+    "Html": "<p>alvar.lib has been renamed to alvar120.lib</p>\r\n<p>Project &gt; Properties &gt; Linker &gt; Input</p>\r\n<p>&nbsp;</p>\r\n<p>these changes:</p>\r\n<p>alvarplatform.lib ---&gt; alvarplatform120.lib</p>\r\n<p>alvar.lib --&gt; alvarplatform120.lib</p>\r\n<p>&nbsp;</p>\r\n<p>now if i could solve my UNRESOLVED EXTERNAL SYMBOL _cvCreateImage!</p>\r\n<p>anyone? please?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks,</p>\r\n<p>&nbsp;</p>\r\n<p>_C</p>",
+    "PostedDate": "2009-10-23T12:41:43.257-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "249440",
+    "ThreadId": "72345",
+    "Html": "<p>Thanks Camb, I still have the same issue as you now.</p>\r\n<p>I tried digging in the ALVAR include files but couldn't find anything useful.</p>\r\n<p>Some help will be appreciated, thanks in advance.</p>\r\n<p>Jocchan</p>",
+    "PostedDate": "2009-10-25T04:19:14.46-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "249545",
+    "ThreadId": "72345",
+    "Html": "<p>Hi all,</p>\r\n<p>Sorry for the wait. Now I added a wrapper for ALVAR 1.2.0 in the wrappers directory. Please either re-download GoblinXNAv3.3.zip or get the ALVARWrapper1.2 project from the SVN repository accessible under &quot;Source Code&quot;.</p>\r\n<p>I also updated the Installation Guide.pdf for using ALVAR 1.2.0 with Goblin XNA.</p>\r\n<p>When you use the wrapper generated using ALVAR 1.2.0, you also need to copy the alvar120.dll and alvarplatform120.dll under Alvar1.2.0/bin/msvc90, and highgui100.dll under OpenCV/bin to the GoblinXNA/bin directory as noted in the updated Installation Guide. If you're using a wrapper generated using ALVAR 1.1.0, then you won't need these additional dlls.&nbsp;</p>\r\n<p>Note that we do not have a wrapper for 1.1.83 since it's an intermediate release, so please either get 1.1.0 or 1.2.0 from VTT.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-25T14:21:18.11-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "249685",
+    "ThreadId": "72345",
+    "Html": "<p>Thanks for helping, downloading now.</p>",
+    "PostedDate": "2009-10-26T04:17:55.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "469960",
+    "ThreadId": "220239",
+    "Html": "<p>Ohan and I discovered a&nbsp;nuance in ALVAR and a work around.&nbsp; If<br>you are in need of marker IDs &gt; 255, you need to tweak ALVAR's<br>resolution:</p>\r\n<p><a href=\"http://graphics.cs.columbia.edu/wiki/alvar#resolution\">http://graphics.cs.columbia.edu/wiki/alvar#resolution</a></p>",
+    "PostedDate": "2010-07-20T18:11:04.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

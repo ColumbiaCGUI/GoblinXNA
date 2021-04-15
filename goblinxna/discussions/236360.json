@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "528173",
+    "ThreadId": "236360",
+    "Html": "\r\n<p>hi guys!</p>\r\n<p>firstly, i have to say that G-XNA is awesome!</p>\r\n<p>and here is my problem:</p>\r\n<p>i have complied those tuts and&nbsp;succeed&nbsp;</p>\r\n<p>but some of them just cant run.</p>\r\n<p>when i start debug it. it stops in here :</p>\r\n<p>&quot;&nbsp;collision = Newton.NewtonCreateBox(nWorld,</p>\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;boundingBox.X * scale.X,</p>\r\n<p>&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;boundingBox.Y * scale.Y,&nbsp;</p>\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;boundingBox.Z * scale.Z, offsetMatrix);&quot;</p>\r\n<p>&nbsp;</p>\r\n<p>and says :</p>\r\n<p>Attempted to read or write protected memory. This is often an indication that other memory is corrupt.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>and for those complied but which cant run . also stop at the line that&nbsp;reference to the function that dont belong XNA.</p>\r\n<p>did i miss something?</p>\r\n<p>&nbsp;</p>\r\n<p>i can run tut &nbsp;1.2.3.6 and 7.</p>\r\n<p>&nbsp;</p>\r\n<p>thx for help</p>\r\n<p>sorry for my BAD english</p>\r\n<p>P.S i have followed the document to build DLL 2 times.&nbsp;</p>\r\n<p>Edit: well i found there is something wrong with NewtonPhysics.cs?</p>\r\n",
+    "PostedDate": "2010-11-29T04:38:38.983-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "528597",
+    "ThreadId": "236360",
+    "Html": "\r\n<p>Did you download the appropriate version of Newton as instructed in the installation guide?</p>\r\n<p>If you still have that problem with the correct Newton.dll, then I have no idea why it's complaining since we've tried it on many machines with different version of Windows and never encountered that problem.</p>\r\n<p>Ohan&nbsp;</p>\r\n",
+    "PostedDate": "2010-11-29T19:53:43.163-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "528599",
+    "ThreadId": "236360",
+    "Html": "\r\n<p>&nbsp;</p>\r\n<p>&nbsp;appropriate version of Newton?</p>\r\n<p>my bad...&nbsp;</p>\r\n<p>im using wrong versoin of&nbsp;Newton.</p>\r\n<p>&nbsp;</p>\r\n<p>thx for reply</p>\r\n",
+    "PostedDate": "2010-11-29T19:55:33.893-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

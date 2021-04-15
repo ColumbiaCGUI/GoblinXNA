@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "648206",
+    "ThreadId": "266696",
+    "Html": "<p>Hi, I am new at GoblinXNA, and I just installed all the programs needed, but on Camera Calibration solution I got an error that ALVARWraper.dll file isn't in the unmanaged folder. So I tried ALVARWraper solution and I got to the conclusion that I needed  ALVAR 1.1.0 so I installed it, and it worked, but I still get a crash:\"Attempting managed execution inside OS Loader lock. Do not attempt to run managed code inside a DllMain or image initialization function since doing so can cause the application to hang.\" Is ALVAR 1.1 problem or something else?</p>",
+    "PostedDate": "2011-07-27T03:56:33.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "648250",
+    "ThreadId": "266696",
+    "Html": "<p>Hi,</p>\r\n<p>Try use the Goblin 3.6, he use an ALVAR 1.5, expiration date in 2012.</p>",
+    "PostedDate": "2011-07-27T05:50:10.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "648264",
+    "ThreadId": "266696",
+    "Html": "<p>I am using 3.6, but cameracalibration in tools in goblin 3.6 is using ALVARWraper.dll, not ALVARWraper150.dll...</p>",
+    "PostedDate": "2011-07-27T06:22:35.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "648273",
+    "ThreadId": "266696",
+    "Html": "<p>I guess that it has to do something with several threads in a single process, but I'm not very good in threading, so, I don't realy know how to fix it...</p>",
+    "PostedDate": "2011-07-27T06:37:43.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "648278",
+    "ThreadId": "266696",
+    "Html": "<p>What your email ?</p>\r\n<p>I go to send my ALVARWrapper 1.5 project.</p>\r\n<p><span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">I had the same</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">problem</span></p>\r\n<p><span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\"><br /></span></p>",
+    "PostedDate": "2011-07-27T06:47:35.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "648286",
+    "ThreadId": "266696",
+    "Html": "<p>mastermana92@gmail.com</p>\r\n<p>thanx, I appreciate it.</p>",
+    "PostedDate": "2011-07-27T06:56:41.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "648289",
+    "ThreadId": "266696",
+    "Html": "<p>My ALVARWapper is configured with RELEASE and Win32</p>",
+    "PostedDate": "2011-07-27T06:58:29.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "648297",
+    "ThreadId": "266696",
+    "Html": "<p>I send.</p>\r\n<p><span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">Tell</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">if it worked</span></p>",
+    "PostedDate": "2011-07-27T07:13:39.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "648329",
+    "ThreadId": "266696",
+    "Html": "<p>Works! Thank you very much!</p>",
+    "PostedDate": "2011-07-27T08:08:58.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "650546",
+    "ThreadId": "266696",
+    "Html": "<p>Hi, apparently I'm having the same problem as mastermania experienced. <a class=\"UserProfileLink\" href=\"http://www.codeplex.com/site/users/view/henriquefirewall\">henriquefirewall</a> ,could you please send me your ALVARWrapper project as well. <br />Email : sabry.moulana@gmail.com</p>\r\n<p>Thanks in advance</p>",
+    "PostedDate": "2011-08-01T07:24:27.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "650570",
+    "ThreadId": "266696",
+    "Html": "<p>Hi sabryM</p>\r\n<p>I send.</p>\r\n<p><span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">Tell</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">if it worked</span></p>",
+    "PostedDate": "2011-08-01T08:02:31.713-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

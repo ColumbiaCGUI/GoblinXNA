@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "448364",
+    "ThreadId": "214117",
+    "Html": "<p>Is it possible to create stand alone applications that make use of Goblin XNA? For example, a zip file that contains an exe of my application plus the dll files required to run? I know it requires OpenCV and other installed applications but I'm wondering that if I simply have the proper libraries where they want to be if I could create a more portable version of my application?</p>",
+    "PostedDate": "2010-05-27T13:21:29.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "448413",
+    "ThreadId": "214117",
+    "Html": "Yes. \r\n\r\nGoblin XNA itself requires:\r\n1. XNA 3.1 redistributable (http://www.microsoft.com/downloads/details.aspx?FamilyID=53867a2a-e249-4560-8011-98eb3e799ef2&displaylang=en)\r\n2. .NET 3.5 framework (http://www.microsoft.com/downloads/details.aspx?FamilyID=333325fd-ae52-4e35-b531-508d977d32a6&DisplayLang=en)\r\n\r\nOpenCV installation requirement is specific to ALVAR implementation. \r\n\r\nOther than that, you simply need:\r\n1. All of the necessary DLLs\r\n2. .exe file\r\n3. Contents compiled by XNA (e.g., .xnb files)",
+    "PostedDate": "2010-05-27T14:59:14.023-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

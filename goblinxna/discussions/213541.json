@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "446291",
+    "ThreadId": "213541",
+    "Html": "<p>Hello Ohan and everyone else,</p>\r\n<p>I'm having an extremely weird problem with networking. I can send my scene from the server to the client. For this I used some save/load functions I had made earlier so I just have to send the name of the XML file to open. I can see&nbsp;the transfer works correctly since the SceneGraphDisplay tool shows every added node with&nbsp;the correct transforms on the client side.&nbsp;&nbsp;The server and client are running on the same machine by the way.</p>\r\n<p>Here's the problem, on the client side, my models appear reversed, as if they had a reflexion applied to them. But like I said, the scenegraphdisplay shows that every node is&nbsp;correctly loaded. I've been checking in the last couple of days for differences with the&nbsp;networking tutorial (10 i think)&nbsp;but can'T find any. At this point I'm wondering if it might not be something to do with the lidgren library... Maybe it has something to do with&nbsp;multiple cameras or something? Are you aware of such a problem?</p>\r\n<p>Alright, thanks for your time!</p>\r\n<p>Bruno<span style=\"line-height:0;display:none\">&nbsp;</span></p>",
+    "PostedDate": "2010-05-22T20:09:00.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "446348",
+    "ThreadId": "213541",
+    "Html": "By the way, if you started off from Tutorial 10, then the view position of the server and the client is different on purpose, and the models will look reversed since they are looking at the scene from reversed side. You probably want to check the position and orientation of the camera for both the server and the client.\r\n\r\nOhan",
+    "PostedDate": "2010-05-23T04:11:24.197-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "446373",
+    "ThreadId": "213541",
+    "Html": "<p>Thanks for the answer,</p>\r\n<p>However, I didn't not start off from tutorial 10. I already had an project going and I added the needed parts for networking. I do not use the CreateCamera Sub that is in tutorial 10. If anything, my camera creation loks like the one in tutorial 8 since I'm using marker tracking by webcams. Basically my camera creation is made by using the InitVideoCapture function.</p>\r\n<p>Bruno</p>",
+    "PostedDate": "2010-05-23T06:23:55.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "446445",
+    "ThreadId": "213541",
+    "Html": "<p>hmm... then I have no idea what's wrong. I've never tried transferring the entire scene graph to the client. I usually transmit the minimum information to reduce network overhead between server and clients.p[p[p[p[p[p[p[p[p[p[p[p[p[p[p[p[p[p[p[p[p[p[</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-05-23T14:19:01.11-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

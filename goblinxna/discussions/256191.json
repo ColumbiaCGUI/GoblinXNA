@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "606628",
+    "ThreadId": "256191",
+    "Html": "\r\n<p>Is it possible to use goblin in XNA for Windows phone 7&nbsp; ??</p>\r\n",
+    "PostedDate": "2011-05-03T12:11:26.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "610823",
+    "ThreadId": "256191",
+    "Html": "<p>You'll need xna studio 4.0 for wp7. It seems that you'll need to wait until the official release for Goblin for XNA 4.0. (the beta is already running, but i don't know for sure if you can run the samples on your phone, i do see some things happening.)</p>",
+    "PostedDate": "2011-05-11T03:20:45.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "621141",
+    "ThreadId": "256191",
+    "Html": "<p>It won't work right out of Goblin XNA 4.0 for the release we will make. We have a working version for WM7, but we will release it much later after the Goblin XNA 4.0 release.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-05-31T19:41:12.117-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

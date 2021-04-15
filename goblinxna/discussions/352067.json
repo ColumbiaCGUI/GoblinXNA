@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "822931",
+    "ThreadId": "352067",
+    "Html": "\r\n<p>hi,&nbsp;</p>\r\n<p>is the principle of 6DOF(<span>rotation and translation)</span> used in goblin XNA? in which file .cs &nbsp;can I get the 6DOF using my own camera?</p>\r\n<p>I've read the maual guide of goblin but i have difficuilties in finding this aspect.</p>\r\n<p>&nbsp;</p>\r\n<p>best regards</p>\r\n<p>&nbsp;</p>\r\n<p>salvo</p>\r\n",
+    "PostedDate": "2012-04-12T08:15:28.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "825450",
+    "ThreadId": "352067",
+    "Html": "<p>Sorry, but I don't quite understand your question. Are you trying to find the camera pose relative to a maker?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-04-18T07:53:52.22-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "827900",
+    "ThreadId": "352067",
+    "Html": "<p>yes, i'm trying to find the camera pose relative to the marker but i have a lot of difficulties to find it. There should be an \"Update\" method in which the program detects the position of the camera relative to a marker and it updates every time it changes, is it correct?</p>\r\n<p>I thing there's something like this in scene.cs but i'm not so sure.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>best regards</p>\r\n<p>&nbsp;</p>\r\n<p>salvo</p>",
+    "PostedDate": "2012-04-24T08:09:27.843-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "828000",
+    "ThreadId": "352067",
+    "Html": "<p>The marker transform is always relative to the camera. So your camera pose relative to the marker is simply an inverse of the marker transform (e.g., Matrix.Invert(markerNode.WorldTransformation)</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-04-24T11:07:25.15-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "828816",
+    "ThreadId": "352067",
+    "Html": "<p>Ok, thanks Ohan. But, if I would extract the cameraPose values through my own function and print them on the screen, should I Put the source code in dominogame.cs or in scene.cs?&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>best regards</p>\r\n<p>&nbsp;</p>\r\n<p>Salvo</p>",
+    "PostedDate": "2012-04-26T01:57:11.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "829410",
+    "ThreadId": "352067",
+    "Html": "<p>It's up to you, but design-wise, it's better to put in dominogame.cs. Unless it's really necessary, I wouldn't recommend changing the GoblinXNA framework codes since it'll be updated for additional functionality and bug fixes from time to time.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-04-27T08:30:01.003-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "829418",
+    "ThreadId": "352067",
+    "Html": "<p>Ok, I'm going to put it into dominoGame.cs.</p>\r\n<p>I saw that markerNode is a 4X4 Matrix. What are the components of this matrix? I supposed that one is position, one is direction and one is rotation of the camera. Might it be? However I can't understand what could it be the fourth component,</p>\r\n<p>&nbsp;</p>\r\n<p>best regards</p>\r\n<p>&nbsp;</p>\r\n<p>Salvo</p>",
+    "PostedDate": "2012-04-27T08:51:29.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "829609",
+    "ThreadId": "352067",
+    "Html": "<p>&nbsp;</p>\r\n<h3 class=\"groups title\">I am a final year student reading for the Software Engineering degree offered at Informatics Institute of Technology in collaboration with University of Westminster.Please fill this questionaire.</h3>\r\n<p class=\"summary\">I am a final year student reading for the Software Engineering degree offered at Informatics Institute of Technology in collaboration with University of Westminster. I have developed an interactive Augmented Reality System for Virtual Dissecting of Human Stomach. The purpose of this application is to provide interactive learning experiences for dissecting a virtual 3D stomach while identifying the main parts which are inside the stomach. Users can use their hands to interact with the virtual stomach with the help of markers.</p>\r\n<p class=\"summary\">Please comment on the technology selection<br /><br />Please be kind enough to fill the question air attached here<a rel=\"nofollow\" href=\"http://www.linkedin.com/redirect?url=https%3A%2F%2Fdocs%2Egoogle%2Ecom%2Fspreadsheet%2Fviewform%3Fformkey%3DdHhxU3FqNUZBc21SdDVmemVyZ3NpT1E6MQ&amp;urlhash=3Fbv&amp;_t=tracking_anet\" target=\"blank\">https://docs.google.com/spreadsheet/viewform?formkey=dHhxU3FqNUZBc21SdDVmemVyZ3NpT1E6MQ</a><br /><br />The prototype can be seen in this link&nbsp;<a rel=\"nofollow\" href=\"http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Eyoutube%2Ecom%2Fwatch%3Fv%3DsAcKA7vCJ3I%26feature%3Dyoutu%2Ebe&amp;urlhash=vWDh&amp;_t=tracking_anet\" target=\"blank\">http://www.youtube.com/watch?v=sAcKA7vCJ3I&amp;feature=youtu.be</a></p>",
+    "PostedDate": "2012-04-27T23:23:06.453-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "834442",
+    "ThreadId": "352067",
+    "Html": "<p>Hi Ohan, how can I get the X Y Z values of camera position starting from the inverse matrix of markerNode? maybe i'm missing something.</p>\n<p>&nbsp;</p>\n<p>best regards</p>\n<p>&nbsp;</p>\n<p>salvo</p>",
+    "PostedDate": "2012-05-10T01:36:07.723-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

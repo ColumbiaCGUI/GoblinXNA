@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "836857",
+    "ThreadId": "355904",
+    "Html": "\r\n<p>Hello, I'm facing weird problem ... when I compile my code it runs fine.. but when I publish it and run the exe file it shows me an error that &quot;Camera Calibration File is either not specified or not found&quot; but Ive attached camera callibration file.... here\r\n u are the picture link :: http://dl.dropbox.com/u/4876897/Untitled1.png</p>\r\n",
+    "PostedDate": "2012-05-15T12:32:19.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "836860",
+    "ThreadId": "355904",
+    "Html": "<p>I've solved the problem ... Thanks by the way .. I've to add the files before publishing it ... :)</p>",
+    "PostedDate": "2012-05-15T12:34:33.233-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

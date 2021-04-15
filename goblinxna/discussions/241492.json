@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "548193",
+    "ThreadId": "241492",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I just wanted to ask whether it is possible to import .max or .obj file formats in GoblinXNA project and whether you can provide any tutorial that I can follow to import such file formats. I need it urgently please.</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-01-12T11:33:47.47-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "548333",
+    "ThreadId": "241492",
+    "Html": "\r\n<p>Take look at this tutorial</p>\r\n<p><a href=\"http://create.msdn.com/en-US/education/catalog/sample/custom_model_importer\">http://create.msdn.com/en-US/education/catalog/sample/custom_model_importer</a></p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-01-12T16:06:13.173-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "548429",
+    "ThreadId": "241492",
+    "Html": "\r\n<div dir=\"ltr\">Thanks a lot for your reply..It is really helpful\r\n<div>I just had some problems when I tried to implement that to my code. I added the ObjImporter project to the solution, and added the necessary stuff in the Game.cs. I added also all the necessary references but I got the following errors:</div>\r\n<div><br>\r\n</div>\r\n<div>\r\n<div>Error<span style=\"white-space:pre\"> </span>1<span style=\"white-space:pre\"> </span>\r\n'GoblinXNA.Graphics.Model' does not contain a definition for 'Bones' and no extension method 'Bones' accepting a first argument of type 'GoblinXNA.Graphics.Model' could be found (are you missing a using directive or an assembly reference?)<span style=\"white-space:pre\">\r\n</span></div>\r\n<div><span style=\"white-space:pre\"><br>\r\n</span></div>\r\n<div><span style=\"white-space:pre\">Error 2 'GoblinXNA.Graphics.Model' does not contain a definition for 'CopyAbsoluteBoneTransformsTo' and no extension method 'CopyAbsoluteBoneTransformsTo' accepting a first argument of type 'GoblinXNA.Graphics.Model' could\r\n be found (are you missing a using directive or an assembly reference?) </span></div>\r\n<div><span style=\"white-space:pre\"><br>\r\n</span></div>\r\n<div><span style=\"white-space:pre\">Error 3 'GoblinXNA.Graphics.Model' does not contain a definition for 'Meshes' and no extension method 'Meshes' accepting a first argument of type 'GoblinXNA.Graphics.Model' could be found (are you missing a using directive\r\n or an assembly reference?) </span></div>\r\n<div><span style=\"white-space:pre\"><br>\r\n</span></div>\r\n<div><span style=\"white-space:pre\"><br>\r\n</span></div>\r\n<div><span style=\"white-space:pre\">a</span>lso when I tried to comment these errors,,I got a runtime error saying that</div>\r\n<div>Error loading &quot;Tank&quot;. File contains Microsoft.Xna.Framework.Graphics.Model but trying to load as GoblinXNA.Graphics.Model.</div>\r\n<div><br>\r\n</div>\r\n<div>can you please advise me what to do</div>\r\n<div><br>\r\n</div>\r\n<div>Thanks a lot</div>\r\n<div><span style=\"white-space:pre\"><br>\r\n</span></div>\r\n<div><br>\r\n</div>\r\n<div><br>\r\n</div>\r\n<div>Best Regards,<br>\r\nSophia Wadie<br>\r\nThe American University in Cairo (AUC)<br>\r\nComputer Science Student<br>\r\n<br>\r\n<br>\r\n<div>On Thu, Jan 13, 2011 at 2:06 AM, ohanoda <span dir=\"ltr\">&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"margin:0 0 0 .8ex; border-left:1px #ccc solid; padding-left:1ex\">\r\n<div>\r\n<p>From: ohanoda</p>\r\n<div>\r\n<p>Take look at this tutorial</p>\r\n<p><a href=\"http://create.msdn.com/en-US/education/catalog/sample/custom_model_importer\" target=\"_blank\">http://create.msdn.com/en-US/education/catalog/sample/custom_model_importer</a></p>\r\n<p>Ohan</p>\r\n</div>\r\n<div>\r\n<p>Read the <a href=\"http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=241492&ANCHOR#Post548333\" target=\"_blank\">\r\nfull discussion online</a>.</p>\r\n<p>To add a post to this discussion, reply to this email (<a href=\"mailto:goblinxna@discussions.codeplex.com?subject=[goblinxna:241492]\" target=\"_blank\">goblinxna@discussions.codeplex.com</a>)</p>\r\n<p>To start a new discussion for this project, email <a href=\"mailto:goblinxna@discussions.codeplex.com\" target=\"_blank\">\r\ngoblinxna@discussions.codeplex.com</a></p>\r\n<p>You are receiving this email because you subscribed to this discussion on CodePlex. You can\r\n<a href=\"https://goblinxna.codeplex.com/discussions/241492/unsubscribe/\" target=\"_blank\">\r\nunsubscribe</a> on CodePlex.com.</p>\r\n<p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at CodePlex.com</p>\r\n</div>\r\n</div>\r\n</blockquote>\r\n</div>\r\n<br>\r\n</div>\r\n</div>\r\n</div>\r\n",
+    "PostedDate": "2011-01-12T20:25:26.93-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "548430",
+    "ThreadId": "241492",
+    "Html": "\r\n<p>&nbsp;</p>\r\n<p>Thanks a lot for your reply..It is really helpful</p>\r\n<div>I just had some problems when I tried to implement that to my code. I added the ObjImporter project to the solution, and added the necessary stuff in the Game.cs. I added also all the necessary references but I got the following errors:</div>\r\n<div>\r\n<div>Error<span> </span>1<span> </span>'GoblinXNA.Graphics.Model' does not contain a definition for 'Bones' and no extension method 'Bones' accepting a first argument of type 'GoblinXNA.Graphics.Model' could be found (are you missing a using directive or an\r\n assembly reference?)<span> </span></div>\r\n<div><span><br>\r\n</span></div>\r\n<div><span>Error 2 'GoblinXNA.Graphics.Model' does not contain a definition for 'CopyAbsoluteBoneTransformsTo' and no extension method 'CopyAbsoluteBoneTransformsTo' accepting a first argument of type 'GoblinXNA.Graphics.Model' could be found (are you missing\r\n a using directive or an assembly reference?) </span></div>\r\n<div><span><br>\r\n</span></div>\r\n<div><span>Error 3 'GoblinXNA.Graphics.Model' does not contain a definition for 'Meshes' and no extension method 'Meshes' accepting a first argument of type 'GoblinXNA.Graphics.Model' could be found (are you missing a using directive or an assembly reference?)\r\n</span></div>\r\n<div><span><br>\r\n</span></div>\r\n<div><span><br>\r\n</span></div>\r\n<div><span>a</span>lso when I tried to comment these errors,,I got a runtime error saying that</div>\r\n<div>Error loading &quot;Tank&quot;. File contains Microsoft.Xna.Framework.Graphics.Model but trying to load as GoblinXNA.Graphics.Model.</div>\r\n<div>can you please advise me what to do</div>\r\n<div>Thanks a lot</div>\r\n</div>\r\n",
+    "PostedDate": "2011-01-12T20:25:53.043-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "550305",
+    "ThreadId": "241492",
+    "Html": "\r\n<p>What exactly is your code?</p>\r\n<p>The only thing you have to do is to change the ModelImporter of your .obj file in the VS solution explorer to ObjImporter.</p>\r\n<p>It looks like you're trying to load the .obj as GoblinXNA.Graphics.Model, which is incorrect.</p>\r\n<p>The importer models are in&nbsp;Microsoft.Xna.Framework.Graphics.Model format, and these format are converted to&nbsp;GoblinXNA.Graphics.Model in the ModelLoader class.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-01-16T20:05:26.61-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

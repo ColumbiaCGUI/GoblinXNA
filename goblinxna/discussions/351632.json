@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "821436",
+    "ThreadId": "351632",
+    "Html": "\r\n<p>Hi, i had some problem on getting MarkerNode.markerID<br>\r\n<br>\r\nIn my project i'm using multiple marker in XML, e.g. TestMarker.xml. How to get each MarkerID in those XML?<br>\r\n<br>\r\nHere is my code:<br>\r\n<br>\r\nplayerMarkerNode = new MarkerNode(scene.MarkerTracker, &quot;TestMarker.xml&quot;);<br>\r\n<br>\r\nWhen i get the markerID from playerMarkerNode, i only get value &quot;TestMarker.xml&quot;. Is there any solution about this problem?<br>\r\n<br>\r\nsorry for my bad english. Thx anyway :D&nbsp;</p>\r\n",
+    "PostedDate": "2012-04-08T22:33:35.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "825446",
+    "ThreadId": "351632",
+    "Html": "<p>It is designed to return the marker array file for multi-marker, and it's used for associating a pose matrix with the appropriate marker node, so it's not something useful for you. I don't provide any APIs to return the marker IDs stored in the xml file. You will either have to parse the XML yourself, or simply, hard-code it since you know what IDs are in the xml.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-04-18T07:50:12.537-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "825486",
+    "ThreadId": "351632",
+    "Html": "<p>Ok. Thanks for your help!</p>",
+    "PostedDate": "2012-04-18T08:45:42.523-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

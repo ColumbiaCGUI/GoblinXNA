@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "673404",
+    "ThreadId": "272993",
+    "Html": "\r\n<p>Hey,</p>\r\n<p>&nbsp;</p>\r\n<p>I've started on a AR project on school, and I thought I could use this program to learn a thing or two, but I can&acute;t get it to work.</p>\r\n<p>I&acute;ve followed the instructions to download the XNA game studio, installed it, added the newton dll, but whenever I try to open one of the tutorials, all I get is either a random piece of code, or I do get a menu, which doesnt do anything.</p>\r\n<p>&nbsp;</p>\r\n<p>Any help on how to get this program working would be appreciated.</p>\r\n",
+    "PostedDate": "2011-09-18T15:32:31.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "673426",
+    "ThreadId": "272993",
+    "Html": "<p>Are you using VS 2008, not VS 2010?</p>",
+    "PostedDate": "2011-09-18T17:56:22.513-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

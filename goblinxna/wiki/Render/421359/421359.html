@@ -1,0 +1,109 @@
+<div class="wikidoc">
+<h1 style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><strong><span style="font-family:'Century Schoolbook'"><span>Creating Custom Markers using ALVAR</span></span></strong></h1>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">The good people at VTT have created a program for creating marker images&nbsp;that is&nbsp;available when
+ you install the ALVAR libraries. (As of this writing, the source code for the sample programs can be found in the &quot;Example programs&quot; section at
+<a href="http://virtual.vtt.fi/virtual/proj2/multimedia/alvar.html"><span style="text-decoration:underline"><span style="text-decoration:underline"><span style="color:#0000ff; font-size:small"><span style="text-decoration:underline"><span style="color:#0000ff; font-size:small"><span style="text-decoration:underline"><span style="color:#0000ff; font-size:small"><span>http://virtual.vtt.fi/virtual/proj2/multimedia/alvar.html</span></span></span></span></span></span></span></span></a>.)
+</span></p>
+<h2 style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><strong><span style="font-family:'Century Schoolbook'"><span>Compiling the Sample Program</span></span></strong></h2>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">To generate the example program provided by Alvar, &quot;SampleMarkerCreator&quot;, you will need to install a variety
+ of utilities and programs, including OpenCV 1.0, GLUT 3.7, and CMake 2.6. OpenCV will have been installed already if you followed the directions in the GoblinXNA Installation Guide to install Alvar. In addition, to compile the program you will need either
+ Microsoft Visual Studio 2003, 2005, or 2008, or MinGW and GNU Make.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Let's start off by obtaining the GLUT libraries. A variety of compiled and uncompiled code can be found
+ at <a href="http://www.opengl.org/resources/libraries/glut/glut_downloads.php"><span style="color:blue">http://www.opengl.org/resources/libraries/glut/glut_downloads.php</span></a>, and for Intel systems the precompiled libraries can be found at
+<a href="http://www.opengl.org/resources/libraries/glut/glutdlls37beta.zip"><span style="color:blue">http://www.opengl.org/resources/libraries/glut/glutdlls37beta.zip</span></a>. Unzip these to your desired location (you will point to them later.)</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218939" border="0" alt="" width="434" height="372" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span style="font-size:10.0pt; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Next install CMake 2.6, found at
+<a href="http://www.cmake.org/files/v2.6/cmake-2.6.4-win32-x86.exe"><span style="color:blue">http://www.cmake.org/files/v2.6/cmake-2.6.4-win32-x86.exe</span></a>. When you are asked, choose to save the file and then launch it. In Google Chrome it looks like
+ this (see the bottom of the screen shot):</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218940" border="0" alt="" width="434" height="302" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">When asked if you wish to allow the program to run, choose &quot;Yes&quot;.</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218941" border="0" alt="" width="352" height="199" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">On the first screen click &quot;Next&quot;, and on the next screen click &quot;I Agree&quot; (after carefully reading the disclaimer
+ and pondering its ramifications, of course). Then you need to tell it to add itself to the path for the current user (or all users if you wish):
+</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218942" border="0" alt="" width="387" height="301" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">You can accept the default installation location or choose one of your own. Likewise, you can select the
+ Start Menu folder. Then click Install. If all goes well you should see this screen, and can click &quot;Finish&quot;.</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218943" alt=""></span><span style="font-size:10.0pt; font-family:&quot;Century Schoolbook&quot;"><span>&nbsp;</span></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">At this point you probably need to log off and on again so that your environment variables are reloaded
+ and the CMake executable will be in your path. Next you can generate the development environment by locating the build script in the Alvar installation directory, located here on my machine (don't launch it yet):
+</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218945" border="0" alt="" width="434" height="322" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">To run this you need to be an administrator. Using the Start Menu, find the Command Terminal in the menu
+ and right-click it:</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218946" border="0" alt="" width="261" height="405" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">In the context menu that appears, choose to &quot;Run as administrator&quot;. Then navigate to the location of your
+ generate.bat file and run that. (Depending upon your path, you may need to surround the command in double quotes.) It will take a moment to build, but then you should see this:
+</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218949" border="0" alt="" width="434" height="220" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Next launch the GUI version of CMake:</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218950" border="0" alt="" width="243" height="403" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Before you proceed, note that you must not change the location where the binaries will be built. But fill
+ out the rest of the requirements as shown below (substituting your own paths for mine.)</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218951" border="0" alt="" width="434" height="327" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Click &quot;Configure&quot;, and then click &quot;Generate&quot;. This will create the sample projects - on my system, located
+ at C:\Program Files\Alvar 1.4.0\build\msvc90\build\sample. When you open the SampleMarkerCreator.vcproj file, you might witness this warning:</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218952" border="0" alt="" width="427" height="268" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Choose &quot;Restart Visual Studio under different credentials&quot;, then choose to allow this program to make changes
+ to your computer.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">To create the samplemarkercreatord.exe file, I recommend choosing Build ... Build Solution &lt;F6&gt;&nbsp;from
+ the top menu. This will produce the executable at C:\Program Files\Alvar 1.4.0\build\msvc90\build\sample\Debug.</span></p>
+<h2 style="margin-bottom:10.0pt; text-autospace:none"><span style="line-height:150%; font-family:&quot;Century Schoolbook&quot;"><strong><span style="font-family:'Century Schoolbook'"><span>Running the Sample Program</span></span></strong></span></h2>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span style="line-height:150%; font-family:&quot;Century Schoolbook&quot;"><span style="font-family:'Century Schoolbook'">To run the program, open a command prompt and navigate to the file. Upon running it, you will
+ see this:</span></span></p>
+<div style="color:black; background-color:white">
+<pre>Alvar Library 1.4.0 Copyright (c) VTT 2008<span style="color:gray">-</span>2010
+Compiled on Windows 5.1 x86 (Jul  7 2010)
+Day 303<span style="color:gray">/</span>365 of usage period <span style="color:#000000">for </span>this version
+
+SampleMarkerCreator
+<span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span><span style="color:gray">=</span>
+
+Description:
+  This is an example of how to use the <span style="color:#a31515">'MarkerData'</span> and <span style="color:#a31515">'MarkerArtoolkit'</span>
+  classes to generate marker images. This application can be used to
+  generate markers and multimarker setups that can be used with
+  SampleMarkerDetector and SampleMultiMarker.
+
+Usage:
+  samplemarkercreatord.exe <span style="color:gray">[</span><span style="color:teal">options</span><span style="color:gray">]</span> argument
+
+    65535             marker with number 65535
+    <span style="color:gray">-</span>f 65535          force hamming(8,4) encoding
+    <span style="color:gray">-</span>1 <span style="color:#a31515">&quot;hello world&quot;</span>  marker with string
+    <span style="color:gray">-</span>2 catalog.xml    marker with file reference
+    <span style="color:gray">-</span>3 www.vtt.fi     marker with URL
+    <span style="color:gray">-</span>u 96             use units corresponding to 1.0 unit per 96 pixels
+    <span style="color:gray">-</span>uin              use inches as units (assuming 96 dpi)
+    <span style="color:gray">-</span>ucm              use cm's as units (assuming 96 dpi) &lt;default<span style="color:gray">&gt;</span>
+    <span style="color:gray">-</span>s 5.0            use marker size 5.0x5.0 units (default 9.0x9.0)
+    <span style="color:gray">-</span>r 5              marker content resolution <span style="color:gray">--</span> 0 uses default
+    <span style="color:gray">-</span>m 2.0            marker margin resolution <span style="color:gray">--</span> 0 uses default
+    <span style="color:gray">-</span>a                use ArToolkit style matrix markers
+    <span style="color:gray">-</span>p                prompt marker placements interactively <span style="color:#000000">from </span>the user
+
+
+Prompt marker placements interactively
+  units: 1 cm 0.393701 inches
+  marker side: 9 units
+  marker id (use <span style="color:gray">-</span>1 to <span style="color:#000000">end</span>) <span style="color:gray">[</span><span style="color:teal">0</span><span style="color:gray">]</span>:
+</pre>
+</div>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">If you simply run the program without passing any arguments you are put into interactive mode. This mode
+ is very handy, especially for beginners, since it defaults to logical choices that create good markers.
+</span></p>
+</div><div class="ClearBoth"></div>

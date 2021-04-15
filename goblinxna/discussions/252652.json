@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "592302",
+    "ThreadId": "252652",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I'm new to Goblin and practicing with the tutorials. In tutorial 9, you can create 3D text using UI3DRender.WriteText and all appears nice. But when I try to use the same function in my own program, the text appears jumpy. It kind of looks like there are\r\n two of the same texts written over the other but at slightly different locations. I want it to be written relative to marker, so I've been doing the following:</p>\r\n<p>&nbsp;</p>\r\n<p>UI3DRenderer.Write3DText(&quot;Hello World&quot;, vectorFont, UI3DRenderer.Text3DStyle.Fill, Color.Red, marker.WorldTransformation);</p>\r\n<p>&nbsp;</p>\r\n<p>Any help you can provide as to how to resolve the jitter, would be appreciated.&nbsp;</p>\r\n<p>Thanks.&nbsp;</p>\r\n",
+    "PostedDate": "2011-04-05T12:28:15.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "595549",
+    "ThreadId": "252652",
+    "Html": "<p>I did a simple modification to Tutorial8 with the 3D text and it worked perfectly fine without any jitters.</p>\r\n<p>I've sent you the image and modified tutorial8. Make sure to include the necessary dlls for Nuclex.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-04-11T14:26:13.503-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

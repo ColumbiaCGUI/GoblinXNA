@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "575268",
+    "ThreadId": "248372",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>We have successfully ported Goblin to XNA 4.0, and we'll release it in the next couple of months.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-03-03T13:40:27.24-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "575944",
+    "ThreadId": "248372",
+    "Html": "<p>We now have a version that works on Windows Mobile 7 as well!!</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-05T00:39:02.657-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

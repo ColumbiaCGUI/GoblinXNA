@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "694494",
+    "ThreadId": "278518",
+    "Html": "\r\n<p>hi Ohan I am doing a project similar to tutorial 8 where i have several different markers and a ground array. Whenever i apply a custom model to the toolbar Marker if the object is close to the camera it looks fine but as i move it farther away it begins\r\n to have the background bleed through. if i set ignore depth to true the texture seems to get overwritten (it stops the bleeding through though). any help is&nbsp;appreciated</p>\r\n",
+    "PostedDate": "2011-11-06T11:36:42.293-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "694555",
+    "ThreadId": "278518",
+    "Html": "<p>What exactly do you mean with \"the background bleeds through\"? Can you perhaps capture a screenshot and post it online so we can see the problem?</p>\n<p>One thing that might cause problems when the virtual objects are distant to your camera is your camera's far clipping plane. I think it's called Camera.ZFarPlane and by default it is set to 1000 units. Try to increase that value and see if that solves your  problem.&nbsp;</p>",
+    "PostedDate": "2011-11-06T19:17:48.41-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "694582",
+    "ThreadId": "278518",
+    "Html": "<p>Changing Z far plane seems to make everything smaller but it still is kind of happening</p>\n<p>this is an image of what i mean by bleading through. on this model it bleeds through black if i use P1_wedge it is sort of transparent. could it be an issue with the model? im kinda new to the whole 3d image thing&nbsp;</p>\n<p>http://img7.imageshack.us/img7/7982/saucerh.jpg</p>\n<p>&nbsp;</p>\n<p>*edit&nbsp;</p>\n<p>The flying saucer is what is attached to the toolbar marker not the circle which is attached to the ground node</p>",
+    "PostedDate": "2011-11-06T21:44:01.283-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "694772",
+    "ThreadId": "278518",
+    "Html": "<p>That looks like <a href=\"http://en.wikipedia.org/wiki/Z-fighting\">Z-fighting</a>. &nbsp;You can read about it if you search for that term. &nbsp;In simple terms, because your Z-buffer has discrete buckets, virtual objects that are 1000 and 1001 units away get put into the same Z-buffer bucket and the graphics card arbitrarily draws either one of them. &nbsp;This is not specific to GoblinXNA, it's a common issue in 3D graphics. &nbsp;Changing your units might help (e.g. in my previous example, if your ground marker has size 10000 by 10000 and your camera's far Z plane is 10000, just divide everything by 10 or 100). &nbsp;Or put a little more distance between your virtual objects and your ground plane so that they are in different depth buckets.</p>",
+    "PostedDate": "2011-11-07T08:14:01.017-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

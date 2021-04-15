@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "893686",
+    "ThreadId": "389731",
+    "Html": "\r\n<p>Hi All,</p>\r\n<p>I am using GoblinXNA 4.1 for my app. If I change the resolution to <span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\">\r\n<span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\"><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\"><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\">Resolution</span></span></span></span><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">._1280x720\r\n when </span></span><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">InitVideoCapture(), then the frame rate will drop to 12 - 20 FPS.</span></span></p>\r\n<p><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\"><font face=\"Consolas\" size=\"2\"></p>\r\n<p>captureDevices.InitVideoCapture(0,<span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\"><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\"><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\">FrameRate</span></span></span><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">._60Hz,\r\n</span></span><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\"><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\"><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\">Resolution</span></span></span><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">._1280x720,\r\n</span></span><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\"><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\"><span style=\"font-family:Consolas; color:#2b91af; font-size:x-small\">ImageFormat</span></span></span><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">.R8G8B8_24,\r\n</span></span><span style=\"font-family:Consolas; color:#0000ff; font-size:x-small\"><span style=\"font-family:Consolas; color:#0000ff; font-size:x-small\"><span style=\"font-family:Consolas; color:#0000ff; font-size:x-small\">false</span></span></span></p>\r\n</font></span></span><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">);</span></span></span></span></span><span style=\"font-family:Consolas; font-size:x-small\">&nbsp;</span>\r\n<p></p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">The reason I decide to do this is because I am using Sony HUD that have display resolution of 1280x720.</span></span></p>\r\n<p><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">Anyone know how to improve this? Thank</span></span></p>\r\n<p><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">Truyen</span></span></p>\r\n<p><span style=\"font-family:Consolas; font-size:x-small\"><span style=\"font-family:Consolas; font-size:x-small\">&nbsp;</span></span></p>\r\n<p><span style=\"font-family:Consolas; font-size:x-small\">&nbsp;</span></p>\r\n",
+    "PostedDate": "2012-07-31T07:55:04.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "893857",
+    "ThreadId": "389731",
+    "Html": "<p>Any webcam app with 1280x720 resolution will be significantly slower than 640x480 resolution. Especially if you're doing marker tracking. More resolution means more computation on vision analysis.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-07-31T12:40:53.77-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "893861",
+    "ThreadId": "389731",
+    "Html": "<p>Yeah, it is very slow. Well, just very excitting with Sony HUD <a href=\"http://www.amazon.com/Sony-HMZ-T1-Wearable-HDTV-2D/dp/B005SCYZGA\">http://www.amazon.com/Sony-HMZ-T1-Wearable-HDTV-2D/dp/B005SCYZGA</a></p>\r\n<p>But seems that no way to improve this?</p>\r\n<p>Thanks ohan</p>",
+    "PostedDate": "2012-07-31T12:47:23.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "893964",
+    "ThreadId": "389731",
+    "Html": "<p>Nope, nothing we can do about the camera capture speed.&nbsp;</p>",
+    "PostedDate": "2012-07-31T18:06:10.503-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894053",
+    "ThreadId": "389731",
+    "Html": "<p>By the way, I don't remember if State.ThreadOption is set to be ThreadOption.MarkerTracker. If not, you can try to multi-thread the capture process by setting this option in your initialization code.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-08-01T02:10:01.05-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894197",
+    "ThreadId": "389731",
+    "Html": "<p>Yes it is Ohan. I see this in the Initialize()</p>\r\n<p><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><font face=\"Consolas\" size=\"2\" color=\"#2b91af\">\r\n<p>State</p>\r\n</font></span></span></span><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\">.ThreadOption = (</span></span><span style=\"font-family: Consolas; color: #0000ff; font-size: x-small;\"><span style=\"font-family: Consolas; color: #0000ff; font-size: x-small;\"><span style=\"font-family: Consolas; color: #0000ff; font-size: x-small;\">ushort</span></span></span><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\">)</span></span><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\">ThreadOptions</span></span></span><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\">.MarkerTracking;</span></span></span></span></span></span>\r\n<p><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; color: #2b91af; font-size: x-small;\"><span style=\"color: #2b91af; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"></span></span></span></span></span><span style=\"font-family: Consolas;\">truyenle</span></p>\r\n</p>",
+    "PostedDate": "2012-08-01T08:24:13.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894370",
+    "ThreadId": "389731",
+    "Html": "<p>Continue testing it and I found that it is not only the resolution cause the frame rate drop. But opening the second real camera does drop a lot. I only got &lt; 10 FPS?</p>\r\n<p>We need to improve this else, the app won't work.</p>\r\n<p>Any idea to improve please help.</p>\r\n<p>Truyen</p>",
+    "PostedDate": "2012-08-01T14:52:12.633-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894538",
+    "ThreadId": "389731",
+    "Html": "<p>We're doing stereoscopic AR with Vuzix Wrap920AR with 640x480 resolution all the time, and we get above 30 FPS performance. It's more likely that you're doing tracking on 1280x720 resolution. You may want to use HalfResizer, which will significantly improve the tracking speed (but may cause less stable tracking due to lower resolution). See how to use a resizer in Windows Phone version of Tutorial 8 (I didn't include an example for the PC version)</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-08-02T02:32:19.52-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894844",
+    "ThreadId": "389731",
+    "Html": "<p>Yeah, you're right change the resolution higher than 640x480 cause the frame rate drop below 10.</p>",
+    "PostedDate": "2012-08-02T12:30:37.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

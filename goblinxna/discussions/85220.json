@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "290317",
+    "ThreadId": "85220",
+    "Html": "<p>Hello,</p>\r\n<p>I have been playing around with the Goblin XNA library recently and so far I've been able to load my own 3D models (From Maya). I however have two questions!</p>\r\n<p>1. It seems my models always appear mirrored when I run my project and view them with webcam and marker. Is there any way to get around this mirroring effect other than pre-mirroring them in Maya and hopeing they come out reversed in XNA?</p>\r\n<p>2. I was also wondering if anyone would have any tips on overriding the draw function in Goblin XNA, I have a custom shader that I would like to try and apply to my models.</p>\r\n<p>Thanks for any input!!</p>\r\n<p>-Steph</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-12T14:11:17.067-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291062",
+    "ThreadId": "85220",
+    "Html": "<p>1. Really? That sounds very strange. Is that because you face your webcam toward you? If so, it will be mirrored because the camera is facing from the opposite direction.&nbsp;</p>\r\n<p>2. If you have your custom shader, then you can simply plug in your shader to the Model you want to use the shader for. Please see Tutorial 11 for applying a custom shader to a model.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-15T17:43:22.94-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

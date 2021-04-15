@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "412303",
+    "ThreadId": "203255",
+    "Html": "<p>I want tomake an xbox 360 game using Goblin Xna, then i would sell the game. I need a team to help me make it. I don't know if this is the place to ask for people to help. I am not the greatest game coder there is, so just giving a heads up.</p>",
+    "PostedDate": "2010-02-27T18:21:17.707-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "412381",
+    "ThreadId": "203255",
+    "Html": "<p>Just a quick reminder for Goblin XNA. Since the marker tracking library like ALVAR or ARTag as well as Newton physics library is in unmanaged code, you will need to replace those libraries with managed libraries in order to use them on XBox 360. Currently, there are some physics library written in C#, but I'm not aware of any for marker tracking. If you do not intend to use neither marker tracking or physics simulation, then you're fine, and just remove those classes from the Goblin XNA project file.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-27T22:59:48.107-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

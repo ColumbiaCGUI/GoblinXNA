@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "450549",
+    "ThreadId": "214711",
+    "Html": "<p>Hi there!</p>\r\n<p><br>I'm installing Globin, following the Installation Guide instructions.</p>\r\n<p><br>I'm on the step 2 A, compiling the ALVAR 1.2 solution(and I tried with 1.3 too). I checked the paths to the libraries and it's all right.</p>\r\n<p><br>When I compile I get this error:<br>Error 1 fatal error LNK1181: cannot open input file 'alvar120.lib' ALVARWrapper1.2 ALVARWrapper1.2<br><br><br>Some help to solve this issue?</p>",
+    "PostedDate": "2010-06-02T05:44:43.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "450861",
+    "ThreadId": "214711",
+    "Html": "<p>If the path is correct, then it should find the .lib files. Make sure the directory path you indicated actually has the right libraries.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-06-02T14:44:37.387-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "451342",
+    "ThreadId": "214711",
+    "Html": "Hi ohanoda, thanks to reply.\r\n\r\nFile &quot;alvar120.lib&quot; should be on my hard drive, before compiling? or it's created at the time of compilation?\r\n\r\nExcuse my ignorance but I'm learning step by step!\r\n\r\nthanks",
+    "PostedDate": "2010-06-03T12:01:05.03-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452441",
+    "ThreadId": "214711",
+    "Html": "Some help?? Pleaseeee",
+    "PostedDate": "2010-06-07T06:34:55.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "452564",
+    "ThreadId": "214711",
+    "Html": "<p>in ALVARWrapper1.3.sln&nbsp;i used these &quot;Additional Include Directories&quot; for C/C++:</p>\r\n<p>&quot;C:\\Program Files (x86)\\Alvar 1.3.0\\include\\pro&quot;;&quot;C:\\Program Files (x86)\\Alvar 1.3.0\\include\\platform&quot;;&quot;C:\\Program Files (x86)\\Alvar 1.3.0\\include&quot;;&quot;C:\\Program Files (x86)\\OpenCV\\cv\\include&quot;;&quot;C:\\Program Files (x86)\\OpenCV\\cxcore\\include</p>\r\n<p>and these &quot;Additional Library Directories&quot; for Linker:</p>\r\n<p>&quot;C:\\Program Files (x86)\\OpenCV\\lib&quot;;&quot;C:\\Program Files (x86)\\Alvar 1.3.0\\bin\\msvc90&quot;</p>\r\n<p>make sure you specify correct paths!!</p>\r\n<p>try it.</p>\r\n<p>or i can send you the&nbsp;ALVARWrapper.dll if you still can't get it right.</p>\r\n<p>good luck!</p>",
+    "PostedDate": "2010-06-07T10:25:58.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "453561",
+    "ThreadId": "214711",
+    "Html": "Hi Alkasai, thanks to reply :)\r\n\r\n\r\nI tried changing the paths in the linker, but now system returns this error: \r\n\r\n\r\nfatal error LNK1104: cannot open file 'C:\\Archivos de programa\\OpenCV\\lib;C:\\Archivos de programa\\Alvar 1.3.0\\bin\\msvc90;.obj'\r\n\r\n\r\n\r\nI would like to know why this error occurs to resolve similar problems in the future, but You do me a big favor sending me the compiled solution! my email is: miguellara21@hotmail.com\r\n\r\n\r\n\r\nTHANKS A LOT!\r\n\r\n\r\n",
+    "PostedDate": "2010-06-09T07:42:56.597-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

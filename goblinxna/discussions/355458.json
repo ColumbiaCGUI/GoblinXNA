@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "835113",
+    "ThreadId": "355458",
+    "Html": "\r\n<p>hi,&nbsp;</p>\r\n<p>i am trying to create a bowling game. i only use marker to render the bowing ball. i dont use any ground marker. everything is in good shape except that for the physics part. now i want the ball to be connected to a point which happen to be its fulcrum/hinge\r\n whatsoever. therefore when the player swing the ball, i will be able to claculate the speed of the swing and ultimately apply force to the ball, lands on the bowling lane and hit the pins. i think the class (the thread title) is the most suitable to do the\r\n trick</p>\r\n<p>now i dont have any clue on how to start. appreciate your help</p>\r\n",
+    "PostedDate": "2012-05-11T06:41:41.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

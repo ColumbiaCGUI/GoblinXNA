@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "435460",
+    "ThreadId": "210551",
+    "Html": "<p>Where can I download marker layout program created by Ohan Oda..!?</p>\r\n<p>Can I only make ARTag.cf with markerLayout program??</p>",
+    "PostedDate": "2010-04-26T05:13:33.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437358",
+    "ThreadId": "210551",
+    "Html": "<p>It's part of GoblinXNA distribution, and you can find it under /tools directory. The program is called MarkerLayout.</p>\r\n<p>Yes, you can make ARTag.cf with the program.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-04-29T17:08:24.74-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "445767",
+    "ThreadId": "210551",
+    "Html": "<p>Hi~Ohan :-)</p>\r\n<p>I am trying to make my own marker&nbsp;ARTag.cf using MarkerLayOut Program from GoblinXNA v3.4.</p>\r\n<p>I realized that I need to make my own marker patterns before making ARTag.cf file.</p>\r\n<p>So, I tried to use <strong>artag_create_marker</strong> project (\\artag_rev2k_sdk_windows_1210\\Sample_projects\\visual_studio_6\\artag_create_marker)</p>\r\n<p>and I have a problem with this source.</p>\r\n<p>//call artag_create_marker() to get pattern<br>if(<strong>artag_create_marker(artag_id,scale,pattern_image)</strong>) <br>&nbsp;&nbsp; {printf(&quot;Error calling artag_create_marker()\\n&quot;);exit(1);}</p>\r\n<p>//copy pattern into *image&nbsp;&nbsp;&nbsp; <br>for(j=0;j&lt;pattern_width;j++)<br>&nbsp;&nbsp; for(i=0;i&lt;pattern_width;i++)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; image[i+xoffset+(j+yoffset)*width]=(pattern_image[i+j*pattern_width])+10;&nbsp;</p>\r\n<p>This source make marker pattern then copy pattern into image array.</p>\r\n<p>I want to change the pattern .. (artag_create_marker function&nbsp;has pattern array)&nbsp;&nbsp;</p>\r\n<p>but I can't see the artag_create_marker function ( it is just defined in artag_rev2.h, they don't show the pattern array)</p>\r\n<p>That mean,,, I can't change the pattern array , I can't make my own marker pattern...</p>\r\n<p>How can I have my own pattern ~~~~~~??</p>\r\n<p>I am so serious T-T..</p>\r\n<p>How do you make your own marker patterns??</p>\r\n<p>Please help me~~</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-21T02:32:10.203-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "445824",
+    "ThreadId": "210551",
+    "Html": "You should simply create each .pgm files (which is an image file that contains the patterns for that specific marker ID) from the program for each marker ID you want to use, and then use those with MarkerLayout.\r\n\r\nYou should be able to create one from the command line like: artag_create_marker 100 100.pgm \r\n\r\nIf there is a problem with the artag-create_marker, then please contact the developer of ARTag directly since we do not have their source code.\r\n\r\nOhan",
+    "PostedDate": "2010-05-21T05:39:50.267-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "600883",
+    "ThreadId": "254786",
+    "Html": "\r\n<p>Hi, I was trying to combine a user interface with AR. But when i overlay the user interface over the video from tutorial 8, the mouse cursor is hidden under the video display. Is there any solution other than creating my own 2d or 3d mouse cursor, and update\r\n it's position every frame?</p>\r\n",
+    "PostedDate": "2011-04-21T03:04:20.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "600885",
+    "ThreadId": "254786",
+    "Html": "<p>Hi,</p>\r\n<p>You can enable the cursor by&nbsp; this.IsMouseVisible = true; in your constructor. Check this link it has more information on how to obtain mouse coordinates. http://msdn.microsoft.com/en-us/library/bb197572.aspx</p>\r\n<p>:)</p>",
+    "PostedDate": "2011-04-21T03:07:40.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "602772",
+    "ThreadId": "254786",
+    "Html": "<p>that worked fine!</p>",
+    "PostedDate": "2011-04-26T01:17:31.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "622270",
+    "ThreadId": "254786",
+    "Html": "<p>How about if we want to change the cursor size and type?</p>",
+    "PostedDate": "2011-06-02T16:36:30.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "622540",
+    "ThreadId": "254786",
+    "Html": "<p>You would probably have to add an item to the UI2D, and bind it's position to the cursor's position.</p>",
+    "PostedDate": "2011-06-03T07:08:12.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "622541",
+    "ThreadId": "254786",
+    "Html": "<p>You would probably have to add an item to the UI2D, and bind it's position to the cursor's position.</p>",
+    "PostedDate": "2011-06-03T07:08:12.977-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "622578",
+    "ThreadId": "254786",
+    "Html": "<p>Can you just elaborate a little more fjhamming? an example?</p>",
+    "PostedDate": "2011-06-03T08:04:11.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "622829",
+    "ThreadId": "254786",
+    "Html": "<p>I think that I got it.</p>\r\n<p>And here is how</p>\r\n<p>Protected Override void LoadContent()</p>\r\n<p>{</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Cursor size <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int cursorSize = 64;<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // New SpriteBatch to draw 2d cursor<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cursorSprite = new SpriteBatch(GraphicsDevice);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Load the bitmap =&gt; If you want transparent =&gt; have to use .png or .gif<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Drawing.Bitmap cursorBitmap = new System.Drawing.Bitmap(\"Content\\\\handCursorpng.png\");<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Create new texture to hold cursor texture<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cursorTexture = new Texture2D(GraphicsDevice, cursorSize, cursorSize);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Extract pixels from loaded bitmap and copy into the texture<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Microsoft.Xna.Framework.Graphics.Color[] data = new Microsoft.Xna.Framework.Graphics.Color[cursorSize * cursorSize];<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int y = 0; y &lt;&nbsp; cursorSize; y++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int x = 0; x &lt; cursorSize; x++)<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Drawing.Color color = cursorBitmap.GetPixel(x,y);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data[x+y*cursorSize] = new Microsoft.Xna.Framework.Graphics.Color(color.R, color.G, color.B, color.A);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cursorTexture.SetData&lt;Microsoft.Xna.Framework.Graphics.Color&gt;(data);</p>\r\n<p>}</p>\r\n<p>protected override void Draw(GameTime gameTime)<br />{</p>\r\n<p>// Retrieve mouse position<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MouseState mState = Mouse.GetState();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vector2 mousePos = new Vector2(mState.X-11, mState.Y-2);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Draw cursor after base.Draw() in order to draw it after any DrawableGameComponent<br /><br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cursorSprite.Begin();<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //cursorSprite.Draw(cursorTexture, mousePos,Color.White);<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cursorSprite.Draw(cursorTexture, mousePos, new Color(255, 255, 255, 255));<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; cursorSprite.End();</p>\r\n<p>}</p>\r\n<p>Assume that you already declared these variable</p>\r\n<p>// A spriteBatch variable to test drawing the mouse<br />&nbsp;private Microsoft.Xna.Framework.Graphics.SpriteBatch cursorSprite;<br />&nbsp;// A texture2d variable to hold the cursor texture<br />private Microsoft.Xna.Framework.Graphics.Texture2D cursorTexture;</p>\r\n<p>&nbsp;</p>\r\n<p>Hope that help.</p>",
+    "PostedDate": "2011-06-03T16:20:58.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

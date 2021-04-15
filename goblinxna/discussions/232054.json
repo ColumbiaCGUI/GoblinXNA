@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "511463",
+    "ThreadId": "232054",
+    "Html": "\r\n<p>What is the difference between ARTag and ALVAR?</p>\r\n",
+    "PostedDate": "2010-10-23T03:53:19.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "512113",
+    "ThreadId": "232054",
+    "Html": "\r\n<p>Actually, ARTag is not active anymore, so you should use ALVAR.</p>\r\n<p>It's just there because we used to support it when it was active (we still support it, but the API might have changed).</p>\r\n<p>There are many differences, but one major difference is that ARTag can track a marker even when it's partially occluded while ALVAR can't. This doesn't mean ARTag is better, because this feature has pros and cons. For more details, please read Mark Fiala's\r\n papers on marker tracking.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-10-25T06:31:54.213-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "513075",
+    "ThreadId": "232054",
+    "Html": "\r\n<p>Thanks!</p>\r\n<p>I have read that two papers written by Mark Fiala. I tried to implement it with EmguCV, but it proved a little difficult.&nbsp;</p>\r\n",
+    "PostedDate": "2010-10-26T17:53:18.667-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

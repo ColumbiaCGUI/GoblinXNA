@@ -1,0 +1,114 @@
+[
+  {
+    "Id": "666446",
+    "ThreadId": "271194",
+    "Html": "<p>When I try to run ARDominos, I get this exception. I have downloaded OpenCV1.0, restarted. Copied everything needed. But no luck. The problem I think is, when I build AlvarWrapper1.5 it creates ALVARWrapper1.5.dll not ALVARWrapper.dll, so I just try to run  with that but that doesn't work. So I change the name of the dll to ALVARWrapper.dll, no luck. Also I ran depends.exe and installed what is missing. But again no luck. I have window7.</p>\n<p>The error is:</p>\n<p>Unable to load DLL 'ALVARWrapper.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)</p>\n<p>&nbsp;</p>\n<p>Thanks for help.</p>",
+    "PostedDate": "2011-09-01T12:30:37.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "666614",
+    "ThreadId": "271194",
+    "Html": "<p>I believe you have copied the necessary OpenCV 1.0 dlls and ALVAR dlls (e.g., cv.dll, alvar.dll, and so on) as well?</p>\r\n<p>Have you tried tutorial 8, which also uses AlvarWrapper?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-01T20:30:18.723-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "666616",
+    "ThreadId": "271194",
+    "Html": "<p>yes I copied everything. it didn't work in Tutorial8 as well. but I finally figured it out. I had to put the complete path of ALVARWrapper1.5.dll into ALVARDllBridge.cs and now it works.&nbsp;</p>",
+    "PostedDate": "2011-09-01T20:34:07.33-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "666999",
+    "ThreadId": "271194",
+    "Html": "<p>ok now I have the same problem in tutorial 13. this time it can't find \"iwrstdrv.dll\". but now i can't find it either. i don't know if i have it somewhere in my system. and can't find it on the web. any suggestion? i guess i need to add the full path of it to iWearTracker.cs too.&nbsp;</p>",
+    "PostedDate": "2011-09-02T13:52:53.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "671844",
+    "ThreadId": "271194",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>btevfik wrote:</strong><br />\r\n<p>yes I copied everything. it didn't work in Tutorial8 as well. but I finally figured it out. I had to put the complete path of ALVARWrapper1.5.dll into ALVARDllBridge.cs and now it works.&nbsp;</p>\r\n</blockquote>\r\n<p>What do you mean by \"I had to put complete path of ALVARWrapper1.5.dll into ALVARDllBridges.cs\" how to go about this? I tried everything but still failed.</p>",
+    "PostedDate": "2011-09-14T11:24:00.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "672026",
+    "ThreadId": "271194",
+    "Html": "<p>do you mean adding the reference path in the project properties settings</p>",
+    "PostedDate": "2011-09-14T19:57:45.333-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "672539",
+    "ThreadId": "271194",
+    "Html": "<p>when you go to&nbsp;ALVARDllBridges.cs, under&nbsp;&nbsp;#region Dll Imports. double click to open.</p>\n<p>you will see.</p>\n<p>put the path like \"C:\\\\user\\\\GoblinXNAv3.6\\\\dlls\\\\unmanaged\\\\ALVARWrapper1.5.dll\"</p>",
+    "PostedDate": "2011-09-15T22:24:52.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "673434",
+    "ThreadId": "271194",
+    "Html": "<p>not successful either. i'm starting to pulling my hair off. hmm....any other ideas.... i'm debugging it now drill down to see what is the real culprit</p>",
+    "PostedDate": "2011-09-18T18:18:25.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "674058",
+    "ThreadId": "271194",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>arrezes wrote:</strong><br />\r\n<p>not successful either. i'm starting to pulling my hair off. hmm....any other ideas.... i'm debugging it now drill down to see what is the real culprit</p>\r\n</blockquote>\r\n<p>perhaps the compiler didn't not accept long file name for the Tutorial8 - Optical Marker Tracking. It went smooth when I run the CameraCalibration because Alvarwrapper which resides in the CameraCalibration folder which is in one word</p>",
+    "PostedDate": "2011-09-20T01:26:47.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "674603",
+    "ThreadId": "271194",
+    "Html": "<p>Finally, I managed to run Tutorial8. My bad! I didn't notice that I compile AlvarWrapper.dll with C++ 2010. After installing 2008 all my problems solved. There are slight problems here and there with the AlvarWrapper.sln with regard to include directories. I had to key in back again the path to the directories because the existing ones seems to not working.</p>\r\n<p>cheers!!</p>",
+    "PostedDate": "2011-09-21T02:40:05.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "675039",
+    "ThreadId": "271194",
+    "Html": "<p>The installation guide mentions that you should use VS 2008 to compile it as well as the include directories that you need to change, so please read through the installation guide carefully.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-21T19:22:25.607-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "698987",
+    "ThreadId": "271194",
+    "Html": "<p>Hello,</p>\n<p>I have installed the new Goblig XNA <strong>version 4.0 beta 2</strong> following the instalation guide. I have compiled&nbsp;<strong>ALVARWrapper.dll</strong> with <strong>Visual Studio C++ 2008 Express</strong> and copied the dll to <strong>unmanaged</strong> directory.&nbsp;I'm trying to run <strong>Tutorial 8</strong> with <strong>Visual Studio 2010 Professional</strong> and I have the same error.</p>\n<p><strong>DllNotFoundException:</strong></p>\n<p>Unable to load DLL 'ALVARWrapper.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)</p>\n<p>&nbsp;</p>\n<pre>   at GoblinXNA.Device.Vision.ALVARDllBridge.alvar_init()\n   at GoblinXNA.Device.Vision.Marker.ALVARMarkerTracker.InitTracker(Object[] configs) in D:\\XNA\\GoblinXNAv4.0\\src\\Device\\Vision\\Marker\\ALVARMarkerTracker.cs:line 346\n   at Tutorial8___Optical_Marker_Tracking.Tutorial8.SetupMarkerTracking() in D:\\XNA\\GoblinXNAv4.0\\tutorials\\Tutorial8 - Optical Marker Tracking\\Tutorial8.cs:line 181\n   at Tutorial8___Optical_Marker_Tracking.Tutorial8.Initialize() in D:\\XNA\\GoblinXNAv4.0\\tutorials\\Tutorial8 - Optical Marker Tracking\\Tutorial8.cs:line 108\n   at Microsoft.Xna.Framework.Game.RunGame(Boolean useBlockingRun)\n   at Microsoft.Xna.Framework.Game.Run()\n   at Tutorial8___Optical_Marker_Tracking.Program.Main(String[] args) in D:\\XNA\\GoblinXNAv4.0\\tutorials\\Tutorial8 - Optical Marker Tracking\\Program.cs:line 15</pre>\n<p>&nbsp;</p>\n<p>In my managed directory:</p>\n<p>&nbsp;</p>\n<pre>   DirectX.Capture.dll\n   DShowNET.dll\n   Lidgren.Network.dll\n   NewtonWrapper.dll\n   Nuclex.Fonts.Content.TrueTypeImporter.dll\n   Nuclex.Fonts.dll\n   Nuclex.Fonts.xml</pre>\n<p>&nbsp;</p>\n<p>In my unmanaged directory:</p>\n<p>&nbsp;</p>\n<pre>   alvar150.dll\n   alvarplatform150.dll\n   ALVARWrapper.dll\n   cv100.dll\n   cvaux100.dll\n   cvcam100.dll\n   cxcore100.dll\n   highgui100.dll\n   Newton.dll</pre>\n<p>I tried to add the reference manually (Add reference -&gt; Browse tab -&gt; select&nbsp;ALVARWrapper.dll), but is not posible:</p>\n<p>&nbsp;</p>\n<p>A reference to 'D:\\XNA\\GoblinXNA4.0\\dlls\\unmanaged\\ALVARWrapper.dll' could not be added. Please make sure that the file is accessible, and that it is a valid assembly or COM component.</p>\n<p>I don't know what can I do, please I need help!</p>\n<p>Thank you.</p>\n<p>&nbsp;</p>\n<p><strong>EDIT:</strong></p>\n<p>I see that installation guide is for 3.6 version, is any proble with this?</p>",
+    "PostedDate": "2011-11-16T07:06:00.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "699088",
+    "ThreadId": "271194",
+    "Html": "<p>See&nbsp;<a href=\"http://goblinxna.codeplex.com/discussions/73134\">http://goblinxna.codeplex.com/discussions/73134</a>&nbsp;</p>",
+    "PostedDate": "2011-11-16T10:01:50.207-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "699422",
+    "ThreadId": "271194",
+    "Html": "<p>Thank you!! It is helpfull!!</p>",
+    "PostedDate": "2011-11-17T01:07:23.337-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

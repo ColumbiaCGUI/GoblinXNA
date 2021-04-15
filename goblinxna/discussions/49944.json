@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "167155",
+    "ThreadId": "49944",
+    "Html": "When I try to run tutorial 8, y receive this message in the prompt. Is there a way to resolve this issue? The readme of artag says that the library should work until December 2009.<br>\r\nThanks!<br>\r\n",
+    "PostedDate": "2009-03-11T17:41:19.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "167480",
+    "ThreadId": "49944",
+    "Html": "That's a problem with ARTag distribution. The ARTag package from <a href=\"http://www.artag.net/sdk_download/artag_sdk_download.php\">http://www.artag.net/sdk_download/artag_sdk_download.php</a> should be updated, and it should work until Dec 2009. If there is a problem, please consult with Mark Fiala, who is the developer of ARTag.\r\n",
+    "PostedDate": "2009-03-12T11:41:18.783-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

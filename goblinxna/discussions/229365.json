@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "501290",
+    "ThreadId": "229365",
+    "Html": "<p><span id=\"result_box\" lang=en><span>Hello!<br></span><span>I wonder how I do I always get two models facing each other, because I could only do what is below: ...</span></span></p>\r\n<p>&nbsp;</p>\r\n<p>http://www.youtube.com/watch?v=rEhCx9ADMOc</p>\r\n<p>http://www.youtube.com/watch?v=AIU7TkjX5AA</p>",
+    "PostedDate": "2010-10-01T16:14:34.55-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "502285",
+    "ThreadId": "229365",
+    "Html": "<p>Can you have separate markers?</p>\r\n<p>Or that's not what you want to achieve in the first place? Perhaps you need to look on how to use&nbsp;quaternions&nbsp;</p>",
+    "PostedDate": "2010-10-04T20:06:15.027-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "502286",
+    "ThreadId": "229365",
+    "Html": "<p>I'm sorry I ddin't watch the second video. yeah maybe you can try quaternions&nbsp;</p>",
+    "PostedDate": "2010-10-04T20:08:35.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "513456",
+    "ThreadId": "229365",
+    "Html": "\r\n<p><span id=\"x_x_result_box\" lang=\"en\"><span>Thanks,<br>\r\n</span><span>But if I use the Quaternions, they will go to rotate based on own axis, if they have to be facing each other I would have to compare the position relating to that axis?<br>\r\n</span><span>And I think I need two reference points so I can align the two 3d models, consider alignment of two points on a Cartesian plane.</span></span></p>\r\n<p>&nbsp;</p>\r\n<p><span lang=\"en\"><span><br>\r\n</span></span></p>\r\n",
+    "PostedDate": "2010-10-27T09:04:27.39-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

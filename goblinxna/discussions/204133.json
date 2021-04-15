@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "415287",
+    "ThreadId": "204133",
+    "Html": "<p>To the best of my knowledge I have set up Goblin properly and am using ALVAR. When running tutorial 8 I have put the printout of groundALVAR.pdf on my desk and set the camera from a stationary position a few feet away. I am able to see the green sphere and the red cube but they are constantly moving around the screen erratically and scaling seemingly randomly. Is this a sign that I need to regenerate my calib.xml file? Also, I have a Logitech Webcam C500 could this be an issue?</p>",
+    "PostedDate": "2010-03-07T19:06:54.083-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "415290",
+    "ThreadId": "204133",
+    "Html": "<p>Haha jeez, figured it out, I had set my webcam to work in mirrored mode. All happy now!</p>",
+    "PostedDate": "2010-03-07T19:33:44.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "419114",
+    "ThreadId": "204133",
+    "Html": "<p>Hi, did you mirror the video using the framework?&nbsp;I can't find any functions for flipping the camera, so I'm guessing I'll have to work with the image texture itself...&nbsp;</p>",
+    "PostedDate": "2010-03-17T02:52:36.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

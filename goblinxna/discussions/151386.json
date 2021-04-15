@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "358553",
+    "ThreadId": "151386",
+    "Html": "<p>I am trying to render video files( avi, wmv, , , etc) on the groundmarker.</p>\r\n<p>Is it possible??</p>\r\n<p>There is a sample video , I want to do this using goblinXNA .</p>\r\n<p><a href=\"http://serviceapi.nmv.naver.com/flash/NFPlayer.swf?vid=53AB8ED100E3762B0BAE10B0B9EEBC3F3E39&outKey=V122d0ba42d7c02cfead\">http://serviceapi.nmv.naver.com/flash/NFPlayer.swf?vid=53AB8ED100E3762B0BAE10B0B9EEBC3F3E39&amp;outKey=V122d0ba42d7c02cfead</a></p>",
+    "PostedDate": "2010-02-21T20:37:13.763-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "363419",
+    "ThreadId": "151386",
+    "Html": "<p>Hi</p>\r\n<p>&nbsp;you can create a rectangle primitive&nbsp; mesh and then texture it with the video .I worked for me!</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-23T14:41:28.117-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "363482",
+    "ThreadId": "151386",
+    "Html": "<p>I made a rectangle primitive mesh, then,,,,,,,,</p>\r\n<p>I don't know how to make the video as texture,,</p>\r\n<p>Could you show me some sample source ??</p>",
+    "PostedDate": "2010-02-23T17:21:22.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "363483",
+    "ThreadId": "151386",
+    "Html": "<p>GeometryNode pyramidNode = new GeometryNode();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pyramidNode.Model = pyramidModel;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pyramidModel.UseLighting = true;<br><br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pyramidMaterial.Diffuse = Color.White.ToVector4();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pyramidMaterial.Specular = Color.White.ToVector4();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pyramidMaterial.SpecularPower = 10;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pyramidMaterial.Texture = videoPlayer.GetTexture();<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pyramidNode.Material = pyramidMaterial;</p>",
+    "PostedDate": "2010-02-23T17:24:08.947-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "413479",
+    "ThreadId": "151386",
+    "Html": "<p>I tried as you&nbsp;told me . And I&nbsp;see only White Back ground and listen to the sound of the movie. However the movie&nbsp;texture is NOT on the marker,,</p>\r\n<p>What is my problem??</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Video video;<br>VideoPlayer player;<br>Texture2D videoTexture;</p>\r\n<p>protected override void LoadContent()<br>{<br>&nbsp;&nbsp;&nbsp; video = Content.Load&lt;Video&gt;(&quot;myVideo&quot;);<br>&nbsp;&nbsp;&nbsp;&nbsp;player = new VideoPlayer();<br>&nbsp;}</p>\r\n<p>protected override void Update(GameTime gameTime)<br>{</p>\r\n<p>&nbsp;&nbsp; if (player.State == MediaState.Stopped)<br>&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.IsLooped = false;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;player.Play(video);<br>&nbsp;&nbsp;&nbsp; }<br>&nbsp;&nbsp;&nbsp;base.Update(gameTime);<br>}</p>\r\n<p>&nbsp;----------------------------------------------------------------------------------------------</p>\r\n<p>Material dominoMaterial = new Material();<br>dominoMaterial.Diffuse = new Vector4(1.5f, 1.5f, 1.5f, 1.0f);<br>dominoMaterial.Specular = Color.White.ToVector4();<br>dominoMaterial.SpecularPower = 10;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\r\n<p>if (player != null)<br>{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (player.State != MediaState.Stopped)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; videoTexture = player.GetTexture();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>}</p>\r\n<p>dominoMaterial.Texture = videoTexture;<br>dominoNode.Material = dominoMaterial;</p>\r\n<p>groundMarkerNode.AddChild(dominoTransNode);</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-03-02T19:24:25.617-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "413545",
+    "ThreadId": "151386",
+    "Html": "<p>videoTexture = player.GetTexture();</p>\r\n<p>should be in the draw function , ie you cannot just load the texture all at once and play it , it needs to be done in the draw function ,</p>\r\n<p>player.GetTexture(); gets the texture frame by frame&nbsp;</p>",
+    "PostedDate": "2010-03-03T00:32:02.027-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "415839",
+    "ThreadId": "151386",
+    "Html": "<p>praqynand. thank you for helping me,&nbsp;</p>\r\n<p>I think I did it :-D</p>\r\n<p>But I don't know why I can see part of the video.</p>\r\n<p>Did you have same problem, praqyanand??</p>",
+    "PostedDate": "2010-03-09T01:16:59.383-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "470983",
+    "ThreadId": "151386",
+    "Html": "<p>I am doing the same thing, Rendering video on the marker. Can you please publish your full code. In my code,Marker is getting detected and I am able to listen sound of the video but not able to see/render video on the Marker.</p>",
+    "PostedDate": "2010-07-22T05:29:48.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "476656",
+    "ThreadId": "151386",
+    "Html": "<p>I think that video is playing well. You need to make&nbsp;space to show video texures, so that&nbsp;you can see the video as well.</p>",
+    "PostedDate": "2010-08-04T17:17:48.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "634136",
+    "ThreadId": "151386",
+    "Html": "<p>Hello,</p>\r\n<p><span title=\"Voc&ecirc;s tiveram sucesso usando videos no marcador ?\">Does You have had success using videos on the marker?&nbsp;</span><span title=\"Estou tentando mas n&atilde;o consigo, hehe.\">I'm trying... but ... nothing, hehe.</span></p>\r\n<p>I would like a example source for me to help...</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2011-06-28T07:10:20.707-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

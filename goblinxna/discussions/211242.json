@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "437884",
+    "ThreadId": "211242",
+    "Html": "<p>I'm using FBX in some of my &quot;projects&quot;, and while i'm using the ones included with Goblin (data/Models), everything works ok. I just load the model and it's textures into my project and thats it.</p>\r\n<p>When i try to load downloaded FBX, i get only gray model, with no textures.</p>\r\n<p>So, i have few questions.</p>\r\n<p>1. Does FBX&nbsp; contains textures at all?</p>\r\n<p>2. Goblin FBXs have regular txt format. The ones i downloaded are binary files. Does that matter at all?</p>\r\n<p>3. How to export FBX from Maya? Which settings to use, how to include textures, etc...?</p>",
+    "PostedDate": "2010-05-01T10:35:53.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437903",
+    "ThreadId": "211242",
+    "Html": "<p>Ok, i sorted this out.</p>\r\n<p>I found Autodesk FBX converter tool and used it to convert FBX i downloaded from Turbosquid to FBX 2006 format, ASCII. Didnt try with binary yet...</p>",
+    "PostedDate": "2010-05-01T12:40:18.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

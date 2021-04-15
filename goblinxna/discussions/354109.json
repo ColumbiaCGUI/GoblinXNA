@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "830571",
+    "ThreadId": "354109",
+    "Html": "\r\n<p>I have created some models and applied translations as you would to the models through buttons presses and xbox controller thumb stick movements.&nbsp;</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>GamePadState currentState = GamePad.GetState(PlayerIndex.One);\r\nKeyboardState keys = Keyboard.GetState();\r\n\r\n       <span style=\"color:blue\">if</span> (currentState.IsConnected)\r\n            {\r\n     \r\n<span style=\"color:blue\">if</span> (gamepadStatus.ThumbSticks.Left.Y &gt; 0.0f || keys.IsKeyDown(Keys.Up))\r\n            \t{\r\n\r\n                playerTransNode.Translation &#43;= Vector3.Up * 4;\r\n\r\n            }\r\n\r\n            <span style=\"color:blue\">if</span> (gamepadStatus.ThumbSticks.Left.Y &lt; 0.0f || keys.IsKeyDown(Keys.Down))\r\n            {\r\n\r\n\r\n                playerTransNode.Translation &#43;= Vector3.Down * 4;\r\n\r\n            }\r\n\r\n            <span style=\"color:blue\">if</span> (gamepadStatus.ThumbSticks.Left.X &gt; 0.0f || keys.IsKeyDown(Keys.Right))\r\n            {\r\n\r\n\r\n                playerTransNode.Translation &#43;= Vector3.Right * 4;\r\n\r\n            }\r\n\r\n           <span style=\"color:blue\">if</span> (gamepadStatus.ThumbSticks.Left.X &lt; 0.0f || keys.IsKeyDown(Keys.Left))\r\n            {\r\n\r\n                playerTransNode.Translation &#43;= Vector3.Left * 4;\r\n\r\n            }\r\n\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>This works and the models move but they do not react correctly in the physics engine, eg the models travel through each other and when the physics of them colliding kick in they roll but when I move them again they reset their position to before they collided.\r\n Now I understand this is because changing the translation is sort of like teleporting and doesn't take into account the physics. So could someone help me to add correct physical movement to the model?</p>\r\n<p>I have taken a look at the Advanced Physics tutorial but it is overly complex. Any help is greatly appreciated.&nbsp;</p>\r\n",
+    "PostedDate": "2012-05-01T04:08:24.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "833142",
+    "ThreadId": "354109",
+    "Html": "<p>I don't have time to provide detailed explanations, but it's possible to do. The version of Newton we currently support doesn't have that functionality (their latest release may support, but I don't know), but I know that Havok and Matali physics support what you want to do. Those functionality is supported through MataliPhysics and HavokPhysics, so please look though the code for a hint of how to do it. You should also look into their (Havok or Matali) documentation to better understand it.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-05-07T15:03:17.073-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

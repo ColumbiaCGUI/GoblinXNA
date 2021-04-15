@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "282862",
+    "ThreadId": "82323",
+    "Html": "<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hey all, I'm trying to create a labyrinth type game (moving a marble through a puzzle, avoiding holes, etc.) using Goblin's marker tracking system. I've modified Tutorial 8 so that the sphere has physics applied to it, but I'm having trouble figuring out how to have the ball react to which way I'm turning the marker. I came up with the idea of getting the marker's rotation values and updating the gravity direction that way. I.E. when the marker is rotated 20 degrees to the right, the direction of gravity changes 20 degrees to the left, that way gravity is always pointing down relative to the viewer. My only trouble is the application of this. How would I go about getting the marker's X &amp; Y rotation, and updating the gravity?&nbsp; Any and all help is appreciated! Also, if anyone knows of another way to accomplish this, please let me know. Thanks!</p>",
+    "PostedDate": "2010-01-28T10:26:24.713-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "282881",
+    "ThreadId": "82323",
+    "Html": "<p>Hey,</p>\r\n<p>Actually one of the projects i'm working on is exactly the same you describe above.. You can see an initial video on my blog: <a href=\"http://www.studentguru.gr/blogs/jupiter/archive/2010/01/02/augmented-reality-game-video.aspx\">http://www.studentguru.gr/blogs/jupiter/archive/2010/01/02/augmented-reality-game-video.aspx</a> . I have, since, added walls and obstacles.</p>\r\n<p>What i decided to do is: get the rotation of the marker and then apply a force to the ball to the direction the marker is rotated.. That way you don't have to change the gravity.</p>",
+    "PostedDate": "2010-01-28T10:56:50.52-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "282897",
+    "ThreadId": "82323",
+    "Html": "<p>So, you just apply a force equal to the direction and amount of the marker's rotation?</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-28T11:23:04.077-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "282990",
+    "ThreadId": "82323",
+    "Html": "<p>Not exactly equal.. I multiply each component (X, Y)&nbsp; with a constant value, because the value of rotation is a very small number to have an effect on the ball. This depends on the mass of your ball and how &quot;responsive&quot; you would like the ball to be. You can experiment with different values to see what suites you best.</p>\r\n<p>I don't know if this is the best approach to the problem but it works great :)</p>",
+    "PostedDate": "2010-01-28T14:29:36.61-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "284959",
+    "ThreadId": "82323",
+    "Html": "<p>I'm trying to do something very similar and am VERY new to this - does anyone know where there is some sample code for a similar game? A labyrinth tutorial or something?&nbsp;&nbsp; I can't find any example code anywhere and am struggling a bit.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks!</p>",
+    "PostedDate": "2010-02-02T14:00:47.867-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "286400",
+    "ThreadId": "82323",
+    "Html": "<p>Specifically - I'm looking for an example of how to convert rotation (quaternion) to direction (vector3).&nbsp; There doesn't seem to be a direct conversion to determine the direction based on the rotation.&nbsp;&nbsp;&nbsp; I've tried this with both applying force and gravity direction.&nbsp; No matter which approach we take, the same quaternion --&gt; vector3 issue remains.&nbsp; Any help?</p>",
+    "PostedDate": "2010-02-05T13:16:49.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

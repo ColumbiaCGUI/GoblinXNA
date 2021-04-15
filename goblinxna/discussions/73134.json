@@ -1,0 +1,146 @@
+[
+  {
+    "Id": "249845",
+    "ThreadId": "73134",
+    "Html": "<p>Hi all,</p>\r\n<p>I'm at my wits end, I'm hoping you might be able to help. I've compiled and run all of the tutorials, but Tutorial 8 - Simple Marker Tracking can't find ALVARWrapper.dll. It's sitting in my Goblin bin directory... I don't know whats wrong!?! I tried downloading the latest version today that supports ALVAR 1.2.0, and I'm still getting the same error.</p>\r\n<p>Can anyone shed any light on why this might be happening?</p>\r\n<p>error message: <a href=\"http://www.flickr.com/photos/camb416/4047426326/sizes/o/\">http://www.flickr.com/photos/camb416/4047426326/sizes/o/</a></p>\r\n<p>Thank you so much in advance,</p>\r\n<p>-C</p>",
+    "PostedDate": "2009-10-26T10:55:13.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "249967",
+    "ThreadId": "73134",
+    "Html": "<p>I'm getting the exact same thing, and I have no clue whats causing it either.</p>",
+    "PostedDate": "2009-10-26T15:57:03.713-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250095",
+    "ThreadId": "73134",
+    "Html": "<p>Hi, I'm working on windows 7rc, and I had the same issue, ALVARWrapper.dll seemed to compile fine, but I got the same error running tutorial 8. &nbsp;It seems that some of ALVARWrappers dependencies have been moved out of the system32 folder in win7, and I heard this is also the case for vista. &nbsp;</p>\r\n<p>I fixed this by using depends.exe to find the missing dll's and putting them into the bin folder. &nbsp;In my case the missing dlls were IEshims.dll, libguide40.dll and SHLWAPI.dll.</p>",
+    "PostedDate": "2009-10-27T02:26:03.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250245",
+    "ThreadId": "73134",
+    "Html": "<p>Hi all,</p>\r\n<p>It will complain that it can't find the wrapper if you have missing DLL dependencies as estiaan pointed out.</p>\r\n<p>Do you have alvar120.dll, alvarplatform120.dll, and highgui100.dll in the bin directory as I mentioned on the discussion board as well as the installation guide?</p>\r\n<p>Also, estiaan, did Tutorial 8 work fine on windows 7?</p>\r\n<p>I know other tutorials (except 13) would work fine on Windows 7, but I'm not sure for Tutorial 8 since there is no guarantee ALVAR (or ARTag) would work on Windows 7. Also, I heard that DirectShowNET is not supported in Windows 7.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-27T09:59:19.997-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250299",
+    "ThreadId": "73134",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>ohanoda wrote:</strong><br>\r\n<p>Do you have alvar120.dll, alvarplatform120.dll, and highgui100.dll in the bin directory as I mentioned on the discussion board as well as the installation guide?</p>\r\n</blockquote>\r\n<p>It was not any of the alvar120 dlls, but something from my OpenCV/bin that wasn't being found (highgui100.dll led me to them).</p>\r\n<p>I didn't see anything in the Installation Guide about copying the OpenCV DLLs to GoblinXNA/bin. Maybe its common knowledge to a developer with more MS dev experience, but it tripped me up.</p>\r\n<p>Thanks so much for your help.</p>\r\n<p>Now to troubleshoot why I get no green ball on groundALVAR.pdf...</p>\r\n<p>Thanks again</p>\r\n<p>_C</p>",
+    "PostedDate": "2009-10-27T12:28:36.907-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250385",
+    "ThreadId": "73134",
+    "Html": "<p>Cool. Actually, the copying of highgui100.dll is mentioned in the Installation Guide. Did you get the latest installation guide which is dated 10/25/09?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-27T15:12:27.267-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250441",
+    "ThreadId": "73134",
+    "Html": "<p>Using Depends.exe did the trick for. It was missing a few dlls scattered around the opencv and alvar sdks.&nbsp;</p>\r\n<p>Thank you <a id=\"ctl00_ctl00_MasterContent_Content_PostRepeater_ctl04_UserNameLink\" style=\"text-decoration:underline;color:#3e62a6\" href=\"http://www.codeplex.com/site/users/view/estiaan\">estiaan</a></p>",
+    "PostedDate": "2009-10-27T17:42:52.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250557",
+    "ThreadId": "73134",
+    "Html": "<p>Hi Ohan</p>\r\n<p>I also heard that DShowNet is not supported in windows 7, but that video capturing has been simplified using libs included in the system folder.</p>\r\n<p>But I had no need to investigate that further, I followed the instruction guide, and I got Alvar and DShowNet working without any real problems.</p>\r\n<p>Tutorial 8 and all the others work perfectly. &nbsp;</p>\r\n<p>Thanks for the great documentation!</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-28T03:12:02.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250729",
+    "ThreadId": "73134",
+    "Html": "<p>Hi estiaan,</p>\r\n<p>It's great to hear that the AR&nbsp;functionalities&nbsp;work on Windows 7!!</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-28T08:55:26.667-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "255625",
+    "ThreadId": "73134",
+    "Html": "<p>Hi all:</p>\r\n<p>I have some problem with camb416. I have compiled and run on Tutorial 8&nbsp; and Tutorial 13, and got execption as follows:</p>\r\n<p>DllNotFoundException was unhandled.</p>\r\n<p>Unable to load DLL 'ALVARWarpper.dll'.</p>\r\n<p>And I am 100 percent sure that I already have alvar120.dll, alvarplatform120.dll, and highgui100.dll in the bin directory, and I followed all the steps in the installtion Guide (25/Oct/2009).</p>\r\n<ul>\r\n<li>OS enviorment: Windows Xp with Sp3</li>\r\n<li>Visual studio 2008 </li>\r\n<li>XNA Game Studio 3.1</li>\r\n<li>.NET Framework 3.5 SP1</li>\r\n<li>ALVARWrapper 1.2</li>\r\n<li>OpenCV 1.0</li>\r\n<li>Can anyone help me to fix this problem.</li>\r\n</ul>\r\n<p>Thanks</p>\r\n<p>ssnh</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-11-10T10:32:34.767-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "255657",
+    "ThreadId": "73134",
+    "Html": "<p>Hi ssnh,</p>\r\n<p>It seems every machine has different missing files even if the environment is the same.</p>\r\n<p>For my machine and couple other machines I used in the lab worked fine with only alvar120.dll, alvarplatform120.dll, and highgui100.dll, but one of my colleague had problem with it, and required cxcore100.dll as well as cv100.dll in addition.&nbsp;</p>\r\n<p>The best way to figure out what exactly is missing is to use depends.exe (<a href=\"http://www.dependencywalker.com/\">http://www.dependencywalker.com/</a>)&nbsp;as estiaan pointed out earlier.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-11-10T11:47:31.413-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "255679",
+    "ThreadId": "73134",
+    "Html": "<p>Hi Ohan:</p>\r\n<p>Thanks for helping.</p>\r\n<p>I works on my machine now. It requireds cxcore100.dll, cv100.dll and libguide40.dll(Which located in OpenCV\\bin). My suggestion in next version of Installtion Guide, it is better let end user ro copy all the dll files from OpenCV\\bin to GoblinXNAv3.3\\bin.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-11-10T13:01:10.363-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "465600",
+    "ThreadId": "73134",
+    "Html": "<p>I am going crazy trying to get this tutorial to run.</p>\r\n<p>I ran AlvarWrapper.dll in dependency walker, and moved the following dll files (all of which I had to download, I couldn't find them on my PC) to GoblinXNA/bin directory</p>\r\n<p>efsadu.dll</p>\r\n<p>msjava.dll</p>\r\n<p>msvcp100.dll</p>\r\n<p>msvcr100.dll</p>\r\n<p>This didn't work, and XNA still claims it can't find AlvarWrapper.</p>\r\n<p>Now when running Dependency Walker on AlvarWrapper again it gives me this message, &quot;Error: At least one module has an unresolved import due to a missing export function in an implicitly dependent module.&quot;</p>\r\n<p>The error seems to be with the msvcr100.dll file. &nbsp;I just wanted a virtual ball to roll around on a table.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-07-09T13:05:25.203-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "466186",
+    "ThreadId": "73134",
+    "Html": "Hmm... I never needed any of the above dlls. It's been tested on XP, Vista, and 7.\r\n\r\nThe only necessary dlls are those listed in the installation guide.\r\n\r\nDid you install OpenCV 1.0 which is needed by ALVAR? When you install it, you need to make sure that its path is added to system variables. Also, you need to restart your machine after OpenCV 1.0 install.\r\n\r\nOhan",
+    "PostedDate": "2010-07-12T01:59:52.757-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "532750",
+    "ThreadId": "73134",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>I've recently realized that for some reason, the path of the OpenCV 1.0's /bin directory is not property added to the environment variables even after you restart your machine for certain machines. This can cause .dll not found problem because it can't access\r\n those dlls in the opencv's bin directory. To check whether this is the case, you can open up the command window (<a href=\"http://www.exclamationsoft.com/exclamationsoft/netmailbot/help/website/HowToOpenADOSCommandWindow.html\">http://www.exclamationsoft.com/exclamationsoft/netmailbot/help/website/HowToOpenADOSCommandWindow.html</a>),\r\n and type cvtest . If it displays &quot;'cvtest' is not recognized ......&quot; message, then the bin path is not properly added.</p>\r\n<p>To fix this problem, you need to manually add your installed opencv bin path (e.g., C://Program Files (x86)/OpenCV/bin/) to your PATH environment variable. Please see&nbsp;<a href=\"http://www.java.com/en/download/help/path.xml\">http://www.java.com/en/download/help/path.xml</a>&nbsp;regarding\r\n how to manually edit the environment variables.&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-12-08T01:24:42.09-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "585100",
+    "ThreadId": "73134",
+    "Html": "<p>Thanks ohannoda, setting the PATH enviroment variable fixed the problem for me.</p>\r\n<p>Note: you need to close the tutorials and open it again after setting the variables.</p>\r\n<p>Goodluck</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2011-03-23T08:58:28.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "660784",
+    "ThreadId": "73134",
+    "Html": "<p>I'm trying to install 3.6. I never had a problem with 3.4. (it still works on the same computer!) However, I have the same issue as Khaosk. cvtest works and for some reason mpr.dll causes this import problem in depends.exe. I'm not sure what to do.</p>\n<p>&nbsp;</p>\n<p>UPDATE:<br />I added ALVARWrapper.dll to the goblin bin directory and it works now. Also, I had to make sure that I compiled the release version of ALVARWrapper because i had moved only the ALVAR dlls that were release, but the compiled ALVARWrapper.dll probably should have been ALVARWrapperd.dll</p>",
+    "PostedDate": "2011-08-19T13:25:50.24-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "699431",
+    "ThreadId": "73134",
+    "Html": "<p>Hello,</p>\r\n<p>I come from <a href=\"http://goblinxna.codeplex.com/discussions/73134\">another topic</a>. I have gone crazy with <strong>ALVARWrapper.dll</strong>. I check dependencies with <strong>Dependecy Walker</strong> and have see errors with&nbsp;IEShims.dll,&nbsp;libguide40.dll and&nbsp;msvcr90.dll. I have put them in dlls/unmanaged folder but the error continues. Them have I copied the dll files to <strong>bin/x86</strong> folder and works fine in Windows 7, but I don't know why the files have to be in bin folder.</p>\r\n<p>Thank you!!</p>",
+    "PostedDate": "2011-11-17T01:22:44.49-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

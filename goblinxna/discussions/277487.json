@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "690513",
+    "ThreadId": "277487",
+    "Html": "\r\n<p>I haven't prepared a proper documentation for it, and I probably won't have time to answer questions for it.</p>\r\n<p>The APIs are mostly same from the 3.x series, but there are couple of critical changes, so please make sure to see the tutorials to figure out the changes.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-10-27T15:55:15.153-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "691296",
+    "ThreadId": "277487",
+    "Html": "<p>Hey Ohan,&nbsp;</p>\r\n<p>I just downloaded this release, but it is missing the Wrappers folder. Can I use the wrapper folder from 3.6?</p>",
+    "PostedDate": "2011-10-30T06:03:54.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "691353",
+    "ThreadId": "277487",
+    "Html": "<p>Oh, ya, forgot to mention. Yes, please use the wrappers from 3.6. They are the same. I'll include the wrappers in the 4.0 release as well.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-30T12:04:06.003-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "694139",
+    "ThreadId": "277487",
+    "Html": "<p>I forgot that I have actually made several API changes in ALVARWrapper1.5, so the one from 3.6 won't work. Please re-download the latest Goblin XNA v4.0 beta 2, which includes the up-to-date wrapper.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-11-04T15:33:24.1-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

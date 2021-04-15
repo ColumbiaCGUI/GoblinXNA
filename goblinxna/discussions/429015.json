@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "984473",
+    "ThreadId": "429015",
+    "Html": "\r\n<p>Hi!</p>\r\n<p>How can I make my solution multi-threaded?</p>\r\n<p>I used theese parameters:<br>\r\nState.ThreadOption = (ushort)ThreadOptions.MarkerTracking;<br>\r\nState.ThreadOption = (ushort)ThreadOptions.PhysicsSimulation;</p>\r\n<p>but I think the multi-threading doesn't work. I got a 4 cored CPU and if i run my solution the performance monitor show that the application only uses 1 core.</p>\r\n<p>The tracking and the physics are runs on that core/thread where main function run.</p>\r\n<p>How can I solve this?</p>\r\n",
+    "PostedDate": "2013-01-09T06:23:03.457-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "424757",
+    "ThreadId": "207594",
+    "Html": "<p>I think I'm running into a scenario where physics collisions are misfiring because I have objects added to the physics engine that are underneath different markers. If I do this, I get cases where collisions are triggered where I can visually see nothing is colliding. Once I put these objects under the same marker, the problem goes away. Anyone know if this scenario is supported?</p>",
+    "PostedDate": "2010-03-28T19:21:58.577-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "425157",
+    "ThreadId": "207594",
+    "Html": "<p>The marker transformation does not affect their transformation registered in the physics engine by design, so even if you attach them to different markers, what matters in the physics engine is their transformation without marker transformation. That's why the physics engine fires collision detection. If we make the marker transformation affect the transformation in the physics engine, then it will constantly &quot;transport&quot; the position of the objects in the physics engine, which is not physically correct behavior. If you simply want to do collision detection attached on separate markers, then you should compute the collision yourself instead of using the physics engine.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-29T16:23:48.213-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "425160",
+    "ThreadId": "207594",
+    "Html": "<p>If you see Tutorial 8, you'll see how I did the collision detection correctly between two separate marker arrays using the physics engine.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-29T16:30:51.977-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "587092",
+    "ThreadId": "207594",
+    "Html": "<p>Hi,</p>\r\n<p>Can u please explain me how to detect the collision in our own ????? pls.... Help me........</p>",
+    "PostedDate": "2011-03-26T20:37:06.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "587221",
+    "ThreadId": "207594",
+    "Html": "<p>You have to do triangle collision detection between the two marker's virtual representation (a quad consisting of two triangles) based on their WorldTransform. It's probably easiest if you simply check the distance between those markers and use a threshold distance to estimate whether they are touching.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-27T11:24:01.453-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

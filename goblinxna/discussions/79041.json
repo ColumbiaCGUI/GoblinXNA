@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "270633",
+    "ThreadId": "79041",
+    "Html": "<p>Hello,</p>\r\n<p>First of all i'd like to congratulate for this great platform. You have done a very nice job that helps us a lot, thanks :)</p>\r\n<p>Now to my problem, i use a VX-6000 camera which works great but when i set the resolution to 800x600 the image looks very weird. Here is a screenshot: <a href=\"http://mzervos.xelixis.net/img/Capture800x600.PNG\">http://mzervos.xelixis.net/img/Capture800x600.PNG</a></p>\r\n<p>I have no problem when the resolution is 640x480 or less.</p>\r\n<p>The same problem occurs with my Microsoft LifeCam Show web-camera on every resolution... It would be great if i could use this webcam since its much much better!</p>\r\n<p>Am i doing something wrong, or is this a known bug or a limitation of the DirectX.Capture / DShowNet assemblies? Do you have any suggestions? Thank you very much and merry xmas :)</p>",
+    "PostedDate": "2009-12-24T10:55:39.8-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "270919",
+    "ThreadId": "79041",
+    "Html": "<p>Hi,</p>\r\n<p>If the image looks weird, it probably means that it's not the supported resolution by your camera.&nbsp;</p>\r\n<p>Actually, I haven't tested all possible resolutions before, so there might be a bug in the code as well.</p>\r\n<p>The larger the image you use for marker tracking, the slower the processing will be, so I usually just use 640x480 resolution.</p>\r\n<p>I've never used Micrsofot LifeCam Show before, so I can't really tell what's exactly the problem is.</p>\r\n<p>The best way to check is to use the CaptureTest project which you had to download for Goblin XNA installation.</p>\r\n<p>If it works fine with CaptureTest using your specified resolution and the same resolution doesn't work with Goblin, then it's a bug in Goblin framework.</p>\r\n<p>Please let me know if you find the exact resolution which works fine with CaptureTest, but doesn't work with Goblin, so I can fix the problem for the next release.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-12-26T23:06:26.953-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "270972",
+    "ThreadId": "79041",
+    "Html": "<p>Hey, thanks for the reply.</p>\r\n<p>The CaptureTest doesn't support 800x600 resolution at all, so i can't really test it. The only available ones are: 160 x 120, 320 x 240, 640 x 480 and 1024 x 768. So i guess it's not a Goblin XNA problem. I can use 800x600 on the Microsoft LifeCam application though. Anyway, it's not really important. 640x480 works fine.</p>\r\n<p>About Microsoft LifeCam Show webcam. I tested it with CaptureTest and it works fine with resolutions 160x120, 320x240, 640x480 but all of them show the same weird image in Goblin XNA.</p>",
+    "PostedDate": "2009-12-27T08:21:28.12-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "271001",
+    "ThreadId": "79041",
+    "Html": "<p>Ok, thanks for the report, I'll check on that.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-12-27T12:13:46.783-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "417771",
+    "ThreadId": "79041",
+    "Html": "<p>Hello,</p>\r\n<p>well i bought vx-7000 webcam and i have problem near than this. But in my case, no&nbsp;resolution are function correctly. When i active my webcam appear a weired image, i don&acute;t know how to fix it.</p>\r\n<p>In this night will post the imagem with de wrong image captured by the webcam.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Ah a tested with a CaptureTest program and works fine, i think the problem is with de Goblin plataform!</p>\r\n<p>&nbsp;</p>\r\n<p><a href=\"http://fan88.sites.uol.com.br/erro.jpg\">http://fan88.sites.uol.com.br/erro.jpg</a></p>\r\n<p>&nbsp;</p>\r\n<p>Someone knows how to solve my problem?</p>",
+    "PostedDate": "2010-03-13T09:21:51.723-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "418060",
+    "ThreadId": "79041",
+    "Html": "<p>I found the solution. I just uninstall de Microsoft LifeCam and everything works fine. It&acute;s a conflicto with a microsoft software. Hahha thanks!</p>",
+    "PostedDate": "2010-03-14T21:15:17.63-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

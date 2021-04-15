@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "533298",
+    "ThreadId": "237706",
+    "Html": "\r\n<p>Hi Ohan,</p>\r\n<p>First of all thanks for making this library public. It has been very useful to us. However, I was wondering why there are no tutorials in the library that make use of markers and physics (Newton/Havok) at the same time. A simple example could be virtual\r\n balls falling on a virtual board and bouncing off it. The transform of virtual board should be dependent upon the pose of the marker in the real world.</p>\r\n<p>I think it will help everyone using GoblinXNA a lot! Since through pictures on your website and videos on youtube, it can be seen that you already have developed complicated physics/AR examples, a simple tutorial showing a simple example as mentioned above\r\n would be of great help to us...</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks again and best regards,</p>\r\n<p>Wetoo</p>\r\n",
+    "PostedDate": "2010-12-09T02:03:46.793-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "533502",
+    "ThreadId": "237706",
+    "Html": "\r\n<p>It is not a simple tutorial, but there is an example under the /projects directory.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-12-09T09:05:30.94-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

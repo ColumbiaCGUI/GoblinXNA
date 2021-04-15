@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "568967",
+    "ThreadId": "246736",
+    "Html": "\r\n<p>&nbsp;</p>\r\n<p>Hello people,</p>\r\n<p>This my first post here. I wasn't aware of the goblin project until recently. I am reviewing some of the existing AR implementations due to my M.Sc. thesis. We are trying an AR game and thus we need animation in our 3d models. I have already taken a quick\r\n look of the documentation but I haven't cleared out the Goblin's way with animating models.</p>\r\n<p>Can someone explain how the animation tutorials work? ( in a broader sense )&nbsp;</p>\r\n<p>Can I import animations from other suites like unity, blender, 3ds Max or Maya? If yes are there any restrictions? Are there any known exporters?</p>\r\n<p>The file that is used is .fbx in some examples, this means that I can create .fbx files and trigger animations from there while runtime?</p>\r\n<p>&nbsp;</p>\r\n<p>I would try all these stuff before I posting but I am running out of time and currently I try to implement the project with OSGArt and OSGexporter of 3d Studio Max.<br>\r\nAny help would be appreciated - Thank you for your time.</p>\r\n<p>Stefanos</p>\r\n",
+    "PostedDate": "2011-02-19T07:27:41.03-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "571905",
+    "ThreadId": "246736",
+    "Html": "<p>We haven't worked out on the animation part much other than the animation tutorial since we never really needed it for our research purpose. There used to be an XNA animation framework, but I think that one is no longer updated . If you come across a nice XNA animation framework, please let me know and I may integrate  it to Goblin later on.</p>\n<p>Ohan</p>",
+    "PostedDate": "2011-02-24T19:39:00.66-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "594917",
+    "ThreadId": "246736",
+    "Html": "<p>Hi Ohan.</p>\r\n<p>I need to work with skeletal animation also.</p>\r\n<p>And there is a good XNA animation library, Actually it support XNA 3.1 and XNA 4. <a title=\"XNAnimation\" href=\"http://xnanimation.codeplex.com/\">http://xnanimation.codeplex.com/</a> , and it's updated constantly. W<span id=\"result_box\" lang=\"en\"><span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">ould be</span> <span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">very</span> <span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">interesting</span> <span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">to</span> <span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">work</span> <span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">with</span> <span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">skeletal</span> <span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">animation</span> <span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">and</span> <span class=\"hps\" title=\"Haz clic para obtener otras posibles traducciones\">goblin</span></span>.</p>\r\n<p>This library support:</p>\r\n<ul>\r\n<li><strong>Animation playback</strong> \r\n<ul>\r\n<li>Plays animations forward and backward.</li>\r\n<li>Constrols animation speed and looping.</li>\r\n<li>Supports models with up to 80 bones</li>\r\n<li>Supports linear, cubic and spherical keyframe interpolation. \r\n<ul>\r\n<li>Stores keyframe translation, orientation, and scale decomposed</li>\r\n<li>Interpolates translation, orientation and scale separately for best interpolation.</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</li>\r\n<li><strong>Animation blending</strong> \r\n<ul>\r\n<li>Supports cross fade between animation clips. \r\n<ul>\r\n<li>Allows smooth transitions between animations.</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n</li>\r\n<li><strong>Material system</strong> \r\n<ul>\r\n<li>Supports multiple point light sources (up to eight) with light attenuation.</li>\r\n<li>Supports materials with emissive, diffuse and specular properties.</li>\r\n<li>Supports Diffuse, Normal and Specular textures.</li>\r\n<li>Reports vertex and pixel shader profiles used</li>\r\n</ul>\r\n</li>\r\n<li><strong>XNAnimation Model Processor</strong> \r\n<ul>\r\n<li>Splits any animation into a new set of animations (based on time or keyframe)</li>\r\n<li>Transforms the entire scene using rotation or scale</li>\r\n</ul>\r\n</li>\r\n</ul>\r\n<p>Carlos Lucero</p>\r\n<div id=\"_mcePaste\" class=\"mcePaste\" style=\"position: absolute; left: -10000px; top: 0px; width: 1px; height: 1px; overflow: hidden;\">http://xnanimation.codeplex.com/</div>",
+    "PostedDate": "2011-04-10T10:21:49.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "595592",
+    "ThreadId": "246736",
+    "Html": "<p>Thanks for letting me know. Never knew they updated it recently. I will probably get time to play with it after mid-May.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-04-11T17:00:39.587-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "598723",
+    "ThreadId": "246736",
+    "Html": "<p>Here's a tutorial I made on creating an animated model in Maya for goblinXNA:</p>\r\n<p>&nbsp;</p>\r\n<p>http://graphics.cs.columbia.edu/wiki/doku.php?id=wiki:user:henderso:tutorials:fbxtoxna</p>\r\n<p>&nbsp;</p>\r\n<p>Steve</p>",
+    "PostedDate": "2011-04-17T11:15:33.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "598870",
+    "ThreadId": "246736",
+    "Html": "<p>&nbsp;@<a class=\"UserProfileLink\" href=\"http://www.codeplex.com/site/users/view/stevenhenderson\">stevenhenderson</a> : Very Nice Tutorial..... Thanks a lot .... :) :)</p>",
+    "PostedDate": "2011-04-17T23:35:59.507-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

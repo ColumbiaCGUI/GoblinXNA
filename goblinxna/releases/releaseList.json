@@ -1,0 +1,190 @@
+[
+  {
+    "Id": "0",
+    "Name": "Goblin XNA v4.0",
+    "DevelopmentStatus": "Stable",
+    "Description": "This is a stable release of Goblin XNA v4.0 with updated installation guide and user manual specific to v4.0. \n\nPlease see the attached Release Notes (which is also included in the distribution) for all of the changes from version 3.6.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2012-06-27T00:33:18.973-07:00",
+    "Files": [
+      {
+        "Id": "1388635e-6e6d-4175-8836-a068d90ff869",
+        "FileName": "GoblinXNAv4.0.zip",
+        "Url": "./0/1388635e-6e6d-4175-8836-a068d90ff869",
+        "Type": "Source Code",
+        "UploadDate": "2012-03-21T12:26:11.833-07:00"
+      },
+      {
+        "Id": "e5d60f61-9028-4d66-bd52-39e004fd693c",
+        "FileName": "ReleaseNotes.txt",
+        "Url": "./0/e5d60f61-9028-4d66-bd52-39e004fd693c",
+        "Type": "Documentation",
+        "UploadDate": "2012-02-23T13:06:14.24-08:00"
+      }
+    ]
+  },
+  {
+    "Id": "1",
+    "Name": "Goblin XNA v4.0 beta 3",
+    "DevelopmentStatus": "Beta",
+    "Description": "beta 3 of Goblin XNA v4.0. It contains updated installation guide and the API reference in .chm. The User Manual and ReleaseNotes.txt are still outdated. \n\nThe major change from beta 2 is that now the shadow mapping is working fine (with appropriate depth bias and light projection of course), and the stereoscopic rendering is working correctly (Tutorial 13).\n\nTo have correct stereo, you will need to calibrate both of the cameras attached to Wrap920AR using CameraCalibration tool (you need to use the calibration pattern from ALVAR for this), and then measure the stereo separation (in terms of position and orientation) using StereoCameraCalibration tool (you need to use the ground marker array used for Tutorial 8 for this). Then, use those calibration files with Tutorial 13 (replace the current Wrap920_Left.xml, Wrap920_Right.xml, and Wrap920_Stereo_Millimeter.xml with yours since each Wrap920AR will have different parameters). The Wrap920_Adjustment is to align the camera's field of view with the real field of view of a person's eye. You will need to tweak this as well. I will provide more detailed documentation in the final release of v4.0.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2011-11-23T13:07:12.677-08:00",
+    "Files": [
+      {
+        "Id": "91d284b4-7906-4959-b07b-fe2a9c808aa7",
+        "FileName": "GoblinXNAv4.0beta3.zip",
+        "Url": "./1/91d284b4-7906-4959-b07b-fe2a9c808aa7",
+        "Type": "Source Code",
+        "UploadDate": "2011-11-23T12:51:22.9-08:00"
+      }
+    ]
+  },
+  {
+    "Id": "2",
+    "Name": "Goblin XNA v4.0 beta 2",
+    "DevelopmentStatus": "Beta",
+    "Description": "NOTE: If you have downloaded this prior to 11/4/2011, please re-download it. I just found out that I have made several API changes for ALVARWrapper1.5 for this release. Otherwise, your tutorial 8 or 13 won't work properly.\n\nSince I can't guarantee when I can release v4.0 with proper documentation due to my limited time, I will post the beta 2 version of Goblin XNA v4.0 for those who can't wait for using Goblin with XNA 4.0 and Kinect SDK. Please note that you still need VS 2008 for compiling ALVAR stuff, but I've heard that VTT folks will release a version that works on VS 2010.\n\nEnjoy!!",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2011-11-23T12:51:46.667-08:00",
+    "Files": [
+      {
+        "Id": "8aa62971-7f6d-4b97-9e4d-1203d71c226e",
+        "FileName": "GoblinXNAv4.0beta2.zip",
+        "Url": "./2/8aa62971-7f6d-4b97-9e4d-1203d71c226e",
+        "Type": "Source Code",
+        "UploadDate": "2011-11-07T05:58:16.88-08:00"
+      }
+    ]
+  },
+  {
+    "Id": "3",
+    "Name": "Goblin XNA v3.6",
+    "DevelopmentStatus": "Stable",
+    "Description": "Version 3.6 release. This is the last release of Goblin XNA 3.x series which is based on XNA Game Studio 3.1. \nThe next releases will be based on XNA Game Studio 4.0.\n\nThere are several bug fixes and changes.\n\nPlease see the ReleaseNotes.txt for details.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2011-07-15T10:37:29.51-07:00",
+    "Files": [
+      {
+        "Id": "9fe7427b-a0e7-462a-88e3-658e5fd75267",
+        "FileName": "GoblinXNAv3.6.zip",
+        "Url": "./3/9fe7427b-a0e7-462a-88e3-658e5fd75267",
+        "Type": "Source Code",
+        "UploadDate": "2011-07-15T10:37:27.087-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "4",
+    "Name": "Goblin XNA v3.5",
+    "DevelopmentStatus": "Stable",
+    "Description": "v3.5.1 is the stable version (which contains the up-to-date User Manual) of release 3.5.\n\nThere are also couple of bug fixes and improvements.\n\nPlease see the ReleaseNotes.txt for details.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2011-01-05T12:53:39.777-08:00",
+    "Files": [
+      {
+        "Id": "f802f078-c49c-44db-aa1f-a308eb6df53d",
+        "FileName": "GoblinXNAv3.5.zip",
+        "Url": "./4/f802f078-c49c-44db-aa1f-a308eb6df53d",
+        "Type": "Source Code",
+        "UploadDate": "2011-01-04T17:35:28.27-08:00"
+      },
+      {
+        "Id": "c1c4a806-433d-4dd0-954c-01d2c5868e57",
+        "FileName": "GoblinXNAv3.5.zip",
+        "Url": "./4/c1c4a806-433d-4dd0-954c-01d2c5868e57",
+        "Type": "Source Code",
+        "UploadDate": "2010-12-15T13:31:21.623-08:00"
+      }
+    ]
+  },
+  {
+    "Id": "5",
+    "Name": "Goblin XNA v3.4",
+    "DevelopmentStatus": "Stable",
+    "Description": "This is Goblin XNA Version 3.4 release. \nThe installation process is much simpler now!!\n\nUpdates:\n\n1. Inlcuded DShowNET.dll and Lidgren.Network.dll with the distribution, so you only need to download Netwon and\n   ALVAR or ARTag library.\n\n2. Added the GetScale(..) method to NewtonPhysics for getting the scale of a physics object.\n\n3. Added the NetConfig property to LidgrenServer and LidgrenClient classes, so that the user can manually configure\n   the networking settings (e.g., max number of connections allowed, max delay).\n\n4. Added support for sensor data acquisition from Vuzix iWear Wrap 920 eyewear. See the updated iWearTracker class for \n   details.\n\n5. Added ALVARWrapper1.3 under the wrappers directory to support the VTT ALVAR 1.3.0 release.\n\n6. Added the NullCapture class under the Device.Capture directory to support static images.\n\n7. Added support to automatically detect whether Vuzix iWear VR920 or Wrap 920 eyewear is plugged in,\n   and to enable side-by-side stereo graphics format on the VGA adapter automatically.\n\n8. Added the DetectAdditional property to the ALVARMarkerTracker class.\n\n9. Added Tutorial 14 to demonstrate skinned model animation.\n\n10. Partially finished scene loading and saving functionality. This is a work in progress: It handles simple scenes, \n    but is not yet complete.\n\n11. Added the ability to save an ALVAR multimarker configuration in XML format by using the\n    MarkerLayout too: Specify an \"xml\" file extension when outputting the config file.\n\n12. Added PreTranslation and PostTranslation properties to the TransformNode class. Please see the API documentation \n    for details.\n\n\nBug Fixes:\n\n1. Fixed a problem with the physics engine add/removal process for geometry nodes when a SwitchNode is used to switch \n   between different branches.  \n\n2. Fixed a Newton Game Dynamics joint re-addition problem.\n\n3. Fixed a bug in the DefaultTransparencyComparer class.\n\n4. Fixed a bug in single marker detection using the AssociateMarker(int) signature. Now the\n   MarkerNode(IMarkerTracker, int) signature will work as expected.\n\n5. Fixed texture mapping and transparent rendering problems for 3D models defined in .fbx and .x files.\n\n6. Fixed the minimum bounding box computation in Model.cs and triangle mesh calculation in\n   NewtonPhysics.cs for models with multiple model meshes and parts.\n\n7. Fixed a bug in the MarkerLayout tool. The lines that indicate the marker size are supposed to be status indicator\n   in the generated configuration .txt file. \n\n8. Fixed a problem in assigning WorldTransformation directly to a TransformNode. \n\n9. Fixed a bug in the TransformNode class for its multiplication ordering. Prior to v3.4, scale and rotation were \n   performed in the wrong order. (This would have caused incorrect behavior only if the x, y, and z scale factors \n   were not identical.) Starting in v3.4, the PreTranslation property was added, and PostTranslation was added as \n   an alias for Translation.\n\n\nChanges:\n\n1. Modified Tutorial 12 to be able to handle scaling of the vehicle model.\n\n2. Modified Tutorial 13 to support side-by-side stereo for Vuzix iWear Wrap 920 eyewear. \n\n3. Modified Tutorial 10 in accordance with the network handling code migration (see below).\n\n4. Moved all network handling code in the Scene class to the INetworkHandler implementation. This\n   makes it possible for a programmer who does not like how network messages are handled\n   in Goblin, to implement their own NetworkHandler to replace the default implementation. \n\n5. Changed State.IsMultiCore to State.ThreadOption to allow a programmer to specify exactly what operations to \n   multi-thread. \n\n6. Modified the IVideoCapture interface and its implementations slightly.\n\n7. Removed the StaticImageFile property of the IMarkerTracker interface.\n\n8. Modified Tutorial 8 to include an example of performing tracking on a static image.\n\n9. Removed the MarkerBase class, and migrated all necessary functionality to the Scene class.\n\nand more..",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2011-01-04T17:37:40.48-08:00",
+    "Files": [
+      {
+        "Id": "39b73421-2c52-4aef-b95f-ad6889263d70",
+        "FileName": "GoblinXNAv3.4.zip",
+        "Url": "./5/39b73421-2c52-4aef-b95f-ad6889263d70",
+        "Type": "Application",
+        "UploadDate": "2010-05-12T11:19:31.103-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "6",
+    "Name": "Goblin XNA v3.3",
+    "DevelopmentStatus": "Stable",
+    "Description": "Version 3.3 (10/15/09)\n\n\nUpdates:\n\n1. Upgraded the underlying XNA framework from 3.0 to 3.1. \n\n2. Added support for ALVAR optical marker tracking library. Tutorial 8 now includes an example of using ALVAR.\n\n3. Added automatic marker array image and configuration generation tool (MarkerLayout) under tools directory.\n\n4. Added State.DebugTextColor to specify the color of the debug texts such as FPS and triangle count.\n\n5. Added DoneEvent event member to GoblinXNA.Helpers.Interpolator class so that the user can assign functions to be triggered when the interpolation finishes. (Has restriction on the usage. Please check API doc)\n\n6. Added support for implementing custom comparer for sorting the drawing order of transparent geometries. You can now set Scene.TransparencyDrawOrderComparer to your custom comparer.\n\n7. Added 3D text drawing capability using Nuclex.Fonts library (http://nuclexframework.codeplex.com) Now you can draw a 3D text using GoblinXNA.UI.UI3D.UI3DRenderer's Write3DText(...) functions. An example is provided in Tutorial 9.  \n\n8. Added UI2DRenderer.FillPolygon(...) method for polygon drawing (concave polygon doesn't work yet).\n\n9. Finished G2DSpinner and G2DList implementation.\n\n10. Added G2DSuggestField which is a text field that is capable of showing a suggestion list under the text field. This new class is added to GoblinXNA.UI.UI2D.Fancy package.\n\n\nBug Fixes:\n\n1. The lag of marker transformations relative to the displayed video image has been removed when State.IsMultiCore is set to true.\n\n2. Fixed bounding volume computation of models that are not centered at the origin. This problem caused some models to be clipped (not rendered) even though they are in the view frustum.\n\n3. Fixed G2DSlider not to function when it is not visible. \n\n4. Fixed bounds problem for cascaded G2DPanel component.\n\n5. Added focus highlight and null character caret blinking for G2DTextField. Also, fixed the caret position display when HorizontalAlignment is set to other than Left.\n\n\nImprovements:\n\n1. Improved transparency handling.\n\n2. Converted Vector3 calculations to inline in order to increase the computation speed on either Update and Draw path and methods called frequently.\n\n3. Optimized 2D shape & text drawing by deferring the actual drawing until UI2DRenderer.Flush() is called. Now you can call UI2DRenderer's drawing functions either before or after base.Draw(..) function (It used to be that you have to call the 2D drawing functions after base.Draw(..)). Now, if you call the 2D drawing functions after base.Draw(..), then you will need to call UI2DRenderer.Flush() after all of your 2D drawing calls in order to display them on the current frame. Otherwise, it will be deferred till the following frame. However, if you want to draw 2D shapes or texts on top of the 2D UI widgets created using G2D objects, then you have to call your 2D drawing functions after base.Draw(..). Otherwise, your 2D drawings will appear beneath the G2D objects.\n\n\nChanges:\n\n1. When a Node is added to a BranchNode subclasses through AddChild, it used to override the Enabled property of the added Node to be the same as its parent's Enabled property value, but this is changed so that it won't override.\n\n2. Removed the GoblinXNA.UI.Events package, and converted all of the listener based event triggering implementations to C# 'event' based implementation. This change removes the neccessity of creating multiple internal classes to handle events and needs to create static member variables. Also, this is more intuitive in C# environment to use event properties instead of Java-like listener implementation.\n\n3. Modified the GenericInput class for easier and more intuitive navigation using mouse-dragging.\n\n4. The constant strings in InputMapper and DeviceEnumerator are removed. Please use the Identifier property of each InputDevice or InputDevice_6DOF classes to specify the device name (e.g., use MouseInput.Instance.Identifier instead of InputMapper.Mouse)",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2011-01-04T17:38:14.247-08:00",
+    "Files": [
+      {
+        "Id": "cb1d50fd-279a-4001-ba7b-18dd2eb79465",
+        "FileName": "GoblinXNAv3.3.zip",
+        "Url": "./6/cb1d50fd-279a-4001-ba7b-18dd2eb79465",
+        "Type": "Application",
+        "UploadDate": "2009-10-25T14:01:56.137-07:00"
+      }
+    ]
+  },
+  {
+    "Id": "7",
+    "Name": "Goblin XNA v3.2",
+    "DevelopmentStatus": "Stable",
+    "Description": "This release contains the source code, installation guide, API documentation, user manual, tutorials, and a project. Please follow the installation guide. \n\nThe latest stable release is version 3.3 (released on 10/15/2009). \n\nIf you need more detailed installation guide, please check out [url:http://graphics.cs.columbia.edu/wiki/wiki:courses:coms4172:installgoblinexna] (Thanks to Steve Henderson for making the wiki). This detailed installation guide was created for COMS 4172 students, so some instructions may not be appropriate for your case (such as the source of downloading _ARTag_). \n\nSceneGraphDisplay (which is now a part of GoblinXNAv3.2 distribution) is a visual debugger tool that displays your current scene graph structure as well as property values of a selected node. Please read the user manual that comes with the download regarding the features and how to use it with Goblin XNA. Big thanks to Nikhil Ramesh for developing this great tool!!\n\nMinimum installation requirements on an end-user machine can be found here: [url:http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=51734]. Big thanks to aaecheve to figure this out!! ",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2009-10-15T13:50:48.733-07:00",
+    "Files": [
+      {
+        "Id": "7a3df43b-074f-47f2-b995-201a2b3ef003",
+        "FileName": "GoblinXNAv3.2.zip",
+        "Url": "./7/7a3df43b-074f-47f2-b995-201a2b3ef003",
+        "Type": "Source Code",
+        "UploadDate": "2009-04-30T12:31:01.307-07:00"
+      },
+      {
+        "Id": "c7284e77-7e9e-487f-bb59-8aaa553e7eb1",
+        "FileName": "GoblinXNA.zip",
+        "Url": "./7/c7284e77-7e9e-487f-bb59-8aaa553e7eb1",
+        "Type": "Source Code",
+        "UploadDate": "2009-02-05T10:33:43.633-08:00"
+      },
+      {
+        "Id": "286f0ae8-c63e-4a6e-8a89-ad1505abb701",
+        "FileName": "GoblinXNAv3.1.zip",
+        "Url": "./7/286f0ae8-c63e-4a6e-8a89-ad1505abb701",
+        "Type": "Source Code",
+        "UploadDate": "2009-03-02T15:09:45.04-08:00"
+      }
+    ]
+  },
+  {
+    "Id": "8",
+    "Name": "Goblin XNA v4.1",
+    "DevelopmentStatus": "Stable",
+    "Description": "This release contains a wrapper for ALVAR 2.0. From this version, you do not need to download and install Visual Studio 2008 for compiling ALVAR wrapper anymore since VS 2010 is supported from ALVAR 2.0. \n\nWe've also added support for Windows Phone development. \n\nWe've included a tutorial that demonstrates how to perform feature-based tracking using ALVAR 2.0 with Goblin XNA. \n\nThere are several other changes and additions. Please read the ReleaseNotes.txt for details.",
+    "ReleasedDatge": "0001-01-01T00:00:00",
+    "ModifiedDate": "2012-07-08T21:49:51.267-07:00",
+    "Files": [
+      {
+        "Id": "ad79c504-19e0-42ec-8059-54b852886a1e",
+        "FileName": "GoblinXNAv4.1.zip",
+        "Url": "./8/ad79c504-19e0-42ec-8059-54b852886a1e",
+        "Type": "Source Code",
+        "UploadDate": "2012-07-08T21:49:49.377-07:00"
+      },
+      {
+        "Id": "83645563-dd25-40d2-b6b7-5fdf0bfc174c",
+        "FileName": "ReleaseNotes.txt",
+        "Url": "./8/83645563-dd25-40d2-b6b7-5fdf0bfc174c",
+        "Type": "Documentation",
+        "UploadDate": "2012-06-27T00:30:27.21-07:00"
+      }
+    ]
+  }
+]

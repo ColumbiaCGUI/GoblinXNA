@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "614515",
+    "ThreadId": "258058",
+    "Html": "\r\n<p>I'm currently playing with Goblin XNA and would appreciate if you could help me.&nbsp; I just have a few questions that I can't google-out. I'm hopless and don't know to whom to turn.<br>\r\n<br>\r\nI'm new at the augmented reality (and computer graphics overall) thing so don't kill me if I say something stupid. Anyway, I'm doing a simple tech demo, 2 cars on a playing field and a ball (it should be something like AR car soccer :P). My problem is that\r\n I have no idea how to add objects. I know there's a create objects method but it just doesn't work for me.\r\n<br>\r\nHere's the CreateGround method: <a rel=\"nofollow\" href=\"http://pastebin.com/M8iBXEzP\" target=\"_blank\">\r\nhttp://pastebin.com/M8iBXEzP</a><br>\r\nAnd here's the CreateObjects one (ball and 2 walls): <a rel=\"nofollow\" href=\"http://pastebin.com/nTQcE7Fc\" target=\"_blank\">\r\nhttp://pastebin.com/nTQcE7Fc</a></p>\r\n<p>There should spawn a playing field, a ball, and 2 walls, but there's just the ground field.</p>\r\n<p>Alvar is being user for the tracking and I want it all on the same multi-marker. Don't be confused by the no.2 in &quot;ALVARGroundArray2.xml&quot;, it's the same marker but I was just experimenting.</p>\r\n<p><br>\r\nI'm probably doing something terribly wrong. I think it has to do with the groundMarkerNode :/</p>\r\n<p>Help me please, I'm desperate :(</p>\r\n",
+    "PostedDate": "2011-05-18T04:11:17.403-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "615040",
+    "ThreadId": "258058",
+    "Html": "<p>This :</p>\r\n<p>groundMarkerNode <span class=\"sy0\">=</span> <span class=\"kw3\">new</span> MarkerNode<span class=\"br0\">(</span>scene<span class=\"sy0\">.</span><span class=\"me1\">MarkerTracker</span>, <span class=\"st0\">\"ALVARGroundArray2.xml\"</span><span class=\"br0\">)</span><span class=\"sy0\">;</span></p>\r\n<p>&nbsp;</p>\r\n<p><span class=\"sy0\">You should only initialize your ground marker once, else when you initialize it later, you loose all the objects attached to it. I think that you create your ground last, that's why it's the only one remaining.<br /></span></p>",
+    "PostedDate": "2011-05-19T00:42:23.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "615395",
+    "ThreadId": "258058",
+    "Html": "<p>Thank you very, very much. I was blind.</p>\n<p>Yeah, the problem was in the Initialisation method - I first created the objects, then the ground so there were always errors.</p>\n<p>On another note - does someone know how to make the ball roll when you <strong> tilt </strong>the marker? (just like in <a href=\"http://www.youtube.com/watch?v=6AKgH4On65A\"> the Marble game</a> by Ohan Oda). I'm searching for a improvised solution, without the HMD.</p>",
+    "PostedDate": "2011-05-19T11:20:25.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

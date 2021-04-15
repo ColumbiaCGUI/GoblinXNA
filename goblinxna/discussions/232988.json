@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "515254",
+    "ThreadId": "232988",
+    "Html": "\r\n<p>Hey im trying to build the tutorial number 8, and i get this error</p>\r\n<p>GoblinXNA.Device.Vision.Marker.MarkerException was unhandled&nbsp;&nbsp;Message=&quot;Usage: AssociateMarker(int markerID) or AssociateMarker(int markerID, double markerSize) or AssociateMarker(String multiMarkerConfig, int[] ids)&quot;&nbsp;&nbsp;Source=&quot;GoblinXNA&quot;&nbsp;&nbsp;StackTrace:&nbsp;&nbsp;\r\n &nbsp; &nbsp; en GoblinXNA.Device.Vision.Marker.ALVARMarkerTracker.AssociateMarker(Object[] markerConfigs) en E:\\Dise&ntilde;o\\8vo\\PDG2\\AR\\GoblinXNAv3.4\\GoblinXNAv3.4\\src\\Device\\Vision\\Marker\\ALVARMarkerTracker.cs:l&iacute;nea 485&nbsp;&nbsp; &nbsp; &nbsp;\r\n en GoblinXNA.SceneGraph.MarkerNode..ctor(String name, IMarkerTracker tracker, Object[] markerConfigs) en E:\\Dise&ntilde;o\\8vo\\PDG2\\AR\\GoblinXNAv3.4\\GoblinXNAv3.4\\src\\SceneGraph\\MarkerNode.cs:l&iacute;nea 91&nbsp;&nbsp; &nbsp; &nbsp; en GoblinXNA.SceneGraph.MarkerNode..ctor(IMarkerTracker\r\n tracker, Object[] markerConfigs) en E:\\Dise&ntilde;o\\8vo\\PDG2\\AR\\GoblinXNAv3.4\\GoblinXNAv3.4\\src\\SceneGraph\\MarkerNode.cs:l&iacute;nea 114&nbsp;&nbsp; &nbsp; &nbsp; en Tutorial8___Optical_Marker_Tracking.Tutorial8.CreateObjects() en E:\\Dise&ntilde;o\\8vo\\PDG2\\AR\\GoblinXNAv3.4\\GoblinXNAv3.4\\tutorials\\Tutorial8\r\n - Optical Marker Tracking\\Tutorial8.cs:l&iacute;nea 256&nbsp;&nbsp; &nbsp; &nbsp; en Tutorial8___Optical_Marker_Tracking.Tutorial8.Initialize() en E:\\Dise&ntilde;o\\8vo\\PDG2\\AR\\GoblinXNAv3.4\\GoblinXNAv3.4\\tutorials\\Tutorial8 - Optical Marker Tracking\\Tutorial8.cs:l&iacute;nea\r\n 116&nbsp;&nbsp; &nbsp; &nbsp; en Microsoft.Xna.Framework.Game.Run()&nbsp;&nbsp; &nbsp; &nbsp; en Tutorial8___Optical_Marker_Tracking.Program.Main(String[] args) en E:\\Dise&ntilde;o\\8vo\\PDG2\\AR\\GoblinXNAv3.4\\GoblinXNAv3.4\\tutorials\\Tutorial8 - Optical Marker\r\n Tracking\\Program.cs:l&iacute;nea 14&nbsp;&nbsp;InnerException:&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>essentially is this i believe &quot;GoblinXNA.Device.Vision.Marker.MarkerException was unhandled&quot;, i have no idea whats happening, im not that experienced in programming,</p>\r\n<p>can anyone help please????</p>\r\n",
+    "PostedDate": "2010-10-31T18:31:51.33-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515674",
+    "ThreadId": "232988",
+    "Html": "\r\n<p>It shd work for v3.4, but if you're having trouble, pls try v3.5.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-01T17:52:38.29-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

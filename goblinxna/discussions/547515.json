@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1252795",
+    "ThreadId": "547515",
+    "Html": "Sir\r<br />\n<br />\nI am able to run Tutorial No: 18 successfully . I created a .dat file for the marker image successfully.\r<br />\n<br />\nNow when ever I  hover my webcam over the image a red box is displayed.\r<br />\nThe red box is displayed even when I hover my webcam over a non related image.\r<br />\n<br />\nI would like to know how the program indicates that the marker has been located.\r<br />\n<br />\n<br />\nRegards\r<br />\n<br />\nMathew<br />\n",
+    "PostedDate": "2014-06-04T03:59:47.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1460897",
+    "ThreadId": "547515",
+    "Html": "Sorry to necro this old thread -- how did you create the .dat file for markerless.png.dat? This seems to be undocumented.<br />\n",
+    "PostedDate": "2016-01-27T10:04:38.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1460958",
+    "ThreadId": "547515",
+    "Html": "Hi\r<br />\n<br />\nI think there was an exe file (its name I don't remember) in this tutorial that was used to generate the .dat file . \r<br />\nHope this helps\r<br />\n<br />\nregards\r<br />\n<br />\nMathew<br />\n",
+    "PostedDate": "2016-01-27T19:47:24.947-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1461097",
+    "ThreadId": "547515",
+    "Html": "Thanks so much for the fast response. I overlooked a comment in one of the source files that directs us to a program supplied by ALVAR. I was a bit thrown off by another comment that appeared to be the directions needed by that broke off mid sentence.\r<br />\n On 01/27/2016 09:47 PM, mjk60355 wrote:<br />\n",
+    "PostedDate": "2016-01-28T09:21:52.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

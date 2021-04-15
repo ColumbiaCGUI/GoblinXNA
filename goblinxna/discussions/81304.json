@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "278986",
+    "ThreadId": "81304",
+    "Html": "<p>Hi all, I've searched the forum and not seen this question asked so it seemed time to ask it myself. I am looking to use Goblin XNA for a project and the two things that I need the most out of it are positional tracking and light detection. What I mean by positional tracking is that I need the X, Y, rotation etc. values of the markers. I assume this is something that Goblin can do fairly easily since it doesn't seem that it would work without it. I just wanted to make sure that this information was fairly easy to get to. By light detection I do not mean in XNA but in the world as it is captured by the camera. I wanted to know if there was a built in method to detect the brightness of a room and if not how difficult it would be for me to get intermittent snapshots so that I could run a self-written image processing method on those images to generate the HSL values myself. From what I've read Goblin XNA looks to be my best bet but I just wanted to make absolutely sure that these two key features are there before I find out down the road that I'm in trouble and need a huge workaround or to start over completely. Thank you so much for any help you can provide!</p>",
+    "PostedDate": "2010-01-19T07:45:07.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "279033",
+    "ThreadId": "81304",
+    "Html": "<p>Goblin XNA supports the marker tracking, and you can easily get the transformation (position &amp; orientation) of the tracked markers. However, we do not provide a method to detect the brightness or the position of the light source in the real world. You will need to process the video image yourself, and figure out these information. There are a few papers that discuss how to do it.</p>",
+    "PostedDate": "2010-01-19T09:01:58.42-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "279123",
+    "ThreadId": "81304",
+    "Html": "<p>Thank you for your quick reply, it's basically what I was expecting and hoping to be the case. I actually have done this sort of image processing in the past so that bit is more or less trivial, I just wanted to be sure that it actually IS possible to directly access the video feed or to snag a frame every second or so. Thanks for your help.</p>",
+    "PostedDate": "2010-01-19T11:17:48.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

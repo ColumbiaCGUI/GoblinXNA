@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "290236",
+    "ThreadId": "85189",
+    "Html": "<p>Just one note when you compile Goblin XNA.</p>\r\n<p>If you're using ALVAR for tracking, and don't need ARTag, then you don't need to download:</p>\r\n<p>1. ARTag distribution</p>\r\n<p>2. Tao framework</p>\r\n<p>3. freeglut.dll</p>\r\n<p>When you compile Goblin XNA, make sure to remove the Tao stuff from the references, and remove ARTagTracker from the Device.Vision.Marker directory in the solution explorer of VS 2008.</p>\r\n<p>Then, when you compile the tutorials, you should remove ARTagWrapper.dll from Tutorial 8 and Tutorial 13 as well as the freeglut.dll.</p>\r\n<p>Then in the code, remove the place that has ARTagTracker.</p>\r\n<p>I'll try to make these a little bit easier for the next release.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-12T10:58:50.08-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "419169",
+    "ThreadId": "85189",
+    "Html": "<p>If you ARE using (or trying to use) ARTag, is there a download link for the ARTagWrapper.dll as I cannot access it via the Columbia site, not being a student there.</p>",
+    "PostedDate": "2010-03-17T05:14:05.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "419172",
+    "ThreadId": "85189",
+    "Html": "<p>Doh! Found it in the artag stuff.</p>",
+    "PostedDate": "2010-03-17T05:21:24.813-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

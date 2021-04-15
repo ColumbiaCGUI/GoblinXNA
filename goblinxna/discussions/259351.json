@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "619705",
+    "ThreadId": "259351",
+    "Html": "\r\n<p>I've been following the&nbsp;Installation Guide (v3.5) and everything work well till the last part.</p>\r\n<p>The last part of the guide told me to&nbsp;compile the Goblin XNA library, by opening the GoblinXNA.sln file&nbsp;under GoblinXNA\\src and build the solution.&nbsp;</p>\r\n<p>So I Clean the Project GoblinXNA, but then 14 Warnings and 1 Error just appear.</p>\r\n<p>Listed below are the error and warnings that I got.</p>\r\n<p>Error:&nbsp;<br>\r\nUnable to create directory &quot;obj\\Debug\\&quot;. Access to the path 'obj\\Debug\\' is denied.</p>\r\n<p>Warning:<br>\r\nThe referenced component 'DirectX.Capture' could not be found.<br>\r\nThe referenced component 'DShowNET' could not be found.<br>\r\nThe referenced component 'Lidgren.Network' could not be found.<br>\r\nThe referenced component 'Microsoft.Xna.Framework' could not be found.<br>\r\nThe referenced component 'Microsoft.Xna.Framework.Content.Pipeline' could not be found.<br>\r\nThe referenced component 'Microsoft.Xna.Framework.Game' could not be found.<br>\r\nThe referenced component 'NewtonWrapper' could not be found.<br>\r\nThe referenced component 'Nuclex.Fonts' could not be found.<br>\r\nThe referenced component 'System' could not be found.<br>\r\nThe referenced component 'System.Core' could not be found.<br>\r\nThe referenced component 'System.Data' could not be found.<br>\r\nThe referenced component 'System.Drawing' could not be found.<br>\r\nThe referenced component 'System.Windows.Forms' could not be found.<br>\r\nThe referenced component 'System.Xml' could not be found.<br>\r\nThe referenced component 'DirectX.Capture' could not be found.</p>\r\n<p>By the way I am using window7&nbsp;</p>\r\n<p>Thank you very much</p>\r\n",
+    "PostedDate": "2011-05-28T01:05:35.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "621132",
+    "ThreadId": "259351",
+    "Html": "<p>You don't need to do \"Clean\". You should be able to compile without any errors if you have all of the dlls in under dlls/managed.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-05-31T19:25:04.103-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "247628",
+    "ThreadId": "72523",
+    "Html": "<p>Hi, I have a problem about drawing models.</p>\r\n<p>I am trying to draw 'p1_wedge'(in totorials sample fbx model) on groundMarker.</p>\r\n<p>I don't know how to make it.</p>\r\n<p>----------------------------------</p>\r\n<p>&nbsp;private void CreateObjects()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundMarkerNode = new MarkerNode(scene.MarkerTracker, &quot;ground&quot;);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scene.RootNode.AddChild(groundMarkerNode);</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Loads a textured model of a ship<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ModelLoader loader = new ModelLoader();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Model shipModel = (Model)loader.Load(&quot;&quot;, &quot;p1_wedge&quot;);</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Create a geometry node of a loaded ship model<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GeometryNode shipNode = new GeometryNode(&quot;Ship&quot;);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shipNode.Model = shipModel;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // This ship model has material definitions in the model file, so instead<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // of creating a material node for this ship model, we simply use its internal materials<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shipNode.Model.UseInternalMaterials = true;</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Create a transform node to define the transformation for the ship<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TransformNode shipTransNode = new TransformNode();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shipTransNode.Translation = new Vector3(0, 5, -12);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shipTransNode.Scale = new Vector3(0.002f, 0.002f, 0.002f); // It's huge!<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shipTransNode.Rotation = Quaternion.CreateFromAxisAngle(new Vector3(0, 1, 0),<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MathHelper.ToRadians(90));</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //shipTransParentNode = new TransformNode();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //shipTransParentNode.Translation = Vector3.Zero;</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Now add the above nodes to the scene graph in appropriate order<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //scene.RootNode.AddChild(shipTransParentNode);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //shipTransParentNode.AddChild(shipTransNode);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //shipTransNode.AddChild(shipNode);</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundMarkerNode.AddChild(shipTransNode);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shipTransNode.AddChild(shipNode);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p>&nbsp;</p>\r\n<p>------------------------------------------------</p>\r\n<p>This is the method I am using.</p>\r\n<p>What&nbsp;should I fix it??</p>\r\n<p>Please help me~</p>",
+    "PostedDate": "2009-10-20T03:49:24.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "247955",
+    "ThreadId": "72523",
+    "Html": "<p>The code snippet looks fine.</p>\r\n<p>My questions are:</p>\r\n<p>Is your marker tracking ARTag? If you're using ALVAL, the parameter you're passing to marker node.</p>\r\n<p>Are you creating a ground geometric node that is attached on to your groundMarkerNode and acts as an occluder?</p>\r\n<p>If so, since you're shifting the model (0, 5, -12) relative to the marker's (0, 0, 0) coordinate location, it'll appear below (-12&nbsp;below the marker surface)&nbsp;the ground geometric model attached to the ground marker node, and the occlusion hides it.</p>\r\n<p>Also when you place things on marker node, you need to know exactly the size of the marker. For example, if the marker size is 4x4, and your scaled model is 100x100x100, then you won't see anything because you're inside of the model and the rendering uses backface culling. If the marker size is 100x100, and your scaled model is 4x4x4, then it'll appear very small and again, you won't be able to&nbsp;or very hard to see it.</p>\r\n<p>Hope this helps</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-20T20:26:26.77-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "247956",
+    "ThreadId": "72523",
+    "Html": "<p>Are you using v3.0 or v3.3? Note that 3.3 is the latest version.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-20T20:27:40.483-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

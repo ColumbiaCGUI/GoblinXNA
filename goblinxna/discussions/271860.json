@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "668896",
+    "ThreadId": "271860",
+    "Html": "\r\n<p>Hi Ohan, I was able to create a custom marker using the ALVAR's samplemarkercreator, however I couldn't make it to be recognized by Goblin XNA, I used the MarkerLayout tool and created ALVARconfig.xml and copied that to my project folder. And trying to pick\r\n it up by&nbsp;</p>\r\n<p>myMarkerNode = new MarkerNode(scene.MarkerTracker, &quot;C:\\\\...\\\\ALVARConfig.xml&quot;);</p>\r\n<p>and trying a test case in update</p>\r\n<p>&nbsp;if (myMarkerNode.MarkerFound)&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>{&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Console.Out.WriteLine(&quot;Marker Found&quot;);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>}</p>\r\n<p>&nbsp;</p>\r\n<p>but it doesn't work. I think I am doing something wrong in MarkerLayout. I want to use only one marker so I have something like this</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;layout.AddMarker(1, new Point(60 , 60), &quot;raw_markers/ALVAR/MarkerData_myMarker.png&quot;);</p>\r\n<p>&nbsp;</p>\r\n<p>the reason I am bugging you so much is that we are doing a senior design project in colorado state university, and we just started, so I am trying to learn Goblin. thank you so much for help. it is a great tool.</p>\r\n",
+    "PostedDate": "2011-09-07T19:59:13.973-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "669588",
+    "ThreadId": "271860",
+    "Html": "<p>ok something is&nbsp;definitely wrong with MarkerLayout tool. i created two different markers using the samplemarkercreator and when I generated ALVARConfig.xml files for both of them, they we completely identical. the only thing in that file is ;</p>\r\n<p><br />&lt;?xml version=\"1.0\" encoding=\"UTF-8\"?&gt;</p>\r\n<p>-&lt;multimarker markers=\"1\"&gt;</p>\r\n<p>-&lt;marker status=\"2\" index=\"0\"&gt;</p>\r\n<p>&lt;corner z=\"0\" y=\"-34\" x=\"0\"/&gt;</p>\r\n<p>&lt;corner z=\"0\" y=\"-34\" x=\"34\"/&gt;</p>\r\n<p>&lt;corner z=\"0\" y=\"0\" x=\"34\"/&gt;</p>\r\n<p>&lt;corner z=\"0\" y=\"0\" x=\"0\"/&gt;</p>\r\n<p>&lt;/marker&gt; &lt;/multimarker&gt;</p>\r\n<p>&nbsp;</p>\r\n<p>which doesn't seem whole lot of information. plus same for two different markers. I think this only has the information of the white box in the black box.(the coordinates) and not actually the information of the different patterns.</p>\r\n<p>what am I missing?</p>",
+    "PostedDate": "2011-09-09T03:01:52.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "672541",
+    "ThreadId": "271860",
+    "Html": "<p>well i kind of figured it out. you only need to use the samplemarkercreator in alvar. it creates the xml's too if you have at least 2 individual markers in your array. i couldn't do the single marker one. but my friend said he got it. it's not a big problem. however i still dont get how the marker tracking works with as little information as that.</p>",
+    "PostedDate": "2011-09-15T22:27:52.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "675040",
+    "ThreadId": "271860",
+    "Html": "<p>You don't need an xml file for just one marker. You can simply pass the ID of the marker. Please see the API documentation of ALVARMarkerTracker.AssociateMarker function.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-21T19:24:14.973-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

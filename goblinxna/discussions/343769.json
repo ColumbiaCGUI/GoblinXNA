@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "798227",
+    "ThreadId": "343769",
+    "Html": "\r\n<p>Hi all,</p>\r\n<p>We have just release Goblin XNA v4.0 stable version today. Please update your beta versions to this stable version.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2012-02-23T13:10:52.18-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "802823",
+    "ThreadId": "343769",
+    "Html": "<p>Hi Ohan. Does 4.0 have a significant performance boost? The reason I am asking is, we are using 3.6 still, and When you move the markers even a little bit fast they are not recognized. Do you have any suggestion on this issue? What are the limits?</p>",
+    "PostedDate": "2012-02-28T13:16:35.313-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "803236",
+    "ThreadId": "343769",
+    "Html": "<p>That has nothing to do with the version of Goblin, but it's rather has something to do with ALVAR. If you have default exposure setting for your camera, the image gets blurred when you move fast, and all marker based tracking libraries I've tried so far can not deal with blurred image since their algorithms look for sharp edges. You should lower your camera's exposure rate if you want to make it work better with fast movement (AMCap can be used to control the camera parameters for most webcams). You should see the section of \"IMPROVING OPTICAL MARKER TRACKING PERFORMANCE\" in the user manual for tips on how to improve your tracking performance. I believe it's in 3.6's user manual, but if not, you can get one for 4.0 from the Documentation page in the codeplex site.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-29T09:23:22.657-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "803349",
+    "ThreadId": "343769",
+    "Html": "<p>yes. lowering exposure&nbsp;definitely&nbsp;helps. thanks.</p>",
+    "PostedDate": "2012-02-29T12:10:34.36-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "803767",
+    "ThreadId": "343769",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>I noticed that ALVAR 2.0 will be officially release in April 2012. Will there be further release plan for Goblin to work with ALVAR 2.0. If so, when would that be available approximately?&nbsp;</p>\r\n<p>zhen</p>",
+    "PostedDate": "2012-03-01T06:26:54.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "804023",
+    "ThreadId": "343769",
+    "Html": "<p>Yes, probably sometime in May</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-01T14:07:36.69-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

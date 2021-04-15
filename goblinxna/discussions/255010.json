@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "601774",
+    "ThreadId": "255010",
+    "Html": "\r\n<p>Hi Ohanoda, I'm wondering about how to create a marker image with ALVAR, I know how to create the config file and xml file with the project MarkerLayout (GoblinXNA), but I don't understand how to create my own marker image with ALVAR, if you have some documentation\r\n about this topic or a link, please tell me =D, I can't find any documentation about this...</p>\r\n<p>Carlos Lucero</p>\r\n",
+    "PostedDate": "2011-04-22T19:21:37.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "646047",
+    "ThreadId": "255010",
+    "Html": "<p>Hello</p>\r\n<p><span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">I also have</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">doubts</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">on how to create</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">the image of my</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">marker.</span><br /><span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">What are the requirements</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">to create</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">a marker</span><span title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">?</span>&nbsp;<span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">Some documentation&nbsp;</span><span title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">?</span><br /><br /><span class=\"hps\" title=\"Clique para mostrar tradu&ccedil;&otilde;es alternativas\">Thank you very much.</span></p>",
+    "PostedDate": "2011-07-22T04:53:33.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "646243",
+    "ThreadId": "255010",
+    "Html": "<p>It's under one of the section under \"Documentation\" tab.</p>\r\n<p><a href=\"http://goblinxna.codeplex.com/wikipage?title=Creating%20Custom%20Markers%20using%20ALVAR&amp;referringTitle=Documentation\">http://goblinxna.codeplex.com/wikipage?title=Creating%20Custom%20Markers%20using%20ALVAR&amp;referringTitle=Documentation</a></p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-07-22T10:54:25.4-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "646244",
+    "ThreadId": "255010",
+    "Html": "<p>Thank you so much ohanoda</p>",
+    "PostedDate": "2011-07-22T10:57:31.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

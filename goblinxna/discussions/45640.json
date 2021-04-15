@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "152322",
+    "ThreadId": "45640",
+    "Html": "It is still possible to run Goblin XNA without downloading ARTag. The Goblin XNA source code will build without ARTag, and all of the tutorials will work except tutorial 8, which uses ARTag. \r\n",
+    "PostedDate": "2009-01-29T14:06:32.5-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "152367",
+    "ThreadId": "45640",
+    "Html": "Hello Ohan.<br>\r\n<br>\r\nI could compile and run all tutorials except nº 8.<br>\r\nI do have the ARTagWrapper.dll but when I try to run the project I receive one exception on (bold text):<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <strong>videoDevice = (videoDeviceID &gt;= 0) ? filters.VideoInputDevices[videoDeviceID] : null;</strong><br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch (Exception exp)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; throw new GoblinException(&quot;VideoDeviceID &quot; + videoDeviceID + &quot; is out of the range&quot;);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n<br>\r\nException description: &quot;VideoDeviceID 1 is out of the range&quot;<br>\r\n<br>\r\nAny ideas?<br>\r\n<br>\r\nBest Regards.<br>\r\n",
+    "PostedDate": "2009-01-29T16:34:10.657-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "152557",
+    "ThreadId": "45640",
+    "Html": "Hi Caio,<br>\r\n<br>\r\nPlease make the following change:<br>\r\n<br>\r\nLine 118: scene.InitVideoCapture(0, <strong>1</strong>, VideoCapture.Resolution._640x480, false, VideoCapture.FrameRate._30Hz, GoblinEnums.CameraLibraryType.DirectShow);<br>\r\n<br>\r\nto<br>\r\n<br>\r\nLine 118: scene.InitVideoCapture(0, <strong>0</strong>, VideoCapture.Resolution._640x480, false, VideoCapture.FrameRate._30Hz, GoblinEnums.CameraLibraryType.DirectShow);<br>\r\n<br>\r\nIf you have only 1 camera, then you should set the videoDeviceID to 0. Actually, this value should be 0 by default since most people will use only 1 camera. I will make this change later on and re-post.<br>\r\n<br>\r\nThanks<br>\r\nOhan\r\n",
+    "PostedDate": "2009-01-30T08:05:58.093-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "699634",
+    "ThreadId": "279841",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I'm making my first steps with Goblin XNA. I want to handle MouseInput events, but I can't. This is my Initialize function:</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">protected</span> <span style=\"color:blue\">override</span> <span style=\"color:blue\">void</span> Initialize()\r\n{\r\n    <span style=\"color:blue\">base</span>.Initialize();\r\n\r\n    <span style=\"color:green\">// Display the mouse cursor</span>\r\n    IsMouseVisible = <span style=\"color:blue\">true</span>;\r\n\r\n    <span style=\"color:green\">// Initialize the GoblinXNA framework</span>\r\n    State.InitGoblin(graphics, Content, <span style=\"color:#a31515\">&quot;&quot;</span>);\r\n\r\n    <span style=\"color:green\">// Initialize the scene graph</span>\r\n    scene = <span style=\"color:blue\">new</span> Scene();\r\n\r\n    <span style=\"color:green\">// Set the background color to CornflowerBlue color. </span>\r\n    <span style=\"color:green\">// GraphicsDevice.Clear(...) is called by Scene object with this color. </span>\r\n    scene.BackgroundColor = Color.CornflowerBlue;\r\n\r\n    <span style=\"color:green\">// Set up the lights used in the scene</span>\r\n    CreateLights();\r\n\r\n    <span style=\"color:green\">// Set up the camera, which defines the eye location and viewing frustum</span>\r\n    CreateCamera();\r\n\r\n    <span style=\"color:green\">// Create 3D objects</span>\r\n    CreateObject();\r\n\r\n    MouseInput.Instance.MouseClickEvent &#43;= <span style=\"color:blue\">new</span> HandleMouseClick(Instance_MouseClickEvent);\r\n}\r\n\r\n<span style=\"color:blue\">void</span> Instance_MouseClickEvent(<span style=\"color:blue\">int</span> button, Point mouseLocation)\r\n{\r\n    Debug.WriteLine(<span style=\"color:#a31515\">&quot;Mouse click!!&quot;</span>);\r\n}\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>When I click with the mouse nothing happens (nothing is writen in the console), and if put a breakpoint in&nbsp;Instance_MouseClickEvent function the debugger doesn't stop. I don't know if I have to initialize MouseInput somehow.</p>\r\n<p>Thanks for help!</p>\r\n",
+    "PostedDate": "2011-11-17T08:01:47.177-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "699785",
+    "ThreadId": "279841",
+    "Html": "<p>try Console.Out.WriteLine instead of Debug.WriteLine</p>",
+    "PostedDate": "2011-11-17T11:46:14.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "699799",
+    "ThreadId": "279841",
+    "Html": "<p>Is this 4.0? If so, are you calling scene.Update(...) in your Update(GameTime) function?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-11-17T12:05:08.867-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "700013",
+    "ThreadId": "279841",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>ohanoda wrote:</strong><br />\r\n<p>Is this 4.0? If so, are you calling scene.Update(...) in your Update(GameTime) function?</p>\r\n<p>Ohan</p>\r\n</blockquote>\r\n<p>Ok, I forgot to do that. Thank you!!</p>",
+    "PostedDate": "2011-11-17T23:32:35.37-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "700638",
+    "ThreadId": "279841",
+    "Html": "<p>4.0 has several important changes from 3.x series, so make sure to check the tutorials to see what has changed.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-11-19T11:49:37.827-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "701021",
+    "ThreadId": "279841",
+    "Html": "<p>Es la primera vez que uso Goblin XNA, yo intentar&eacute; fijarme m&aacute;s de aqu&iacute; en adelante.</p>",
+    "PostedDate": "2011-11-20T23:29:37.187-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1431008",
+    "ThreadId": "640145",
+    "Html": "As mentioned in the Installation Guide, I am trying to download &quot;Newton Game Dynamics SDK 1.53&quot; so that I can work with tutorials. However, I am not able to download as all the links are redirecting to <a href=\"http://newtondynamics.com/forum/newton.php\" rel=\"nofollow\">http://newtondynamics.com/forum/newton.php</a> only.\r<br />\nPlease advise me how can I download this so that I can work with GoblinXNA or is there any other alternative available.<br />\n",
+    "PostedDate": "2015-06-19T03:17:43.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1435788",
+    "ThreadId": "640145",
+    "Html": "I try download and install this: <a href=\"https://newton-dynamics.googlecode.com/files/newton-dynamics-2.33.rar\" rel=\"nofollow\">https://newton-dynamics.googlecode.com/files/newton-dynamics-2.33.rar</a>\r<br />\nand i take dll : newton-dynamics-2.33\\packages\\Win32\\debugDll\\newton.dll\r<br />\n<br />\nbut it have error on &quot;NewtonSetWorldSize&quot; in DLL &quot;Newton.dll&quot;.\r<br />\n<br />\n<br />\nPlease HELP HELP HELP.<br />\n",
+    "PostedDate": "2015-07-23T23:43:05.793-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1436667",
+    "ThreadId": "640145",
+    "Html": "I had this same issue and solved it by doing a search for &quot;newtonwin-1.5.3.zip&quot;. The first search result which is some course notes archive worked for me. <br />\n",
+    "PostedDate": "2015-07-30T11:18:19.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

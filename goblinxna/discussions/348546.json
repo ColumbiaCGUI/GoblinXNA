@@ -1,0 +1,210 @@
+[
+  {
+    "Id": "810143",
+    "ThreadId": "348546",
+    "Html": "\r\n<p>Hi, I'm trying to build the ardomino project included in goblin XNA. The solution build successfully but the application does not run. Why? Maybe because i'm using the asus xtion pro live kinect instead of the microsoft kinect?? In this case, how could i\r\n run the project using asus xtion pro live as camera device?</p>\r\n<p>&nbsp;</p>\r\n<p>cheers,</p>\r\n<p>salvo</p>\r\n",
+    "PostedDate": "2012-03-14T03:55:32.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "810403",
+    "ThreadId": "348546",
+    "Html": "<p>Which library are you using? DirectShowCapture or KinectMSCapture? DirectShowCapture is for regular webcam (non-RGBZ cameras) and KinectMSCapture is for MS Kinect. You probably need to create your own IVideoCapture implementation for your asus xtion pro live. I would assume that they provide specific library for you to get their color and depth streams. You can see how I implement KinectMSCapture as an example to make your own class.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-14T11:35:25.737-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "810456",
+    "ThreadId": "348546",
+    "Html": "<p>I used kinectMSCaptute because when i build the goblinXNA sln,visual <br /> studio gave me an error. In fact it said that Microsoft kinect <br /> reference was missing. So i need to create a new \".cs\" file in which i <br /> implement the class for asus xtion pro live, is it correct?<br /> <br /> <br /> Thanks in <br /> advance,<br /> <br /> Salvo<br /><br /></p>",
+    "PostedDate": "2012-03-14T13:25:44.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "810488",
+    "ThreadId": "348546",
+    "Html": "<p>Yes, that's correct.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-14T14:37:41.8-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "810519",
+    "ThreadId": "348546",
+    "Html": "<p>thanks for replying! Now i've got a more serius problem: I compiled correcty CameraCalibration and i tried to run the application. But it ended immediatly with the following message of error:</p>\n<p>&nbsp;</p>\n<p>\"Alvar Library 1.5.0Copyright 2008-2010 VTT Technical Research Centre of FinlandCompiled on Windows 5.1 x86 on Jan &nbsp;4 2011Licensed to Public (00000000000000000000)Day 435/365 of usage period for this licenceEXPIREDThe program '[7064] CameraCalibration.exe:  Managed (v4.0.30319)' has exited with code 1 (0x1).\"</p>\n<p>I downloaded that library yesterday following the instruction written in the installation guide. How could i resolve it??</p>\n<p>&nbsp;</p>\n<p>thanks in advance</p>\n<p>&nbsp;</p>\n<p>salvo</p>",
+    "PostedDate": "2012-03-14T15:58:23.97-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "810547",
+    "ThreadId": "348546",
+    "Html": "<p>Did you download their latest 1.5? The latest one has the timebomb removed.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-14T16:49:21.327-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "810706",
+    "ThreadId": "348546",
+    "Html": "<p>I solved this problem, thanks.</p>\r\n<p>However, i noticed that when i run ArDomino, it starts the webcam of my notebook instead of the kinect. why? Do i have to delete any references in particular?</p>\r\n<p>&nbsp;</p>\r\n<p>salvo</p>",
+    "PostedDate": "2012-03-15T02:08:04.197-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "810940",
+    "ThreadId": "348546",
+    "Html": "<p>That's because the original code uses DirectShowCapture which is only for regular webcams, so it will only recognize your webcam. Kinect is not a regular webcam. If you want to use Kinect, you should change the code to use KinectMSCapture instead.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-15T09:23:31.217-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "810997",
+    "ThreadId": "348546",
+    "Html": "<p>that's ok ohan. thank you! ;) Obviously i need to change only the code of the ARDomino project. Is that right?.&nbsp;</p>",
+    "PostedDate": "2012-03-15T11:00:09.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811017",
+    "ThreadId": "348546",
+    "Html": "<p>yes</p>",
+    "PostedDate": "2012-03-15T11:59:26.073-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811316",
+    "ThreadId": "348546",
+    "Html": "<p>Ok, i'm trying to change the code. Let's see if i'm doing it correcly :D</p>\n<p>I change the following code in DominoGame.cs &nbsp;from:</p>\n<p>&nbsp;</p>\n<div style=\"color: black; background-color: white;\">\n<pre><span style=\"color: blue;\">private</span> <span style=\"color: blue;\">void</span> SetupMarkerTracking()\n        {\n            DirectShowCapture captureDevice = <span style=\"color: blue;\">new</span> DirectShowCapture();\n            captureDevice.InitVideoCapture(0, FrameRate._30Hz, Resolution._640x480,\n                ImageFormat.R8G8B8_24, <span style=\"color: blue;\">false</span>);\n\n            scene.AddVideoCaptureDevice(captureDevice);\n\n\n...\n\n}\n</pre>\n</div>\n<p>&nbsp;</p>\n<p>to:</p>\n<p>&nbsp;</p>\n<div style=\"color: black; background-color: white;\">\n<pre><span style=\"color: blue;\">private</span> <span style=\"color: blue;\">void</span> SetupMarkerTracking()\n        {\n            KinectMSCapture captureDevice = <span style=\"color: blue;\">new</span> KinectMSCapture(<span style=\"color: blue;\">true</span>);\n            captureDevice.InitVideoCapture(0, FrameRate._30Hz, Resolution._640x480,\n                ImageFormat.R8G8B8_24, <span style=\"color: blue;\">false</span>);\n\n            scene.AddVideoCaptureDevice(captureDevice);\n\n            ...</pre>\n<pre>        }\n</pre>\n</div>\n<p>&nbsp;</p>\n<p>so far so good?</p>\n<p>the Build ends successfully, but the debug gives me a error back: Null Reference Exception Was Unhandled and it tells me that the error is situated in this part of the code of KinectMSCapture.cs file:</p>\n<div style=\"color: black; background-color: white;\">\n<pre><span style=\"font-family: 'Segoe UI', 'Microsoft Sans Serif', Arial, Geneva, sans-serif;\"><span style=\"white-space: normal;\"><div style=\"color: black; background-color: white;\"><pre>sensor = (<span style=\"color: blue;\">from</span> sensorToCheck <span style=\"color: blue;\">in</span> KinectSensor.KinectSensors\n                      <span style=\"color: blue;\">where</span> sensorToCheck.Status == KinectStatus.Connected\n                      <span style=\"color: blue;\">select</span> sensorToCheck).ElementAtOrDefault(videoDeviceID);\n\n            sensor.ColorStream.Enable(colorFormat);\n\n            sensor.Start();</pre>\n<pre><br /></pre>\n<pre><br /></pre>\n</div>\n</span></span></pre>\n<pre>am i missing something?</pre>\n</div>",
+    "PostedDate": "2012-03-16T02:33:57.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811780",
+    "ThreadId": "348546",
+    "Html": "<p>ok i got it. I resolved the problem by connecting the kinect. Now i would like to use the Asus Xtion Pro live, and I'm finding a lot of difficulties to implement it XD</p>",
+    "PostedDate": "2012-03-17T02:47:58.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811803",
+    "ThreadId": "348546",
+    "Html": "<p>However, &nbsp;my asus xtion pro live uses both OpenNI and primesense, as the microsoft kinect. I had to add only Primesense Sensor to use it. So i can't find any solution to run ARdomino with asus xtion pro live :( any other suggestion??</p>\r\n<p>&nbsp;</p>\r\n<p>thanks</p>\r\n<p>&nbsp;</p>\r\n<p>salvo</p>",
+    "PostedDate": "2012-03-17T04:40:26.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811944",
+    "ThreadId": "348546",
+    "Html": "<p>It's not just swapping the driver, but you also need to implement the IVideoCapture class using OpenNI.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-17T13:27:45.197-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812001",
+    "ThreadId": "348546",
+    "Html": "<p>Ok, as a matter of fact I've added OpenNI references. In IvideoCapture.cs, do I have to write \"using OpenNI\" and change the declaretion of namespace or I leave it as it is (i.e. goblinXNA.device.Capture)?&nbsp;</p>",
+    "PostedDate": "2012-03-17T17:09:24.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812033",
+    "ThreadId": "348546",
+    "Html": "<p>You have to write the actual code similar to other IVideoCapture implementations (DirectShowCapture, OpenCVCapture, KinectMSCapture, etc) using OpenNI library for your case.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-17T21:14:29.317-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812957",
+    "ThreadId": "348546",
+    "Html": "Thanks for replying. Ok, i managed to work asus xtion pro live. I mean, <br>\r\nthe device is recognized by the program, and i can see because the <br>\r\nlight of the Infrared is turned on. But the window is completely dark. <br>\r\n<br>\r\n<br>\r\nIn kinectMSCapture, what is the part of the code in which you enable <br>\r\nthe kinect camera in order to find the equivalent function in OpenNI <br>\r\nlibrary?<br>\r\n<br>\r\nthanks<br>\r\n<br>\r\nsalvo<br>\r\n<br>\r\n<br>\r\nE' nata indoona: chiama, videochiama e messaggia Gratis. Scarica indoona per iPhone, Android e PC: http://www.indoona.com/",
+    "PostedDate": "2012-03-20T06:06:26.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "813236",
+    "ThreadId": "348546",
+    "Html": "<p>There isn't much equivalence between MS SDK and OpenNI, so you need to look into the OpenNI sample codes to figure out what you need to do.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-20T14:47:16.097-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "814209",
+    "ThreadId": "348546",
+    "Html": "<p>I've created a class for my asus following, more or less, what you've done, for example, in kinetmscapture.cs file. But, i've a lot of difficult to implement the function \"GetImageTexture\" defined in IVideoCapture.cs. And I think this function is important because it captures the stream video from RGB camera and it passes to ARDominos. Is that right?&nbsp;</p>\r\n<p>So, ones I've Updated Image and Depth values in this way:</p>\r\n<p>&nbsp;</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>  <span style=\"color: blue;\">private</span> <span style=\"color: blue;\">unsafe</span> <span style=\"color: blue;\">void</span> CameraThread()\r\n        {\r\n            <span style=\"color: blue;\">while</span> (_isRunning) \r\n            {\r\n                Context.WaitAndUpdateAll();\r\n\r\n                ImageGenerator.GetMetaData(_imgMD);\r\n                DepthGenerator.GetMetaData(_depthMD);\r\n            }\r\n        }\r\n</pre>\r\n</div>\r\n</p>\r\n<p>what do i have to do?</p>\r\n<p>Maybe, if you want, i could send you the entire .cs file so you can have a look and tell me where i'm missing.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2012-03-22T11:27:54.75-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "814842",
+    "ThreadId": "348546",
+    "Html": "<p>hi, i've found some useful tips following the openni forum. I tryed to implement the function GetImageTexture in this way:&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre><span style=\"color: blue;\">public</span> <span style=\"color: blue;\">unsafe</span> <span style=\"color: blue;\">void</span> GetImageTexture(<span style=\"color: blue;\">int</span>[] returnImage, <span style=\"color: blue;\">ref</span> IntPtr imagePtr)\r\n        {\r\n\r\n            Texture2D imageTexture = <span style=\"color: blue;\">null</span>;\r\n            <span style=\"color: blue;\">byte</span>[] bmpBytes = <span style=\"color: blue;\">null</span>;\r\n\r\n           <span style=\"color: green;\">// this.ImageGenerator.GetMetaData(_imgMD);</span>\r\n            <span style=\"color: blue;\">lock</span> (<span style=\"color: blue;\">this</span>)\r\n            {\r\n                <span style=\"color: blue;\">int</span> byteCount = _imgMD.XRes * _imgMD.YRes * 4;    <span style=\"color: green;\">// 4-byte color representation - RGBA </span>\r\n\r\n                <span style=\"color: blue;\">if</span> (bmpBytes == <span style=\"color: blue;\">null</span> || bmpBytes.Length != byteCount)\r\n                    bmpBytes = <span style=\"color: blue;\">new</span> <span style=\"color: blue;\">byte</span>[byteCount];\r\n\r\n                <span style=\"color: blue;\">fixed</span> (<span style=\"color: blue;\">byte</span>* texturePointer = &amp;bmpBytes[0])\r\n                {\r\n                    RGB24Pixel* pImage = (RGB24Pixel*)<span style=\"color: blue;\">this</span>.ImageGenerator.GetImageMapPtr().ToPointer();\r\n                    <span style=\"color: blue;\">int</span> pointerWalker = 0;\r\n\r\n                    <span style=\"color: blue;\">for</span> (<span style=\"color: blue;\">int</span> y = 0; y &lt; _imgMD.YRes; ++y)\r\n                    {\r\n                        <span style=\"color: blue;\">for</span> (<span style=\"color: blue;\">int</span> x = 0; x &lt; _imgMD.XRes; ++x, ++pImage, pointerWalker += 4)\r\n                        {\r\n                            texturePointer[pointerWalker] = pImage-&gt;nRed;\r\n                            texturePointer[pointerWalker + 1] = pImage-&gt;nGreen;\r\n                            texturePointer[pointerWalker + 2] = pImage-&gt;nBlue;\r\n                            texturePointer[pointerWalker + 3] = 255;    <span style=\"color: green;\">//Set alpha to 1 </span>\r\n                        }\r\n                    }\r\n                }\r\n            }\r\n\r\n            <span style=\"color: blue;\">if</span> (imageTexture == <span style=\"color: blue;\">null</span>)\r\n                imageTexture = <span style=\"color: blue;\">new</span> Texture2D(State.Device, _imgMD.XRes, _imgMD.YRes);\r\n\r\n            imageTexture.SetData(bmpBytes);\r\n            \r\n            <span style=\"color: green;\">//return imageTexture; </span>\r\n        }\r\n</pre>\r\n</div>\r\n</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>could it be a sort of first solution? sorry but i'm a beginner in XNA and C# so i'm doing my best :D</p>",
+    "PostedDate": "2012-03-23T13:54:09.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816258",
+    "ThreadId": "348546",
+    "Html": "<p>I won't have time to look into your implementation unfortunately.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-27T13:32:41.653-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816471",
+    "ThreadId": "348546",
+    "Html": "<p>ok ohan, never mind, you were helpful anyway. For now i'm going to use microsoft kinect and in the mid time i will try to solve the problem with the class by my self and if I get it, i will certainly send you the new class. :D</p>\r\n<p>However, i would ask you another thing; is it possible to have the source code of the other goblinxna projects? i'm referring in particular to game race(the last screeshot of the&nbsp;<a href=\"http://goblinxna.codeplex.com/\">http://goblinxna.codeplex.com</a>&nbsp;home page and the labyrint game (the second screenshot)?&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>regards</p>\r\n<p>&nbsp;</p>\r\n<p>salvo</p>",
+    "PostedDate": "2012-03-28T03:47:02.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816642",
+    "ThreadId": "348546",
+    "Html": "<p>Sorry, but we don't distribute our projects for reason 1. it contains bunch of stuff and it's not really cleaned up for release and 2. that there might be some copyright/license issues or conflicts. For anything that we can distribute will be in the distribution package, and anything that is not there is something that we can't or not planning to distribute to the public.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-28T09:22:11.827-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816842",
+    "ThreadId": "348546",
+    "Html": "<p>Don't worry ohan :D&nbsp;</p>\r\n<p>however, i solved my problem with my asus xtion pro live. The rgb video works! :D:D:D This class is compatible also with microsoft kinect and other nui sensors that use openni library! The problem now is the color displayed: blu object become red, and vice versa: red goes blu, sky-blue goes yellow and so on...</p>\r\n<p>which may be the cause?</p>",
+    "PostedDate": "2012-03-28T15:25:52.833-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816861",
+    "ThreadId": "348546",
+    "Html": "<p>Just swap your red and blue channel assignment like: (using your code above)</p>\r\n<pre>texturePointer[pointerWalker] = pImage-&gt;nBlue;\r\ntexturePointer[pointerWalker + 1] = pImage-&gt;nGreen;\r\ntexturePointer[pointerWalker + 2] = pImage-&gt;nRed;</pre>",
+    "PostedDate": "2012-03-28T16:11:12.98-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "817000",
+    "ThreadId": "348546",
+    "Html": "\r\n<pre>Thank you ohan, you were right! Now it works well!! Are you interested in Source code so you Can update goblinXNA with the new IVideoCapture class?</pre>\r\n",
+    "PostedDate": "2012-03-29T00:48:45.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

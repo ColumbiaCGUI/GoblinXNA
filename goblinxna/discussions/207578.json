@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "424697",
+    "ThreadId": "207578",
+    "Html": "<p>Hello,</p>\r\n<p>I would like to know if multi-markers tracking is more accurate than single marker tracking.</p>\r\n<p>Does multi-markers tracking take some sort of average from the poses of the different markers or does it just compute the transformation from the first marker detected?</p>\r\n<p>Thank You in advance.</p>",
+    "PostedDate": "2010-03-28T14:22:39.01-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "425158",
+    "ThreadId": "207578",
+    "Html": "<p>From my experience, multi-marker tracks better than single marker, and also it's more reliable since even if part of the marker becomes invisible, multi-marker situation still tracks it as long as at least one marker is visible.&nbsp;</p>\r\n<p>For the details, you should ask VTT people who developed ALVAR directly since I don't get to see their source code.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-29T16:25:50.727-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "425190",
+    "ThreadId": "207578",
+    "Html": "<p>Thanks Ohan.</p>\r\n<p>I'm trying to develop an application where a marker is rendered on a LCD screen along with 2D shapes drawn in various positions around the marker.</p>\r\n<p>When I point my camera to the screen, the marker should be recognized and 3D shapes should appear on top of the corresponding 2D ones (ex: a cube on top of a square) by using different transformations for each shape.</p>\r\n<p>However, I noticed that most of the time the 3D shapes are not&nbsp;correctly&nbsp;aligned on top of the 2D ones.</p>\r\n<p>Therefore, I was wondering whether the problem is caused from tracking the marker on screen or it's &nbsp;just the accuracy of marker tracking in ALVAR?</p>\r\n<p>Do you have any suggestions to achieve better marker tracking and shape positioning &nbsp;(to have the 3D shapes and 2D align perfectly) in such a scenario?&nbsp;</p>\r\n<p>Again, thanks a lot for your help.</p>",
+    "PostedDate": "2010-03-29T18:29:07.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "426112",
+    "ThreadId": "207578",
+    "Html": "<p>It's hard to give a suggestion without seeing how the tracking behaves in your scenario.&nbsp;</p>\r\n<p>Also, if you have questions regarding the optimal placement of the markers for best tracking, VTT will more likely give you better answer than I do, so please ask them directly.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-31T10:49:39.727-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

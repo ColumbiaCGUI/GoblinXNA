@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "495311",
+    "ThreadId": "227697",
+    "Html": "<p>greetings from santiago chile</p>\r\n<p>i open ALVARWrapper1.3.sln but i can see any project in the document outline</p>\r\n<p>i have installed all but i think something is missing</p>\r\n<p>where does the installation of the open cv and alvar must be?</p>\r\n<p>thanks in advance</p>\r\n<p>in</p>",
+    "PostedDate": "2010-09-17T22:03:46.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496391",
+    "ThreadId": "227697",
+    "Html": "<p>i'm creating a tutorial for GoblinXNA installation :</p>\r\n<p>http://azerdark.wordpress.com/2010/09/13/how-to-generating-calib-xml-using-alvar/</p>\r\n<p>hoping link above will help you</p>",
+    "PostedDate": "2010-09-21T02:35:30.213-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "496860",
+    "ThreadId": "227697",
+    "Html": "<p>Please read IntallationGuide and UserManual in the /doc directory, and if you still get problems, please let me know.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-22T00:04:01.097-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

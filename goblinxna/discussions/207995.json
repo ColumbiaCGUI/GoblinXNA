@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "426263",
+    "ThreadId": "207995",
+    "Html": "<p>Hi All,</p>\r\n<p>Since there are broken links for one of the library required for v3.3 release, you won't be able to get one of the necessary library to compile Goblin XNA now.&nbsp;</p>\r\n<p>We have a solution for this problem in our v3.4 release, which is expected to be release very soon (waiting for documentation review from my advisor), so please wait for the new release if you have downloaded&nbsp;recently&nbsp;or planning to download Goblin XNA.</p>\r\n<p>Thanks</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-31T20:07:36.233-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

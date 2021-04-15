@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "514797",
+    "ThreadId": "232850",
+    "Html": "\r\n<p>Hi everyone, hello Ohan!</p>\r\n<p>Yes, another SampleCamCalib topic (yet again!). This one is about a precise issue, though, not about being unable to compile the program.</p>\r\n<p>I am working on my laptop which has an integrated webcam that I successfully calibrated with sampleCamCalib. However, when I plug in the Vuzix iWear VR920 with the Dynex 1.3 webcam to try and calibrate it, the program starts normally but only displays a\r\n black screen instead of the camera output. I'm sure I disactivated my laptop's integrated camera since the Goblin tutorials use the Dynex camera instead. However, the 3d images are very unstable, so I think that calibrating the camera could help.</p>\r\n<p>Any idea anyone?</p>\r\n",
+    "PostedDate": "2010-10-29T17:56:40.033-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "514977",
+    "ThreadId": "232850",
+    "Html": "\r\n<p>Are you using ALVAR 1.4? If so, I had similar problem as well. That's why I included a C# wrapped version of SampleCamCalib.</p>\r\n<p>You can calibrate your camera using CameraCalibration program under /tools directory assuming your have v3.5.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-10-30T13:50:16.92-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515116",
+    "ThreadId": "232850",
+    "Html": "\r\n<p>Hi!</p>\r\n<p>I'm using Alvar 1.3.0 and GoblinXNA 3.4 right now.</p>\r\n<p>I'll try 3.5.</p>\r\n<p>Thanks!</p>\r\n",
+    "PostedDate": "2010-10-31T06:33:34.61-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515158",
+    "ThreadId": "232850",
+    "Html": "\r\n<p>Hello, it's me again!</p>\r\n<p>Having installed GoblinXNA 3.5 succesfully, I'm trying to run the CameraCalibration program, but it seems that it cannot find the ALVARWrapper.dll file, which I put in the /dll/unmanaged directory, as stated in the installation guide...</p>\r\n<p>I tried deleting it and adding it manually to the project but it doesn't help. What can I do now?</p>\r\n",
+    "PostedDate": "2010-10-31T09:37:22.76-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515180",
+    "ThreadId": "232850",
+    "Html": "\r\n<p>&quot;Cannot find ALVARWrapper.dll&quot; doesn't mean it can't find ALVARWrapper.dll, but it can't find other dlls that ALVARWrapper.dll accesses. Did you install OpenCV 1.0 and restarted your machine? Also, do you have all of the necessary dlls mentioned in the installation\r\n guide in appropriate folders?</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-10-31T11:38:46.503-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515376",
+    "ThreadId": "232850",
+    "Html": "\r\n<p>Yes, I installed OpenCV 1.0 a few weeks ago, so I rebooted quite a few times since then. And I followed all the steps described in the installation guide. I read that other post, http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=222464 so I'll try\r\n what you told ManInTheSuit an try the dependency walker depends.exe.</p>\r\n<p>Thanks Ohan!</p>\r\n<p>Edit: I don't think Glut is installed correctly, though, but everything works but the calibration of the camera, so that's probably why Alvar's SampleCamCalib won't work for me. But still, that doesn't explain why the version our teacher compiled for us\r\n doesn't show the Dynex image but works correctly with my laptop's integrated webcam.</p>\r\n",
+    "PostedDate": "2010-11-01T05:22:28.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515402",
+    "ThreadId": "232850",
+    "Html": "\r\n<p>Hello again!</p>\r\n<p>Using Dependency Walker, I found that IEShims.dll is missing (I can't see why you'd need that, though). So I looked in the Internet Explorer directory, and the dll is there. I added the directory to the path and rebooted, but it's still not working. I added\r\n the path to ALVARWrapper.dll and rebooted but that didn't help either... I searched the web for answers, but couldn't find anything helpful...</p>\r\n<p>Any idea?</p>\r\n",
+    "PostedDate": "2010-11-01T07:04:24.443-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515575",
+    "ThreadId": "232850",
+    "Html": "\r\n<p>Hmm... not sure. ALVARWrapper is what I wrote, but the original ALVAR is from VTT. AVLAR should only depend on the dlls listed in the installation guide.&nbsp;</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-01T13:24:14.64-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515890",
+    "ThreadId": "232850",
+    "Html": "\r\n<p>Well, I'm out of solutions. Does anybody have the Calib.xml for for a Dynex 1.3 Webcam? If so please email it to me at fanfanprovok@yahoo.ca</p>\r\n<p>Thanks!</p>\r\n<p>&nbsp;</p>\r\n<p>Edit: I still haven't been able to calibrate, but using the right marker really stabilized the 3d images. *&amp;?%$!!!</p>\r\n",
+    "PostedDate": "2010-11-02T05:34:04.863-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "610017",
+    "ThreadId": "232850",
+    "Html": "<p>Just in case you still can't run the calibration tool, try running depends.exe over the other dlls than alvarwrapper.dll (ie alvarplatform and the other dependency dlls) that worked for me.</p>\r\n<p>Also, when installing cmake and glut, following the tutorial found&nbsp;http://azerdark.wordpress.com/2010/09/13/how-to-generating-calib-xml-using-alvar/ you could calibrate using opengl instead.</p>",
+    "PostedDate": "2011-05-10T00:44:48.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

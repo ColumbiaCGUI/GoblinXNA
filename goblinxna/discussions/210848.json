@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "436492",
+    "ThreadId": "210848",
+    "Html": "<p><span style=\"color:#000000\">Hello friends,</span></p>\r\n<p><span style=\"color:#000000\">I have a problem with alvar and goblin xna.</span></p>\r\n<p><span id=\"result_box\" style=\"color:#000000\"><span style=\"background-color:#ebeff9\" title=\"veja o seguinte código\">see the following code</span></span></p>\r\n<p><span style=\"color:#000000\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\">\r\n<div style=\"color:black;background-color:white\">\r\n<pre>1-   <span style=\"color:blue\">if</span> (markerNode.MarkerFound)\r\n2-  {\r\n3-          Console.WriteLine(<span style=\"color:#a31515\">&quot;Achou um marcador&quot;</span> );\r\n4-          <span style=\"color:blue\">if</span> (scene.MarkerTracker.FindMarker(0))\r\n5-                    Console.WriteLine(<span style=\"color:#a31515\">&quot;Marcador 0&quot;</span>\r\n6-   ); \r\n</pre>\r\n</div>\r\n</span></span></span>The line 1 found the marker, but the line 5 not execute because line 4 never return TRUE, the marker detected in line 1 is the marker with id 0.</p>\r\n<p>&nbsp;</p>\r\n<p>the setupMarkerTracking code is :</p>\r\n<pre>            captureDevice = new DirectShowCapture();\r\n       \r\n            captureDevice.InitVideoCapture(0, FrameRate._30Hz, Resolution._640x480,\r\n                ImageFormat.R8G8B8_24, false);\r\n            scene.AddVideoCaptureDevice(captureDevice);\r\n            tracker = null;\r\n            <br>            tracker = new ALVARMarkerTracker();\r\n            ((ALVARMarkerTracker)tracker).MaxMarkerError = 0.02f;\r\n            tracker.InitTracker(captureDevice.Width, captureDevice.Height, &quot;calib.xml&quot;, 9.0);\r\n            scene.MarkerTracker = tracker;\r\n            scene.ShowCameraImage = true;\r\n            \r\n            int[] ids = new int[4];\r\n            for (int i = 0; i &lt; ids.Length; i++)\r\n                ids[i] = i;\r\n            markerNode= new MarkerNode(scene.MarkerTracker, &quot;ALVARConfig.txt&quot;,ids);\r\n            <br>            scene.RootNode.AddChild(markerNode);</pre>\r\n<p>I'am from Brasil, so sorry my english.</p>\r\n<p>\r\n<p><span style=\"color:#000000\"><span style=\"font-size:x-small\"><span style=\"font-size:x-small\"></span></span></span></p>\r\n&nbsp;</p>",
+    "PostedDate": "2010-04-28T05:38:33.247-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437366",
+    "ThreadId": "210848",
+    "Html": "<p>If you want to detect whether a single marker is in the image, then you need to first associate the ID with the marker tracker.</p>\r\n<p>In your code, you're associating the 4 markers as a single multi-marker setting, so it won't tell you the individual marker.</p>\r\n<p>If you want to detect ID 0, then you should insert the following line in your setup marker code:</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>scene.MarkerTracker.AssociateMarker(0);\r\n</pre>\r\n</div>\r\n</p>\r\n<p>Ohan</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><br></pre>\r\n<pre><br></pre>\r\n</div>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-29T17:31:46.733-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437522",
+    "ThreadId": "210848",
+    "Html": "<p>Thanks, and congratulations your plataform is really great.</p>",
+    "PostedDate": "2010-04-30T05:47:44.587-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

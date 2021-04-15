@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "459197",
+    "ThreadId": "217117",
+    "Html": "Hi\r\nI have an Augmented reality app , and when no marker is detected it should default to a video.I have successfully  done this with v3.3 before.\r\n but with 3.4 it gives an error.\r\nIn code . i just do a MarkerFound check and stet off a stopwatch , and  do\r\n\r\n videoPlayer_screensaver.Play(myVideoFile_saver);\r\n                 scene.ShowCameraImage = false;\r\n                   scene.BackgroundTexture = videoPlayer_screensaver.GetTexture();\r\n\r\n\r\n                    videoPlayer_screensaver.IsLooped = true;\r\n\r\n\r\nAt    scene.ShowCameraImage = false; it gives  me an error\r\nin DirectShowCapture.cs, the return image is null;\r\n\r\n  \r\n  public void GetImageTexture(int[] returnImage, ref IntPtr imagePtr)\r\n        {\r\n            if (grabbedImage != IntPtr.Zero)\r\n            {\r\n                processing = true;\r\n                Marshal.Copy(grabbedImage, returnImage, 0, returnImage.Length);\r\n\r\n\r\n\r\nPlease tell me what am i doing wrong\r\n\r\nThanks\r\nJAson ",
+    "PostedDate": "2010-06-23T17:12:16.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "459409",
+    "ThreadId": "217117",
+    "Html": "<p>Thanks for the report. Probably there is a bug in Scene.cs since I modified the way how background image is handled. I'll look into the problem next week.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-06-24T03:46:28.447-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "460059",
+    "ThreadId": "217117",
+    "Html": "<p>Ok but until then &nbsp;can you pleasee suggest a way i can achieve this ??</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Jason&nbsp;</p>",
+    "PostedDate": "2010-06-25T12:48:56.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "466178",
+    "ThreadId": "217117",
+    "Html": "For now, it's probably best to draw the screen saver texture yourself using a SpriteBatch. Make sure to draw after base.Draw(...) call so that your screen saver will be rendered after whatever Goblin renders so that your screen save overwrites Goblin rendering. \r\n\r\nbase.Draw(....);\r\n\r\nspriteBatch.Begin();\r\n\r\nspriteBatch.Draw( // your texture here );\r\n\r\nspriteBatch.End();\r\n\r\nI haven't had time to look into the program, but it's probably due to texture size mismatching between the capture device and your screen saver image.\r\n\r\nOhan",
+    "PostedDate": "2010-07-12T01:45:16.317-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

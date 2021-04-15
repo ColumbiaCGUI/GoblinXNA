@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "513329",
+    "ThreadId": "232506",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I'm working on a project that mixes marker tracking and some 2D panels. The problem is that the panels always appear in front of the marker, and i wanted just the&nbsp;opposite. The marker object should appear in front of &nbsp;the panels.</p>\r\n<p>Thanks in advance.</p>\r\n",
+    "PostedDate": "2010-10-27T05:09:14.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "513597",
+    "ThreadId": "232506",
+    "Html": "\r\n<p>Do you mean you want to have the marker in the live video (which is a 2D image) appear in front of the 2D panels, or 3D model attached to the marker appear in front of 2D panels? Note that 2D stuff live in different coordinate system from the 3D stuff.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-10-27T13:05:16.187-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

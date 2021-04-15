@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "545314",
+    "ThreadId": "240826",
+    "Html": "\r\n<p><span id=\"x_result_box\" lang=\"en\"><span title=\"Fai clic per visualizzare le traduzioni alternative\">Is there a</span>\r\n<span title=\"Fai clic per visualizzare le traduzioni alternative\">way</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">\r\nto</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">buy ARTag or ALVAR library??...ARTag library has expired on dec 31\r\n</span></span><span id=\"x_result_box\" lang=\"en\"><span title=\"Fai clic per visualizzare le traduzioni alternative\">and</span>\r\n<span title=\"Fai clic per visualizzare le traduzioni alternative\">therefore i can not</span>\r\n<span title=\"Fai clic per visualizzare le traduzioni alternative\">use the</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">\r\nlibrary</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">\r\nfor my</span> thesis project<span title=\"Fai clic per visualizzare le traduzioni alternative\">. For trial version of ALVAR i have only 30 days to use it....</span></span></p>\r\n<p><span lang=\"en\"><span title=\"Fai clic per visualizzare le traduzioni alternative\">how can I do?</span></span></p>\r\n<p>Thanks</p>\r\n<p>Giacomo</p>\r\n",
+    "PostedDate": "2011-01-07T03:23:04.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "545752",
+    "ThreadId": "240826",
+    "Html": "\r\n<p>ARTag does not have a license available as long as I know. Are you sure ALVAR non-commercial free version only have 30 days limit? I thought it had 1 year limit.&nbsp;</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-01-07T18:06:29.307-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "545772",
+    "ThreadId": "240826",
+    "Html": "\r\n<p>Hi</p>\r\n<p>ARTag library has expired. but&nbsp;if&nbsp;you&nbsp;change the date of the computer, it can be used.</p>\r\n<p>Seungjin</p>\r\n",
+    "PostedDate": "2011-01-07T19:06:28.33-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "546527",
+    "ThreadId": "240826",
+    "Html": "\r\n<p>thanks for answers...</p>\r\n<p>With basic version of alvar there is one year limit, but when I open my application that uses alvar library it says me:</p>\r\n<p>Alvar Library 1.3.0 Copyright (c) VTT 2008-2010</p>\r\n<p>Conpiled on Windows 5.1 x86 (Feb 5 2010)</p>\r\n<p>Day 339/365 of usage period for this version.</p>\r\n",
+    "PostedDate": "2011-01-10T01:28:19.693-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "546536",
+    "ThreadId": "240826",
+    "Html": "\r\n<p><span id=\"x_result_box\" lang=\"en\"><span title=\"Fai clic per visualizzare le traduzioni alternative\">On the website</span>\r\n<span title=\"Fai clic per visualizzare le traduzioni alternative\">of</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">\r\nalvar</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">I have</span>\r\n<span title=\"Fai clic per visualizzare le traduzioni alternative\">seen</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">\r\nThat</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">there</span>\r\n<span title=\"Fai clic per visualizzare le traduzioni alternative\">is</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">\r\nalso</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">the</span>\r\n<span title=\"Fai clic per visualizzare le traduzioni alternative\">1.5.0</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">\r\nversion</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">\r\nwith these</span> <span title=\"Fai clic per visualizzare le traduzioni alternative\">\r\nfeatures</span></span></p>\r\n<ul>\r\n<li>added licensing system to disable time-bomb </li><li>refactored capturing system to actually allow for third party plugins </li><li>added a check that detects the presence of capture plugins and displays an appropriate error message in samples\r\n</li><li>documentation updates </li><li>fixed build system on Windows Vista </li><li>fixed bug in UKF implementation </li><li>fixed MultiMarker implementation to allow marker sets that do not contain id 0\r\n</li><li>fixed bug with distortion initialization in Camera class </li></ul>\r\n",
+    "PostedDate": "2011-01-10T01:44:15.53-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "546542",
+    "ThreadId": "240826",
+    "Html": "\r\n<p>we'll add AVLAR 1.5.0 support in the next release. For now, please use ALVAR 1.4.0 since it won't expire for a while.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-01-10T02:09:51.743-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

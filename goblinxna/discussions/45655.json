@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "152368",
+    "ThreadId": "45655",
+    "Html": "Hi,<br>\r\n<br>\r\n(Just a tip for those who may face problems while compiling the tutorials provided)<br>\r\n<br>\r\nI had to change Content.contentproj for all tutorials as below:<br>\r\n<br>\r\nFrom:<br>\r\n&lt;Import Project=&quot;$(MSBuildExtensionsPath)\\Microsoft\\XNA Game Studio\\<strong>v2.0</strong>\\Microsoft.Xna.GameStudio.ContentPipeline.targets&quot; /&gt;<br>\r\nTo:<br>\r\n&lt;Import Project=&quot;$(MSBuildExtensionsPath)\\Microsoft\\XNA Game Studio\\<strong>v3.0</strong>\\Microsoft.Xna.GameStudio.ContentPipeline.targets&quot; /&gt;<br>\r\n<br>\r\nIt seems that the tutorials were built using v2.0, but since I had v3.0 installed I had to do this.<br>\r\n<br>\r\nBest Regards. <br>\r\n<br>\r\n\r\n",
+    "PostedDate": "2009-01-29T16:37:09.973-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "152558",
+    "ThreadId": "45655",
+    "Html": "Hi Caio,<br>\r\n<br>\r\nThanks for letting me know the problem. I will make the fixes and re-post the release later on today.<br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-01-30T08:07:45.68-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "152627",
+    "ThreadId": "45655",
+    "Html": "I just replaced the release with the modifications. Sorry for the problem.<br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-01-30T10:39:30.847-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "152748",
+    "ThreadId": "45655",
+    "Html": "Hi Ohan,<br>\r\n<br>\r\nIt was not a big deal to fix that, just a small issue :)<br>\r\n<br>\r\nThanks for considering it.<br>\r\n<br>\r\nBest Regards.<br>\r\nCaio C. Moreira.<br>\r\n",
+    "PostedDate": "2009-01-30T17:54:38.867-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

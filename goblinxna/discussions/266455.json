@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "647119",
+    "ThreadId": "266455",
+    "Html": "\r\n<p><span title=\"Clique para mostrar traduções alternativas\">Hello</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">ohanoda</span><br>\r\n<span title=\"Clique para mostrar traduções alternativas\">I'm testing</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">the Goblin</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">XNA,</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">and\r\n I have</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">a</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">doubt.</span><br>\r\n<span title=\"Clique para mostrar traduções alternativas\">There is no</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">collision between</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">objects of different</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">markers</span><span title=\"Clique para mostrar traduções alternativas\">?</span><br>\r\n<br>\r\n<span title=\"Clique para mostrar traduções alternativas\">Tutorial</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">8</span><span title=\"Clique para mostrar traduções alternativas\">, there is a</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">collision\r\n between</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">cube and</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">sphere, they</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">are in the same</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">marker.</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">If\r\n the cube</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">were in&nbsp;</span><span title=\"Clique para mostrar traduções alternativas\">another marker</span><span title=\"Clique para mostrar traduções alternativas\">,</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">would\r\n not</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">collide with the</span>&nbsp;<span title=\"Clique para mostrar traduções alternativas\">sphere</span><span title=\"Clique para mostrar traduções alternativas\">?</span></p>\r\n<p>&nbsp;</p>\r\n<p><span title=\"Clique para mostrar traduções alternativas\">Thanks</span></p>\r\n",
+    "PostedDate": "2011-07-25T06:11:06.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "650215",
+    "ThreadId": "266455",
+    "Html": "<p>Please help me, is a college work, hehe. =D<br /> I have a 3D model (. FBX) very large, then use the transformNode to change the object size (scale).<br /> <br /> In the tutorial 8 , I would like to put this model in toolbarMarker using the same logic that red cube.When I do this, the size of the model is big again. I'd like to put in toolbarMarker my TransformationNode model ? How to do ?</p>\n<p>&nbsp;I need this model collides with another object in 3D using in GroundNode.</p>\n<p>Thanks again, please help me my friends.</p>",
+    "PostedDate": "2011-07-31T07:37:44.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "650354",
+    "ThreadId": "266455",
+    "Html": "<p>See&nbsp;<a href=\"http://goblinxna.codeplex.com/discussions/207594\">http://goblinxna.codeplex.com/discussions/207594</a></p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-07-31T22:48:30.187-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "192978",
+    "ThreadId": "57113",
+    "Html": "<p>Hi,</p>\r\n<p>Could I use goblin xna in for commercial project?</p>\r\n<p>And where I can find a artagwrapper.dll [artag]? I have been searched entire internet by google ;) and I didt find it</p>\r\n<p>&nbsp;</p>\r\n<p>best regards</p>",
+    "PostedDate": "2009-05-21T15:38:12.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "193230",
+    "ThreadId": "57113",
+    "Html": "<p>Hi,</p>\r\n<p>Yes, you can use Goblin XNA for commercial project for free as our BSD license notes. You need to get ARTag from the website mentioned on the instruction guide. The current problem for commercial use of Goblin XNA is that there is no commercial license for ARTag, which is the current tracking library we support in Goblin XNA, so you will need to implement or wrap another tracking library that has commercial license. We do not support ARToolkit because it has GPL license. We will however, support another tracking library that is not GPL and has commercial license in the near future.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-05-22T07:28:24.62-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "193483",
+    "ThreadId": "57113",
+    "Html": "<p>I see.. thax for the reply :) You are doing great job</p>\r\n<p>&nbsp;</p>\r\n<p>best regards</p>",
+    "PostedDate": "2009-05-22T23:20:28.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

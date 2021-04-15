@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "573914",
+    "ThreadId": "248014",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>Im new to Goblin XNA and I would like to know if its possible to fire an event when the rendered 3D Object is collided with the user's hand. Im building a guitar learning tool and I will be displaying the note to play on the guitar using Goblin XNA. I need\r\n to know if the user's hand is closer to the note to play so I can display the next note to play.&nbsp;</p>\r\n<p>I hope I made my self clear and any help would be much appreciated.</p>\r\n<p>Kind Regards,</p>\r\n<p>Janidu</p>\r\n",
+    "PostedDate": "2011-03-01T08:58:33.657-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "576889",
+    "ThreadId": "248014",
+    "Html": "<p>We will add a tutorial on using OpenCV with Goblin XNA in the next release, so you can probably do finger tracking using OpenCV.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-07T14:55:42.477-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "576912",
+    "ThreadId": "248014",
+    "Html": "<p>Thanks :) . Looking&nbsp;forward&nbsp;to the new release. When is the next version planned to be released.</p>\r\n<p>Janidu</p>",
+    "PostedDate": "2011-03-07T16:12:50.287-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "576924",
+    "ThreadId": "248014",
+    "Html": "<p>end of March to early April. Same time for Goblin XNA 4.0 release.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-07T16:58:42.737-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

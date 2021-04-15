@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "261174",
+    "ThreadId": "76414",
+    "Html": "<p>Hello,</p>\r\n<p>I'm currently working on an Augmented Reality project using Goblin XNA, and I opted for the ALVAR tracking library .</p>\r\n<p>I'm trying to create markers with custom contents, for example containing geometric shapes or text inside the black borders of the marker.</p>\r\n<p>ARToolkit can learn new user created markers with different contents like text or images, however I couldn't find a similar functionality in ALVAR.</p>\r\n<p>I tried using the ALVAR sample code for marker generation, but I couldn't get enough control over the contents of the markers.</p>\r\n<p>How can one generate such type of custom made markers using ALVAR, or is such a feature unsupported?</p>\r\n<p>Thanks,</p>",
+    "PostedDate": "2009-11-27T08:03:40.48-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "261628",
+    "ThreadId": "76414",
+    "Html": "<p>You cannot create a custom contents for ALVAR. That's only supported by ARToolkit. If you want to use ARToolkit, you have to wrap it yourself, but please remember that if you use ARToolkit, all of your stuff will be GPL due to its license. That's why we do not include ARToolkit support in our distribution.</p>\r\n<p>&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-11-29T11:33:37.36-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "262342",
+    "ThreadId": "76414",
+    "Html": "<p>Thank You for the clarification.</p>\r\n<p>Alain</p>",
+    "PostedDate": "2009-12-01T08:45:09.9-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

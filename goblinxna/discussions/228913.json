@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "499604",
+    "ThreadId": "228913",
+    "Html": "<p>Hi,</p>\r\n<p>I'm still learning the base of AR Programming.&nbsp; This is great!&nbsp;&nbsp; I'm a college teacher in Canada and I plan to teach Goblin XNA soon.&nbsp;&nbsp; Just a base of few hours, and then students will start their own AR projects.</p>\r\n<p>Here is my problem.&nbsp; I use 2 different markers (ARDomino and Toolbar).&nbsp;&nbsp;&nbsp; I have loaded two diffrents 3D models (Homer's face and Home's body).&nbsp;&nbsp;&nbsp; I want to move the 2 models, according tothe 2 markers moves.&nbsp;</p>\r\n<p>In other words, I want that:</p>\r\n<p>I rotate the &quot;Toolbar&quot; marker,&nbsp; Homer's head rotate the same.<br>I rotate the &quot;ARDomino&quot; marker, Homer's body rotate too.&nbsp;</p>\r\n<p>The bad thing is that when ONE of the two markers is recognized, it displays BOTH of the models and the transformation is the same for both.&nbsp;&nbsp; I want them to work alone.&nbsp;&nbsp; <br>And if two markers are detected, the models are not displayed properly.</p>\r\n<p>Is there anything I can do to dissociate them?&nbsp;&nbsp;&nbsp; I looked on tutorial 8, but I can't see what I did wrong.</p>\r\n<p>Any idea?</p>\r\n<p>In advance, thanks!</p>\r\n<p>Sebastien</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-09-28T12:19:49.567-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "499973",
+    "ThreadId": "228913",
+    "Html": "<p>Ok...&nbsp;&nbsp; Got my answer!&nbsp;&nbsp; I found that the two squares in the Toolbar marker &nbsp;appear in the ARomino marker.&nbsp;&nbsp;&nbsp;</p>\r\n<p>I'll try some other markers (different ones).</p>\r\n<p>S&eacute;bastien</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-09-29T06:33:39.323-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

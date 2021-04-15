@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "679634",
+    "ThreadId": "274669",
+    "Html": "\r\n<p>im trying to add an object to the scene statically, ie i want to put a box in the center with the camera. This is to be&nbsp;completely&nbsp;independent&nbsp;of any kind of marker tracking when i try to do&nbsp;</p>\r\n<p>scene.rootnode.addchild(node)</p>\r\n<p>nothing shows up am i missing something?</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-10-03T22:39:43.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684315",
+    "ThreadId": "274669",
+    "Html": "<p>since your node doesn't have any transformation, it'll be placed at (0,0,0). If your camera is at (0,0,0) as well (which is by default for an AR camera), then your camera is inside the object. the default culling makes the back face not to render, so you wont' see anything.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-14T08:24:01.537-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

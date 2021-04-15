@@ -1,0 +1,28 @@
+<div class="wikidoc">
+<h1 style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="line-height:150%; font-family:&quot;Century Schoolbook&quot;">Calibrating your Camera with calib.xml</span></h1>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><strong><span style="font-family:'Century Schoolbook'; line-height:19px; font-size:13px">Option One, the GoblinXNA Calibration Tool</span></strong></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">First, navigate to the directory containing the calibration project. On my machine it was found at &quot;C:\Users\Colin\Documents\GoblinXNAv3.5\tools\CameraCalibration&quot;.
+ Then open the &quot;CameraCalibration.sln&quot;.</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218933" border="0" alt="" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">If you are using Visual Studio 2010, you may get a message like this:
+</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218934" border="0" alt="" width="371" height="199" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">It's okay, you can click OK and continue. (More on this message can be found at
+<a href="http://msdn.microsoft.com/en-us/library/bs2bkwxc.aspx"><span style="color:blue">http://msdn.microsoft.com/en-us/library/bs2bkwxc.aspx</span></a>.)</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">You should then see something like this:</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218935" border="0" alt="" width="434" height="316" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">From here all you have to do is build and run the project. To do both steps at once, choose from the menu
+ at the top of the screen: &quot;Debug&quot; then &quot;Start Debugging&quot;. Alternatively you can hit the F5 key. This will build the project, as you can see in the lower left corner of the window, and then launch a window from you camera (you should see yourself at this point.
+ I'll spare you my screen capture.)</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Use the checkerboard printout provided in the Alvar.pdf file, page 8, and hold the page perpendicularly
+ facing your camera. It doesn't have to be perfectly aligned, just try to get all of the black and white squares into the picture. When the program has recognized the pattern it will begin to execute passes, once every second and a half. It will make 50 such
+ passes before it is finished.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">At the end of this process the file called &quot;calib.xml&quot; will be produced and saved in your &quot;bin\x86\Debug&quot;
+ directory.</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218936" border="0" alt="" width="434" height="322" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Link to this file in any project you run so that GoblinXNA will allow for any distortions from your camera
+ and therefore be working from a picture that is closer to reality.</span></p>
+</div><div class="ClearBoth"></div>

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "454088",
+    "ThreadId": "215628",
+    "Html": "<p>is there a way to capture an online stream instead of webcam?</p>\r\n<p>&nbsp;</p>\r\n<p>Alexey.</p>",
+    "PostedDate": "2010-06-10T09:47:20.87-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "454206",
+    "ThreadId": "215628",
+    "Html": "<p>Nope, it's not currently supported. You can implement an IVideoCapture interface that capures online stream, and use it with Goblin.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-06-10T15:40:57.727-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

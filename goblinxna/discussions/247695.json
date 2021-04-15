@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "572584",
+    "ThreadId": "247695",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>In my AR application I loaded a model of a solar system.<br>\r\nThis model is an animation .FBX<br>\r\nI could see the model in augmented reality only as a static image, but I'm having difficulty understanding how to integrate classes (AnimatedModelLoader etc.) of the tutorial 14 Skinned Model Animation<br>\r\nsomeone has already done something about this kind of application<br>\r\nthanks for attention<br>\r\n<br>\r\nGiacomo</p>\r\n",
+    "PostedDate": "2011-02-26T09:32:03.7-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "575269",
+    "ThreadId": "247695",
+    "Html": "<p>You will need something different from the SkinnedModel tutorial for your case.</p>\r\n<p>I can't give you the exact instructions now since I haven't done it myself yet.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-03T13:42:09.07-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

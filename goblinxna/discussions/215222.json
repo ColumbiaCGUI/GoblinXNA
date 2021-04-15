@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "452559",
+    "ThreadId": "215222",
+    "Html": "<p>My post is similar to <a href=\"http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=76388&ANCHOR#Post450860\">this one</a>, but i still trying to solve that problem.&nbsp;</p>\r\n<p>When i run Tutorial 13 in stereo mode it crashes in<em><strong> Scene.UpdateTrackerAndImage()</strong></em><strong> </strong>since it is trying to render right eye camera. This is supposed to crash since VR920 only has one camera. So here is the question - how do i stop it from rendering <span style=\"text-decoration:underline\">TWO</span> video inputs, but keep the scene rendering in stereoscopic mode?</p>\r\n<p>Note: My&nbsp;<em><strong>iTracker.ProductID</strong></em> is detected as<strong>&nbsp;</strong><em><strong>IWR_PROD_NONE&nbsp;</strong></em></p>",
+    "PostedDate": "2010-06-07T10:12:57.907-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

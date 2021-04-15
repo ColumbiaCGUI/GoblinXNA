@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "544289",
+    "ThreadId": "240564",
+    "Html": "\r\n<p>Hey guys,</p>\r\n<p>i'm using Newton to do mouse picking like in the example, but i want to have the coordinates of the clicked point relative to a node. I cant make it work.</p>\r\n<p>The testNode is attached to the groundNode and should show where the Ray Collision happens. If the testNode is attached to the scene root node it's no problem, but i dont get it to work if its attached to the groundNode.</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>        List&lt;PickedObject&gt; pickedObjects = ((NewtonPhysics)parent.gameScene.PhysicsEngine).PickRayCast(nearPoint, farPoint);\r\n\r\n        <span style=\"color:blue\">if</span> (pickedObjects.Count &gt; 0)\r\n        {\r\n            pickedObjects.Sort();\r\n\r\n            <span style=\"color:green\">// That is the clicked point relative to the Camera Node</span>\r\n            Vector3 worldPoint = nearPoint &#43; normRay * pickedObjects[0].IntersectParam;\r\n\r\n\r\n           <span style=\"color:green\">// Relative Point</span>\r\n           Vector3 relPoint = worldPoint - groundNode.Translation;\r\n          &nbsp;</pre>\r\n<pre>           testNode.Translation = relPoint;\r\n        }\r\n</pre>\r\n</div>\r\nWe need the relative coordinates later for heightmap calculation. Thx for your help.\r\n<p></p>\r\n",
+    "PostedDate": "2011-01-05T06:05:13.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "546099",
+    "ThreadId": "240564",
+    "Html": "\r\n<p>hmm,, so you need the real position of your objects right?</p>\r\n<p>if you want to do that you must calculate all elements of matrix transformation for all node above your testNode ( not only translation but you must consider every transformation include scale and rotation)</p>\r\n<p>here's my code to calculate real position of a object, and the parameter of the function is your testNodeTranslation point</p>\r\n<p>groundNodeTransformation is your Transformation of your gound node and markerNodeTransformation is Matrix Tranformation of your marker node</p>\r\n<p><span style=\"color:#000080\">public static Vector3 ConvertToRealPosition(Vector3 pos)</span><br>\r\n<span style=\"color:#000080\">{</span></p>\r\n<p><span style=\"color:#000080\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Matrix trans = groundNodeTransformation * markerNodeTransformation;</span><br>\r\n<span style=\"color:#000080\">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return Vector3.Transform(pos, trans);</span><br>\r\n<span style=\"color:#000080\">}</span></p>\r\n<p>CMIIW</p>\r\n",
+    "PostedDate": "2011-01-08T18:11:26.463-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "546373",
+    "ThreadId": "240564",
+    "Html": "\r\n<p>I needed it right the other way (I had the world coordinates), you brought me on the right path, thanks.</p>\r\n<p>I did just the same thing but with an inverted matrix.</p>\r\n",
+    "PostedDate": "2011-01-09T15:09:25.357-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

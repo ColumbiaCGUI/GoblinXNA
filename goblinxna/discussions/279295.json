@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "697616",
+    "ThreadId": "279295",
+    "Html": "\r\n<p>Hi Ohan,</p>\r\n<p>&nbsp;im trying to change the animation of my project at run. For example i have a string called models, that string contain the name of the fbx. So the line of the model loader will be like this: Model sphereModel = (Model)loader.Load(&quot;&quot;, models);&nbsp;</p>\r\n<p>All its fine when i put the string into de model loader, but when i want to change that string (in the Update() method) something wrong happend (it creates a new model over and over again, its\r\n<span id=\"result_box\" lang=\"en\"><span>obvious..</span></span><span id=\"result_box\" lang=\"en\"></span>). For example: if (state.IsKeyDown(Keys.Right)){ models = &quot;model2&quot;; CreateObjects(); }</p>\r\n<p>Can i delete the <span id=\"result_box\" lang=\"en\"><span>previous model from the scene? or maybe i must to create a lot of Nodes for each Model and delete and add it later to the scene???=</span></span><br>\r\nI know that something is wrong... but am i ok with my <span id=\"result_box\" lang=\"en\">\r\n<span>philosophy? Please help... </span></span><br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\n</p>\r\n",
+    "PostedDate": "2011-11-13T13:33:39.75-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

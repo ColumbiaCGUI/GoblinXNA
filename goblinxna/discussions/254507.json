@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "599787",
+    "ThreadId": "254507",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>Any one know how to import animations like particle effects into Goblin XNA ??? I tried with joint animations. It worked very well. But i need to import&nbsp;particle&nbsp;effects from maya into G-XNA. Any help ????</p>\r\n",
+    "PostedDate": "2011-04-19T07:55:01.78-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "663088",
+    "ThreadId": "254507",
+    "Html": "<p>hi,</p>\r\n<p>you must export models as FBX... take a look at this <a href=\"http://graphics.cs.columbia.edu/wiki/doku.php?id=wiki:user:henderso:tutorials:fbxtoxna\">http://graphics.cs.columbia.edu/wiki/doku.php?id=wiki:user:henderso:tutorials:fbxtoxna</a></p>",
+    "PostedDate": "2011-08-25T01:30:33.71-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

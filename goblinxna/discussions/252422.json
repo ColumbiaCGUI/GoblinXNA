@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "591301",
+    "ThreadId": "252422",
+    "Html": "\r\n<p>Well it is not a problem with the tool, but I have a problem using the tool properly. :) After building, I run the project but I have no camera image in the application form but instead bar code like colored vertical lines. My camera's working indicator\r\n light is also dim.</p>\r\n<p>Does any of you have a solution for me? :)</p>\r\n<p>&nbsp;</p>\r\n<p>thank you,</p>\r\n<p>Noah</p>\r\n",
+    "PostedDate": "2011-04-04T06:52:34.777-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "591569",
+    "ThreadId": "252422",
+    "Html": "<p>If you camera's light is dim, that means the program is not using your camera. Try other cameraID in your camera initialization code.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-04-04T13:13:52.853-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "591872",
+    "ThreadId": "252422",
+    "Html": "<p>Thank you for the help!</p>",
+    "PostedDate": "2011-04-05T02:24:41.617-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

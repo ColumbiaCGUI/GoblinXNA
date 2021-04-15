@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "189808",
+    "ThreadId": "56186",
+    "Html": "<p>I am trying to build an array of markers around a 3D cube. In each face of the cube I put a marker, and I adjust the coordinates in the ARTag configuration file to form the cube. The problem that I am having is that the Z dimension in the marker node configuration doesnt work, we tried different configurations but changing the Z didnt affect the result. I was wondering if anyone has done something like this, I dont know if we are doing something wrong or if there is a problem with ArTag.</p>\r\n<p>Thanks.</p>",
+    "PostedDate": "2009-05-13T08:54:28.773-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "189867",
+    "ThreadId": "56186",
+    "Html": "<p>Hi aaecheve,</p>\r\n<p>As noted in ARTag documentation, they do not support Z coordinate for their evaluation version. Unfortunately, there is no commercial or licensed version for ARTag now, so you won't be able to find a public version that supports Z coordinate.</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2009-05-13T11:01:12.783-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "519100",
+    "ThreadId": "233969",
+    "Html": "\r\n<p>Hi!</p>\r\n<p>Tutorials 5 and 9&nbsp;are slowest that versions of Goblin v3.4.</p>\r\n<p>This issue is why Goblin is in Beta version ?</p>\r\n<p>Thanks&nbsp;for your attention &nbsp;(sorry the bad english).</p>\r\n",
+    "PostedDate": "2010-11-08T18:49:04.843-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "520101",
+    "ThreadId": "233969",
+    "Html": "\r\n<p>It shouldn't run slow. Both are physics related tutorials, so maybe Newton runs slow on your computer?</p>\r\n<p>It's (Beta) because the User Manual is not updated yet, but the codes are Stable.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-10T10:09:44.987-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "537796",
+    "ThreadId": "233969",
+    "Html": "\r\n<p>Hi Ohan!</p>\r\n<p>When i put this line of code: &nbsp;&quot;((NewtonPhysics)scene.PhysicsEngine).MaxSimulationSubSteps = 5;&quot; on tuts 5 and 9 of 3.5 version, &nbsp;all works well again.(Newton is a very cool engine)</p>\r\n<p>Thanks again for this great project and your attention.</p>\r\n<p>Merry Christmas at all!</p>\r\n",
+    "PostedDate": "2010-12-18T14:46:01.353-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "538052",
+    "ThreadId": "233969",
+    "Html": "\r\n<p>Oh, ok, that's what you meant by 'slow'.</p>\r\n<p>Ya, increasing MaxSimulationSubSteps will make the physics engine update more times if needed.</p>\r\n<p>If the elapsed time for each Draw call is much less than the PhysicsEngine.SimulationTimeStep property, then it will update very slowly for the simulation (not the FPS). To fix this, you can allow the physics engine to update more than 1 time by changing\r\n MaxSimulationSubSteps. Note that it will also require more CPU time since it's updating more than once in each Draw call. If your actual FPS gets too low, then you want to decrease this sub steps.</p>\r\n<p>Another way to make the simulation &quot;look faster&quot; is to increase the Gravity property. Changing this won't hurt the performance so you want to play around with each property to see which combinations give your best result in terms of performance (FPS count)\r\n and simulation speed.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-12-19T15:37:57.887-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

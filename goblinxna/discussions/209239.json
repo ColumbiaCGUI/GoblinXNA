@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "430640",
+    "ThreadId": "209239",
+    "Html": "One of the developer has reported a few minor problems for 3.4 release, and I have just fixed those minor issues for both the SVN source and the downloadable zip file on April 13th at 5:00 p.m (EST).\r\n\r\nIf you have downloaded or checked-out the source from SVN before this time, please either re-download/re-check-out, or make the following changes:\r\n\r\n1. Open the GoblinXNA.sln file using VS2008 in /src directory, and modify the class name of DirectShowCapture2 to DirectShowCapture in DirectShowCapture.cs under Device/Capture package and recompile the project\r\n\r\n2. Open the Tutorials.sln file using VS2008 in /tutorials and modify the output target of Tutoial 12 in Debug configuration to ../../bin/ instead of bin/x86/Debug.\r\n\r\nOhan",
+    "PostedDate": "2010-04-13T14:13:04.773-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

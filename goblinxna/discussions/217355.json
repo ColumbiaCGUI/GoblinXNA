@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "460046",
+    "ThreadId": "217355",
+    "Html": "<p>I finished installing all the dependencies for Goblin XNA3.4<br>While I am able to run the tutorial projects, When I try to run the dominoes projects and Tutorial8 - optical marker tracker project, I get the error -<br><em>&quot; error CS0246: The type or namespace name 'DirectShowCapture' could not be found (are you missing a using directive or an assembly reference?)&quot;</em><br><br>I guess DirectShow is already included with Goblin XNA with the new release, when I tried to add a reference to DShowNET.dll, it said, the reference is already included.<br><br>Can anyone help me out with this please? I am currently trying to decide on best game engine to perform AR.<br><br>Pradeep</p>",
+    "PostedDate": "2010-06-25T12:20:05.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "466179",
+    "ThreadId": "217355",
+    "Html": "Are you using the latest release? Make sure the class DirectShowCapture exists under GoblinXNA.Device.Capture directory. It might have been named to DirectShowCapture2 by mistake if you had downloaded v3.4 a while ago.\r\n\r\nOhan",
+    "PostedDate": "2010-07-12T01:47:49.883-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

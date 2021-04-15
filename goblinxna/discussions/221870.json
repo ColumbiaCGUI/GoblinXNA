@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "474324",
+    "ThreadId": "221870",
+    "Html": "<p>.</p>",
+    "PostedDate": "2010-07-29T09:04:13.16-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "479733",
+    "ThreadId": "221870",
+    "Html": "MatrixHelper class has GetRotationMatrix() method, and you can pass MarkerNode.WorldTransformation to get just the rotation component of the marker node you're tracking.\r\n\r\nOhan",
+    "PostedDate": "2010-08-12T07:57:41.497-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

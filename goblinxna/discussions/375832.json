@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "876018",
+    "ThreadId": "375832",
+    "Html": "\r\n<p>Hi!</p>\r\n<p>I have an application developed in VisualStudio 2008 using Goblin XNA 3.5 and AlvarWrapper 1.4 that I need to migrate to Alvar new version.</p>\r\n<p>Is it possible to make a migration by remplacing the .dll files (GoblinXNA.dll,AlvarWrapper.dll,alvar2.0.dll,etc.) or should I make a new development in VisualStudio 2010 with the new libraries?</p>\r\n<p>I'm sorry because of my english level.&nbsp;</p>\r\n<p>Thanks!</p>\r\n",
+    "PostedDate": "2012-07-19T01:24:40.547-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "879253",
+    "ThreadId": "375832",
+    "Html": "<p>You can't migrate by simply replacing the dlls since the underlining technology (XNA 4.0) is completely different.</p>\r\n<p>Also, there are some API changes between v.3.x versions and v.4.x versions. You should look at the new tutorials and migrate your project line by line or simply rewrite it if you don't have lots of codes.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-07-20T01:54:06.023-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

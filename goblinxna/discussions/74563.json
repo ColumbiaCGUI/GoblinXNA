@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "255163",
+    "ThreadId": "74563",
+    "Html": "<p>I get many emails asking for missing calib.xml file for projects that use ALVAR. If you run Tutorial 8 first, there is a README.pdf which explains how you should generate calib.xml using one of the project (SampleCamCalib) that comes with ALVAR distribution package.</p>\r\n<p>Since different camera has different distortion, focal points, etc, it is best to calibrate your camera for best tracking result instead of us providing a default calib.xml.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-11-09T10:31:08.663-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "489132",
+    "ThreadId": "74563",
+    "Html": "<p>i got errors at compiling it from C++ 2008</p>\r\n<p>could you help me again(sorry)</p>\r\n<p>i was add the right additional directory and at the end, i found several error</p>\r\n<p>&nbsp;</p>\r\n<p><img src=\"http://a.imageshack.us/img535/7928/errortutor8.png\" alt=\"\"></p>\r\n<p>Sorry for this inconvenience &gt;.&lt;</p>",
+    "PostedDate": "2010-09-03T18:01:29.913-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "489137",
+    "ThreadId": "74563",
+    "Html": "<p>Please ask VTT guys who are the developer of ALVAR for ALVAR related compiling issues.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-03T18:21:33.78-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

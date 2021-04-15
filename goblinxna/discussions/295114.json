@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "742451",
+    "ThreadId": "295114",
+    "Html": "\r\n<p><span>Hello, I'm new to GoblinXNA.</span></p>\r\n<p>After I finally successfully compiled and ran the CameraCalibrationtool in GoblinXNA,the program did detect my camera and the light of my camera was on.</p>\r\n<p>The problem is, once the program tried detect the checkerboard&nbsp;pattern, it shut down right away.</p>\r\n<p>I would like to ask is there something missing in my process of calibration?</p>\r\n",
+    "PostedDate": "2012-02-05T22:15:53.863-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "742469",
+    "ThreadId": "295114",
+    "Html": "<p>welcome to the club. you probably have missing or corrupt dll's, i would think. try to copy over dll's ending with \"d\" as well to your unmanaged folder, although they are not on the installation manual. other than that, i can suggest start over with installation. i think i tried it couple of times to get it right when i first installed.</p>",
+    "PostedDate": "2012-02-05T22:30:08.357-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

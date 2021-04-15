@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "483692",
+    "ThreadId": "224535",
+    "Html": "<p>hello!</p>\r\n<p>i've tortured myself with making goblin xna render transparency in a normal way for a long time. i even make code for rendering models using xna - that helped actually. but in this case i had to write code for caculating all transformations obtained from marker node and apply them on a model. that was not perfect, thats why i decided to return back to model rendering using goblin.&nbsp;</p>\r\n<p>but still, i haven't succeded.</p>\r\n<p>i really need wise guru advice: how to make effects such as transparency, blur, bloom or others available within goblin xna?</p>\r\n<p>thank you in advance.</p>",
+    "PostedDate": "2010-08-23T10:41:06.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "483853",
+    "ThreadId": "224535",
+    "Html": "<p>The current DefaultTransparencyComparer does not take the marker transformation into consideration for sorting transparency, so you need to implement one that considers the marker transform as well (you can simply take&nbsp;DefaultTransparencyComparer. and multiply&nbsp;x.BoundingVolume.Center with x.MarkerTransform to get the actual position in AR world, and use that to sort the transparency). I just realized that&nbsp;</p>\r\n<p>if (thisDist &gt; otherDist)&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return 1;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else if (thisDist == otherDist)&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return 0;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return -1;</p>\r\n<p>should be:</p>\r\n<p>if (thisDist &gt; otherDist)&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return -1;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else if (thisDist == otherDist)&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return 0;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;else&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return 1;</p>\r\n<p>Also, you need to change the line in Scene.cs where the transparent nodes are sorted to be sorted every frame since marker transform changes every frame. Right now, it resorts them only when eye transform changes or a new transparency object is added to the scene.</p>\r\n<p>For post process effects such as blur or bloom, it can be tricky in AR scene since you may want to separate the background image with the 3D objects. I'm still experimenting with it to find a general and optimal way to perform them in Goblin.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-08-23T16:43:28.26-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "483859",
+    "ThreadId": "224535",
+    "Html": "<p>thank you for your reply!! i will try transparency trick shortly.</p>\r\n<p>and what about reflection? are there any ways to implement this effect with goblin?</p>",
+    "PostedDate": "2010-08-23T16:53:33.717-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "483868",
+    "ThreadId": "224535",
+    "Html": "<p>For any effects other than the default shader we provide, you should implement yourself. Please see Tutorial 11 for how to implement your own shader and use it with Goblin. You will need to have a good understanding of HLSL and how to deal with Effect loaded from model files. You may need to implement your own ModelContentProcessor if you need additional vertex info passed to the shader file such as Tangent or Binormal. For implementing shaders, it's good to take look at XNA samples in Creators Club.</p>\r\n<p>Also, reflection can be computationally expensive if you want to generate dynamic environment cubemap since it requires your to draw the scene 6 times plus the actual rendering.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-08-23T17:14:59.293-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "484030",
+    "ThreadId": "224535",
+    "Html": "<p>i've tried to apply the bloom sample (http://creators.xna.com/en-US/sample/bloom) ideas to the goblin models. there is written a GameComponent (BloomComponent inherited from GameComponent) that uses the shader for bloom effect and it is added to the game components list in initialization. i did the same in my goblin xna game (added BloomComponent to the Components list), but i'm not succeeded with that. no video background neither model were bloomed.</p>\r\n<p>maybe i'm doing wrong? should be this component added in a different way? i noticed that there are also some goblin xna component in a Component list in the game. maybe it makes postprocess after bloom component does, so i cant see the effect?...</p>\r\n<p>thanks in advance in thanks for your help and explanations=)</p>",
+    "PostedDate": "2010-08-24T03:41:37.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "484180",
+    "ThreadId": "224535",
+    "Html": "<p>ok. i succeeded with bloom on whole image, including video picture as well =) the problem solved simply - by changing DrawOrder in bloom component to more that 101, because goblin xna component has DrawOrder 101.</p>\r\n<p>so now, next step - is how to make model bloomed, not the video. one approach i found on xna forums is to use alpha channels as mask. that works for sample. the main idea is to change BloomExtract.fx shader so it could pick the data should be bloomed and dont touch those pixels, which shouldn't. you can find here a discussion&nbsp;http://forums.xna.com/forums/p/8735/178603.aspx</p>\r\n<p>the main steps as i understood are these:</p>\r\n<p>1. erase alpha channel for buffer before rendering background&nbsp;</p>\r\n<p>2. render background</p>\r\n<p>3. fill the alpha channel for buffer (that would be like an indicator for shader to enable bloom effect)</p>\r\n<p>4. render model.</p>\r\n<p>as a result we obtain bloomed model on a normal background - that what we need in our goblin game, right?</p>\r\n<p>as far as i see, the problem with goblin is to somehow get into the moment and add some code (like filling and erasing alpha channels) before rendering background video and after rendering background video.</p>\r\n<p>i would appreciate any help from those who knows how to implement this =) or maybe there are some other ways?</p>\r\n<p>ohanoda, you said, that you're experimenting with it, arent you? may be we can exchange our ideas?</p>\r\n<p>thanks in advance&nbsp;</p>",
+    "PostedDate": "2010-08-24T08:05:48.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "488145",
+    "ThreadId": "224535",
+    "Html": "<p>Thanks for the suggestions. I will think about the best steps once I'm done with my deadlines in mid-October. Some examples may be included with the next release if it works well.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-02T04:06:41.713-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

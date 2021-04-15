@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "246145",
+    "ThreadId": "72123",
+    "Html": "<p>the ground marker works great, but the tool bar markers seam to be very jerky mostly with the&nbsp;rotational&nbsp;axis's, is there any way to solve that?</p>",
+    "PostedDate": "2009-10-15T10:47:22.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "246207",
+    "ThreadId": "72123",
+    "Html": "<p>Hi kdodman,</p>\r\n<p>Since the tool bar only has two markers on it, the tracking tend to be quite jerky when using ARTag. ARTag performs better when there are multiple visible markers. With the new release (which will be posted shortly), ALVAR does much better job with fewer markers. There are pros and cons between ARTag and ALVAR.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-15T13:11:58.357-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "246887",
+    "ThreadId": "72123",
+    "Html": "<p>I'm trying to make some new markers to solve this problem. I like the size of the toolbar ones so I would like to keep them, 2 inchs by 4inchs ish. But I'm having issues with the markerlayout program you have made. It seams to make everything massive, even if I change the pixels per ich down to 0.1f or so. I dont want a 40 by 40 inch marker lol.&nbsp;</p>\r\n<p>And another note, I&nbsp;generated a pile of artag marker images, but when i use those i seam to get an error when running your program.</p>\r\n<p>&quot;Your crop area's X position is outside of the marker size&quot; or the X demension error. the only thing I change is the image it loads. and from what I can tell the images I generated are the same&nbsp;dimensions&nbsp;as the ones you have in there.&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-17T11:11:17.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "246893",
+    "ThreadId": "72123",
+    "Html": "<p>Can you send me your code and a few images you're using?</p>\r\n<p>If you want to make things small, you should use larger pixels per inch setting. If the marker size is 100 pixels and you set pixels per inch to 0.1f, then it means it's 1000 inches big.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-17T11:54:01.207-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "246894",
+    "ThreadId": "72123",
+    "Html": "<div style=\"color:Black;background-color:White\">\r\n<pre>I figured out the marker image issue, VS just hadnt copied the images to the debug dir yet. And i figured out the pixels per inch issue too, that was my own stupidity there LOL.</pre>\r\n<pre>This is what I ended up with. My goal was to have it print nicely on a 5 x 3 inch index card. </pre>\r\n<pre>I think I have it all figured out, but I dont quite get what the * 170 is for yet?</pre>\r\n<pre>  LayoutManager layout = <span style=\"color:Blue\">new</span> LayoutManager(500, 300, 10);\r\n\r\n            layout.BeginCoordframe(<span style=\"color:#A31515\">&quot;Card1&quot;</span>, 6);\r\n\r\n            <span style=\"color:Blue\">int</span>[] array1 = { 20, 21 };\r\n\r\n            <span style=\"color:Blue\">int</span>[] array2 = { 22, 23 };\r\n\r\n            <span style=\"color:Blue\">int</span>[] array3 = { 24, 25 };\r\n\r\n\r\n\r\n            <span style=\"color:Blue\">int</span>[][] marker_arrays = <span style=\"color:Blue\">new</span> <span style=\"color:Blue\">int</span>[3][];\r\n\r\n            marker_arrays[0] = array1;\r\n\r\n            marker_arrays[1] = array2;\r\n\r\n            marker_arrays[2] = array3;\r\n\r\n            Rectangle cropArea = <span style=\"color:Blue\">new</span> Rectangle(50, 50, 100, 100);\r\n\r\n            <span style=\"color:Blue\">for</span> (<span style=\"color:Blue\">int</span> j = 0; j &lt; 3; j++)\r\n\r\n            {\r\n\r\n                <span style=\"color:Blue\">for</span> (<span style=\"color:Blue\">int</span> i = 0; i &lt; 2; i++)\r\n\r\n                layout.AddMarker(marker_arrays[j][i], <span style=\"color:Blue\">new</span> Point(10+j * 170, 10+i * 170),\r\n\r\n                      cropArea, <span style=\"color:#A31515\">&quot;raw_markers/ARTag/&quot;</span> + marker_arrays[j][i] + <span style=\"color:#A31515\">&quot;.pgm&quot;</span>);\r\n\r\n            }\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-17T11:55:02.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "247030",
+    "ThreadId": "72123",
+    "Html": "<p>Great.</p>\r\n<p>170 is there to give extra white space between the markers.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-18T06:52:05.83-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

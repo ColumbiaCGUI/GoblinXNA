@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "667808",
+    "ThreadId": "271540",
+    "Html": "\r\n<p>I'm only starting studying the GoblinXNA so that I dont know any of this. I am at the INSTALLATION GUIDE.pdf</p>\r\n<p>Following DLLs are missing EVEN if i followed the instructions</p>\r\n<p>&nbsp;</p>\r\n<p>GoblinXNA.dll</p>\r\n<p>AlvarWrapper.dll</p>\r\n<p>alvar150.dll</p>\r\n<p>alvarplatform150.dll</p>\r\n<p>cv100.dll</p>\r\n<p>cvaux100.dll</p>\r\n<p>cvcam100.dll</p>\r\n<p>cxcore100.dll</p>\r\n<p>highgui100.dll</p>\r\n<p>cv210.dll</p>\r\n<p>cvaux210.dll</p>\r\n<p>cxcore210.dll</p>\r\n<p>highgui210.dll</p>\r\n<p>&nbsp;</p>\r\n<p>I'm planning to do an Augmented Reality Ball Maze for my project(2weeks), Please Help me about my problem</p>\r\n",
+    "PostedDate": "2011-09-05T10:49:06.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "672535",
+    "ThreadId": "271540",
+    "Html": "<p>Please re-read through the installation guide.&nbsp;</p>",
+    "PostedDate": "2011-09-15T21:54:35.383-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

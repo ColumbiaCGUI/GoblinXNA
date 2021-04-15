@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "423040",
+    "ThreadId": "207138",
+    "Html": "<p>hi im looking to calculate the distance from the markers in tutorial 8 to the video capture device.</p>\r\n<p>&nbsp;</p>\r\n<p>so you get a feel for what i am trying to do i want an enemy to come from the marker and come towards the player.</p>\r\n<p>i'm new to xna so i'm still learning how to do things. but ive managed to create more &quot;blocks&quot; and change there colour &nbsp;and position.</p>\r\n<p>James&nbsp;</p>",
+    "PostedDate": "2010-03-24T06:56:50.227-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "423050",
+    "ThreadId": "207138",
+    "Html": "<p>The camera is at (0, 0, 0) by default, so the distance is the length of the vector of MarkerNode.WorldTransformation.Translation.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-24T07:20:16.433-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570068",
+    "ThreadId": "207138",
+    "Html": "<p>Hi,</p>\n<p>Sorry new to goblin xna I was just wondering how do you display this distance from the camera to the marker on the screen similar to the FPS??</p>\n<p>-Martin</p>",
+    "PostedDate": "2011-02-22T00:57:30.567-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570280",
+    "ThreadId": "207138",
+    "Html": "<p>If you mean how to display a text, then please see Tutorial 2.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-02-22T09:26:42.603-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "571997",
+    "ThreadId": "207138",
+    "Html": "<p>Hi Ohan,</p>\n<p>Thanks for the quick reply and its showing the distance from the marker to the camera. &nbsp;But my question is what is the unit of this distance? Beacuse doesn't it depend on the size of the marker. &nbsp;I printed a marker out and it was 7cm by 7cm (only 1 marker and not a marker array), but when I placed  the marker about 20cm away from the camera the reading I get on screen when I use&nbsp;MarkerNode.WorldTransformation.Translation is&nbsp;something&nbsp;like 42.46843. &nbsp;So I was wondering, if you want the exact distance in cm how big should the markers be when you print  them out??? I am using ALVAR</p>\n<p>Thanks again,<br /> Martin</p>",
+    "PostedDate": "2011-02-25T00:56:03.35-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "572332",
+    "ThreadId": "207138",
+    "Html": "<p>The unit depends on the physical marker size you print and the size defined in the configuration file (e.g., ALVARGroundArray.xml). For example, if the size defined in the configuration file is 20x20 and your physical print out is 7 cm x 7 cm, then the unit in the application is 7/20 = 0.35 cm/unit . If you're using single marker, then it's the size you pass as a parameter when you initialize MarkerNode (e.g., if you set the size to be 10 and your physical print out has 7cmx7cm, then it'll be 7/10 = 0.7 cm/unit.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-02-25T13:02:27.013-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "575945",
+    "ThreadId": "207138",
+    "Html": "<p><span id=\"result_box\" lang=\"en\"><span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">Is there</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">a</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">way</span> instead <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">to know</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">the</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">distance</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">between</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">the</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">camera</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">and</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">an</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">object</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">like</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">a sphere</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">or</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">a</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">cube</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">displayed</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">in</span> <span class=\"hps\" title=\"Fai clic per visualizzare le traduzioni alternative\">augmented reality</span><span title=\"Fai clic per visualizzare le traduzioni alternative\">?</span></span></p>",
+    "PostedDate": "2011-03-05T00:41:31.353-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "576090",
+    "ThreadId": "207138",
+    "Html": "<p>Unless you move the camera, it's always at (0,0,0) in AR since the world moves instead of the camera by default, so just&nbsp;</p>\r\n<p>(Matrix)(node.WorldTransform * node.MarkerTransform).Translation.Length() (typing top off my head so the actual syntax might be different) should give you the distance.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-05T12:38:59.107-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "576497",
+    "ThreadId": "207138",
+    "Html": "<p>Thank you very much Mr Ohan!!</p>",
+    "PostedDate": "2011-03-07T00:53:16.037-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

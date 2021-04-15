@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "488996",
+    "ThreadId": "225995",
+    "Html": "<p>hello master Ohanoda</p>\r\n<p>i really noob in this Goblin XNA</p>\r\n<p>i try to follow the instruction of ALVARWrapper1.3 in your tutorial.</p>\r\n<p>but i got many strange problem to solve,</p>\r\n<p>i noob too in C++ programming,so i can't quietly solve it</p>\r\n<p>here is my error at compiling the MarkerDetectorWrapper.cpp project</p>\r\n<p><a title=\"my file source code\" href=\"http://rapidshare.com/files/416881406/My_Log_file_and_CPP_source.7z\">all of my file is here</a></p>\r\n<p>thanks...sorry for my bad English..</p>\r\n<p>&nbsp;</p>\r\n<p>the preview of my error</p>\r\n<p><img src=\"http://a.imageshack.us/img822/1402/errorgu.png\" alt=\"\"></p>",
+    "PostedDate": "2010-09-03T11:33:33.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "489017",
+    "ThreadId": "225995",
+    "Html": "<p>You need to properly set the linking directory. Please read the InstallationGuide since the details are listed there.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-03T12:11:27.777-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "489118",
+    "ThreadId": "225995",
+    "Html": "<p>sorry for my careless,it's solved</p>\r\n<p>but it's okay if i got that file,but got many warning??but i got the ALVARWrapper.dll</p>",
+    "PostedDate": "2010-09-03T16:27:19.337-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "489135",
+    "ThreadId": "225995",
+    "Html": "<p>You can safely ignore all of the warnings.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-03T18:19:51.27-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "282283",
+    "ThreadId": "82156",
+    "Html": "<p>hi</p>\r\n<p>what i read seems amazing</p>\r\n<p>i was thinking to use goblin to devop a authoring system (a system to help users make a assembly task of chair for example) using augmented reality for a scholl project</p>\r\n<p>something like this <a href=\"http://www.youtube.com/watch?v=P9KPJlA5yds\">http://www.youtube.com/watch?v=P9KPJlA5yds</a></p>\r\n<p>do you think that goblin can limit my application in any way?</p>\r\n<p>thanks in advance</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-27T04:08:19.357-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "282477",
+    "ThreadId": "82156",
+    "Html": "<p>Actually, one of the Ph.D student in our lab, Steve Henderson, is working on an authoring toolkit build on top of Goblin XNA for any types of procedural tasks including assembly task, maintenance and repair task, etc called ARMAR (<a href=\"http://graphics.cs.columbia.edu/projects/armar/index.htm\">http://graphics.cs.columbia.edu/projects/armar/index.htm</a>). It's still in development phase, and not officially released yet, but you can contact him directly if you're interested in learning what is exactly supported by ARMAR toolkit and when it is expected to be publicly available.</p>\r\n<p>Goblin is flexible enough to support many types of applications. The only limitation is that you can run Goblin only in XNA supported platforms (currently, only Windows based OS)</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-01-27T12:58:48.95-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "282868",
+    "ThreadId": "82156",
+    "Html": "<p>Thanks, i will read about ARMAR and talk with Steve if i need some info.</p>\r\n<p>Reggarding the OS, have you know of experiences with Wine+Goblin it seems that wine can run windows applications in linux</p>\r\n<p>http://appdb.winehq.org/objectManager.php?sClass=application&amp;iId=8153</p>\r\n<p>http://wiki.winehq.org/</p>\r\n<p>Ghus</p>",
+    "PostedDate": "2010-01-28T10:33:01.913-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "283001",
+    "ThreadId": "82156",
+    "Html": "<p>You probably want to test whether XNA 3.1 works on that OS. If it does, it's likely Goblin will work as well. If not, then Goblin won't work.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-01-28T14:50:25.817-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "235082",
+    "ThreadId": "69094",
+    "Html": "<p><strong>I'm encountering a problem with Tutorial 8 :</strong></p>\r\n<p>I had problem with ARTagWrapper.dll , but I solved with visual studio C++ 2005.</p>\r\n<p>Now I have another problem with ARTag.cf.............</p>\r\n<p>&nbsp;</p>\r\n<p>----------------------------------------------Message --------------------------------------------</p>\r\n<p>double artag_camera_fx,artag_camera_fy,artag_camera_cx,artag_camera_cy = 638.05200</p>\r\n<p>2,633.672974,320.000000,240.000000</p>\r\n<p><strong>Problem opening ARTag.cf</strong></p>\r\n<p>Unhandled Exception:GoblinXNA.Device.Vision.Marker.MarkerException: Error loading</p>\r\n<p>marker file sets: ARTag.cf</p>\r\n<p>at GoblinXNA.Device.Vision.Marker.MarkerTracker.SetArrayFile(String sArray Filename)</p>\r\n<p>at GoblinXNA.Device.Vision.Marker.MarkerTracker.InitTracker(Single camera_fx, Single camera_fy, String sArrayFilename)</p>\r\n<p>at GoblinXNA.SceneGraph.Scene.InitMarkerTracker(Single camera_fx, Single camera_fy, String sArrayFilename)</p>\r\n<p>at Tutorial18__Optical_Marker_Tracking.Tutoria18.SetupMarkerTracking( )</p>\r\n<p>at Tutorial18__Optical_Marker_Tracking.Tutiruial8.Initialize( )</p>\r\n<p>at Microsoft.Xna.Framework.Game.Run( )</p>\r\n<p>at Tutorial18__Optical_Marker_Tracking.Program.Main(String[] args)</p>\r\n<p>----------------------------------------------Message --------------------------------------------</p>\r\n<p>What should I do ?? Please help me,,,,,,,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : (&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>",
+    "PostedDate": "2009-09-16T03:49:42.503-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "237020",
+    "ThreadId": "69094",
+    "Html": "<p>Hi,</p>\r\n<p>I've never had this problem before. Are you using the original ARTag.cf? If so, it should work fine. If you made changes to ARTagWrapper, that may cause some problems.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-09-21T13:02:13.663-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "239921",
+    "ThreadId": "69094",
+    "Html": "<p>I solved this problem.</p>\r\n<p>It was linking error.&nbsp; :-)</p>\r\n<p>Thank you~</p>",
+    "PostedDate": "2009-09-29T03:25:55.487-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242515",
+    "ThreadId": "69094",
+    "Html": "<p>I've run into a problem with NewARTag.cf, Newton.dll, ARTagWrapper.dll and freeglut.dll - Visual Studio C# 2008 Express Edition keeps deleting these files whenever I try to compile the tutorial solution file or the goblinxna.dll (not sure on the last one, but the files seemed to be missing right after that when I tried to compile the tutorial sln).<br>This is annoying and I don't know how to stop the IDE from doing this.<br>Changing the &quot;Copy to output folder&quot; behavior to &quot;Don't copy&quot; didn't solve the problem.<br>Any ideas why this might happen? I haven't seen this kind of stuff before.<br><br>edit: To make things clear - I could compile everyting successfully (after a few moments of bad headache) by making sure to copy the files over to the bin folder each and every time before building a solution. But I'd still like to know what causes the files to disappear.</p>",
+    "PostedDate": "2009-10-06T04:57:48.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242670",
+    "ThreadId": "69094",
+    "Html": "<p>You shouldn't do &quot;Rebuild Solution&quot; or &quot;Clean Solution&quot;. It will removes all of its associated files in the bin directory. You should always just do &quot;Build Solution&quot;.&nbsp;</p>\r\n<p>The problem is that I set the tutorials up so that it's copying the files (e.g., Newton.dll) from bin to bin (basically to the same directory), and if you do either Rebuild or Clean, VS will first delete those files, and then try to copy them to bin. Obviously, it will try to copy something that it just deleted. If you don't like this behavior, please copy the resource files such as Newton.dll to some other folder, or change the destination directory of the tutorials to some other directory (e.g., bin/Debug under Tutorial 1 directory). I made everything to stay in the bin directory just to make things look clean.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-06T12:17:30.33-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "519842",
+    "ThreadId": "234132",
+    "Html": "\r\n<p>Hi</p>\r\n<p>Due to ALVAR library is only provided free for trial version (during a year), i would like know if there is another way to run Alvar without the limitation.</p>\r\n<p><br>\r\nAnother topic is i'm trying to make a wrapper to unite with ARToolKit IMarkerTracker interface of goblinxna.&nbsp;&nbsp;I found this: http://sites.google.com/site/augmentedrealitytestingsite/ and http://www.mperfect.net/wpfAugReal/. I supose that i need to\r\n create a ArtoolkiTracker and ArtoolkitDllBridge, like with Alvar/ArTag, and adapt functionalities of the first one for IMarkerTracker. Has anyone managed to make a wrapper for Artoolkit?</p>\r\n<p>Thank you very much for the help!</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2010-11-10T01:51:04.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "520100",
+    "ThreadId": "234132",
+    "Html": "\r\n<p>That's correct. We have internal version of ARToolkit wrapper for Goblin XNA, but we can't release it due to GPL license.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-10T10:07:45.837-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "704652",
+    "ThreadId": "281152",
+    "Html": "\r\n<p>Hi ohan I am adding 3 buttons to a frame at the end of a game the frame takes up almost all of the screen. The 3 buttons are added to the bottom of the frame none overlapping and they are all added to the frame independently. the problem is when i try and\r\n click on them the area to click them (ie when the button highlights) is different then where the button is the code to create the buttons is attached.</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; G2DButton Exit = new G2DButton(&quot;Exit&quot;); &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;Exit.TextFont = font;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Exit.Bounds = new Rectangle(0, 520, 256, 50);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\r\n Exit.ActionPerformedEvent &#43;= new ActionPerformed(HandleExitActionsPerformed);</p>\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G2DButton Retry = new G2DButton(&quot;Retry&quot;);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Retry.TextFont = font;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Retry.Bounds = new Rectangle(257, 520, 256, 50);&nbsp; &nbsp; &nbsp;\r\n &nbsp; &nbsp; &nbsp; Retry.ActionPerformedEvent &#43;= new ActionPerformed(HandleRetryActionsPerformed);</p>\r\n<p><br>\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; G2DButton Next = new G2DButton(&quot;Next&quot;);&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Next.TextFont = font;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Next.Bounds = new Rectangle(513, 520, 257, 50);</p>\r\n<p>Next.ActionPerformedEvent &#43;= new ActionPerformed(HandleNextActionsPerformed);</p>\r\n",
+    "PostedDate": "2011-11-29T02:29:06.4-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "704962",
+    "ThreadId": "281152",
+    "Html": "<p>after playing with it a bit the issue seems to be that if i move the window with the game then i am able to line up the boxes with there highlight area but by default it does not seem to stay there.</p>",
+    "PostedDate": "2011-11-29T12:53:13.473-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "706695",
+    "ThreadId": "281152",
+    "Html": "<p>Which version of Goblin is this? Also, can you send me the source code?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-12-02T14:54:43.41-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

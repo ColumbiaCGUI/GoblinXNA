@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "184733",
+    "ThreadId": "54772",
+    "Html": "Is there a documentation of the ARTag configuration file? My main doubt about it is the min_points attribute, which I don't understand.<br>\r\nThanks.<br>\r\n",
+    "PostedDate": "2009-04-28T15:02:05.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185101",
+    "ThreadId": "54772",
+    "Html": "Unfortunately, I don't know of a documentation for the ARTag configuration file. From I what I figured out, it seems like min_points defines the minumum number of corner points it need to see. If a single marker is shown fully in the video image, then 4 corner points are shown. I remember that if you set min_points to 4, and if less than 4 corner points are shown (especially with multiple marker array configuration), then it won't return as marker found. I think this parameter is to control the reliability. If you set it to higher numbers (I guess it should be always less than 4 * (num_marker)), then it will only give you back transformation when many markers are in the view to avoid crappy tracking when only a few is visible.<div><br></div><div>Ohan</div>",
+    "PostedDate": "2009-04-29T10:40:23.877-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

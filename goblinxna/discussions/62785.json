@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "213122",
+    "ThreadId": "62785",
+    "Html": "<p>Hi. I'm newbie who entered Goblin XNA world recently.</p>\r\n<p>Currently I'm having trouble with running tutorials.</p>\r\n<p>The problem is as above. Debugger constantly complains with that message with most of tutorial projects when I run them.</p>\r\n<p>I've tried to figure out whether tha function was removed from recent release of Goblin XNA or Newton physics engine but no one says so.</p>\r\n<p>Of course Newton.dll file is included in my tutorial project, and no referential warning is observed.</p>\r\n<p>The things singular with me is that I'm  trying to use Goblin XNA with <strong>XNA 3.1</strong>, <strong>Newton 2.03 Beta</strong>, and Goblin XNA 3.2. The installation guide says me to use Newton 1.53 and XNA 3.0.</p>\r\n<p>Also I'm curious which dll is specific Newton.dll file mentioned in the guide document, as I found out that there were two types of Newton.dll in the release of Newton 2.03 (What's the difference between two dll in<strong> dll_double_vs9</strong> folder and <strong>dll_vs9</strong>?)</p>\r\n<p>Does these difference can cause serious problems such as this?</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-07-17T10:29:08.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "213183",
+    "ThreadId": "62785",
+    "Html": "<p>Hi,</p>\r\n<p>If the version of the library changes, the interface can change a lot, and that's the case for Newton library.&nbsp;</p>\r\n<p>I've tried to convert the support of Newton from 1.53 to 2.03 a few months ago, but there were so many changes including the interfaces, so I didn't have time to finish the conversion.&nbsp;</p>\r\n<p>NewtonWorldFreezeBody is one of the function that's been changed from 1.53, so unless you use the Newton.dll 1.53, Goblin XNA won't work (until I finish the conversion).</p>\r\n<p>I haven't tried XNA 3.1 yet, but I believe it should work fine, so the only problem should be the Newton library.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-07-17T13:12:49.663-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "213278",
+    "ThreadId": "62785",
+    "Html": "<p>Thanks for your answer!! Finally I understood what's the problem.</p>",
+    "PostedDate": "2009-07-17T18:55:30.847-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

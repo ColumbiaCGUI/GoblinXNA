@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "844507",
+    "ThreadId": "358284",
+    "Html": "\r\n<p>Hi Ohan,</p>\r\n<p>Occured when I tried to debug the project- HiDef profile been used.</p>\r\n<p>No suitable graphics card found</p>\r\n<p>Could not find a suitable direct3D devie that supports the XNA framework HiDef profile</p>\r\n<p>When I use Reach profile it says&nbsp;</p>\r\n<p>Error<span> </span>2<span> </span>XNA Framework Reach profile does not support vertex shader model 3.0.<span>\r\n</span>E:\\GoblinXNA v4\\GoblinXNAv4.0\\data\\Shaders\\SimpleShadowShader.fx<span> </span>\r\nTutorial8 - Optical Marker Tracking - Windows</p>\r\n<p>&nbsp;</p>\r\n<p>How can I solve this in either way?</p>\r\n",
+    "PostedDate": "2012-06-04T10:06:47.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "844516",
+    "ThreadId": "358284",
+    "Html": "<p>You either need to get a better graphics card, or turn off the shadow (comment scene.ShadowMap line) since shadow can only work with shader model 3.0 or above.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-04T10:14:52.843-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "844519",
+    "ThreadId": "358284",
+    "Html": "<p>Thanks Ohan :)</p>",
+    "PostedDate": "2012-06-04T10:17:37.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

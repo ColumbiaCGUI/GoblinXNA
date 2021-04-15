@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "679247",
+    "ThreadId": "274567",
+    "Html": "\r\n<p>is there a way to set the ground static? in other words what i want to do is i want the user to set the ground using the groundmarker and then he/she won't need it anymore. so somehow need to transform the groundmarker worldtransformation to another node\r\n that is just static. i tried to do it with geometryNode but it either shows the objects zoomed in, or doesn't register them in the physics engine. depending on if I add the groundMarker(a geometryNode with a simple box model) to physics engine.&nbsp;</p>\r\n<p>i have an initialGroundMarkerNode that is&nbsp;</p>\r\n<p></p>\r\n<pre>initialGroundMarkerNode = new MarkerNode(scene.MarkerTracker, &quot;ALVARGroundArray.xml&quot;);</pre>\r\n<p></p>\r\n<p>then i have&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<pre>GeometryNode groundMarkerNode = new GeometryNode();\r\n\r\ngroundMarkerNode.Model = new Box(0.1f);\r\n\r\ngroundMarkerNode.AddToPhysicsEngine = true; // if this is set to false, then i have the physics of the other objects added to this node working(i can tell because i hear the sphere moving and hitting sound) but they all are so zoomed in that you can't see anything. but if it is set to true then everything seems normal but the sphere doesn't move.</pre>\r\n<p>&nbsp;</p>\r\n<p>in my draw method when the user hits S(for selecting) key, i have</p>\r\n<p>&nbsp;</p>\r\n<pre>groundMarkerNode.Physics.InitialWorldTransform = initialGroundMarkerNode.WorldTransformation;\r\n\r\nCreateObjects();   </pre>\r\n<p>&nbsp;</p>\r\n<p>and what it does in the createObjects is, it creates some objects and adds them to groundMarkerNode(which is not really a marker node, but a geometryNode). one of the objects is a sphere and it has an initial velocity. but for some reason it doesn't move\r\n at all. also I have two other markers that are kind of like toolbarMarkerArray and they do not show up either using</p>\r\n<p></p>\r\n<pre>((NewtonPhysics)scene.PhysicsEngine).SetTransform(boxNode1.Physics, mat1);</pre>\r\n<p></p>\r\n",
+    "PostedDate": "2011-10-03T00:32:49.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684317",
+    "ThreadId": "274567",
+    "Html": "<p>Once you've already added the ground to the physics engine by setting AddToPhysicsEngine to true, the Physics.InitialWorldTransform won't take effect anymore (it's ignored), so you will need to use the NewtonPhysics.SetTransform method to change its position. Meanwhile,  if the object is not added to the physics engine yet, then you should set the Physics.InitialWorldTransform property to set their location. So for your ground node, either use SetTransform method or set AddToPhysicsEngine to true at the time the user hits  S key.</p>\n<p>Ohan</p>",
+    "PostedDate": "2011-10-14T08:29:11.653-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

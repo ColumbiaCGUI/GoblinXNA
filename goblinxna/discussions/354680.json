@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "832634",
+    "ThreadId": "354680",
+    "Html": "\r\n<p>Hello, I want to generate a new marker and wants to integrate with my project ? Please guide how to do this.</p>\r\n",
+    "PostedDate": "2012-05-06T00:47:38.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "833144",
+    "ThreadId": "354680",
+    "Html": "<p>For ALVAR, in their distribution package, they have a SampleMarkerCreater sample project, so please run that project to generate new markers. You will need Visual Studio 2008 for compiling and running their code.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-05-07T15:05:07.183-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

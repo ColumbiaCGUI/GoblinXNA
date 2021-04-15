@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "282677",
+    "ThreadId": "82271",
+    "Html": "<p>Hi, guys!</p>\r\n<p>I want to PUBLISH GoblinXNAv3.3\\projects\\ARDominos,</p>\r\n<p>and I use vs2008, rightclick on project ARDominos, choose Publish,</p>\r\n<p>and I got a setup.exe &amp; some files.</p>\r\n<p>&nbsp;</p>\r\n<p>But on another PC, setup.exe has some errors.</p>\r\n<p>How to package those independencies with setup?</p>\r\n<p>&nbsp;</p>\r\n<p>THX!!!</p>",
+    "PostedDate": "2010-01-28T02:26:10.04-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "282689",
+    "ThreadId": "82271",
+    "Html": "<p>I have never &quot;Publish&quot;ed a project using GoblinXNA before since I use it for research purpose and never had to &quot;Publish&quot; it, so I can not give much advise.&nbsp;</p>\r\n<p>I usually take the bin directory that contains the necessary DLLs, content files, and .exe. However, you need to be careful if you want to distribute it since you need to resolve the legal issues such as marker tracking license (e.g., ALVAR)</p>\r\n<p>For personal use, what I just described would suffice.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-01-28T02:58:31.277-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "282752",
+    "ThreadId": "82271",
+    "Html": "<p>thanks for your reply!</p>",
+    "PostedDate": "2010-01-28T07:04:08.06-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "742050",
+    "ThreadId": "82271",
+    "Html": "<p>hi. i have a question on this manner too.</p>\r\n<p>i have created an msi installer using setup and deployment in visual studio. and put the appropriate folders. it installs and runs on my computer just fine. but we tried it in another computer, and it installed but the program didnt work at all. do you think the dll's are supposed to be compiled on specific machine? in other words, if we want to get our games working in another computer, do we need to first install goblin, then compile specific dlls(alvar etc.), then compile the game source files?</p>",
+    "PostedDate": "2012-02-05T16:43:08.73-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "743830",
+    "ThreadId": "82271",
+    "Html": "<p>I do not know what \"Publish\" generates or what's included in .msi since I've never done it, but if you're using ALVAR for marker tracking, you will need to have at least OpenCV 1.0 installed separately from Goblin XNA stuff.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-06T14:00:51.123-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "744047",
+    "ThreadId": "82271",
+    "Html": "<p>msi installer includes what is in the project's debug folder. but i think you can add other stuff if needed. so i guess we need to do the normal goblin installation to get it working.&nbsp;</p>",
+    "PostedDate": "2012-02-06T16:25:21.253-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

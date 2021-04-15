@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "517403",
+    "ThreadId": "233569",
+    "Html": "\r\n<p>I was going through the user manual and the API I seemed that I could not find an example on how to load a picture onto GoblinXNA the user manual didn't mentioned it and in the API I didn't know where to start. Since there is little or no documentation or\r\n basic examples for all of the 2D UI.&nbsp; Basically I am guessing as I go along in making a 2D GUI.&nbsp; Also is there a way that I can use RGB instead of using Color.Blue, the reason is that I am using cutsom colors that I have picked for my project. And\r\n lastly is there a way to use gradients for panel or button backgrounds?</p>\r\n",
+    "PostedDate": "2010-11-04T16:48:16.747-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "517656",
+    "ThreadId": "233569",
+    "Html": "\r\n<p>i learned some of xna programming from http://create.msdn.com/en-US/education/catalog</p>\r\n<p>in there you'll get a lot of project examples</p>\r\n",
+    "PostedDate": "2010-11-05T05:22:47.587-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "255718",
+    "ThreadId": "74712",
+    "Html": "<p>Hi all:</p>\r\n<div>I've setup environment for running Goblin XNA with ARTag.</div>\r\n<div></div>\r\n<div>I assigned ARTag to markerLibrary, the code as follows:</div>\r\n<div></div>\r\n<div>// Use ARTagmarker tracking library<br>markerLibrary = MarkerLibrary.ARTag;</div>\r\n<div></div>\r\n<div>And I already printed out &quot;ground.pdf&quot; and &quot;toolbar.pdf&quot; as in README.pdf in GoblinXNAv3.3\\tutorials\\Tutorial8 - Optical Marker Tracking, but I can't see green 3D sphere and red 3D box on top of marker.</div>\r\n<div></div>\r\n<div>Actually, I tested the demo in ARTag, it works fine on my machine.</div>\r\n<div></div>\r\n<div>Thanks,</div>\r\n<div></div>\r\n<div>ssnh</div>",
+    "PostedDate": "2009-11-10T14:35:59.65-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "255792",
+    "ThreadId": "74712",
+    "Html": "<p>Hi ssnh,</p>\r\n<p>Due to a change for place where I update the marker node transformations, now ARTag does not work if State.IsMultiCore is set to true (which is by default). So if you're using ARTag, then you need to explicitly set State.IsMultiCore to false (which makes it run much slower).</p>\r\n<p>However, there is a way to make ARTag work with State.IsMultiCore true, but you need to make changes to Goblin XNA framework as discussed here: <a href=\"http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=72346\">http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=72346</a>&nbsp;.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-11-10T18:35:05.91-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

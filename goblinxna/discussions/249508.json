@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "579741",
+    "ThreadId": "249508",
+    "Html": "<p>Hi,<br /> I was trying to leave fall cubes on ground, so I use some coordinates for farPoint and nearPoint and near values with my based point far and near (I got these values from goblin xna 3.5 when I shot ball on the ground).<br /> Everything was ok, but now when I use this code:<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TransformNode modelTransNode = new TransformNode();<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; markerNode.AddChild(modelTransNode);<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; modelTransNode.AddChild(modelNode);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; boxes.Add(modelNode);<br /> Cubes are not fallen on the right place, there is something wrong with transformation, my question is, if in this function there is something needed to take account when I add to markerNode some child (geometryNode or transformNode), to be position the same  like when I am using only markerNode and I only add scene like scene.RootNode.AddChild(markerNode);<br /> <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vector3 nearSource = new Vector3(uiState.CrossHairPoint.X, uiState.CrossHairPoint.Y, 0);<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vector3 farSource = new Vector3(uiState.CrossHairPoint.X, uiState.CrossHairPoint.Y, 1);<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Matrix viewMatrix = markerNode.WorldTransformation * State.ViewMatrix;<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vector3 nearPoint = graphics.GraphicsDevice.Viewport.Unproject(nearSource,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State.ProjectionMatrix, viewMatrix, Matrix.Identity);<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(nearPoint);<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Vector3 farPoint = graphics.GraphicsDevice.Viewport.Unproject(farSource,<br /> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; State.ProjectionMatrix, viewMatrix, Matrix.Identity);<br /> <br /> Thank you<br /> Monika</p>",
+    "PostedDate": "2011-03-13T13:11:04.087-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "580697",
+    "ThreadId": "249508",
+    "Html": "<p>Where does it exactly fall?</p>\r\n<p>There shouldn't be any problems adding transform node below marker nodes.</p>\r\n<p>If you see the ARDomino project under GoblinXNA/projects directory, that's how I define domino's original locations relative to the marker array (line 1354).</p>\r\n<p>You might have something missing, so please take a careful look at ARDomino project since it shows physics simulation in AR.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-15T05:47:58.387-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "581233",
+    "ThreadId": "249508",
+    "Html": "<p>Hi, thank you for answer, I was debugging my code, I noticed that it is wrong only when I use fbx. model like modelNode, some my model don't change tranformation but some do. In 3ds max I set for every model position 0,0,0, and when I&nbsp; give these modelNode  to markerNode, fallen cubes are on the different place (for different models).&nbsp; When I try set for example ((TransformNode)dominoNode.Parent).Translation = new Vector3(0,90,0); It was ok with using some models, there is some trans, but I want for all my model  to have the same behavior, maybe I have to set something for model to not change my transformation. Because when I have position new Vector(0,0,0) every model is displayed exactly on the marker but some of them change position fallen cubes, some not. I don't understand why or how it has affect when I use some fbx model on position fallen cubes.</p>\n<p>Monika</p>",
+    "PostedDate": "2011-03-16T01:20:41.123-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "581397",
+    "ThreadId": "249508",
+    "Html": "<p>Hmmm... You're using physics engine, right? If so, why don't you set Scene.RenderCollisionMesh to true. Make sure the collision mesh assigned to your model looks correct. What PhysicsType are you using? If you see the collision mesh is wrong, then please send your model to me so that I can debug.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-16T06:13:34.033-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "581665",
+    "ThreadId": "249508",
+    "Html": "<p>I am using NewtonPhysics(), I tried set Scene.RenderCollisionMesh to true.&nbsp; I think collision mesh is assigned ok to model.&nbsp; On the first link is picture where I use model which changes trans coordinate z (boxes are higher than ground) , on the third place  there is link on the picture where I use another model and position of boxes is exactly on the ground, on the second place is link with problem model and collision mesh.</p>\n<p>http://img217.imageshack.us/i/boxesb.png/</p>\n<p>http://img690.imageshack.us/i/modelfbx.png/</p>\n<p>http://img8.imageshack.us/i/boxes2.png/</p>\n<p>Monika</p>",
+    "PostedDate": "2011-03-16T12:45:41.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "581823",
+    "ThreadId": "249508",
+    "Html": "<p>What's the difference between the boxes in the first image and the 3rd image? If you'd like me to see the problem, I need to have the models that cause problems.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-16T17:35:59.817-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "581925",
+    "ThreadId": "249508",
+    "Html": "<p>I add transNode to markerNode and boxNode to transNode like child, for fbx model, and then for fallen boxes the same way I add fallen boxes to transNode and markerNode. But in the first image I use model for example 1.fbx and boxes are higher than groundNode,  and when I use for example 2.fbx like model, boxes are on the position like when I don't use model fbx, nothing is changes. I can send you two models, one moves boxes higher (z) (thonet), second model moves boxes more to background (y) (thonet_chair1).&nbsp; Where  can I send you models?</p>\n<p>Thanks</p>\n<p>Monika</p>",
+    "PostedDate": "2011-03-17T00:50:20.643-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "582104",
+    "ThreadId": "249508",
+    "Html": "<p>\"&nbsp;I use model for example 1.fbx and boxes are higher than groundNode, and when I use for example 2.fbx like model, boxes are on the position like when I don't use model fbx\", I don't quite understand this sentence. Is the position set in the model internally, or in your transNode?</p>\r\n<p>Please send to ohan@cs.columbia.edu</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-17T07:43:16.243-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "582125",
+    "ThreadId": "249508",
+    "Html": "<p>Hi,</p>\n<p>I have sent you email with models, I set position for model&nbsp;like modelNode.﻿﻿translation = new Vector3(0,0,0), so I use&nbsp;transNode.&nbsp;I try&nbsp;to explain&nbsp;shortly all project. I have on markers some models, some text information&nbsp;on the markers belong to models.  And now I am&nbsp;trying to make&nbsp;bord game, I have som players on the markes and so on, so I want to generate cube like&nbsp;in some board game. When I give directly to code where I work with model model \"thonet\", and I give this model to transNode and markerNode, in  other class I give boxes for board game to transNode and markerNode, and then I run application with models, text information, boxes and so on, I can see this image ﻿﻿﻿<a href=\"http://img217.imageshack.us/i/boxesb.png/\">http://img217.imageshack.us/i/boxesb.png/</a>,  when I change directly&nbsp;in source code model \"thonet\" on different&nbsp;model and I run application I can see this image ﻿<a href=\"http://img8.imageshack.us/i/boxes2.png/\">http://img8.imageshack.us/i/boxes2.png/</a>. So&nbsp;I change in code only model, no translation  and boxes are falling&nbsp;on the different position.</p>\n<p>If you want to see the problem you can try add model thonet on other marker for example in dominogame and then try shooting balls.</p>\n<p>Thanks</p>\n<p>Monika﻿</p>\n<p>&nbsp;</p>",
+    "PostedDate": "2011-03-17T08:17:03.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "590429",
+    "ThreadId": "249508",
+    "Html": "<p>Hi,<br /> My problem is resolved.<br /> I decided that I do not want physic engine for 3dmodels, when I give away this line modelNode.AddToPhysicsEngine = true; cubes are fallen exactly on the ground. I didn't realize that when I have 3d models in physic engine, although 3d models are not displayed on the scene they have effect for fallen cubes. Sorry.<br /> Monika﻿</p>",
+    "PostedDate": "2011-04-01T13:01:16.093-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

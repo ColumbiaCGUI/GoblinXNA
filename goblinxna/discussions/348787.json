@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "811041",
+    "ThreadId": "348787",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I suffered runtime error on tutorial 16. I just download the tutorial 16 and .sln of the whole tutorial and copy them to the original tutorials on my computer.&nbsp; I got this error when running tutorial 16: Fileloadexception was unhandled on&nbsp;&nbsp;&quot;capture\r\n = new DCapture(videoDevice, audioDevice);&quot; on file &quot;DirectShowCapture.cs&quot;. Is there something I missed?</p>\r\n",
+    "PostedDate": "2012-03-15T12:41:10.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811144",
+    "ThreadId": "348787",
+    "Html": "<p>Hmm... Never seen that error before. Does tutorial 8 work, assuming you're running it from the unzipped distribution package?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-15T16:11:23.74-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811438",
+    "ThreadId": "348787",
+    "Html": "<p>Hi,</p>\r\n<p>Thank you for the reply. I have upgraded the goblinXNA, and this error did not come again. However, I met this error on the red line below. The error is \"already has a parent\". I remember before, when I use RemoveChild and AddChild, sometimes it would run this error.</p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre><span style=\"color: green;\">// Set the render target for rendering the AR scene</span>\r\n            scene.SceneRenderTarget = arViewRenderTarget;\r\n            <span style=\"color: green;\">// Set the scene background size to be the size of the AR scene viewport</span>\r\n            scene.BackgroundBound = arViewRect;\r\n            <span style=\"color: green;\">// Set the camera to be the AR camera</span>\r\n            scene.CameraNode = arCameraNode;\r\n            <span style=\"color: green;\">// Associate the overlaid model with the ground marker for rendering it in AR scene</span>\r\n            scene.RootNode.RemoveChild(overlayNode.Parent);\r\n            <span style=\"color: #ff0000;\">groundMarkerNode.AddChild(overlayNode.Parent);\r\n</span>            <span style=\"color: green;\">// Don't render the marker board and camera representation</span>\r\n            markerBoardGeom.Enabled = <span style=\"color: blue;\">false</span>;\r\n            vrCameraRepNode.Enabled = <span style=\"color: blue;\">false</span>;\r\n            <span style=\"color: green;\">// Show the video background</span>\r\n            scene.ShowCameraImage = <span style=\"color: blue;\">true</span>;\r\n            <span style=\"color: green;\">// Render the AR scene</span>\r\n            scene.Draw(gameTime.ElapsedGameTime, gameTime.IsRunningSlowly);\r\n\r\n            <span style=\"color: green;\">// Set the render target for rendering the VR scene</span>\r\n            scene.SceneRenderTarget = vrViewRenderTarget;\r\n</pre>\r\n</div>",
+    "PostedDate": "2012-03-16T07:31:40.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "811945",
+    "ThreadId": "348787",
+    "Html": "<p>Hmm... interesting. Theoretically, from the code, that should never happen. So you saw this error in Tutorial 16, correct?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-17T13:28:46.587-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,146 @@
+[
+  {
+    "Id": "627134",
+    "ThreadId": "261246",
+    "Html": "\r\n<p>&nbsp;</p>\r\n<p>Hi, I'm new here, I follow the tutorial instalation and I got all the dll, when I try to&nbsp; build the tutorial 1 and 9 &nbsp;I got the&nbsp; next</p>\r\n<p>&nbsp;The type or namespace name 'GoblinXNA' could not be found (are you missing a using directive or an assembly reference?)&nbsp;C:\\GoblinXNAv3.5\\tutorials\\Tutorial9 - Advanced Features\\Tutorial9.cs&nbsp;12&nbsp;7&nbsp;Tutorial9 - Advanced Features</p>\r\n<p>and more</p>\r\n<p>&nbsp;Warning&nbsp;24&nbsp;Could not resolve this reference. Could not locate the assembly &quot;GoblinXNA, Version=3.9.30.2010, Culture=neutral, processorArchitecture=x86&quot;. Check to make sure the assembly exists on disk. If this reference is required by your\r\n code, you may get compilation errors.&nbsp;Tutorial1 - Getting Started</p>\r\n<p>&nbsp;</p>\r\n<p>Do you have any idea what is going on?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks a lot for your help</p>\r\n<p>&nbsp;</p>\r\n<p>Hescobedoa</p>\r\n",
+    "PostedDate": "2011-06-13T14:12:24.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "627252",
+    "ThreadId": "261246",
+    "Html": "<p>Right click on \"GoblinXNA\" in the \"References\" section, and click \"Properties\". Under properties window, set \"Specific Version\" to \"False\". I believe that should fix the problem. Otherwise, delete \"GoblinXNA\" from the references, and re-add it from the GoblinXNAv3.5/bin folder.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-06-13T19:50:48.5-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "629386",
+    "ThreadId": "261246",
+    "Html": "<p>Thanks for your help!! you were right!</p>",
+    "PostedDate": "2011-06-17T12:16:38.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "669168",
+    "ThreadId": "261246",
+    "Html": "<p>hic.</p>\r\n<p>I not found&nbsp;\"GoblinXNA\"&nbsp;from the GoblinXNAv3.6/bin folder, this folder in&nbsp;GoblinXNAv3.6 only have files: xnb, xsb, xwb, xgs</p>\r\n<p>Help me...</p>",
+    "PostedDate": "2011-09-08T08:43:54.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "669422",
+    "ThreadId": "261246",
+    "Html": "<p>did you build the solution? when you build it, if there are no errors, it should produce a GoblinXNA.dll in the bin directory.</p>",
+    "PostedDate": "2011-09-08T16:08:51.637-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "669448",
+    "ThreadId": "261246",
+    "Html": "<p>yes, thank you.</p>\r\n<p>I forgot to build....hihi...</p>",
+    "PostedDate": "2011-09-08T17:24:01.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670070",
+    "ThreadId": "261246",
+    "Html": "<p>what do you mean by build the solution?</p>\r\n<p>if i use f6(which i think its the build), errors has occured such as rootname space blah blah blah..</p>\r\n<p>&nbsp;</p>\r\n<p>when i delete the goblinxna, and readd it, i cannot find the goblinxna.dll in bin..</p>",
+    "PostedDate": "2011-09-10T08:26:53.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670076",
+    "ThreadId": "261246",
+    "Html": "<p>Hi nitruder !</p>\r\n<p>what is error ?</p>",
+    "PostedDate": "2011-09-10T08:45:00.047-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670079",
+    "ThreadId": "261246",
+    "Html": "<p>i cant generate goblinxna.dll...im using goblinxnav3.6</p>\r\n<p>&nbsp;</p>\r\n<p>\"</p>\r\n<p>Right click on \"GoblinXNA\" in the \"References\" section, and click \"Properties\". Under properties window, set \"Specific Version\" to \"False\". I believe that should fix the problem. Otherwise, delete \"GoblinXNA\" from the references, and re-add it from the GoblinXNAv3.5/bin folder.</p>\r\n<p>Ohan\"</p>\r\n<p>&nbsp;</p>\r\n<p>i already done that..but still its missing..</p>\r\n<p>&nbsp;</p>\r\n<p>and also the rootnamespace error...help me im also newbie</p>",
+    "PostedDate": "2011-09-10T08:50:37.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670082",
+    "ThreadId": "261246",
+    "Html": "<p>im using VS2010, is &nbsp;there any difference if i &nbsp;use that?</p>\r\n<p>&nbsp;</p>\r\n<p>and, if i build the solution, errors occured</p>",
+    "PostedDate": "2011-09-10T08:51:57.317-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670090",
+    "ThreadId": "261246",
+    "Html": "<p>In folder&nbsp;unmanaged, are you sure there dll files:&nbsp;alvar150.dll,&nbsp;alvarplatform150.dll,&nbsp;ALVARWrapper.dll,&nbsp;cv100.dll,&nbsp;cvaux100.dll,&nbsp;cvcam100.dll, &nbsp;cxcore100.dll,&nbsp;highgui100.dll,&nbsp;Newton.dll ?</p>\r\n<p>note: I compile&nbsp;ALVARWrapper1.5 project and it&nbsp;generated ALVARWrapper1.5.dll file , not&nbsp;ALVARWrapper.dll file, i rename it, then copy to&nbsp;unmanaged directory.</p>\r\n<p>you try !</p>",
+    "PostedDate": "2011-09-10T09:05:26.333-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670091",
+    "ThreadId": "261246",
+    "Html": "<p>Oh, i using vs2008, if still erorr, you should try vs2008</p>",
+    "PostedDate": "2011-09-10T09:07:35.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670092",
+    "ThreadId": "261246",
+    "Html": "<p>there are no files in unmanaged folder...</p>\r\n<p>&nbsp;</p>\r\n<p>how to compile so i can have alvarwrapper1.5dll?&nbsp;</p>\r\n<p>if i compile it, i can also have goblinxna.dll?</p>",
+    "PostedDate": "2011-09-10T09:09:49.747-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670096",
+    "ThreadId": "261246",
+    "Html": "<p><span class=\"hps\">You</span>&nbsp;<span class=\"hps\">should review&nbsp;Installation Guide.pdf in&nbsp;GoblinXNAv3.6\\doc directory.</span></p>\r\n<p><span class=\"hps\"><br /></span></p>",
+    "PostedDate": "2011-09-10T09:13:33.887-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670097",
+    "ThreadId": "261246",
+    "Html": "<p>do you have ym/msn? can we talk there so you can help me?please...</p>\r\n<p>im &nbsp;planning to do an AR ball maze to my project which is to be submitted on friday..i dont know what should i do..:(</p>",
+    "PostedDate": "2011-09-10T09:13:50.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "670099",
+    "ThreadId": "261246",
+    "Html": "<p>i'm also newbie :D.</p>\r\n<p>my ym: cungtien_2709</p>",
+    "PostedDate": "2011-09-10T09:18:38.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "671578",
+    "ThreadId": "261246",
+    "Html": "<p>Hi,</p>\r\n<p>my error is slightly different. when i added Scene class i will get error pointing at the Scene class variable saying</p>\r\n<p>\"The type 'Microsoft.XNA.Framework.DrawableGameComponent' is defined in an assembly that is not referenced. You must add a reference to assembly 'Microsoft.XNA.Framework.Game', version....token....\"</p>\r\n<p>I do a lot of things like remove and add all referenced libraries. tweaking the project properties settings &amp; add the reference path but still the problem persists</p>\r\n<p>please help</p>",
+    "PostedDate": "2011-09-14T01:29:22.69-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "671624",
+    "ThreadId": "261246",
+    "Html": "<p>Hi,</p>\n<p>my bad wasn't particular about the basic stuff. before, I compiled the tutorial with 2010 Express and XNA 4.0. Now everything works wonderfully. now I'm using 2008 Express &amp; XNA 3.1</p>",
+    "PostedDate": "2011-09-14T03:24:36.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "560439",
+    "ThreadId": "244576",
+    "Html": "\r\n<p>hello everyone,</p>\r\n<p>&nbsp;</p>\r\n<p>well, i follow all steps without any problem..</p>\r\n<p>when i run the project &quot;samplecamcalib&quot; the file that was created is &quot;camera_calibration_highgui_0.xml&quot;..</p>\r\n<p>well, i rename it to calib.xml to run it in tutorial8..</p>\r\n<p>when i run the tutorial8 i get this:</p>\r\n<p>xml is not in the XNA intermediate format. Missing XnaContent root element.</p>\r\n<p>&nbsp;</p>\r\n<p>my calib.xml:</p>\r\n<p>&lt;?xml version=&quot;1.0&quot;?&gt;<br>\r\n&lt;opencv_storage&gt;<br>\r\n&lt;intrinsic_matrix type_id=&quot;opencv-matrix&quot;&gt;<br>\r\n&nbsp; &lt;rows&gt;3&lt;/rows&gt;<br>\r\n&nbsp; &lt;cols&gt;3&lt;/cols&gt;<br>\r\n&nbsp; &lt;dt&gt;d&lt;/dt&gt;<br>\r\n&nbsp; &lt;data&gt;<br>\r\n&nbsp;&nbsp;&nbsp; -1.0462432029028093e&#43;003 0. 336.4961312086086900 0.<br>\r\n&nbsp;&nbsp;&nbsp; -1.6737823896685791e&#43;003 1.3353201308085099e&#43;003 0. 0. 1.&lt;/data&gt;&lt;/intrinsic_matrix&gt;<br>\r\n&lt;distortion type_id=&quot;opencv-matrix&quot;&gt;<br>\r\n&nbsp; &lt;rows&gt;4&lt;/rows&gt;<br>\r\n&nbsp; &lt;cols&gt;1&lt;/cols&gt;<br>\r\n&nbsp; &lt;dt&gt;d&lt;/dt&gt;<br>\r\n&nbsp; &lt;data&gt;<br>\r\n&nbsp;&nbsp;&nbsp; 0.3617856094503178 -1.9303826996318145 -0.2161534791207309<br>\r\n&nbsp;&nbsp;&nbsp; -5.9419554333624905e-003&lt;/data&gt;&lt;/distortion&gt;<br>\r\n&lt;width&gt;640&lt;/width&gt;<br>\r\n&lt;height&gt;480&lt;/height&gt;<br>\r\n&lt;/opencv_storage&gt;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>anyone can help me? best regards</p>\r\n",
+    "PostedDate": "2011-02-03T15:26:54.46-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "560799",
+    "ThreadId": "244576",
+    "Html": "\r\n<p>resolved..</p>\r\n<p>best,</p>\r\n<p>David.</p>\r\n",
+    "PostedDate": "2011-02-04T07:11:57.77-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "611253",
+    "ThreadId": "244576",
+    "Html": "<p>Hello,</p>\r\n<p>I'm also getting same message. Would you mind to post how you fixed the problem?</p>\r\n<p>Thank you!</p>",
+    "PostedDate": "2011-05-11T14:44:55.713-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "611653",
+    "ThreadId": "244576",
+    "Html": "<p>include the document in the root folder of your project, instead of in your content folder. (you can also create another folder in your root folder with all the xml documents. I find the last one very convenient as my projects tend to become very complex.)</p>",
+    "PostedDate": "2011-05-12T06:37:17.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "601441",
+    "ThreadId": "254924",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>Im using Goblin UI2DRenderer to draw two circles and I want to do a collision detection to see if these shapes are overlapped. I assume that I cannot use XNA sprite collision detection since I'm not drawing a Sprite. Any help regarding the issue is much\r\n appriciated.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks,</p>\r\n<p>Regards</p>\r\n<p>Janidu</p>\r\n",
+    "PostedDate": "2011-04-22T02:36:45.35-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601747",
+    "ThreadId": "254924",
+    "Html": "<p>There might be an XNA function for this, I'm not sure.&nbsp; But if not, you can probably code circle collision in 2D yourself pretty easily.&nbsp; Just take the distance between the 2 centers; if it's less then radius1 + radius2, they are colliding/overlapping.&nbsp; If you are storing your centers as vector2's, you can just subtract them from each other and then retrieve the .Length() property of the resulting vector2.</p>",
+    "PostedDate": "2011-04-22T15:55:55.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "602224",
+    "ThreadId": "254924",
+    "Html": "<p>Thank you so much. I solved it using 2d collision detection as suggested by you.&nbsp;</p>\r\n<p>Thanks for your time :)</p>",
+    "PostedDate": "2011-04-24T16:42:46.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

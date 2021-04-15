@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "443391",
+    "ThreadId": "212785",
+    "Html": "Using goblinXNA (with ALVAR lib) I found one problem. If I move a marker along XY plane rather quickly then my application won't see this marker until it's speed becomes low. I suppose that this is caused by low quality of my web-camera (1.3 megapixel), because during such fast movement even my eyes can notice black squares on my markers blurred. On the contrary, when I move the marker along Z axis then it's recognized practically all the time, obviously because in this way web-cam sees that marker becomes bigger/lesser :-)\r\nI have three thoughts how can I solve this problem:\r\n1. Use bigger markers. That will help my web-cam to see all squares. (I used floor multimarker from the GoblinXNA tutorial, its markers are small enough)\r\n2. Use bigger markers with big squares in the middle. All markers in tutorials have very small squares in the middle, they become blurred even when I make rather slow movement. Maybe if I create my own marker with big squares it will help.\r\n3. Third variant requires some coding. Maybe I can create some interpolation, I mean, I can ask my application to remember the marker's movement direction and speed each frame and when the marker is not visible I can do some calculations taking into account marker's old position and speed.\r\n\r\nWhat should I do?\r\n\r\nP.S.\r\n Also, how should I use MarkerLayout tool to create my own markers. For example, I want to create config file for SampleMultiMarker image from ALVAR docs, what should I do? And how can I define marker size (I mean, how should I tell to the GoblinXNA that my marker is 10x10 cm?)\r\n\r\nP.P.S.\r\nSorry for bad English.\r\n",
+    "PostedDate": "2010-05-16T01:28:58.167-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "443408",
+    "ThreadId": "212785",
+    "Html": "<p>Motion blur is always a problem for vision-based tracking, and there are several papers that describe how to solve it. It's not included with Goblin XNA, so you will need to perform image analysis and solve it in your application. Using bigger marker won't solve it since it depends on the camera shutter duration (you can lower 'exposure' value to lessen motion blur, but it's inevitable, and you can only control exposure using the software that comes with your camera).</p>\r\n<p>In case you implement prediction code when the marker tracker loses tracking, the best way is to implement your own IPredictor and assign it to MarkerNode.</p>\r\n<p>For MarkerLayout, please see the sample code. For marker size. the pixelPerInch value defines it.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-05-16T04:49:56.537-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "443711",
+    "ThreadId": "212785",
+    "Html": "Thank you",
+    "PostedDate": "2010-05-17T04:03:48.353-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

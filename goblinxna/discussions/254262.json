@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "598754",
+    "ThreadId": "254262",
+    "Html": "\r\n<p>Can anyone help me to import Animated .fbx objects from maya ??? I got the animated object (just an animated cube) and i tried to import that by using Animated Pipeline but its' showing me the following error....</p>\r\n<p>&nbsp;</p>\r\n<p>Error<span>&nbsp;</span>2<span>&nbsp;</span>Building content threw NullReferenceException: Object reference not set to an instance of an object.&nbsp;&nbsp; at SkinnedModelPipeline.SkinnedModelProcessor.ValidateMesh(NodeContent node, ContentProcessorContext\r\n context, String parentBoneName) in C:\\Users\\Raathigesh92\\Desktop\\GoblinXNAv3.5 (1)\\GoblinXNAv3.5\\tutorials\\SkinnedModelPipeline\\SkinnedModelProcessor.cs:line 209&nbsp;&nbsp; at SkinnedModelPipeline.SkinnedModelProcessor.Process(NodeContent input, ContentProcessorContext\r\n context) in C:\\Users\\Raathigesh92\\Desktop\\GoblinXNAv3.5 (1)\\GoblinXNAv3.5\\tutorials\\SkinnedModelPipeline\\SkinnedModelProcessor.cs:line 44&nbsp;&nbsp; at Microsoft.Xna.Framework.Content.Pipeline.ContentProcessor`2.Microsoft.Xna.Framework.Content.Pipeline.IContentProcessor.Process(Object\r\n input, ContentProcessorContext context)&nbsp;&nbsp; at Microsoft.Xna.Framework.Content.Pipeline.BuildCoordinator.BuildAssetWorker(BuildItem item)&nbsp;&nbsp; at Microsoft.Xna.Framework.Content.Pipeline.BuildCoordinator.BuildAsset(BuildItem item)&nbsp;&nbsp;\r\n at Microsoft.Xna.Framework.Content.Pipeline.BuildCoordinator.RunTheBuild()&nbsp;&nbsp; at Microsoft.Xna.Framework.Content.Pipeline.Tasks.BuildContent.RemoteProxy.RunTheBuild(BuildCoordinatorSettings settings, TimestampCache timestampCache, ITaskItem[] sourceAssets,\r\n String[]&amp; outputContent, String[]&amp; rebuiltContent, String[]&amp; intermediates, Dictionary`2&amp; dependencyTimestamps, KeyValuePair`2[]&amp; warnings)C:\\Users\\Raathigesh92\\Desktop\\AnimatedPP\\AnimatedPipeLine\\AnimatedPipeLine\\Content\\Cy.fbx<span>&nbsp;</span>AnimatedPipeLine</p>\r\n<p>&nbsp;</p>\r\n<p>Please help me to solve this issue......</p>\r\n<p>Thank You.</p>\r\n",
+    "PostedDate": "2011-04-17T13:12:32.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "598871",
+    "ThreadId": "254262",
+    "Html": "<p>Solved the Problem.....</p>\r\n<p>http://graphics.cs.columbia.edu/wiki/doku.php?id=wiki:user:henderso:tutorials:fbxtoxna</p>",
+    "PostedDate": "2011-04-17T23:38:30.153-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "196205",
+    "ThreadId": "58034",
+    "Html": "<p>Hi,</p>\r\n<p>I'm trying to set WorldSize in Newton Lib, but when i set it shows a message:</p>\r\n<p>System.AccessViolationException was unhandled<br>&nbsp; Message=&quot;Attempted to read or write protected memory. This is often an indication that other memory is corrupt.&quot;<br>&nbsp; Source=&quot;NewtonWrapper&quot;<br>&nbsp; StackTrace:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at NewtonDynamics.Newton.NewtonSetWorldSize(IntPtr pNewtonWorld, Single[] pMinPoint, Single[] pMaxPoint)<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at GoblinXNA.Physics.NewtonPhysics.set_WorldSize(BoundingBox value) in E:\\TCC\\GoblinXNAv3.2\\GoblinXNAv3.2\\src\\Physics\\NewtonPhysics.cs:line 422<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at TCC.Game1.Initialize() in E:\\TCC\\Projeto\\1.0\\TCC\\TCC\\Game1.cs:line 54<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at Microsoft.Xna.Framework.Game.Run()<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; at TCC.Program.Main(String[] args) in E:\\TCC\\Projeto\\1.0\\TCC\\TCC\\Program.cs:line 14<br>&nbsp; InnerException:</p>\r\n<p>My code</p>\r\n<p>NewtonPhysics physics= new NewtonPhysics();<br>physics.WorldSize = new BoundingBox(new Vector3(-400f, -200f, -400f), new Vector3(400f, 200f, 400f));</p>\r\n<p>&nbsp;</p>\r\n<p>Did anyone try this?</p>",
+    "PostedDate": "2009-05-31T16:08:54.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "196490",
+    "ThreadId": "58034",
+    "Html": "<p>You need to initialize the physics engine before doing anything with it.</p>\r\n<p>If you do scene.PhysicsEngine&nbsp;= new NewtonPhysics(), then scene class automatically calls the Initialize() function, but if you just do NewtonPhysics physics = new NewtonPhysics(), then you need to call Initialize() yourself.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-06-01T10:35:11.993-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

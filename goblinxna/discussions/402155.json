@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "937523",
+    "ThreadId": "402155",
+    "Html": "\r\n<p>Dear Ohan!</p>\r\n<p>I would like to use the GPU for rendering, is that possible to do that? I downloaded a GPU monitoring app and when i running my app it shows that, the GPU doesn't work (only the CPU counting the objects), so how can i use the GPU for rendering?</p>\r\n<p>My other problem is when i working with 1280x720 images, the processing is too slow (i5 CPU) and it only uses 1 core from out of 4. So my question that how can i make the program multi threaded? Or is that any kind of idea how can i increase the performance\r\n for higher resolution capturing?</p>\r\n<p>At least there is another question. :) I solved the shadow problem for non-primitive models, but the shadow are too hard and it's resonating (with primitive models too, like in the domino game and tutorial 8). How can I make much smoother and non-resonating\r\n shadows?</p>\r\n<p>I know that theese are so difficult questions, but if you can write it in few sentence, i will say &quot;BIG THANKS&quot; :)</p>\r\n<p>Thanks for all the helps, You and Columbia University rocks! ;)</p>\r\n",
+    "PostedDate": "2012-11-06T13:26:21.087-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "943606",
+    "ThreadId": "402155",
+    "Html": "\r\n<p>Dear Ohan!</p>\r\n<p>I solved this question:<br>\r\n&quot;<span><span>At least there is another question. :) I solved the shadow problem for non-primitive models, but the shadow are too hard and it's resonating (with primitive models too, like in the domino game and tutorial 8). How can I make much smoother and non-resonating\r\n shadows?</span></span>&quot;</p>\r\n<p>Have you got any idea for the other problems? (GPU rendering or Multithreading)</p>\r\n",
+    "PostedDate": "2012-11-18T10:15:26.94-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

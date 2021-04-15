@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "420383",
+    "ThreadId": "205534",
+    "Html": "<p>Since some users asked about not being able to render video images other than 640x480 (or whatever the default resolution of the camera is) using DirectShowCapture class, I have investigated on the problem today. Then I just figured out that for some reason, if the runtime environment is set to x86, which is the case for XNA, then DirectShow won't let the resolution to change from its default resolution. I have compiled exact same code, but with different project setting (one with VS2008 empty project, and another one with VS2008 XNA 3.1 project), and the one with empty project lets me change the resolution since it's running environment can be set to &quot;Any CPU&quot; instead of &quot;x86&quot; for XNA project. Does anyone know the reason for this?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-19T13:08:55.647-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

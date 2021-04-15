@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "179275",
+    "ThreadId": "53289",
+    "Html": "<span style=\"font-size:10pt;color:rgb(0, 0, 0)\" lang=EN-GB><p><span style=\"font-size:10pt\" lang=EN-GB>Hello, <br><br></span></p><p><span style=\"font-size:10pt\" lang=EN-GB>I am using the ARTag SDK 'panel_set.cf' configuration file and the 'base0' and 'toolbar0' markers.  However, my game has the following irregular coordinate behaviour:-<br><br> - <span style=\"font-size:10pt\" lang=EN-GB>Incrementing X has the effect of decrementing Z (right-handed coordinates)  i.e. The object gets nearer to the camera.<br> - Incrementing Y has the effect of incrementing X (right-handed coordinates)   i.e. The object moves to the right.<br> - Incrementing Z has the effect of incrementing Y (right-handed coordinates)   i.e. The object goes up.</span></span></p><p><span style=\"font-size:10pt\" lang=EN-GB>and conversely...<br><br> - </span><span style=\"font-size:10pt\" lang=EN-GB>Decrementing X has the effect of incrementing Z (right-handed coordinates)   i.e. The object moves further away from the camera<br> - Decrementing Y has the effect of decrementing X (right-handed coordinates)  i.e. The object moves to the left.<br> - Decrementing Z has the effect of decrementing Y (right-handed coordinates)  i.e. The object move downwards.</span> </p><p><span style=\"font-size:10pt\" lang=EN-GB>At first I thought it was something I was (or wasn't) doing in my code, however the same behaviour occurs in the Tutorial 8 project (again using the 'panel_set.cf' config file and 'base0' / 'toolbar0' markers - NOT the default 'artag.cf' and 'ground' marker).  I am unable to print the 'ground' marker sheet because it is very big (I am assuming I cannot de-scale it).<br><br></span></p><p>To clarify, I would expect the right-handed coordinate system behaviour - where incrementing X moves the object to the right; incrementing Y moves the object upwards; and incrementing Z moves an object further away from the camera.</p><p><span style=\"font-size:10pt\" lang=EN-GB><br></span><span style=\"font-size:10pt\" lang=EN-GB>Any help would be greatly appreciated!</span></p><p><span style=\"font-size:10pt\" lang=EN-GB>Simon</span></p><p></p></span>",
+    "PostedDate": "2009-04-14T15:58:48.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179822",
+    "ThreadId": "53289",
+    "Html": "What do you exactly mean by &quot;incrementing&quot; or &quot;decrementing&quot; your coordinates? <div><br></div><div>If you mean by incrementing or decrementing the translation component of an object attached to a marker, then the translation is based on the marker coordinates, but not the global coordinates. In global coordinates, you would excpect incrementing X moves object to the right, and incrementing Y moves object upwards, and so on, but this is not true if an object is attached to a marker. </div><div><br>The marker coordinate is +Z up, +X right, and +Y further relative to the marker transformation. </div><div><br></div><div>Ohan</div>",
+    "PostedDate": "2009-04-15T13:49:49.353-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "179841",
+    "ThreadId": "53289",
+    "Html": "Hi Ohan,<br>\r\n<br>\r\nYes, I was referring to the translation component of an object attached to a marker.  Apologies for the ambiguity.  <br>\r\n<br>\r\nAs you've probably already guessed, I was under the impression that objects still adhered to global coordinates even when attached to a marker.  This is obviously not the case, so thanks for straightening this out for me!<br>\r\n<br>\r\nI'll go and have a play around, keeping the marker coordinate system behaviour in mind.  This may generate some more questions so I may need to keep this discussion alive for a little while longer :) <br>\r\n<br>\r\n** I've actually just removed quite a lengthy question because I want to get all my facts straight first ***<br>\r\n<br>\r\nCheers<br>\r\nSimon<br>\r\n",
+    "PostedDate": "2009-04-15T15:06:29.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "180707",
+    "ThreadId": "53289",
+    "Html": "<p>Hi Ohan,<br>\r\n<br>\r\nWhen my 'base0' marker sheet is laid out like the front-cover of Mark Fiala's book (Augmented Reality. A Practical Guide), I get the following behavior:-</p>\r\n<p>   +Z up, +X nearer, and +Y right</p>\r\n<p> .. which of course is incorrect.  In order to get the expected marker coordinate behavior (i.e. +Z up, +X right, and +Y further away), I must rotate the sheet 90 degrees anti-clockwise so that the X-axis runs vertically (with the X label on the right-hand side of the captured frame) and the Y-axis runs horizontally (with the Y label displayed top-center in the captured frame).<br>\r\n<br>\r\nI am just a little puzzled as to why this is the case?  I am not rotating the model in any way, just appling a Scale Vector.<br>\r\n<br>\r\nHope I've explained myself well enough.<br>\r\n<br>\r\nSimon</p>\r\n<p><span style=\"font-family:arial;font-size:10pt\"> </span></p>\r\n",
+    "PostedDate": "2009-04-17T15:31:04.65-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "181488",
+    "ThreadId": "53289",
+    "Html": "Hi Simon,<div><br></div><div>Sorry, I missed your last post. </div><div><br></div><div>I didn't realize that the panel0 has X &amp; Y flipped. I'll check it, but since I'm very busy with conducting user study this week, I will probably work on it next week.</div><div><br></div><div>Ohan</div>",
+    "PostedDate": "2009-04-20T13:14:28.093-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "181513",
+    "ThreadId": "53289",
+    "Html": "Hi Ohan,<div><br></div><div>No stress.  I appreciate you're a busy guy!  The behavior isn't holding me back anyway; I'm making great leaps forward thanks to your feedback.  The Goblin tutorials have been a big help too.  I've also been reading Mark Fiala's book on ARTag (something I should have started a lot sooner ;)</div><div><br></div><div>Thanks again<br></div><div>Simon</div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div><div><br></div>",
+    "PostedDate": "2009-04-20T14:33:20.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

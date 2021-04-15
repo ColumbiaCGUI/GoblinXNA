@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "586101",
+    "ThreadId": "251112",
+    "Html": "<p>Hi,</p>\n<p>I want to draw a rectangle around text that is rendered using UI3DRender. The UI3DRenderer text is placed at a certain distance from a marker, based on the marker's woldtransformation.&nbsp;UI2DRender can draw a rectangle, but the X and Y components are relative to the top left hand corner of the screen. I've applied a 3D projection to map the 3D image to the computer's 2D plane, and the rectangles appear at the correct orientation to the text. But the rectangles move with my line of sight. How would I go about placing and keeping the rectangles around the text? I notice that the camera.projection is set using&nbsp;Matrix.CreatePerspectiveFieldOfView(...). I use Vuzix iwear as the camera. Does that mean that when I move my head/the camera, the rectangles move as well?</p>\n<p>Also, how can I determine the length and width of the rendered text so the text and box have the same dimensions?</p>\n<p>Thanks.</p>",
+    "PostedDate": "2011-03-24T15:46:10.587-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

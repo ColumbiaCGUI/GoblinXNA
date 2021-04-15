@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "171982",
+    "ThreadId": "51293",
+    "Html": "Running Windows Vista, using a Creative Webcam Live! I am running into the following exception: <br>\r\n<br>\r\nC:\\&quot;Tutorial8 - Optical Marker Tracking.exe&quot;<br>\r\n<br>\r\nUnhandled Exception: GoblinXNA.GoblinException: No video capturing devices are f<br>\r\nound at GoblinXNA.Device.Capture.DirectShowCapture.InitVideoCapture(Int32 videoDev<br>\r\niceID, Int32 audioDeviceID, FrameRate framerate, Resolution resolution, Boolean<br>\r\ngrayscale) in C:\\Users\\ray\\Desktop\\brody\\goblinxna\\src\\Device\\Capture\\DirectShow<br>\r\nCapture.cs:line 221 at Tutorial8___Optical_Marker_Tracking.Tutorial8.SetupMarkerTracking() in C:\\<br>\r\nUsers\\ray\\Desktop\\brody\\goblinxna\\tutorials\\Tutorial8 - Optical Marker Tracking\\<br>\r\nTutorial8.cs:line 116 at Tutorial8___Optical_Marker_Tracking.Tutorial8.Initialize() in C:\\Users\\ray<br>\r\n\\Desktop\\brody\\goblinxna\\tutorials\\Tutorial8 - Optical Marker Tracking\\Tutorial8<br>\r\n.cs:line 65<br>\r\n&nbsp;&nbsp; at Microsoft.Xna.Framework.Game.Run()<br>\r\n&nbsp;&nbsp; at Tutorial8___Optical_Marker_Tracking.Program.Main(String[] args) in C:\\User<br>\r\ns\\ray\\Desktop\\brody\\goblinxna\\tutorials\\Tutorial8 - Optical Marker Tracking\\Prog<br>\r\nram.cs:line 14<br>\r\n<br>\r\nWith Steve Henderson's advice I have tried the following: <br>\r\n<br>\r\nI have installed the camera drivers<br>\r\nI have seen the camera work through AmCap<br>\r\nI have turned off AmCap<br>\r\nI have checked TaskManager for processes that might be holding the camera<br>\r\nI have confirmed that both &quot;Creative WebCam Live!&quot; options show video in AmCap<br>\r\nI have tried to call captureDevice.InitVideoCapture at 0-50<br>\r\nI have done the above with sound at -1<br>\r\nI have done the above with resolution at 320x240<br>\r\nI have confirmed that the camera appears in GraphEdit/Insert Filters/Video Capture Sources<br>\r\nI have run the tests with the camera plugged into each and every USB port<br>\r\n<br>\r\nHere is my modified code from Tutorial8.cs SetupMarkerTracking(): <br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (int i = 0; i &lt;= 10; i++)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.Out.WriteLine(&quot;Trying &quot; + i);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; captureDevice.InitVideoCapture(i, 0, FrameRate._30Hz, Resolution._640x480, false);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //captureDevice.InitVideoCapture(i, -1, FrameRate._30Hz, Resolution._640x480, false);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //captureDevice.InitVideoCapture(i, 0, FrameRate._30Hz, Resolution._320x240, false);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; catch<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.Out.WriteLine(i + &quot; failed&quot;);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (captureDevice.Initialized)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.Out.WriteLine(i + &quot; DID NOT FAIL&quot;);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n<br>\r\nPlease help, thanks<br>\r\n",
+    "PostedDate": "2009-03-25T11:47:49.657-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "171990",
+    "ThreadId": "51293",
+    "Html": "The exception &quot;No video capturing devices are found&quot; is thrown when the DirectShow library cannot find any cameras connected to your machine. If there are more than one camera, and the deviceID is incorrect, it will throw different exception &quot;device ID out of range&quot;. Can you try to run the original DirectShow program that you downloaded separately from Goblin? If the test program for DirectShow doesn't recognize your camera, then it's either that the DirectShow.NET doesn't support your camera, or there is a bug with the DirectShow library. If the test program can recognize your camera, and it works fine, then it's a problem with Goblin. Please let me know the result.<br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-25T12:01:15.73-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172033",
+    "ThreadId": "51293",
+    "Html": "Thank you Ohan, <br>\r\n<br>\r\nIn fact, CaptureTest.exe throws an exception on line 26 of CaptureTest.CaptureTest in the call<br>\r\n<br>\r\nprivate Filters filters = new Filters(); <br>\r\n<br>\r\nwhich is exactly where it crashes for me otherwise. <br>\r\n",
+    "PostedDate": "2009-03-25T14:21:19.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "172420",
+    "ThreadId": "51293",
+    "Html": "Thanks for the information, brody. In that case, the DirectShowNET library does not support your camera unfortunately. We know that most embedded cameras, Microsoft Lifecam series, and Logitec series work fine with the DirectShowNET library.<br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-26T10:27:18.52-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "175669",
+    "ThreadId": "51293",
+    "Html": "Ohan, <br>\r\n<br>\r\nI finally found a camera that works! It does something odd with Tutorial 8 however. The window appears with two very wide and short windows showing video capture and the bottom 80% of the screen is black. Also, when the program initializes I get this in the command-window: <br>\r\n<br>\r\ndouble artag_camera_fx,artag_camera_fy,artag_camera_cx,artag_camera_cy=638.05200<br>\r\n2,633.672974,320.000000,240.000000<br>\r\nreading coordframe file &lt;ARTag.cf&gt;<br>\r\n<br>\r\nBrody <br>\r\n",
+    "PostedDate": "2009-04-04T11:58:43.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "176299",
+    "ThreadId": "51293",
+    "Html": "Hi Brody,<div><br></div><div><span style=\"border-collapse:collapse;font-family:arial;font-size:13px\">It seems like the camera resolution you're using is not supported by DirectShowNET. What resolution are you using? Can you try the same<br>resolution with the CaptureTest program which came with the DirectShow download? If CaptureTest doesn't work, then the resolution won't work<br>on Goblin XNA either.</span><br></div><div><span style=\"border-collapse:collapse;font-family:arial;font-size:13px\"><br></span></div><div><span style=\"border-collapse:collapse;font-family:arial;font-size:13px\">The message you see on the command-window is from ARTag library. It's just a debug message, not an error message.</span></div><div><span style=\"border-collapse:collapse;font-family:arial;font-size:13px\"><br></span></div><div><span style=\"border-collapse:collapse;font-family:arial;font-size:13px\">Ohan</span></div>",
+    "PostedDate": "2009-04-06T13:34:35.113-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

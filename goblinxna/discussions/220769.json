@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "471106",
+    "ThreadId": "220769",
+    "Html": "<p>Hello everybody,</p>\r\n<p>I'm going crazy about this error. I followed the installation guide, making sure that &quot;Additional Include Directories&quot; and &quot;Additional Library Directories&quot; were correct.</p>\r\n<p>When i try to build the ALVARWrapper1.3 project, VS2008 gives me back this issue.</p>\r\n<p>Using VS2008, XNA game studio 3.1, openCV1.0, alvar 1.3.0 and newton 1.53.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance.</p>",
+    "PostedDate": "2010-07-22T09:42:08.993-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

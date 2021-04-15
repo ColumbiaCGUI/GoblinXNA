@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "520949",
+    "ThreadId": "234412",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I am trying to run goblin xna v3.5, I think, that there is something bad with Newton.dll, I gave it to unmanaged direcotory, it is visible in project solution, I tried to give it to bin in projects, but it didn't help.</p>\r\n<p>Here are my errors</p>\r\n<p>Error&nbsp;&nbsp;&nbsp; 1&nbsp;&nbsp;&nbsp; The type or namespace name 'PrimitiveModel' could not be found (are you missing a using directive or an assembly reference?)&nbsp;&nbsp;&nbsp; C:\\skola\\dp0\\minka\\GoblinXNAv3.5\\projects\\ARDominos\\ARDominos\\DominoBox.cs&nbsp;&nbsp;&nbsp;\r\n 49&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp; ARDominos<br>\r\nError&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; The type or namespace name 'Newton1' does not exist in the namespace 'GoblinXNA.Physics' (are you missing an assembly reference?)&nbsp;&nbsp;&nbsp; C:\\skola\\dp0\\minka\\GoblinXNAv3.5\\projects\\ARDominos\\ARDominos\\DominoGame.cs&nbsp;&nbsp;&nbsp;\r\n 55&nbsp;&nbsp;&nbsp; 25&nbsp;&nbsp;&nbsp; ARDominos<br>\r\nError&nbsp;&nbsp;&nbsp; 3&nbsp;&nbsp;&nbsp; The type or namespace name 'CustomMesh' could not be found (are you missing a using directive or an assembly reference?)&nbsp;&nbsp;&nbsp; C:\\skola\\dp0\\minka\\GoblinXNAv3.5\\projects\\ARDominos\\ARDominos\\DominoBox.cs&nbsp;&nbsp;&nbsp;\r\n 61&nbsp;&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp; ARDominos<br>\r\nError&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp; The type or namespace name 'PrimitiveModel' could not be found (are you missing a using directive or an assembly reference?)&nbsp;&nbsp;&nbsp; C:\\skola\\dp0\\minka\\GoblinXNAv3.5\\projects\\ARDominos\\ARDominos\\DominoGame.cs&nbsp;&nbsp;&nbsp;\r\n 83&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp; ARDominos</p>\r\n<p>&nbsp;</p>\r\n<p>I want to use v3.5 because in v 3.3 which I was using, suddenly stopped function, it stopped here&nbsp; tracker.InitTracker(100, 200, &quot;configs/calib.xml&quot;, 9.0); with errors Loader lock was detected.</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you</p>\r\n<p>Monika</p>\r\n",
+    "PostedDate": "2010-11-12T00:35:59.43-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "522318",
+    "ThreadId": "234412",
+    "Html": "\r\n<p>You shouldn't be getting those errors if you're using the right version of GoblinXNA.dll. I just tested from the repo and it compiled without any problems.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-15T12:47:38.12-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "522538",
+    "ThreadId": "234412",
+    "Html": "\r\n<p>Thank you.</p>\r\n",
+    "PostedDate": "2010-11-16T00:20:57.243-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "242747",
+    "ThreadId": "71179",
+    "Html": "<p>Is there any way I could convert a nodes matrix to a matrix based on another node.&nbsp;</p>\r\n<p>For example, I want to know the x and y axes or an object based on the x and y axis of the ground node. &nbsp;To tell how a marker is positioned and rotated compaired to the ground marker. &nbsp;Rather then how a marker is rotated in the world. &nbsp;Make sense?</p>\r\n<p>I know in the leadwerks engine you can use TFormPoint to convert the coordinant system to the system from another object.</p>\r\n<p>Look at it this way, lets say I have 2 markers, Ground and Toolbar1, I want to have a 3d object located at the Toolbar1 location, but rotating on the Ground Y axis. How would I do that?</p>",
+    "PostedDate": "2009-10-06T15:37:59.127-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242985",
+    "ThreadId": "71179",
+    "Html": "<p>Assuming the transformation of the ground node is G, and the transformation of another node is A.&nbsp;</p>\r\n<p>Then you want to know the transformation X that would transforms from G to A, which means the equation G * X = A would hold.</p>\r\n<p>Then, you can tweak the equation to get X = inverse(G) * A. In XNA, the matrix computation would actually be A * inverse(G).</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-07T08:12:58.46-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242993",
+    "ThreadId": "71179",
+    "Html": "<p>That worked, Thank you</p>\r\n<p>One of these days i will get my head wrapped around the Matrix, and how it works.</p>\r\n<p>I did find this post in the XNA forums, it helps abit.&nbsp;</p>\r\n<p style=\"display:block;margin-left:0px\"><span style=\"color:#888888\">&quot;What a matrix does is describe converting from one 'coordinate space' to another. This could simply mean 'how to go from here to there' or it could be something more complex.</span></p>\r\n<p style=\"display:block;margin-left:0px\"><span style=\"color:#888888\">An example would be a tank. You can have a matrix to describe the position/rotation/scale of the tank. ('tank space'). The vertices for the tank's mesh will be stored in 'tank space', as will things like the centre point of the gun turret, etc. No matter where in your game that tank may be (which is defined by it's matrix), those values describing it will not have to change. If you wanted to know where those points were in&nbsp;</span><em><span style=\"color:#888888\">world space</span></em><span style=\"color:#888888\">, you would multiply them by the tank matrix. By this definition, the matrix for the tank describes converting from 'tank space' to 'world space'.</span></p>\r\n<p style=\"display:block;margin-left:0px\"><span style=\"color:#888888\">Going back to the gun turret on the tank, if the gun turret is '1m above the centre of the tank', then the&nbsp;</span><em><span style=\"color:#888888\">matrix</span></em><span style=\"color:#888888\">&nbsp;for that turrent simply translates&nbsp;</span><em><span style=\"color:#888888\">+1m on the y axis</span></em><span style=\"color:#888888\">&nbsp;- the important point is that the turret matrix converts from&nbsp;</span><em><span style=\"color:#888888\">turret space</span></em><span style=\"color:#888888\">&nbsp;to&nbsp;</span><em><span style=\"color:#888888\">tank space</span></em><span style=\"color:#888888\">&nbsp;(in that order!). So no matter how the tank rotates or moves around, the turret is always 1m above it. (Then to rotate the turret left/right, just rotate it's matrix around the y-axis - this could be another matrix 'turret rotation space'.). To convert directly from&nbsp;</span><em><span style=\"color:#888888\">turret space</span></em><span style=\"color:#888888\">&nbsp;to&nbsp;</span><em><span style=\"color:#888888\">world space</span></em><span style=\"color:#888888\">&nbsp;you get the matrix: (tank space) * (turret space). (This heirachy can go as deep as you want).</span></p>\r\n<p style=\"display:block;margin-left:0px\"><span style=\"color:#888888\">Also note that matrix1*matrix2 != matrix2*matrix1; think of the tank example, and what each matrix represents and this should become clear.&quot;.</span></p>\r\n<p style=\"display:block;margin-left:0px\"><span style=\"color:#888888\"><span style=\"color:#000000\">However, I still dont get what adding, subrtracting, Multiplying, and Inverting a matrix with another matrix does exactly.&nbsp;</span></span></p>",
+    "PostedDate": "2009-10-07T08:36:58.627-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

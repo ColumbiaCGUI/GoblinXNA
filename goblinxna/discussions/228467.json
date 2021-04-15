@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "498035",
+    "ThreadId": "228467",
+    "Html": "<p>Hi,</p>\r\n<p>I've made a very simple AR application and it works fine.&nbsp;&nbsp;&nbsp; I just display a the planet earth over a marker (the one used by ARDomninos.&nbsp;&nbsp;&nbsp; It looks great!</p>\r\n<p>The problem is that it display an error message in the output window:</p>\r\n<p>It's in french, but the message says that there is an exception &quot;System.InvalidOperationException&quot; that occurs in Microsoft.Xna.Framework.dll.&nbsp;&nbsp; This message appears 15 times in a row in the console (always the same).</p>\r\n<p>It look like this error occurs when I call the base.Draw(gameTime); line.</p>\r\n<p>Any idea?</p>\r\n<p>In advance, thanks!</p>\r\n<p>Sebastien</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p><span style=\"font-size:xx-small\"></span></p>\r\n&nbsp;",
+    "PostedDate": "2010-09-24T05:33:50.243-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "498680",
+    "ThreadId": "228467",
+    "Html": "<p>Hmm.. i have no idea. You should be able to get the exact line where it throws an exception if you include the GoblinXNA project directly as reference instead of linking to the generated GoblinXNA.dll file.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-26T16:42:08.747-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "499045",
+    "ThreadId": "228467",
+    "Html": "<p>Ok...&nbsp;&nbsp; Thank you!&nbsp;&nbsp; I was just wondering.&nbsp;&nbsp; I can do everything anyway.&nbsp;&nbsp;&nbsp; I'll chek it out later.</p>\r\n<p>Thank you!</p>\r\n<p>Sebastien</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-09-27T10:16:39.163-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

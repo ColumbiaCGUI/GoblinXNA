@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "702126",
+    "ThreadId": "280504",
+    "Html": "\r\n<p>I don't know why, box object which I set on the ground marker move downward/upward (depends on how I hold the marker) and finally stopped at a particular position.</p>\r\n<p>why is this happening?</p>\r\n",
+    "PostedDate": "2011-11-22T19:19:59.653-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "702161",
+    "ThreadId": "280504",
+    "Html": "<p>If you face the marker parallel to the camera, it will get confused as to which the marker is facing. It's a known problem that's hard to solve. There are also few tracking bugs in ALVAR. VTT folks are trying to make it more robust.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-11-22T21:33:17.21-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "702194",
+    "ThreadId": "280504",
+    "Html": "<p>is there any workaround of it? is it possible to use groundMarker.WorldTransformation to make the ground object stick to the marker.</p>\r\n<p>where should I put the code? in the update method? still confused</p>",
+    "PostedDate": "2011-11-22T23:37:16.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "702693",
+    "ThreadId": "280504",
+    "Html": "<p>Finally fixed it. In Draw() method I simply multiply marker worldTransformation with offset vector3 bounds by matrix.CreateTranslation()</p>\n<p>and apply the result with NewtonPhysics SetTransform</p>\n<p>\n<pre>((NewtonPhysics)scene.PhysicsEngine).SetTransform(groundNode.Physics, mat);</pre>\n</p>\n<p>and the ground object remains on the marker.</p>",
+    "PostedDate": "2011-11-23T17:15:02.73-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "702714",
+    "ThreadId": "280504",
+    "Html": "<p>Another problem but nothing got to do with the groundmarker. Now, it's about the sphere object thrown to the ground object ignited by mouse click.</p>\n<p>when the ball lands to the ground object (box), it is like glued to the box. I wanted it to roll and finally fall down. I've adjusted the values of kinetic and static friction. But that don't help. What else do I need to look or perhaps any additional code that I need to  put in</p>\n<p>my code (excerpt of the NewtonMaterial values inside the <strong><span style=\"color: #ff0000;\">Initialize(method)</span></strong></p>\n<pre>// Set up physics material interaction specifications between the shooting box and the ground\n            NewtonMaterial physMat = new NewtonMaterial();\n            physMat.MaterialName1 = \"BowlingBall\";\n            physMat.MaterialName2 = \"Ground\";\n            physMat.Elasticity = 0f;\n            physMat.StaticFriction = 2f;\n            physMat.KineticFriction = 0.9f; <br /><pre>((NewtonPhysics)scene.PhysicsEngine).AddPhysicsMaterial(physMat);</pre>\n<br /><span style=\"color: #ff0000;\"><strong>CreateObject() method</strong></span><br />\n<div style=\"color: black; background-color: white;\">\n<pre><span style=\"color: blue;\">private</span> <span style=\"color: blue;\">void</span> CreateObjects()\n        {\n            bowlingAlley = <span style=\"color: blue;\">new</span> Box(Vector3.One);\n            Material bowlingAlleyMaterial = <span style=\"color: blue;\">new</span> Material();\n            bowlingAlleyMaterial.Specular = Color.Brown.ToVector4();\n            bowlingAlleyMaterial.Diffuse = Color.BurlyWood.ToVector4();\n            bowlingAlleyMaterial.SpecularPower = 45;\n\n            bowlingBall = <span style=\"color: blue;\">new</span> Sphere(3f, 50, 50);\n            bowlingBallMaterial = <span style=\"color: blue;\">new</span> Material();\n            bowlingBallMaterial.Specular = Color.Black.ToVector4();\n            bowlingBallMaterial.Diffuse = Color.BlanchedAlmond.ToVector4();\n\n            alleyGroundMarker = <span style=\"color: blue;\">new</span> MarkerNode(scene.MarkerTracker, <span style=\"color: #a31515;\">\"AlvarGroundArray.xml\"</span>);\n            \n            groundNode = <span style=\"color: blue;\">new</span> GeometryNode(<span style=\"color: #a31515;\">\"Ground\"</span>);\n            groundNode.Model = bowlingAlley;\n            groundNode.Material = bowlingAlleyMaterial;\n\n            groundNode.Physics.MaterialName = <span style=\"color: #a31515;\">\"Ground\"</span>;\n            groundNode.Physics.Interactable = <span style=\"color: blue;\">true</span>;\n            groundNode.Physics.Collidable = <span style=\"color: blue;\">true</span>;\n            groundNode.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;            \n            groundNode.AddToPhysicsEngine = <span style=\"color: blue;\">true</span>;\n            \n\n            <span style=\"color: green;\">// Create a parent transformation for both the ground and the sphere models</span>\n            TransformNode transformBowlingAlley = <span style=\"color: blue;\">new</span> TransformNode();\n            transformBowlingAlley.Translation = <span style=\"color: blue;\">new</span> Vector3(0,-10,-20);\n\n            <span style=\"color: green;\">// Create a scale transformation for the ground to make it bigger</span>\n            TransformNode groundScaleNode = <span style=\"color: blue;\">new</span> TransformNode();\n            groundScaleNode.Scale = <span style=\"color: blue;\">new</span> Vector3(400, 400, 10);\n\n            <span style=\"color: green;\">// Add this ground model to the scene</span>\n            scene.RootNode.AddChild(alleyGroundMarker);\n            scene.RootNode.AddChild(transformBowlingAlley); \n            alleyGroundMarker.AddChild(groundScaleNode);\n            groundScaleNode.AddChild(groundNode);\n            \n        }\n</pre>\n</div>\n<br /><strong><span style=\"color: #ff0000;\">ShootBall() method</span></strong><br />\n<div style=\"color: black; background-color: white;\">\n<pre><span style=\"color: blue;\">private</span> <span style=\"color: blue;\">void</span> ShootBall(Vector3 near, Vector3 far)\n        {\n            GeometryNode bowlingBallNode = <span style=\"color: blue;\">new</span> GeometryNode(<span style=\"color: #a31515;\">\"BowlingBall\"</span> + shooterID++);\n            bowlingBallNode.Model = bowlingBall;\n            bowlingBallNode.Material = bowlingBallMaterial;\n\n            bowlingBallNode.Physics.MaterialName = <span style=\"color: #a31515;\">\"BowlingBall\"</span>;\n            bowlingBallNode.Physics.Interactable = <span style=\"color: blue;\">true</span>;\n            bowlingBallNode.Physics.Collidable = <span style=\"color: blue;\">true</span>;\n            bowlingBallNode.Physics.Shape = GoblinXNA.Physics.ShapeType.Sphere;            \n            bowlingBallNode.Physics.Mass = 6f;\n            bowlingBallNode.AddToPhysicsEngine = <span style=\"color: blue;\">true</span>;\n            \n            <span style=\"color: green;\">// Calculate the direction to shoot the box based on the near and far point</span>\n            Vector3 linVel = far - near;\n            linVel.Normalize();\n            <span style=\"color: green;\">// Multiply the direction with the velocity of 20</span>\n            linVel *= 60f;\n\n            bowlingBallNode.Physics.InitialLinearVelocity = linVel;\n            bowlingBallNode.Physics.InitialWorldTransform = Matrix.CreateTranslation(near);\n\n            scene.RootNode.AddChild(bowlingBallNode);           \n        }\n</pre>\n</div>\n<br />thanks and appreciate any helps<br /></pre>",
+    "PostedDate": "2011-11-23T18:13:57.713-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "250326",
+    "ThreadId": "73265",
+    "Html": "<p>I'm having some issues with DLLs when compiling the tutorial projects: the DLL files in the bin folder often disappear entirely when I build/rebuild the tutorials (I had to make a backup bin folder to readd them manually each time), and some tutorials often don't work even after - apparently - compiling correctly (they become unable to find components from these DLLs and throw exceptions, so I have to readd the libraries and recompile hoping for the best). It's seemingly random (sometimes they work perfectly and sometimes they don't), and which DLL files disappear seems random too.</p>\r\n<p>Any idea about what might be the cause? I'm using Windows Vista 64 bit, might this be related to the issue?</p>\r\n<p>Thanks in advance.</p>\r\n<p>J.</p>",
+    "PostedDate": "2009-10-27T13:49:00.86-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250377",
+    "ThreadId": "73265",
+    "Html": "<p>I had the same issue in XP 32 bit. I unzipped the GoblinXNA zip into another folder, recompiled my libraries really carefully, and the problem went away.</p>\r\n<p>I suspect that the issue had something to do with the fact that I downloaded multiple versions of Newton, ALVAR and OpenCV. I troubleshot it by compiling and running the tutorials one at a time, and seeing which components flipped out.</p>\r\n<p>Be sure to use the versions of Newton, OpenCV and ALVAR that are indicated in the Install instructions (although i managed to get ALVAR 1.2.0 working).</p>\r\n<p>Good luck!</p>\r\n<p>_C</p>",
+    "PostedDate": "2009-10-27T15:03:02.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250391",
+    "ThreadId": "73265",
+    "Html": "<p>If you do &quot;Rebuild&quot; or &quot;Clean&quot;, it will remove the DLLs included in the project, and try to re-add them.</p>\r\n<p>The problem is that I made all tutorials to be generated in the /bin directory, and usually, the necessary dlls should be moved to another directory so that VS can copy them from that folder to where the .exe will be generated. I guess I'm using a bad file structure, and I'll consider changing it for the next release.&nbsp;</p>\r\n<p>If you don't want this disappear behavior, you should change the project settings for each of the tutorials to be generated in another folder which is not /bin directory.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-27T15:18:20.143-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "250461",
+    "ThreadId": "73265",
+    "Html": "<p>Thanks to both, I'll try changing the project settings to use another folder.</p>",
+    "PostedDate": "2009-10-27T19:37:32.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

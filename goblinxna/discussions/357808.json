@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "842980",
+    "ThreadId": "357808",
+    "Html": "\r\n<p>Hi Ohan:</p>\r\n<p>&nbsp;&nbsp;&nbsp; I want to add some new custom marker to track by alvar. Can I do that?</p>\r\n<p>&nbsp;&nbsp; I'v been worked on this all day, and could not find the way to do this.</p>\r\n",
+    "PostedDate": "2012-05-31T02:37:03.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843461",
+    "ThreadId": "357808",
+    "Html": "<p>You need to use the SampleMarkerCreation program in ALVAR distribution to generate each marker images, and the use them with our MarkerLayout program in /tools/ directory to create the .xml or just them as single marker.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-01T02:17:07.023-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "850696",
+    "ThreadId": "357808",
+    "Html": "<p>Hi Ohan:</p>\r\n<p>&nbsp;&nbsp;&nbsp;Thanks for your reply. &nbsp;I have some other things to do these days. And now I return to this.</p>\r\n<p>&nbsp;&nbsp; I tried to run SampleMarkerCreation in VS 2008. Compiled OK, but it always broke when calling function \"multi_marker.PointCloudAdd(idi, marker_side_len, pose);\". And also I really dont know how to use this since there is no document told me the steps. Could help me about the document thing?</p>",
+    "PostedDate": "2012-06-18T23:11:13.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "850772",
+    "ThreadId": "357808",
+    "Html": "<p>It's likely you're running the wrong project. I believe marker creation should never need to call multi-marker functions.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-19T02:42:57.55-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

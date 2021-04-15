@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "891750",
+    "ThreadId": "389156",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>In my app, I am using VGA2USB video feeds (<a href=\"http://www.epiphan.com/products/frame-grabbers/vga2usb-lr/\">http://www.epiphan.com/products/frame-grabbers/vga2usb-lr/</a>). It is a capture card to capture VGA output from another PC and feed into my app\r\n as a camera through USB.</p>\r\n<p>But when opening the camera I got this kind of generic exception</p>\r\n<p>Could not start video stream<br>\r\nCould not setup graph<br>\r\nError HRESULT E_FAIL has been returned from a call to a COM component.</p>\r\n<p>This happen at line 585 of DirectShowCapture.cs under method <span style=\"font-size:x-small\">\r\nStartupVideo.</span></p>\r\n<p><span style=\"font-size:x-small\">Seem that the camera can't be opened.</span></p>\r\n<p><span style=\"font-size:x-small\">I then test the device VGS2USB with VLC and the software came with the device called Epiphan Capture Tool. The device works just fine. I mean the apps can open the camera just fine.</span></p>\r\n<p><span style=\"font-size:x-small\">Any clue on how to overcome this would be very much appreciated.</span></p>\r\n<p><span style=\"font-size:x-small\">Thanks</span></p>\r\n<p><span style=\"font-size:x-small\">&nbsp;</span></p>\r\n",
+    "PostedDate": "2012-07-26T07:51:40.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "891801",
+    "ThreadId": "389156",
+    "Html": "<p>Never mind, it is resolution issue. VGA2USB require 1024x768.</p>",
+    "PostedDate": "2012-07-26T09:03:18.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

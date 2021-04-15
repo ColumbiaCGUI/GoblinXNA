@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "812086",
+    "ThreadId": "349063",
+    "Html": "\r\n<p>Can I use GoblinXNA without inherit from the Game class? I'm trying to create an application that uses a GoblinXNA inside a Windows Forms application and i cant use the Game Class, would i have a problem?</p>\r\n<p>I see that i need create my own ContentManager to initialize Goblin, and I see that the Update method of Scene uses the ElapsedGameTime and I don't know if i have problems trying to do my application because of this.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks a lot, and sorry for my bad english!</p>\r\n",
+    "PostedDate": "2012-03-18T01:51:41.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812138",
+    "ThreadId": "349063",
+    "Html": "<p>If you go to App Hub, there should be an example of integrating XNA application with WinForms. You should be able to figure out how you can integrate GoblinXNA with WinForms using that sample code.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-18T08:12:13.547-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "812141",
+    "ThreadId": "349063",
+    "Html": "<p>Thanks! Yes, i've already seen that and i have implemented yet. But I have a problem, the Control where I render with XNA flicked a lot... and in the tutorial doesn't occurs... I'm working on that!</p>\r\n<p>&nbsp;</p>\r\n<p>Ruben</p>",
+    "PostedDate": "2012-03-18T08:22:21.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

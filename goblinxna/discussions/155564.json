@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "363431",
+    "ThreadId": "155564",
+    "Html": "<p>Hi</p>\r\n<p>&nbsp;my app is not working on 64 bit Windows 7 ,&nbsp; is there something i can do to fix this?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Pragya</p>",
+    "PostedDate": "2010-02-23T15:10:28.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "363484",
+    "ThreadId": "155564",
+    "Html": "<p>its needed xna to be installed on the client machine !</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-23T17:24:58.48-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "1002211",
+    "ThreadId": "433373",
+    "Html": "Hey guys,\r<br />\n<br />\nI'm trying to pick models (TransformationNodes which consists of certain GeometryNodes) and I tried to make use of the PickRayCast but its not really working. I've tried to look into the Code of the Domino Game but i dont know how to project this to my project. I have something like a wall which is a TransformationNode. Each side of the wall is a GeometryNode and this node is made out of triangles. So i can access all the TransformationNodes i put on the groundMarkerNode. How can i pick objects like in the Domino Game? Can someone help me ?\r<br />\n<br />\nbest regards\r<br />\n<br />\nLordTribual<br />\n",
+    "PostedDate": "2013-02-16T08:48:32.22-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002659",
+    "ThreadId": "433373",
+    "Html": "all of your nodes (transform and geometry) added to only 1 marker?<br />\n",
+    "PostedDate": "2013-02-18T00:12:01.867-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002661",
+    "ThreadId": "433373",
+    "Html": "yes, all added to 1 single Marker. So the parent for all the GeometryNodes is one always 1 TransformNode. You know what i mean ?<br />\n",
+    "PostedDate": "2013-02-18T00:14:29.48-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002665",
+    "ThreadId": "433373",
+    "Html": "in this case read this discussion:\r<br />\n<a href=\"http://goblinxna.codeplex.com/discussions/257363\" rel=\"nofollow\">http://goblinxna.codeplex.com/discussions/257363</a><br />\n",
+    "PostedDate": "2013-02-18T00:18:56.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002666",
+    "ThreadId": "433373",
+    "Html": "Hi,\r<br />\n<br />\nI have already read the discussion but this will not wokr because as you could imagine, for example a wall is made out of 5 GemetryNode which make up one TransformNode to display the wall as a model on the marker. So i cannot simple take the TransformNode since this is not supposed to be added to the physics right ?\r<br />\nI cannot find any options for the physics for the TransformationNode.<br />\n",
+    "PostedDate": "2013-02-18T00:21:41.407-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002677",
+    "ThreadId": "433373",
+    "Html": "The transformnode has no physics property because this is just for the transformational editing. If you want to pick object in the marker (the 5 geometrynode) you can use the gemoetrynodes, not the transformnodes!<br />\n",
+    "PostedDate": "2013-02-18T00:32:09.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002679",
+    "ThreadId": "433373",
+    "Html": "But everytime i add all the geometrynodes to the physics and i try to pick it the list of pickedObjetcs in only 1 and the only object in the list is the groundNode. How is that possible ?<br />\n",
+    "PostedDate": "2013-02-18T00:34:30.28-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002681",
+    "ThreadId": "433373",
+    "Html": "Am i missing something ?\r<br />\n<br />\nI do pretty much the same as you mentioned in the thread. I add all the GeometryNodes to the physics and make it pickable. Do i also have to set the shape ? is that nessecery ? And what do i also need to do ?\r<br />\n<br />\ncheers<br />\n",
+    "PostedDate": "2013-02-18T00:35:48.897-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002683",
+    "ThreadId": "433373",
+    "Html": "if your groundnodes are gemoetrynodes then don't add theese geometrynodes to the physics.<br />\n<pre><code>groundNode.AddToPhysicsEngine = false;</code></pre>\n\nor if you dont set this parameter, it originally false. if it not solves your problem, post your code here.<br />\n",
+    "PostedDate": "2013-02-18T00:38:05.803-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1002697",
+    "ThreadId": "433373",
+    "Html": "Thanks i ll try this out! Ill be back with an answer.<br />\n",
+    "PostedDate": "2013-02-18T01:07:50.003-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1005173",
+    "ThreadId": "433373",
+    "Html": "Hi,\r<br />\n<br />\nwell i finally made it that i recieve objects from the raycast. The problem is that if i visualize the bounding box fromthe GemetryNodes such as Box or something similar i can see that the boxes are not right in place of the object itself. There is an offset between the bounding box and the object. How is that possible ? Another thing is that i can sometimes see the bounding box when i select Convec Hull (and this works fine then and the bounding box is also right in pace) but it always dissapears so if i chose Convex Hull the box is not always visable. \r<br />\n<br />\nTo visualize the bounding box i use :<br />\n<pre><code>scene.RenderCollisionMesh = true</code></pre>\n\nCan someone help me ?\r<br />\n<br />\nregards\r<br />\n<br />\nLordTribual<br />\n",
+    "PostedDate": "2013-02-22T04:17:13.203-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

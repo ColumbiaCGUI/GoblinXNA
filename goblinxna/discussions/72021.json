@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "245803",
+    "ThreadId": "72021",
+    "Html": "<p>I could not find information about whether ALVAR will be available to track natural features. Or if there are any plans to make ALVAR do so in the near future.<br>Do you know what VTT's plans are? Will they support markerless tracking like PTAM does?</p>",
+    "PostedDate": "2009-10-14T15:58:50.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "246188",
+    "ThreadId": "72021",
+    "Html": "<p>Hi Suzume,</p>\r\n<p>As far as I know, ALVAR does not include natural feature tracking in their released package (including the pro version) yet, but they told me that they plan to include natural feature tracking sometime in 2010. Probably it's best to contact them directly for more accurate information.&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-15T12:31:10.02-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

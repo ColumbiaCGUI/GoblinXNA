@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "498492",
+    "ThreadId": "228593",
+    "Html": "<p>the release notes say that 3.4 supports side-by-side stereoscopic graphics. By default, StereoCamera displays frame sequential stereo. How do I change to side by side?</p>",
+    "PostedDate": "2010-09-25T21:16:55.493-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "498681",
+    "ThreadId": "228593",
+    "Html": "<p>Yes, it renders frame sequential stereo, but you can see how I make it side-by-side in Tutorial 13 by rendering the frames into two textures.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-26T16:44:00.2-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "500329",
+    "ThreadId": "228593",
+    "Html": "<p>thanks, i see. how do I change the screen resolution/windowsize of goblinxna? i really want a&nbsp; 1600x600</p>",
+    "PostedDate": "2010-09-29T20:28:28.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "501270",
+    "ThreadId": "228593",
+    "Html": "<p>In your main Game class's constructor, do</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>graphics = <span style=\"color:blue\">new</span> GraphicsDeviceManager(<span style=\"color:blue\">this</span>);\r\ngraphics.PreferredBackBufferWidth = 1600;\r\ngraphics.PreferredBackBufferHeight = 600;\r\n</pre>\r\n</div>\r\n</p>\r\n<p>If you do it outside of your constructor, then you also need to call</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>graphics.ApplyChanges();</pre>\r\n</div>\r\n</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-01T14:56:23.703-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

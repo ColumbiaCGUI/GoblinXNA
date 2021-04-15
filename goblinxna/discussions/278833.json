@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "695770",
+    "ThreadId": "278833",
+    "Html": "\r\n<p>suddenly, i messed up something I guess, and some of the markers are not recognized in my game. For example the ground marker works in tutorial8 but when I try to load it in my game, the .markerfound is false. however the toolbar marker works for both. i\r\n have no idea how to solve this. any ideas? i created a menu system (using the xna tutorial one) and I think I messed up something with &quot;scene&quot; but not sure. I am stuck. any help is appreciated.&nbsp;</p>\r\n",
+    "PostedDate": "2011-11-09T04:07:05.21-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "697278",
+    "ThreadId": "278833",
+    "Html": "<p>appreciate if you can put down your code. I'm still new to this too. perhaps somebody else got an idea or solutions to your problems</p>",
+    "PostedDate": "2011-11-11T21:24:26.357-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "697721",
+    "ThreadId": "278833",
+    "Html": "<p>i got the groundmarker working. i needed to put the xml file in debug-&gt;content. and it worked. however something utterly strange happens now. in one of my screens I am using the groundmarker and a small marker. then i go to&nbsp;another&nbsp;screen where i use 2 small markers and the program doesn't recognize one of them, instead recognizes the groundmarker for that small marker. &nbsp;</p>\r\n<p>so in of my screens i have</p>\r\n<p>setUpMarkerNode = new MarkerNode(scene.MarkerTracker, \"Marker2Array.xml\");&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>groundNode = new MarkerNode(scene.MarkerTracker, \"GroundArray.xml\");</p>\r\n<p>these both work</p>\r\n<p>then i go to another screen where i have</p>\r\n<p>Marker2Node = new MarkerNode(scene.MarkerTracker, \"Marker2Array.xml\");&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>Marker1Node = new MarkerNode(scene.MarkerTracker, \"Marker1Array.xml\");&nbsp; &nbsp;</p>\r\n<p>but the program recognizes GroundArray for Marker1Node. &nbsp; &nbsp;</p>",
+    "PostedDate": "2011-11-14T01:33:56.057-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "698164",
+    "ThreadId": "278833",
+    "Html": "<p>i think the problem might be due to the placement of your marker in the scene node. Have you checked that? your initialization seems correct for both</p>",
+    "PostedDate": "2011-11-14T17:50:33.607-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "698764",
+    "ThreadId": "278833",
+    "Html": "<p>&nbsp;i don't know what the actual problem is but, i fixed it when I added Marker1Node to my first screen (even though I don't use it). now the second screen recognizes the marker.&nbsp;</p>",
+    "PostedDate": "2011-11-15T20:23:42.497-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "505680",
+    "ThreadId": "230496",
+    "Html": "<p>GoblinXNA works very great for me, but i have a question, maybe a simple one but very important for me</p>\r\n<p>i am creating a game using Goblin XNA, and i want to add &quot;pause&quot; feature ,image that being rendered by goblin xna is stopped (so do for the marker tracking) and it can continue if the player want</p>\r\n<p>is it possible to do this?</p>",
+    "PostedDate": "2010-10-11T16:29:19.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "505685",
+    "ThreadId": "230496",
+    "Html": "<p>Scene.FreezeVideo freezes the video, but it still performs tracking on the background. If you want to pause anything else, you need to do that yourself.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-11T16:47:24.183-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

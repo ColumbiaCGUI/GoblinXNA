@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1046425",
+    "ThreadId": "444398",
+    "Html": "Hello, All!\r<br />\n<br />\nI'm working with VS2012, XNA 4.0 and GoblinXNA 4.1 and have a trouble:\r<br />\n<br />\n(1)I get the Invalid Operation Exception with &quot;Lost current vertex declaration does not contain all the elements required by the current vertex shader. Color0.&quot; in the &quot;SimpleEffectShader.cs&quot; When I run Tutorial 1.\r<br />\n<br />\nI would be very gleeful if you could help me and answer these questions.\r<br />\n<br />\nThanks in advance,\r<br />\n<br />\nTsiayou<br />\n",
+    "PostedDate": "2013-05-21T03:20:46.273-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1047534",
+    "ThreadId": "444398",
+    "Html": "I have solved. Thanks a lot.<br />\n",
+    "PostedDate": "2013-05-22T23:49:08.927-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

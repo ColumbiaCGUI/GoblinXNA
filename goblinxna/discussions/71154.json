@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "242665",
+    "ThreadId": "71154",
+    "Html": "<p>I know its probably a simple question. But how would i get the rotation of Marker.&nbsp;</p>",
+    "PostedDate": "2009-10-06T12:07:41.807-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242677",
+    "ThreadId": "71154",
+    "Html": "<p>If you're using a MarkerNode (which is the simplest way), then you can get the transformation of the marker by accessing MarkerNode.WorldTransformation property.</p>\r\n<p>To get the rotation from the matrix, you can use Matrix.Decompose(....) method supported by XNA.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-06T12:26:40.46-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242703",
+    "ThreadId": "71154",
+    "Html": "<p>I found this little bit of code in the XNA forums. Works great.</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>        <span style=\"color:Blue\">public</span> <span style=\"color:Blue\">static</span> <span style=\"color:Blue\">bool</span> GetRotation(Matrix mat, <span style=\"color:Blue\">out</span> Quaternion qRot)\r\n        {\r\n            Vector3 scale, translation;\r\n            <span style=\"color:Blue\">if</span> (!mat.Decompose(<span style=\"color:Blue\">out</span> scale, <span style=\"color:Blue\">out</span> qRot, <span style=\"color:Blue\">out</span> translation))\r\n            {\r\n                Console.WriteLine(<span style=\"color:#A31515\">&quot;XNA failed ! Ninjutsu !&quot;</span>);\r\n\r\n                <span style=\"color:Blue\">if</span> (Matrix.Invert(mat).Decompose(<span style=\"color:Blue\">out</span> scale, <span style=\"color:Blue\">out</span> qRot, <span style=\"color:Blue\">out</span> translation))\r\n                {\r\n                    qRot = Quaternion.Inverse(qRot);\r\n                }\r\n                <span style=\"color:Blue\">else</span>\r\n                {\r\n                    Console.WriteLine(<span style=\"color:#A31515\">&quot;Hopeless !!!\\n&quot;</span> + mat);\r\n                    <span style=\"color:Blue\">return</span> <span style=\"color:Blue\">false</span>;\r\n                }\r\n            }\r\n            <span style=\"color:Blue\">return</span> <span style=\"color:Blue\">true</span>;\r\n        } \r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-06T13:31:31.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

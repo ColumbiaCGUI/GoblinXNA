@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "536213",
+    "ThreadId": "238488",
+    "Html": "\r\n<p><span id=\"x_result_box\" lang=\"en\"><span>How can I do to associate a G2Dscrollbar to a text (in a G2DLabel)?</span></span></p>\r\n<p><span lang=\"en\"><span>I created a G2Dscrollbar by G2DScrollbar scroll=new G2DScrollbar, then\r\n</span></span><span id=\"x_result_box\" lang=\"en\"><span>I could not associate it with a large text...</span></span></p>\r\n<p><span id=\"x_result_box\" lang=\"en\"><span>any advice?</span></span></p>\r\n",
+    "PostedDate": "2010-12-15T08:56:57.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "536466",
+    "ThreadId": "238488",
+    "Html": "\r\n<p>It is not supported. Goblin's 2D GUI's are really just for simple tasks and debugging since it mostly focuses on 3D and AR aspects.&nbsp;</p>\r\n<p>If you want to have nice 2D GUI's, there are several packages available for XNA and you should be able to incorporate them with Goblin.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-12-15T15:44:21.207-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "536598",
+    "ThreadId": "238488",
+    "Html": "\r\n<p>Ok Ohan,Thanks!</p>\r\n",
+    "PostedDate": "2010-12-16T00:19:20.093-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

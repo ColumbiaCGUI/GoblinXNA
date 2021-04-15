@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "570447",
+    "ThreadId": "247135",
+    "Html": "\r\n<p>Hi, I need some advice. What is the best way to put a stereoscopic 3D movie in Goblin XNA for Vuzix glasses? I'm thinking is it possible to change the source of the stream from Vuzix cameras to two separate video files (for the left and right eye).</p>\r\n",
+    "PostedDate": "2011-02-22T14:02:17.4-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570492",
+    "ThreadId": "247135",
+    "Html": "<p>We will support IVideoCapture implementation that accepts video files from the next version. For now, you need to implement an IVideoCapture interface just like NullCapture or DirectShowCapture and use that implementation instead of DirectShowCapture in tutorial 8 or 13.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-02-22T15:17:54.39-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

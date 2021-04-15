@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "484555",
+    "ThreadId": "224749",
+    "Html": "<p>hello!</p>\r\n<p>i just watched this video&nbsp;<a href=\"http://www.youtube.com/watch?v=c_LrVqI6StY\">http://www.youtube.com/watch?v=c_LrVqI6StY</a>&nbsp;and could see that shadows and glossiness can be implemented within goblin.&nbsp;</p>\r\n<p>i tried this:</p>\r\n<pre>scene.EnableShadowMapping = true</pre>\r\n<p>but it throws an error &quot;The active render target and depth stencil surface must have the same pixel size and multisampling type.&quot;</p>\r\n<p>had somebody deal with that? i had similar problem before, but it was not goblin. i don't know where to change surface parameters for goblin =(</p>\r\n<p>and glossiness... my only idea was to play with material parameters for 3d model (such as glossiness, specular level etc.) in model editor before exporting to visual studio. but it didn't help. am i doing smth wrong?&nbsp;</p>\r\n<p>any help would be appreciated...</p>\r\n<p>\r\n<pre><br></pre>\r\n<pre><br></pre>\r\n<pre><br></pre>\r\n</p>",
+    "PostedDate": "2010-08-25T01:38:04.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "488151",
+    "ThreadId": "224749",
+    "Html": "<p>I never had that error with shadow mapping before. If you set scene.EnableShadowMapping to true, you should also include the ShadowMap.fx and PostScreenShadowBlur.fx in data/Shaders and&nbsp;ShadowDistanceFadeoutMap.dds in data/Textures into your project Content directory.</p>\r\n<p>For the glossiness, you may need to write your own shader, such as for reflections. The one you see in the video uses the original racing game's NormalMapping shader, which is not included with the release. You can see how your can create your own shader and use it with Goblin XNA from Tutorial 11. It's best you extend the current Material class to include anything extra that you use in your shader (e.g., bump map textures), and set the GeometryNode.Material to your extended class. It'll then be passed to your shader automatically.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-02T04:14:06.707-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "501824",
+    "ThreadId": "224749",
+    "Html": "<p>i get the same error as the above and i have included the shader files etc.&nbsp; For me, it seems that it is a problem with using .x files. If I merely have one included in the project (i.e., it is not actually being loaded in the code), I get this error. if everything is FBX, then it works. Odd.</p>",
+    "PostedDate": "2010-10-03T21:06:47.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "504944",
+    "ThreadId": "224749",
+    "Html": "<p>What you see in the video are all .x files. Maybe your .x file has some weird formatting?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-10T00:17:07.297-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "504946",
+    "ThreadId": "224749",
+    "Html": "<p>are you using 3dMax for your models? what type of X converter then you use? i'm using panda</p>",
+    "PostedDate": "2010-10-10T00:19:57.947-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "504948",
+    "ThreadId": "224749",
+    "Html": "<p>We use GoogleSketchUp's plug in to convert models to .x</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-10T00:23:11.377-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "514645",
+    "ThreadId": "224749",
+    "Html": "\r\n<p>Nevermind, it was having an issue with the way I incorporated XNAnimation</p>\r\n",
+    "PostedDate": "2010-10-29T10:07:58.8-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

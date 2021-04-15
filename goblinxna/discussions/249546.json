@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "579860",
+    "ThreadId": "249546",
+    "Html": "<p>Hi,</p>\n<p>How do i set the position of an object anywhere on screen. &nbsp;For example I have a sphere which is&nbsp;overplayed&nbsp;on the marker. &nbsp;When the marker is not being detected by the camera I want the sphere to still remain on the screen in the exact same position, how do I go about doing that?  I thought changing the spherenode.translation but i do not know if that is how the co-ordinate system works. &nbsp;</p>\n<p>Thanks in advance,</p>",
+    "PostedDate": "2011-03-13T23:13:42.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "580210",
+    "ThreadId": "249546",
+    "Html": "<p>If you mean \"exact same position\" to be where it's lost, then simply set MarkerNode.MaxDropouts to -1.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-14T12:42:40.903-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

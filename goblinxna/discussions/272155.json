@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "670067",
+    "ThreadId": "272155",
+    "Html": "\r\n<p>Warning<span> </span>1<span> </span>Load of property 'RootNamespace' failed. &nbsp;The string for the root namespace must be a valid identifier.<span>\r\n</span>Tutorial1 - Getting Started</p>\r\n<p>&nbsp;</p>\r\n<p>Goblinxna.dll missing</p>\r\n",
+    "PostedDate": "2011-09-10T08:17:03.517-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "672160",
+    "ThreadId": "272155",
+    "Html": "<p>If you follow the installation guidelines properly you may come across instruction to compile GoblinXNA dll file at the second last paragraph. Have you done that? Remember, I was hit with the same problem before. I was using C# 2010 Express &amp; XNA 4. It should be compiled with 2008 Express &amp; XNA 3.1.&nbsp;</p>",
+    "PostedDate": "2011-09-15T02:43:04.903-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

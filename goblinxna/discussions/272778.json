@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "672537",
+    "ThreadId": "272778",
+    "Html": "\r\n<p>i finally made a custom marker, although with two individual markers and not single, it works fine. it turns out you dont need the markerlayout tool at all. the simplemarkercreator creates an xml file too. anyways now i am having trouble with transformation.\r\n i am making a simple pong game. and my camera sits right in front of me facing the ground marker. i taped the little paddle markers on to two boxes so i can feel the paddles. the problem is when i move them further down they move down into the ground and when\r\n i move them towards to camera (closer to me) they move up. something is wrong with z transformation i think. I tried to change the shift vector according to the place of the marker but that doesn't quiet work either. so what i want to do in short, is that\r\n make the paddle &nbsp;marker appear always on ground no matter what it's y value. any suggestions?</p>\r\n",
+    "PostedDate": "2011-09-15T22:21:02.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

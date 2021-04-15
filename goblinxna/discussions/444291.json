@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "1046031",
+    "ThreadId": "444291",
+    "Html": "Hello there. I am new to GoblinXNA, but i am pretty familiar with XNA itself. I have the latest XNA Game Studio installed (4.0). When i am trying to Release compile Alvarwrapper.dll, i am getting the obvious errors. All of the headers (*.h): <br />\n<br />\ninclude &quot;MarkerDetectorWrapper.h&quot;<br />\ninclude &quot;MultiMarker.h&quot;<br />\ninclude &quot;FernImageDetector.h&quot;<br />\ninclude &quot;FernPoseEstimator.h&quot;<br />\n<br />\nare missing. I've tried to look for those headers everywhere but i didn't managed to find any. Any suggestions on this strange topic? THX in advance!<br />\n<br />\nI am woking with:<br />\nVS 2010 Premium, OpenCV 2.4.0, GoblinXNA 4.1, XNA 4.0, ALVAR 2.0.<br />\n",
+    "PostedDate": "2013-05-20T07:28:53.843-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1046218",
+    "ThreadId": "444291",
+    "Html": "SOLVED !!! TY.<br />\n",
+    "PostedDate": "2013-05-20T15:11:12.453-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1128616",
+    "ThreadId": "444291",
+    "Html": "Hello there. I am new to GoblinXNA, so plz help me I have the latest XNA Game Studio installed (4.0). When i am trying to Release compile Alvarwrapper.dll, i am getting the obvious errors. All of the headers (*.h): \r<br />\n<br />\ninclude &quot;MarkerDetectorWrapper.h&quot;\r<br />\ninclude &quot;MultiMarker.h&quot;\r<br />\ninclude &quot;FernImageDetector.h&quot;\r<br />\ninclude &quot;FernPoseEstimator.h&quot;\r<br />\n<br />\nare missing. I've tried to look for those headers everywhere but i didn't managed to find any. Any suggestions on this strange topic? THX in advance!\r<br />\n<br />\nI am working with:\r<br />\nVS 2010 Premium, OpenCV 2.4.0, GoblinXNA 4.1, XNA 4.0, ALVAR 2.0.<br />\n",
+    "PostedDate": "2013-11-25T03:06:42.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1215276",
+    "ThreadId": "444291",
+    "Html": "Hi please same problem \r<br />\nI use VS 2010 OpenCV and Alvar 2.0 - I read the installation guide no other idea - tried again - reinstall alvar open cv and xna too\r<br />\n<br />\nThanks \r<br />\nTOM<br />\n",
+    "PostedDate": "2014-02-26T11:19:13.657-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

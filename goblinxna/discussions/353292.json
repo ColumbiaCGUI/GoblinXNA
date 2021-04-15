@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "827588",
+    "ThreadId": "353292",
+    "Html": "\r\n<p><span>HI all...</span><br>\r\n<span>first, I want to say sorry if my english are bad..</span></p>\r\n<p><span><span>actually I want to develop vision-based Hand interaction in augmented reality environment based on this journal/paper</span><br>\r\n<a href=\"http://www.tandfonline.com/doi/abs/10.1080/10447318.2011.555297\">http://www.tandfonline.com/doi/abs/10.1080/10447318.2011.555297</a><br>\r\n<span>, so the hand can interact with virtual object(AR)</span><br>\r\n<span>but in order to make those things work, I have to detect/track hand, then the tracked hand can interact with virtual object.&nbsp;</span></span></p>\r\n<p>Is it possible to develop these AR system using goblinXNA??</p>\r\n",
+    "PostedDate": "2012-04-23T16:46:45.08-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "827999",
+    "ThreadId": "353292",
+    "Html": "<p>Yes, that's totally possible. Tutorial 15 shows how you can combine OpenCV 2.1 with Goblin XNA. If you want to use other versions of OpenCV, you can see how I wrapped it in the source code and do whatever you need for hand tracking.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-04-24T11:05:31.193-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "838468",
+    "ThreadId": "353292",
+    "Html": "\r\n<blockquote style=\"border:solid .1em #ccc; font-style:italic; margin:.25em 1em 0 1em; padding:0 .25em 0 .25em\">\r\n<strong>ohanoda wrote:</strong></blockquote>\r\n<blockquote style=\"border:solid .1em #ccc; font-style:italic; margin:.25em 1em 0 1em; padding:0 .25em 0 .25em\">\r\n<br>\r\nHI , all</blockquote>\r\n<blockquote style=\"border:solid .1em #ccc; font-style:italic; margin:.25em 1em 0 1em; padding:0 .25em 0 .25em\">\r\n<br>\r\n</blockquote>\r\n<blockquote style=\"border:solid .1em #ccc; font-style:italic; margin:.25em 1em 0 1em; padding:0 .25em 0 .25em\">\r\n<br>\r\n</blockquote>\r\n<blockquote style=\"border:solid .1em #ccc; font-style:italic; margin:.25em 1em 0 1em; padding:0 .25em 0 .25em\">\r\n<br>\r\n</blockquote>\r\n<blockquote style=\"border:solid .1em #ccc; font-style:italic; margin:.25em 1em 0 1em; padding:0 .25em 0 .25em\">\r\n<p>Yes, that's totally possible. Tutorial 15 shows how you can combine OpenCV 2.1 with Goblin XNA. If you want to use other versions of OpenCV, you can see how I wrapped it in the source code and do whatever you need for hand tracking.</p>\r\n<p>Ohan</p>\r\n</blockquote>\r\n",
+    "PostedDate": "2012-05-19T14:51:31.593-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

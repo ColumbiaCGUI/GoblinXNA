@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "464598",
+    "ThreadId": "218699",
+    "Html": "<p>I have error from SampleCamCalib error with this messages</p>\r\n<p>Error&nbsp;1&nbsp;error LNK2019: unresolved external symbol _cvCircle referenced in function &quot;void __cdecl videocallback(struct _IplImage *)&quot; (<a href=\"mailto:?videocallback@@YAXPAU_IplImage@@@Z\">?videocallback@@YAXPAU_IplImage@@@Z</a>)&nbsp;SampleCamCalib.obj&nbsp;SampleCamCalib</p>\r\n<p>Error&nbsp;2&nbsp;error LNK2019: unresolved external symbol &quot;__declspec(dllimport) public: void __thiscall alvar::Camera::ProjectPoints(class std::vector&lt;struct CvPoint3D64f,class std::allocator&lt;struct CvPoint3D64f&gt; &gt; &amp;,class alvar::Pose *,class std::vector&lt;struct CvPoint2D64f,class std::allocator&lt;struct CvPoint2D64f&gt; &gt; &amp;)const &quot; (<a href=\"mailto:__imp_?ProjectPoints@Camera@alvar@@QBEXAAV?$vector@UCvPoint3D64f@@V?$allocator@UCvPoint3D64f@@@std@@@std@@PAVPose@2@AAV?$vector@UCvPoint2D64f@@V?$allocator@UCvPoint2D64f@@@std@@@4@@Z\">__imp_?ProjectPoints@Camera@alvar@@QBEXAAV?$vector@UCvPoint3D64f@@V?$allocator@UCvPoint3D64f@@@std@@@std@@PAVPose@2@AAV?$vector@UCvPoint2D64f@@V?$allocator@UCvPoint2D64f@@@std@@@4@@Z</a>) referenced in function &quot;void __cdecl videocallback(struct _IplImage *)&quot; (<a href=\"mailto:?videocallback@@YAXPAU_IplImage@@@Z\">?videocallback@@YAXPAU_IplImage@@@Z</a>)&nbsp;SampleCamCalib.obj&nbsp;SampleCamCalib</p>\r\n<p>Error&nbsp;3&nbsp;error LNK2019: unresolved external symbol &quot;__declspec(dllimport) public: void __thiscall alvar::Camera::CalcExteriorOrientation(class std::vector&lt;struct CvPoint3D64f,class std::allocator&lt;struct CvPoint3D64f&gt; &gt; &amp;,class std::vector&lt;struct CvPoint2D64f,class std::allocator&lt;struct CvPoint2D64f&gt; &gt; &amp;,class alvar::Pose *)&quot; (<a href=\"mailto:__imp_?CalcExteriorOrientation@Camera@alvar@@QAEXAAV?$vector@UCvPoint3D64f@@V?$allocator@UCvPoint3D64f@@@std@@@std@@AAV?$vector@UCvPoint2D64f@@V?$allocator@UCvPoint2D64f@@@std@@@4@PAVPose@2@@Z\">__imp_?CalcExteriorOrientation@Camera@alvar@@QAEXAAV?$vector@UCvPoint3D64f@@V?$allocator@UCvPoint3D64f@@@std@@@std@@AAV?$vector@UCvPoint2D64f@@V?$allocator@UCvPoint2D64f@@@std@@@4@PAVPose@2@@Z</a>) referenced in function &quot;void __cdecl videocallback(struct _IplImage *)&quot; (<a href=\"mailto:?videocallback@@YAXPAU_IplImage@@@Z\">?videocallback@@YAXPAU_IplImage@@@Z</a>)&nbsp;SampleCamCalib.obj&nbsp;SampleCamCalib</p>\r\n<p>I cannot generate calib.xml file.</p>\r\n<p>Thank you.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-07-07T19:41:07.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "473066",
+    "ThreadId": "218699",
+    "Html": "<p>Please include all&nbsp;ALVAR's library to your project</p>",
+    "PostedDate": "2010-07-27T02:36:42.043-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

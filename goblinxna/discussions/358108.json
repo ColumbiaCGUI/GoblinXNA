@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "843964",
+    "ThreadId": "358108",
+    "Html": "\r\n<p>Hello all,</p>\r\n<p>In the last couple of days I've been trying to make tutorial 8 work on my Windows 7 64bits. I've followed the installation guide carefully, had problems with AlvarWrapper.dll (not found) which I believe I've managed to solve... but now I get an AccessViolationException\r\n message when calling:</p>\r\n<p>ALVARDllBridge.alvar_add_multi_marker(markerConfigName)</p>\r\n<p>I haven't been able to find the answer in the discussions. I'm using windows 7 64 bits and Visual Studio 2010 (which may be the cause). Another detail is that after all this I tried using depends.exe on AlvarWrapper.dll, and it can't find gpsvc.dll or ieshims.dll.\r\n I can't simply copy these into the unmanaged folder, they're found in Windows\\System32</p>\r\n<p>Any suggestions? Thank you in advance</p>\r\n",
+    "PostedDate": "2012-06-02T20:34:38.21-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "844162",
+    "ThreadId": "358108",
+    "Html": "<p>Make sure that you have compiled AlvarWrapper using Visual Studio 2008, not 2010 as instructed in the installation guide.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-03T19:03:23.637-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "844385",
+    "ThreadId": "358108",
+    "Html": "<p>You should download/copy any dlls that depends.exe requires into the Bin folder of your project also make sure your Alvar library isn't expired.&nbsp;</p>\r\n<p>Also make sure your marker config xmls are correct. You may be lacking the correct xml for the marker you are trying to call.&nbsp;</p>",
+    "PostedDate": "2012-06-04T06:44:05.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "845694",
+    "ThreadId": "358108",
+    "Html": "<p>thank you for your answers.. it was indeed the Visual Studio 2008, had a hard time setting it up but now it works, thank you!</p>",
+    "PostedDate": "2012-06-06T11:58:13.953-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "845845",
+    "ThreadId": "358108",
+    "Html": "<p>The pain of installing VS 2008 will be gone from ALVAR 2.0 since they started to support VS 2010. Will be updated in the next release when I release ALVARWrapper 2.0.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-06T20:11:49.843-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "846152",
+    "ThreadId": "358108",
+    "Html": "<p>that sounds great Ohan. Do you know when the next AlvarWrapper will be ready? or is it still too far away?</p>",
+    "PostedDate": "2012-06-07T10:00:20.64-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "846331",
+    "ThreadId": "358108",
+    "Html": "<p>Will be there by the end of June</p>",
+    "PostedDate": "2012-06-07T20:06:47.033-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

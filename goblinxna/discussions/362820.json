@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "860372",
+    "ThreadId": "362820",
+    "Html": "\r\n<p>Hey there,</p>\r\n<p>I was wondering what are the best approaches to creating and using animated models in GoblinXNA. What to use and how to go on about it.</p>\r\n",
+    "PostedDate": "2012-07-11T08:47:59.907-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "863687",
+    "ThreadId": "362820",
+    "Html": "<p>you can go through tutorial 14 and find out how. It is the basic tutorial on how to achieve that</p>",
+    "PostedDate": "2012-07-13T00:52:08.31-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "864232",
+    "ThreadId": "362820",
+    "Html": "\r\n<p>Hey,<br>\r\nThanks for the reply, think I have managed to integrate it with marker tracking, and the sample animated fbx file is working. Something else comes up though. I have tried making a custom animated model in blender with a single armature bone and the problem\r\n is once I export it to Goblin and try to start the project I get the following exception:</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">if</span> (skinningData == <span style=\"color:blue\">null</span>)\n <span style=\"color:blue\">throw</span> <span style=\"color:blue\">new</span> GoblinException(<span style=\"color:#a31515\">&quot;This model does not contain a SkinningData tag.&quot;</span>); \n</pre>\r\n</div>\r\n<p>Now this is an already textured custom model and is exported with xna strict options, I also made sure that the content processor is set&nbsp;to the right SkinnedModelProcessor value, so then what could be the issue?&nbsp;</p>\r\n",
+    "PostedDate": "2012-07-13T04:43:28.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "866792",
+    "ThreadId": "362820",
+    "Html": "\r\n<p>HI blaze_trail!</p>\r\n<p>Do you can post a video of you model structure <span style=\"text-decoration:underline\">\r\nand</span> the animation in Blender screen?</p>\r\n",
+    "PostedDate": "2012-07-14T12:15:16.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "869560",
+    "ThreadId": "362820",
+    "Html": "<p>Hey there,<br /><br />Thanks for replying, well like I might have mentioned I wanted tryout with a very simple model, too simple maybe, it only consists of a single textured cube<br />rigged with one bone and a simple swaying animation.</p>\r\n<p>I have &nbsp;uploaded a zipped folder (~<span>256KB</span>) &nbsp;if it helps, with the following content:</p>\r\n<p>-A rendered video of the animation<br />-.blend file<br />-.fbx file&nbsp;<br />-Texture image<br /><br /><a href=\"http://www.sendspace.com/file/d9gy56\">http://www.sendspace.com/file/d9gy56</a>&nbsp;</p>\r\n<p>Hope it helps.</p>",
+    "PostedDate": "2012-07-16T06:36:23.827-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "870420",
+    "ThreadId": "362820",
+    "Html": "\r\n<p><span>Hi blaze_trail</span>!</p>\r\n<p>Yes it helps...</p>\r\n<p>In a very simple way: your model is animated, but not your bones and skin(cube), thats why the skinnedprocessor shows this error.</p>\r\n<p>Inside of Blender space you have applied rotations that are lost when you export the fbx model.</p>\r\n<p>To work with a simple model you don't need bones inside them, just apply the texture and export to Goblin.</p>\r\n<p>Then you can do simple animations like rotations by code(see Tutorial2).</p>\r\n<p>If you really need a skinnedModel with more complex animations(legs, arms.....), here are two very interesting links:</p>\r\n<p>This is a very... very good starting point:</p>\r\n<p><a href=\"http://www.stromcode.com/category/xna/\">http://www.stromcode.com/category/xna/</a></p>\r\n<p>And these fantastic tutorials (especially #6!!) are to Softimage ModTool but you can use the same principles with Blender(pay attention in the mesh weight painting and animations part):</p>\r\n<p><a href=\"http://blogs.msdn.com/b/dawate/archive/2008/02/05/building-a-3d-game-in-xna-from-scratch-free-video-tutorial-series-now-available.aspx\">http://blogs.msdn.com/b/dawate/archive/2008/02/05/building-a-3d-game-in-xna-from-scratch-free-video-tutorial-series-now-available.aspx</a></p>\r\n<p>I really hope it can helps you!(and sorry the english)</p>\r\n<p>Eduardo.</p>\r\n",
+    "PostedDate": "2012-07-16T16:11:47.83-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "870864",
+    "ThreadId": "362820",
+    "Html": "\r\n<p>Hey&nbsp;<span>Eduardo,</span></p>\r\n<p>Those links are cool, thanks for the great help. I sure have picked a few things form there.<br>\r\nAs much as I'd like &nbsp;to say I got the cube animation running though, it's still not. umm not sure what you mean by&nbsp;<br>\r\nsaying I have &nbsp;animated the model and not the bones and skin EDD, I thought I did animate the bones while they are in&nbsp;<br>\r\npose &nbsp;mode, isn't that the right way? umm maybe if I could see an example of a functional blend file of the animated cube model&nbsp;I might be &nbsp;able to figure it out? Well anyways thanks a great deal for all. I should keep studying those links maybe\r\n I am&nbsp;missing something.&nbsp;</p>\r\n<p>Thanks again ^^</p>\r\n<p>btw. your&nbsp;English&nbsp;is very well clearly understood .</p>\r\n",
+    "PostedDate": "2012-07-17T08:41:03.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "876664",
+    "ThreadId": "362820",
+    "Html": "<p>hey guys,</p>\r\n<p>could anyone afford aid with a&nbsp;sample&nbsp;animated .fbx model that could be loaded into goblinxna.</p>\r\n<p>thanks</p>",
+    "PostedDate": "2012-07-19T06:08:14.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "889268",
+    "ThreadId": "387845",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I'm trying to use Dragon Naturally Speaking&nbsp;<a href=\"http://www.nuance.com/for-business/by-product/dragon/dragon-for-the-pc/dragon-premium/index.htm\">http://www.nuance.com/for-business/by-product/dragon/dragon-for-the-pc/dragon-premium/index.htm</a>&quot;\r\n as a voice command to control the navigation in my application.</p>\r\n<p>In my app, I have a button of type&nbsp;G2DButton. Instead of click on this button, I can just use voice command and&nbsp;pronounce&nbsp;&quot;Next&quot;. Dragon Naturally Speaking will click on the button for me.&nbsp;</p>\r\n<p>I have other c# app that I wrote having a button of type System.Windows.Forms.Button. This app is working ok with Dragon Natuarally Speaking. I also check other desktop application in windows and they all work with this voice command application.</p>\r\n<p>I don't know if G2DButton need to implement anything else in other for it to work with this Dragon?</p>\r\n<p>Anyone try this yet?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2012-07-23T12:51:56.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "889577",
+    "ThreadId": "387845",
+    "Html": "<p>If you can handle the event callback for your voice command from Dragon, then simply call the DoClick() method of your G2DButton instance. That'll do the click programatically. You can view through the UserManual and API reference to see what you can do using Goblin XNA.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-07-24T03:00:20.907-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "889723",
+    "ThreadId": "387845",
+    "Html": "<p>Thank Ohan. I'll give it a try and update back if success.</p>\r\n<p>You're great!</p>",
+    "PostedDate": "2012-07-24T07:51:14.037-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "891740",
+    "ThreadId": "387845",
+    "Html": "<p>I think I got it using window recognition instead of DNS by follow the post here</p>\r\n<p><a href=\"http://boxhacker.com/blog/2011/11/22/speech-recognition-for-net/\">http://boxhacker.com/blog/2011/11/22/speech-recognition-for-net/</a></p>\r\n<p>Just share in case that someone else need it.</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2012-07-26T07:41:53.173-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

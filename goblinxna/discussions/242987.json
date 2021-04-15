@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "554142",
+    "ThreadId": "242987",
+    "Html": "\r\n<p>Hi~</p>\r\n<p>I cannot use Play3D method.</p>\r\n<p>&#65279;&#65279;How to use this?</p>\r\n<p>Seungjin</p>\r\n",
+    "PostedDate": "2011-01-23T20:35:02.633-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "554214",
+    "ThreadId": "242987",
+    "Html": "\r\n<p>Sound.Play3D(&quot;CueName&quot;, ??);</p>\r\n<p>I don't know, what is &quot;IAudioEmitter emitter&quot; ?</p>\r\n<p>Depending on the location&nbsp;of the 3D model changes and I want to&nbsp;listen to&nbsp;different sounds.</p>\r\n<p>&nbsp;</p>\r\n<p>Seungjin</p>\r\n",
+    "PostedDate": "2011-01-24T00:52:43.217-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "554241",
+    "ThreadId": "242987",
+    "Html": "\r\n<p>Please see the user manual for Sound section (page 47) and Scene Graph Node -&gt; Sound (page 22)</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-01-24T01:50:10.383-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

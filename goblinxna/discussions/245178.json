@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "562895",
+    "ThreadId": "245178",
+    "Html": "\r\n<p>I'm working on an augmented reality project for school and am at the point where I need to generate the calib.xml file. (I'm using ALVAR 1.4 and Goblin XNA v3.5)</p>\r\n<p>I've tried running both SampleCamCalib.cpp (from ALVAR) and CameraCalibration (from GoblinXNA) but haven't had any luck. SampleCamCalib will run but can't seem to detect my webcam because the last line printed to the screen is &quot;Could not find any capture\r\n devices&quot;. CameraCalibration seems to recognize my webcam because the light on the camera turns on whenever I run the project. But the code doesn't seem to be executing because I just get a blank window with the cornflower blue background.</p>\r\n<p>I've tried using a PS3Eye, a Nexxtech and a rocketFish webcam. Currently I am using a Logitech C210 webcam because I read somewhere that people generally have better success with AR when using Logitech cameras. I can run the driver for the camera and it\r\n picks up a video feed perfectly so it's not a matter of the computer detecting the camera.</p>\r\n<p>I've been trying to sort this our for two weeks now so if anyone can shed some light on these problems it would be greatly appreciated!</p>\r\n<p>Thanks!</p>\r\n",
+    "PostedDate": "2011-02-08T13:26:50.623-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "562939",
+    "ThreadId": "245178",
+    "Html": "\r\n<p>That's very interesting. I've only seen this problem once a while ago, and it was on a student's Mac book that runs Windows XP as parallel (or maybe it was bootcamp, don't remember). I myself use bootcamp on Macbook to run GoblinXNA (with Windows 7), and\r\n have seen people running parallel fine.</p>\r\n<p>If you run the program, does it throw any exceptions? If not, it'll be quite hard to figure out the problem since I can't replicate the problem on any of the machines I can access.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-02-08T14:39:00.92-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "562953",
+    "ThreadId": "245178",
+    "Html": "\r\n<p>I am actually using Windows XP through VMware Fusion on my Macbook Pro (forgot to mention that). When I debug CameraCalibration this exception is thrown to the output window:</p>\r\n<p>&nbsp;</p>\r\n<p>A first chance exception of type 'System.InvalidOperationException' occurred in Microsoft.Xna.Framework.dll</p>\r\n<p>The thread '&lt;No Name&gt;' (0xda0) has exited with code 0 (0x0).</p>\r\n<p>The program '[3608] CameraCalibration.exe: Managed' has exited with code 0 (0x0).</p>\r\n<p>&nbsp;</p>\r\n<p>When I debug SampleCamCalib this appears in the output window:</p>\r\n<p>&nbsp;</p>\r\n<p>First-chance exception at 0x7c81eb33 in samplecamcalibd.exe: Microsoft C&#43;&#43; exception: alvar::AlvarException at memory location 0x00daf748..</p>\r\n<p>The program '[2952] samplecamcalibd.exe: Native' has exited with code 0 (0x0).</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-02-08T15:11:36.407-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "562958",
+    "ThreadId": "245178",
+    "Html": "\r\n<p>Maybe that is exactly the setup the student had using VMware. The exception doesn't make any sense to me so there is no way for me to fix it.</p>\r\n<p>I suggest that you run your Windows using bootcamp to run Goblin XNA. We know that it works well in this setup.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-02-08T15:24:46.67-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "562993",
+    "ThreadId": "245178",
+    "Html": "\r\n<p>Thanks for your fast replies! I will install bootcamp and let you know how it goes.</p>\r\n",
+    "PostedDate": "2011-02-08T16:25:14.643-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "568484",
+    "ThreadId": "245178",
+    "Html": "<p>So I installed bootcamp and I got SampleCamCalib.cpp to run properly! Thanks so much for your help!</p>",
+    "PostedDate": "2011-02-18T05:22:32.677-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

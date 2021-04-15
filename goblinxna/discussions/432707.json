@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "999532",
+    "ThreadId": "432707",
+    "Html": "Hi guys,\r<br />\n<br />\ni'm experiencing problems with my rotations. How do I rotate my model around another point ?\r<br />\n<br />\nOf course I know that I have to translate it first and rotate after that but its not working. Im trying to do the rotations with Quaternions. \r<br />\n<br />\nHow does it work when I want to rotate around one axis. I already found out that i have to use something like Quaternion.CreateFromAxisAngle but its not rotating around its own center. I want to rotate a single object around its own center.\r<br />\n<br />\nCan someone help me please ?\r<br />\n<br />\nregards\r<br />\n<br />\nLordTribual<br />\n",
+    "PostedDate": "2013-02-11T04:23:28.56-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

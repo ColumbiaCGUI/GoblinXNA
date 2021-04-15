@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "173554",
+    "ThreadId": "51734",
+    "Html": "What are the prerequisites for installing a goblin based game in an end user machine? I am trying the tutorials in a Windows XP SP2 UMPC, I installed the XNA Framewok redristibutable and the .NET Framework 3.5, but when I try to run the tutorials an error occurs.<br>\r\nThanks!<br>\r\n",
+    "PostedDate": "2009-03-30T10:42:35.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "174117",
+    "ThreadId": "51734",
+    "Html": "Unfortunately, I don't know the exact prerequisites of Goblin XNA since I installed VS 2008 and XNA 3.0 on all of the machines I've been testing Goblin XNA apps including the UMPC with XP SP2. First of all, you will need the prerequisites to run XNA 3.0 games. I've found a discussion on XNA 2.0 prerequisites here (<a href=\"http://blogs.msdn.com/astebner/archive/2008/02/29/7968464.aspx\">http://blogs.msdn.com/astebner/archive/2008/02/29/7968464.aspx</a>), but not for XNA 3.0. I believe prerequisites for 3.0 would be similar to the one of 2.0. I'll try to figure out the prerequisites when I get time, but it'll be great if someone figures out the prerequisites to run Goblin XNA on end user machines, and post the information here.<br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-31T16:03:24.68-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185729",
+    "ThreadId": "51734",
+    "Html": "I finally was able to run all the tutorials on an end user machine without installing Visual Studio. This is the list of what I installed on the system:<br>\r\n<br>\r\n.NET Framework 3.5<br>\r\n<span><a href=\"http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&displaylang=en\">http://www.microsoft.com/downloads/details.aspx?FamilyId=333325FD-AE52-4E35-B531-508D977D32A6&amp;displaylang=en</a></span><br>\r\n<br>\r\nXNA Framework Redristibutable 3.0<br>\r\n<span>\r\n<a href=\"http://www.microsoft.com/downloads/details.aspx?FamilyID=6521d889-5414-49b8-ab32-e3fff05a4c50&displaylang=en\">http://www.microsoft.com/downloads/details.aspx?FamilyID=6521d889-5414-49b8-ab32-e3fff05a4c50&amp;displaylang=en</a></span><br>\r\n<br>\r\nWith this installed I could run every tutorial except number 8. The problem was that ARTagWrapper.dll needs the MFC and CRT Debug C++ libraries. I had to add this libraries by hand (there is no redristibutable package for them), the libraries are stored in the Windows\\WinSxS folder of the development computer (you have to have installed full Visual Studio, or Visual C# Express AND Visual C++ Express to have the necessary libraries). The libraries that I got from here where the ones in the x86_Microsoft.VC90.DebugCRT and x86_Microsoft.VC90.DebugMFC folders (I am not sure if the MFC one is really necessary). Also I got the manifsets associated to this libraries from Windows\\WinSxS\\Manifests. After I copied the folders and manifests in the corresponding paths in the end user machine and resetting it, I was able to run Tutorial 8 withouth trouble.<br>\r\n<br>\r\nI am not sure if this are the minimum requirements, but at least it worked for me.<br>\r\n<br>\r\n",
+    "PostedDate": "2009-04-30T15:24:29.603-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185745",
+    "ThreadId": "51734",
+    "Html": "Thank you very much for figuring out the minimum requirements on end-user machine!! <div><br></div><div>Ohan</div>",
+    "PostedDate": "2009-04-30T17:19:36.537-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

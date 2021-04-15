@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "676559",
+    "ThreadId": "273820",
+    "Html": "<div id=\"gt-res-content\">\n<div dir=\"ltr\"><span id=\"result_box\" lang=\"en\"><span>I have a problem</span> <span> when it</span> <span>generates</span> <span>ALVARWrapper.dll</span><br /> <br /> <span>I am using</span>&nbsp;<span>Alvar 1.5.0</span><span>,</span> <span> when</span> <span>I</span> <span>build,</span> <span>produce</span> <span>ALVARWrapper1.5.dll</span><span>, not</span> <span>ALVARWrapper.dll</span> <span>as on</span> <span>Installasion</span> <span> guide</span> <span>GoblinXNA3.6</span><br /> <br /> <span>Anyone know</span> <span>why</span><span>?</span></span></div>\n</div>",
+    "PostedDate": "2011-09-26T00:58:01.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "676955",
+    "ThreadId": "273820",
+    "Html": "<p>techpunya,&nbsp;</p>\r\n<p>make sure u use Visual Studio 2008 or Visual C++ 2008 Express. Secondly. compile it using the Release mode. When I was compiling it I have linking errors whereby compiler couldn't find the include directory. FYI, the include directories has been previously defined in the settings. However, the compiler seemed not to be correctly directed to the defined directory. What I did was jot down all the required include directories, delete all of them and re-type all the directories back again. Ultimately, I managed to compile the AlvarWrapper.dll successfully.&nbsp;</p>\r\n<p>As for the file naming, you just need to simply rename it. That's all. Hope this helps!!</p>",
+    "PostedDate": "2011-09-26T19:39:54.073-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "679928",
+    "ThreadId": "273820",
+    "Html": "<p>For anyone having problems compiling ALVAR 1.5.0, please make sure to use VS 2008 as mentioned in the installation guide and change the include and library path based on where you install the ALVAR package. Also, MAKE SURE to change the configuration to \"Release\" instead of \"Debug\". I forgot to set the configurations for \"Debug\" properly, so compiling with \"Debug\" configuration may have some problems. If your generated dll is ALVARWrapper1.5.0.dll instead of ALVARWrapper.dll, that means you have compiled it using \"Debug\" config.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-04T11:16:31.02-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

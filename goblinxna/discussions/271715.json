@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "668448",
+    "ThreadId": "271715",
+    "Html": "<p><strong>SOLVED</strong>: This error only occurs in Visual Studio 2010, it doesn't appear in Visual Studio 2008, probably because the Content Pipeline is differently loaded in both. Though the error I've been having with MSVCR90.dll, is the next problem.</p>\n<p>\n<hr />\n</p>\n<pre>You need to add 'DebugFont.spritefont' file to your content directory before you can display debug information</pre>\n<p>&nbsp;</p>\n<p>When I Debug CameraCalibration.sln I get the above error, does anyone know how to solve this?</p>\n<p>Thanks in advance!</p>\n<p>&nbsp;</p>\n<p><strong>-- EDIT: This error shows up in the Event Viewer:</strong></p>\n<p>Faulting application name: CameraCalibration.exe, version: 1.0.0.0, time stamp: 0x4e67259c</p>\n<p>Faulting module name: MSVCR90.dll, version: 9.0.30729.4974, time stamp: 0x4b7a226f</p>\n<p>Exception code: 0xc0000417</p>\n<p>Fault offset: 0x0006ccb5</p>\n<p>Faulting process id: 0xdc0</p>\n<p>Faulting application start time: 0x01cc6d34cfa769a0</p>\n<p>Faulting application path: D:\\My Documents\\user\\AR-Demo\\GoblinXNAv3.6\\tools\\CameraCalibration\\bin\\x86\\Release\\CameraCalibration.exe</p>\n<p>Faulting module path: C:\\Windows\\WinSxS\\x86_microsoft.vc90.crt_1fc8b3b9a1e18e3b_9.0.30729.4974_none_50940634bcb759cb\\MSVCR90.dll</p>\n<p>Report Id: 1296c1c0-d928-11e0-8928-fa12135e51e5</p>",
+    "PostedDate": "2011-09-07T00:19:25.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "682464",
+    "ThreadId": "271715",
+    "Html": "<p>i am using visual studio 2008. and i have this problem too. i starting building a menu for my game. and this error started appearing. any help. i have the file in the directory.</p>",
+    "PostedDate": "2011-10-11T01:34:42.873-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684056",
+    "ThreadId": "271715",
+    "Html": "<p>Do you have&nbsp;DebugFont.spritefont in the root of your Content directory or under a subdirectory called \"Fonts/\"? &nbsp;I think Goblin has a default layout for organizing the content files (Fonts, Models, Shaders, Sounds, Textures), maybe it's looking under Fonts and that why it can't find the right file.</p>",
+    "PostedDate": "2011-10-13T17:52:05.427-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "910164",
+    "ThreadId": "394912",
+    "Html": "\r\n<p>hi all,</p>\r\n<p>I'm currently trying to implement an AR game using a handheld projector, with the camera for the marker tracking installed on the projector. The camera detects the marker, and the projector shows a model over it.</p>\r\n<p>The issue is.. when the player points the projector-camera to a marker on the wall (from an angle other than 90&deg;) the model draws itself with some deformation, because the projector is not alligned with the surface. This skew of the image is theoretically\r\n the same as how the markers are detected from the point of view of the camera.</p>\r\n<p>My question is.. is there by any chance an easy way to compensate the deformation? to make the model look different on the computer screen depending on the angle, and when using a projector see it on the wall the way it should be? maybe someone thought about\r\n this before</p>\r\n<p>thanks in advance!</p>\r\n",
+    "PostedDate": "2012-09-09T07:29:07.67-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "910241",
+    "ThreadId": "394912",
+    "Html": "<p>Never used projector with the framework, so not sure the exact cause, but I would guess that it's wrong aspect ratio or you need to calibrate your camera.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-09-09T15:46:26.113-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "910250",
+    "ThreadId": "394912",
+    "Html": "<p>it's not about the aspect ratio or calibration. The cause is that the wall is in a diagonal position compared to the projector.. so the beam of light arrives bigger on one side of the image than in the other.. for example, a sphere will become an oval, a square becomes a sort of trapezoid... I don't know if I'm being clear, but it's a normal effect. Just thought maybe there was an easy way to compensate this in the framework. Some street painters use this deformation to achieve a 3D effect when you look at the painting from a specific angle. Here you can see an example of one of these street paintings when the pic is taken from different angles.</p>\r\n<p>http://www.google.com.ar/imgres?start=90&amp;um=1&amp;hl=en&amp;client=firefox-a&amp;rls=org.mozilla:en-US:official&amp;biw=1366&amp;bih=666&amp;tbm=isch&amp;tbnid=WCBRsaEaibkgMM:&amp;imgrefurl=http://www.emisora.org/labels/arte.htm&amp;docid=dEwHtb6apMRopM&amp;imgurl=http://www.emisora.org/uploaded_images/globe-746442.jpg&amp;w=320&amp;h=213&amp;ei=ZjBNUOXtFoPI9QSqNg&amp;zoom=1&amp;iact=hc&amp;vpx=1069&amp;vpy=135&amp;dur=849&amp;hovh=170&amp;hovw=256&amp;tx=143&amp;ty=102&amp;sig=114507857960774922690&amp;page=5&amp;tbnh=139&amp;tbnw=182&amp;ndsp=24&amp;ved=1t:429,r:17,s:90,i:59</p>\r\n<p>http://www.google.com.ar/imgres?start=90&amp;um=1&amp;hl=en&amp;client=firefox-a&amp;rls=org.mozilla:en-US:official&amp;biw=1366&amp;bih=666&amp;tbm=isch&amp;tbnid=WCBRsaEaibkgMM:&amp;imgrefurl=http://www.emisora.org/labels/arte.htm&amp;docid=dEwHtb6apMRopM&amp;imgurl=http://www.emisora.org/uploaded_images/globe-746442.jpg&amp;w=320&amp;h=213&amp;ei=ZjBNUOXtFoPI9QSqNg&amp;zoom=1&amp;iact=hc&amp;vpx=1069&amp;vpy=135&amp;dur=849&amp;hovh=170&amp;hovw=256&amp;tx=143&amp;ty=102&amp;sig=114507857960774922690&amp;page=5&amp;tbnh=139&amp;tbnw=182&amp;ndsp=24&amp;ved=1t:429,r:17,s:90,i:59</p>\r\n<p>&nbsp;</p>\r\n<p>thanks for answering!</p>",
+    "PostedDate": "2012-09-09T17:17:44.97-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "910266",
+    "ThreadId": "394912",
+    "Html": "<p>In that case, the easiest way is: (all of the stuff below should be done in Draw(..) function in the given order)</p>\r\n<p>1. Create a render target and draw the Goblin rendered scene to this render target (see Tutorial 16 on how to render the scene into a render target, which is basically a texture)</p>\r\n<p>2. Use SpriteBatch class to draw this texture, and when you draw this texture, you can set the destination rectangle size, and you can achieve skew effect to offset the skew you get from the projector. You can compute the right skew based on the marker's transformation.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-09-09T20:31:26.373-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "910515",
+    "ThreadId": "394912",
+    "Html": "<p>thanks Ohan, great idea. I'm going to try that.</p>",
+    "PostedDate": "2012-09-10T10:16:28.387-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

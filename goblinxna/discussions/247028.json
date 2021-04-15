@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "570058",
+    "ThreadId": "247028",
+    "Html": "<p>Hi all,</p>\n<p>I am new to goblin xna, and I am really confused on how to create my own markers using ALVAR as well as creating the layout using the one provided in goblin xna. &nbsp;This is what I understand so far;</p>\n<p>From alvar you create a<strong> .png </strong>file of your marker &nbsp; (which i have done)</p>\n<p>From goblin xna use the markerlayout to generate the<strong> .xml .txt</strong> as well as a <strong>.gif</strong> file .... how is this done?? (Do I build&nbsp;markerlayout&nbsp;because&nbsp;every time&nbsp;I do, it give me \"unsafe\" errors- LayoutManager.cs on lines 353 and 608 and ImageReader.cs line 348 or is it a class that i call)</p>\n<p>But bottom line is I just want to create a marker array thats 1x4 (using alvar tag ids 101-103 ) and display the cube on it, similar to the one in tutorial 8 but instead of the ground array i am using my own.</p>\n<p>Also I know this is a stupid question but since I am so confused right now, if your only tracking one marker do you need .xml the and .txt files because to my understanding you would just put in your marker ID in&nbsp;appropriate&nbsp;field below.</p>\n<p><span style=\"white-space: pre;\"> </span>MarkerNode(IMarkerTracker, (int) markerID, (double) markerSize)</p>\n<p>Thanks in&nbsp;advance,</p>\n<p>Jay-ar</p>",
+    "PostedDate": "2011-02-22T00:23:47.68-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570278",
+    "ThreadId": "247028",
+    "Html": "<p>We will have a tutorial about it soon</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-02-22T09:25:23.37-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "570554",
+    "ThreadId": "247028",
+    "Html": "<p>Thanks a lot for replying so quickly and thank you it would be helpful in the future</p>",
+    "PostedDate": "2011-02-22T18:58:26.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

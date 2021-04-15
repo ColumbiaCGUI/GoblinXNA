@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "443384",
+    "ThreadId": "212782",
+    "Html": "<p>I want to make a physics simulation that a torus fall through a cylinder under gravity, but GoblinXNA.Physics.ShapeType only support some predefined shape (e.g. Box and Cylinder) and Compound, ConvexHull and TriangleMesh. If I use the simple shapes such as Box and Cylinder, the torus will not fall through because the physics engine doesn't recognize the hold in the torus. The same situation occurred when using ConvexHull. I cannot use Compound because I don't know how to set up the ShapeData. And when I try TriangleMesh, the torus just don't move!!</p>\r\n<p>Another problem: If I design my own model using 3dsmax and export to fbx file, how can I set up the simulation so the dynamics is correct (corresponding to the model shape)?</p>\r\n<p>I'm a beginner at GoblinXNA and don't know how to solve this problem, please show me how to do this if you have any ideas, thanks!!</p>",
+    "PostedDate": "2010-05-16T00:27:22.607-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "443407",
+    "ThreadId": "212782",
+    "Html": "<p>Unfortunately, the Newton doesn't have Torus primitive, and you need to create it with Compound type to do what you want to do. Torus is rather a complicated shape, so you probably need a list of cylinder shapes to represent it. TriangleMesh in Newton cannot be moved.&nbsp;</p>\r\n<p>For any models with complicated shape, if you want to have correct dynamic behavior, you need to model them using Compound shapes, and you probably need to write your own content pipeline to assign correct shapes based on the model. Other solution is to implement IPhysics class with another physics engine of your choice, and plug it in to use with Goblin XNA. Commercially available physics engine such as Havok may do this for you.</p>\r\n<p>Currently, i'm busy with a paper deadline, so I won't have a time to provide a tutorial, but I'm planning to write a tutorial for Compound types later on.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-05-16T04:43:34.197-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "443628",
+    "ThreadId": "212782",
+    "Html": "<p>Thanks for your immediate reply! I'm quite interested in it and looking forward to the&nbsp;tutorial.</p>\r\n<p>There's still a problem: I designed a model in 3ds Max 8 SP2 and applied a material to it,&nbsp;&nbsp;then I exported the model to a .fbx file (choosing &quot;Embed textures in export file&quot;)&nbsp;and loaded in my program using Content Manager. If I don't set the IModel's Material, then the model will just appear dark black. I also tried the property UseInternalMaterials and failed. How can I correctly render the model in my game?</p>\r\n<p>Thank you!</p>",
+    "PostedDate": "2010-05-16T23:32:02.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "443790",
+    "ThreadId": "212782",
+    "Html": "It is possible that the texture material is for some reason, set to very dark color.\r\n\r\nSet UseInternalMaterials to true, and also set its GeometryNode.Material.Diffuse to Vector4(1, 1, 1, 1).\r\n\r\nOhan",
+    "PostedDate": "2010-05-17T07:09:40.25-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "443814",
+    "ThreadId": "212782",
+    "Html": "<p>I tried several materials and find that only some material will be rendered correctly in GoblinXNA, for the materials that can be rendered correctly, set&nbsp;&nbsp;its GeometryNode.Material.Diffuse to Vector4(1, 1, 1, 1) will disable the original material and the object appear pure white. For the materials that cannot be renderly correctly, the object will appear just black if I don't set UseInternalMaterials to true, and appears pure white if I set UseInternalMaterials to true.</p>\r\n<p>Maybe GoblinXNA only support a limited set of materials?</p>",
+    "PostedDate": "2010-05-17T07:46:24.85-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "443995",
+    "ThreadId": "212782",
+    "Html": "Hmm... that is very weird. I've been loading many models with textures, but haven't had problem in v3.4 yet.\r\n\r\nInstead of .fbx, why don't you try .x models? What I usually do is create (or download using it's 3D warehouse) a textured model in GoogleSketchup and export the model to .x format using the plugin downloadable here (http://www.3drad.com/Google-SketchUp-To-DirectX-XNA-Exporter-Plug-in.htm) .\r\n\r\nYou can do this with the free version of GoogleSketchup, and it's very handy.\r\n\r\nOhan",
+    "PostedDate": "2010-05-17T14:28:13.733-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "444258",
+    "ThreadId": "212782",
+    "Html": "<p>Thanks for your suggestion! I tried .x model and more materials can be rendered correctly, however, still some (maybe advanced, such as Ink's Paint) cannot be displayed correctly.</p>\r\n<p>GoogleStetchup is a really cool tool and yeah, I think I will use it in some of my future works.</p>\r\n<p>Thanks again!</p>",
+    "PostedDate": "2010-05-18T04:50:30.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "444365",
+    "ThreadId": "212782",
+    "Html": "We currently only support basic rendering using SimpleEffectShader, so if you need more advanced rendering to support, for example bump mapping, then you can easily extend the framework by extending Material.cs and implementing an IShader interface and use those for your model. \r\n\r\nWe actually have internal project that has advanced material and shader support, but it's still in experimental phase, so it's not included in the release version.\r\n\r\nOhan",
+    "PostedDate": "2010-05-18T07:52:13.023-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

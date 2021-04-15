@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "674492",
+    "ThreadId": "273266",
+    "Html": "\r\n<p>even with tutorial 8, I only get 15-16 fps. what do you think the issue would be? is it normal</p>\r\n<p>i have hp dv6, 6 gig ram, AMD Phenom II N950 Quad Core 2.10GHZ,&nbsp;ATI Mobility Radeon HD 5650 1Gb,<span>&nbsp;</span>windows7-64bit</p>\r\n",
+    "PostedDate": "2011-09-20T18:35:11.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "675042",
+    "ThreadId": "273266",
+    "Html": "<p>Hmm... that's strange. It seems like you have a decent machine. It should run above 30 FPS. Is your camera constantly changing exposure? If you have an auto-exposure for your camera, that slows down the application. Also, you may want to turn off shadow and per-pixel-shading to see how much improvement you get.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-21T19:30:01.943-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "860264",
+    "ThreadId": "362794",
+    "Html": "\r\n<p>I am getting an error in the function get image texture , saying <strong><em>&quot;Index was outside the bounds of the array. &quot;</em></strong></p>\r\n<p><em>in the following lines in pointgreycapture2.1.cs .</em></p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;for (int i = 0; i &lt; processedImage.rows; i&#43;&#43;)</p>\r\n<p>{</p>\r\n<p>for (int j = 0; j &lt; processedImage.stride; j &#43;= 3, rawIndex &#43;= 3, &#43;&#43;index)&nbsp;</p>\r\n<p>{&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; returnImage[index] = &nbsp;((pixelData[rawIndex &#43; R] &lt;&lt; 16) | (pixelData[rawIndex &#43; G] &lt;&lt; 8) |&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;\r\n &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; (pixelData[rawIndex &#43; B]));&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>}</p>\r\n<p>}</p>\r\n<p>&nbsp;</p>\r\n<p>In tutorial 8.cs i changed</p>\r\n<p>captureDevice = new DirectShowCapture(); &nbsp; &nbsp; to&nbsp;&nbsp; &nbsp; captureDevice = new PointGreyCapture_2_1();</p>\r\n<p>to use my point grey camera , also i added a app.config file which says the application can use legacy mode.&nbsp;</p>\r\n<p>Maybe the error is because my camera is Monochrome not colored&nbsp;.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Can you suggest what should i do to correct this .&nbsp;</p>\r\n",
+    "PostedDate": "2012-07-11T05:38:19.57-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "860270",
+    "ThreadId": "362794",
+    "Html": "\r\n<p>Ohk , now i changed the camera video intialization to Grayscale .&nbsp;</p>\r\n<p>captureDevice.InitVideoCapture(0, FrameRate._15Hz, Resolution._640x480,ImageFormat.GRAYSCALE_8, true);</p>\r\n<p><strong>Now there is no error , but the application exists as soon as it starts .&nbsp;</strong></p>\r\n<p>&nbsp;</p>\r\n<p><strong>PS: I am trying to use point grey monochrome camera , in tutorial 8 .</strong></p>\r\n",
+    "PostedDate": "2012-07-11T05:55:20.36-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "860392",
+    "ThreadId": "362794",
+    "Html": "\r\n<p>I got the program to work with grayscale : I changed the following parts (marked in red) in pointgreycapture2.1.cs :</p>\r\n<p>----------------</p>\r\n<p>&nbsp;</p>\r\n<pre><span style=\"color:#ff0000\"><strong>pixelData = new byte[cameraWidth * cameraHeight ];</strong></span></pre>\r\n<p>&nbsp;</p>\r\n<p>-----------------</p>\r\n<pre>for (int i = 0; i &lt; processedImage.rows; i&#43;&#43;)\n                        {\n                            for (int j = 0; j &lt; processedImage.stride; j &#43;= 1, rawIndex &#43;= 1, &#43;&#43;index)\n                            {\n                               \n                                    \n                                <span style=\"color:#ff0000\">   <strong> returnImage[index] =\n                                        ((pixelData[rawIndex] &lt;&lt; 16) |\n                                      (pixelData[rawIndex] &lt;&lt; 8) |\n                                      (pixelData[rawIndex]));</strong></span>\n                                  \n                              \n                            }\n                        }</pre>\r\n<pre>-----------------<br></pre>\r\n<p>&nbsp;</p>\r\n<pre>    private void OnImageGrabbed(ManagedImage image)\n        {\n            while (accessing) { }\n            <span style=\"color:#ff0000\"><strong>image.Convert(PixelFormat.PixelFormatMono8, processedImage);</strong></span>\n            unsafe\n            {\n                Marshal.Copy((IntPtr)processedImage.data, pixelData, 0, pixelData.Length);\n            }\n        }</pre>\r\n<pre>-----------------<br></pre>\r\n<p>&nbsp;</p>\r\n<p>Everything seems to work and there are no errors , but the object that should appear on the marker paper appears at random places from time to time . Please Help !&nbsp;</p>\r\n<p>Also only ground marker is getting detected and not the toolbar marker .&nbsp;</p>\r\n",
+    "PostedDate": "2012-07-11T09:26:45.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

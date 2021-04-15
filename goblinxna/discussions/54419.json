@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "183411",
+    "ThreadId": "54419",
+    "Html": "Hey, I'm currently trying to find out where a marker is located.<br>\r\nI've defined an array - like the &quot;ground&quot; one - and need to discover where a marker is relativelly to that array.<br>\r\n&nbsp;in Initialize I run the following code:<br>\r\n<br>\r\n<blockquote>captureDevice = new DirectShowCapture();<br>\r\ncaptureDevice.InitVideoCapture(0, 0, FrameRate._30Hz, Resolution._640x480, false);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\nscene.AddVideoCaptureDevice(captureDevice);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\ntracker = new ARTagTracker();&nbsp;&nbsp; <br>\r\ntracker.InitTracker(638.052f, 633.673f, captureDevice.Width,captureDevice.Height, false, &quot;ARTag.cf&quot;);<br>\r\nscene.MarkerTracker = tracker;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\ntoolbarMarkerNode = new MarkerNode(scene.MarkerTracker, &quot;toolbar0&quot;);&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\nscene.ShowCameraImage = true;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\nscene.RootNode.AddChild(toolbarMarkerNode);<br>\r\n<br>\r\n</blockquote>all variables are defined for the class.<br>\r\n<br>\r\nin draw() i tried to run the code:<br>\r\n<br>\r\n<blockquote>if (toolbarMarkerNode.MarkerFound)<br>\r\n</blockquote>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tracker.ProcessImage(captureDevice);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\nbut I'm getting the exception:<br>\r\n<br>\r\nA first chance exception of type 'System.AccessViolationException' occurred in GoblinXNA.dll<br>\r\nAn unhandled exception of type 'System.AccessViolationException' occurred in GoblinXNA.dll<br>\r\n<br>\r\nAdditional information: Attempted to read or write protected memory. This is often an indication that other memory is corrupt.<br>\r\n<br>\r\nThe program '[6736] test.exe: Managed' has exited with code 0 (0x0).<br>\r\n<br>\r\nin the line&nbsp; ARTagDllBridge.artag_find_objects_wrapped(captureDevice.ImagePtr, rgb_greybar); <br>\r\nof ARTagTracker.cs<br>\r\n<br>\r\nDoes anyone have an idea of what is causing this exception??<br>\r\nThanks,<br>\r\n<br>\r\nLaetitia Mendes<br>\r\n<br>\r\n",
+    "PostedDate": "2009-04-24T14:12:44.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "183784",
+    "ThreadId": "54419",
+    "Html": "Hi Laetitia,<div><br></div><div>I've never encountered first chance exception. Maybe there is a problem with the XNA installation?</div><div><br></div><div>Regarding your code, you're not supposed to call tracker.ProcessImage(...) yourself. It's done automatically by the Scene class. You should take look at Tutorial8 to see how you should find the location of a marker.</div><div><br></div><div>Ohan</div>",
+    "PostedDate": "2009-04-26T10:02:59.117-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "184500",
+    "ThreadId": "54419",
+    "Html": "Hi Ohan, thanks so much for yout time and patience.<br>\r\n<br>\r\nOkay, then probably the problem is calling the function, without having to, and accessing some memory zone I shouldn't. <br>\r\nI've analyzed tut8, but probably not very well, cause I cant find a way to get the marker's position. <br>\r\n<br>\r\nIs it with the geometry node ? Cause I don't need one, only a marker..<br>\r\n<br>\r\nI now have 4 markers in the corners of a paper sheet, and need to find the relative position of a marker inside those four. What funciton can i use to find the pos of a marker wihtout having a geometry node associated.?<br>\r\n<br>\r\nThanks a lot!<br>\r\n<br>\r\nLaetitia Mendes<br>\r\n",
+    "PostedDate": "2009-04-28T06:07:18.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185098",
+    "ThreadId": "54419",
+    "Html": "You don't need a GeometryNode to get the transformation of a marker. MarkerNode itself has WorldTransformation property, and that tells you the transformation of the marker array you associated with the MarkerNode.<div><br></div><div>Ohan</div>",
+    "PostedDate": "2009-04-29T10:33:28.8-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185207",
+    "ThreadId": "54419",
+    "Html": "Hi Ohan,<br>\r\n<br>\r\nI've been studying tutorial8, but still can't see how to find the distance between 2 markers. The only think I've found is the collision detector, but what i really need is the distance.<br>\r\nI've defined, in ARTag.cf two arrays, one has the ground (4 markers in the corners), with the real coordinates, and other array which has other markers, which starts in 0,0,0.<br>\r\n<br>\r\nI'm really sorry for the insistence, but i cant find a way to get the distance (or, by the way, the real position of a marker). <br>\r\n<br>\r\nThe world transformation gives me what? position relative to what point ? I also has rotation, translation, etc.. no ?<br>\r\n",
+    "PostedDate": "2009-04-29T13:53:38.327-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "185213",
+    "ThreadId": "54419",
+    "Html": "The transformation of the marker array is relative to your camera's transformation (if your camera is at (0,0,0), then it's relative to (0,0,0) and the orientation of your camera). If you only need the distance between two marker arrays, then it's simply Vector3.Distance(MarkerNode1.WorldTransformation.Translation, MarkerNode2.WorldTransformation.Translation). There is no &quot;real&quot; position. It's always relative to your camera.<div><br></div><div>Ohan</div>",
+    "PostedDate": "2009-04-29T14:06:13.797-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

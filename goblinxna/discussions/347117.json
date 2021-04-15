@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "804740",
+    "ThreadId": "347117",
+    "Html": "\r\n<p>Hi guys!</p>\r\n<p>Im starting to work with the GoblinXNA today. I was following the user manual and i found a problem in the first step.</p>\r\n<p>When i open the Tutorials.sln and try to build the solution, appears errors saying that the &quot;GoblinXNA&quot; doesnt exists(&quot;The referenced component 'GoblinXNA' could not be found&quot; &quot;The type or namespace name 'GoblinXNA' could not be found (are you missing a\r\n using directive or an assembly reference?)&quot;).</p>\r\n<p>I tried to add that reference but i did not found in the GoblinXNA folder, can u guys help me?</p>\r\n<p>Sorry for my stupid question and bad english, im just a beginner programmer trying to make a project for a crazy programing teacher!</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks u All!</p>\r\n",
+    "PostedDate": "2012-03-02T17:10:17.11-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "804776",
+    "ThreadId": "347117",
+    "Html": "<p>You need to build GoblinXNA project in src/ first . Please follow the instruction guide.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-02T19:32:08.393-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

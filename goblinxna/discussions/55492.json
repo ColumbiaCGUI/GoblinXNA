@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "187363",
+    "ThreadId": "55492",
+    "Html": "Hi there,<br>\r\nSince the WorldTransformation of a marker gives me the position of the objects relative to the camera, I was wondering if there is any function equivalent to artag_project_between_objects() of ARTag which gives the relative position between to objects.<br>\r\nAlso, in an array of 4 markers, how do i get the position of each one, instead of the position of the array (if there is a way)..<br>\r\n<br>\r\nThanks!<br>\r\n<br>\r\nLaetitia Mendes<br>\r\n",
+    "PostedDate": "2009-05-06T07:00:48.897-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "187783",
+    "ThreadId": "55492",
+    "Html": "Hi Laetitia,<div><br></div><div>I'm not sure what exactly artag_project_between_objects() return since I've never used it, but if you just want to know the position different between two ARTag markers, you can simply take the difference between WorldTransformation. If you're taking the difference, then it does not matter what the transformation is relative to. </div><div><br></div><div>If 4 markers are in the same array (assuming they are planner), then the position of each marker is simply the difference between the transformation of the array, and the shifted transformation of each marker from (0, 0) defined in the ARTag coordinate file. </div><div><br></div><div>Ohan</div>",
+    "PostedDate": "2009-05-07T09:18:45.22-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "187785",
+    "ThreadId": "55492",
+    "Html": "Hi Ohan,<br>\r\nI haven't thought of that... =)<br>\r\n<br>\r\nThanks a lot !<br>\r\n",
+    "PostedDate": "2009-05-07T09:27:27.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242792",
+    "ThreadId": "55492",
+    "Html": "<p>I found the artag_project_between_objects() function in goblin, I'm not sure if it works tho.</p>\r\n<p>ARTagDllBridge.artag_project_between_objects()</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-06T21:22:41.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

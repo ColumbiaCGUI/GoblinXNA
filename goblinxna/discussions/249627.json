@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "580143",
+    "ThreadId": "249627",
+    "Html": "<p>Hi, I'm using Havoc Physics. But when I try to compile ALVARWrapper1.4.sln it first shows a diaglog box which asks for the executable file and URL where the project can be accessed(ATL server only), But it generates ALVARWrappar.dll in the release folder.  But aftere copying all the openCv and other files to the dll managed directory, I'm not able to run the tutorial.... It's saying building Failed (Error&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; The type or namespace name 'GoblinXNA' could not be found (are you missing a using directive or an assembly reference?) ....) and when I tried to run the goblinxna.sln from the source folder its again showing one diaglog box showing \"A project  with an output class library cannot be started........\".</p>\n<p>&nbsp;</p>\n<p>Please help as soon as possible.</p>",
+    "PostedDate": "2011-03-14T11:09:21.467-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "580212",
+    "ThreadId": "249627",
+    "Html": "<p>???? You're talking about Havok Physics, but you mention ALVARWrapper. I don't understand.</p>",
+    "PostedDate": "2011-03-14T12:44:16.083-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "509728",
+    "ThreadId": "231578",
+    "Html": "<p>Greetings,</p>\r\n<p>To start off, I want thank all Ohan&nbsp; and all Coders for making Goblin XNA. It is a truly remarkable library for game development!</p>\r\n<p>Secondly, My name is Michael Pitre. I am a&nbsp; 5th year game design student in college who is attempting to create a RTS game with XNA game studio. Goblin XNA caught my eye because I wanted to implement the game play within recorded video,, similar to video tracking.</p>\r\n<p>My question is, can the library support recorded video as a interactive environment for applications developed with Goblin XNA? Or does this library only support live video tracking? If so for the first option, how can I go about implementing that action within my game</p>\r\n<p>framework?</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you in advance,</p>\r\n<p>Michael T Pitre</p>",
+    "PostedDate": "2010-10-19T19:27:38.463-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "509850",
+    "ThreadId": "231578",
+    "Html": "<p>Hi, there never mind the question I found the solution within the manual. Thanks anyway</p>\r\n<p>&nbsp;</p>\r\n<p>Michael</p>",
+    "PostedDate": "2010-10-20T03:49:26.11-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

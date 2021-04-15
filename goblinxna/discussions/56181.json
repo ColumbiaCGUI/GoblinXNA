@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "189786",
+    "ThreadId": "56181",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>Hope you are well.&nbsp; Well done on version 3.2.&nbsp; It's very stable and the new tutorials are very helpful.</p>\r\n<p>I am hoping that you can help me with a problem which I am struggling with.&nbsp; I suspect the solution will be relatively straight forward!</p>\r\n<p>I want an object (say a soccer ball) to effectively roll off the edge of a surface which is bound to a marker node.&nbsp; The marker node would be positioned in the real-world such that the soccer ball would appear to fall off of a real desktop (or table top).</p>\r\n<p>Just to give you a little background - I have an animated character which loiters about a surface which is bound to my 'base0' marker node.&nbsp; I introduce soccer balls via a 'toolbar0' marker and drop them into the 'base0' marker's world coordinate space&nbsp;(when I press a key). At this point the Newton physics engine takes over and the ball falls to the ground (base0 surface) and bounces a little.&nbsp; The animated character then runs toward the ball.&nbsp; The collision knocks the ball off the screen.&nbsp; This is fine when the character kicks the ball off&nbsp;the&nbsp;left or right-hand-side of the screen, however if she kicks the ball down the Y axis (away from the camera and off the edge of the table) the ball appears to be suspected in mid-air, which of course spoils the illusion.</p>\r\n<p>So I think the really questions is, How do I make the world coordinates much lower (in the Z-Axis (height) for the virtual space which surrounds the surface&nbsp;bound to the marker node.</p>\r\n<p>As always, I hope this makes sense.</p>\r\n<p>Regards<br>Simon</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-05-13T07:58:48.99-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "190491",
+    "ThreadId": "56181",
+    "Html": "<p>It sounds like that you don't have a big enough simulation world, which causes the simulation to stop. How big is your board? As mentioned on the documentation in physics simulation, you may need to enlarge NewtonPhysics.WorldSize if your simulation space is larger than 100x100x100 cube. Changing the WorldSize to larger size may resolve your issue.</p>\r\n<p>Thanks</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-05-14T16:43:58.59-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "190661",
+    "ThreadId": "56181",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>Thanks for your suggestion.&nbsp; I'll try&nbsp;this out over the next couple of days&nbsp;and post my findings.</p>\r\n<p>Cheers</p>\r\n<p>Simon</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-05-15T04:28:25.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

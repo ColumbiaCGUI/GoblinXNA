@@ -1,0 +1,154 @@
+[
+  {
+    "Id": "285512",
+    "ThreadId": "83077",
+    "Html": "<p>Hi there,</p>\r\n<p>i'm trying to install the Goblin Framework, i created most of the dependencies but now i'm stuck.</p>\r\n<p>I want to build the ALVARWrapper but the &quot;MarkerDetector.h&quot; is missing.</p>\r\n<p>Building Log:</p>\r\n<table border=0 cellspacing=0 cellpadding=0>\r\n<tbody>\r\n<tr>\r\n<td width=0 bgcolor=\"#ffffff\">&nbsp;</td>\r\n<td width=\"*\">\r\n<pre>Compiling...<br>cl : Command line warning D9035 : option 'Wp64' has been deprecated and will be removed in a future release<br>MarkerDetectorWrapper.cpp<br>.\\MarkerDetectorWrapper.cpp(36) : fatal error C1083: Cannot open include file: 'MarkerDetector.h': No such file or directory<br></pre>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<p>I downloaded the GoblinXNAv3.3.</p>\r\n<p>I don't want to rewrite this Header file so maybe you can just upload it in some place?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks,</p>\r\n<p>RedHead</p>",
+    "PostedDate": "2010-02-03T14:55:58.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "285626",
+    "ThreadId": "83077",
+    "Html": "<p>You need to get ALVAR tracking library from VTT site (<a href=\"http://virtual.vtt.fi/virtual/proj2/multimedia/alvar.html\">http://virtual.vtt.fi/virtual/proj2/multimedia/alvar.html</a>) as mentioned in the installation guide, and link to the .h file in their directory.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-03T20:54:25.403-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "285806",
+    "ThreadId": "83077",
+    "Html": "<p>Thanks for the fast reply,</p>\r\n<p>I did how it is written in the installation guide, but when I want to compile the ALVARWrapper1.2sln i get the compile error (see above).</p>\r\n<p>I downloaded the tracking Library, installed ALVAR 1.2.1 reconfigured all the &quot;Include Directories&quot; and &quot;Library Directories&quot; and start the build process.</p>\r\n<p>In the Solution ALVARWrapper.sln is no MarkerDetector.h file.</p>\r\n<p>Ii've another question.</p>\r\n<p>Since I'm just figuring out how to work with all this stuff i'm wondering which of all the dependecies packages are really needed. So my question is if I extract all the .dll files from the dependencies and copy them in the binary folder of Goblin, can I just use this folder with all the .dll to install the System on another PC?</p>\r\n<p>I have to work on several workstations and I want to know if it is enough to copy just the bin folder to all the other machines instead of installing all the programms on every PC?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks, for the answer.</p>\r\n<p>RedHead</p>",
+    "PostedDate": "2010-02-04T07:09:07.417-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "286042",
+    "ThreadId": "83077",
+    "Html": "<p>Goblin is currently configured to work with ALVAR 1.2.0 version. I haven't touched the 1.2.1 version, so there might be file changes. It'll be updated to the latest version (probably, it'll be 1.3 series by then)</p>\r\n<p>You can simply copy the dlls in the bin directory and move it to another machine.</p>\r\n<p>However, in your other machine, you need to have at least .NET 3.5 redistributable, XNA 3.1 redistributable, and OpenCV 1.0 installed. Make sure you restart your machine after installing these minimum requirements. If you're not going to do code development, then you don't need any of the Visual Studio stuff.</p>\r\n<p>Ohan</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-04T17:51:41.8-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "289947",
+    "ThreadId": "83077",
+    "Html": "<p>Hi I'm new to GoblinXNA. I think I have downloaded correct tools needed to compile GoblinXNA. all of the required libraries are successfully built but I have doubt in some of the libraries because I think as if I cheated the way I compiled it.</p>\r\n<p>For newton and lidgren they were smooth. DirectShow.Net package was a bit problematic. First I couldn't get the package from the site provided in the Installation Guide, therefore I searched for it elsewhere. I managed to find it. However I didn't know whether that package was OK. Anyway I managed to get its DLL and eventually copied it into the GoblinXNA\\bin folder.</p>\r\n<p>&nbsp;Then it was ALVAR. Building it was a pain in the &quot;tut&quot;. Firstly I got lots of errors and warnings. Then I found out that it was the library and include path. i corrected it. then comes the problem with <em>cxcore.lib. </em>I couldn't find it anywhere. Finally, I changed a file in C:\\OpenCV\\lib folder from <strong><em>libcxcore200.dll.a </em><span style=\"font-weight:normal\">to </span><em>cxcore.lib</em><span style=\"font-weight:normal\">. And then I managed to build and get the ALVARWrapper.dll straight away. The rest was good.</span></strong></p>\r\n<p>Then I opened C# to compile GoblinXNA I got 3 errors and 1338 warnings. Until now I can't find what is wrong. Please help</p>",
+    "PostedDate": "2010-02-11T19:08:33.79-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290218",
+    "ThreadId": "83077",
+    "Html": "<p>For OpenCV, I believe you downloaded the wrong version. As it's noted in ALVAR, you should use OpenCV 1.0 instead of 2.0. Also, .a sounds like it's for linux instead of for Windows.&nbsp;</p>\r\n<p>You can ignore all of the warnings since those are XML documentation stuff.</p>\r\n<p>I don't know what 3 errors you're getting. If you can post them, I can suggest a solution.</p>\r\n<p>If it's hard to see the errors because of the warning messages, turn the warning messages off in VS 2008.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-12T10:53:27.03-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291331",
+    "ThreadId": "83077",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>You're correct my OpenCV is version 2.0. I will download the version 1.0 and retry. Anyway these are the errors:</p>\r\n<ul>\r\n<li>GoblinXNA<span style=\"white-space:pre\"> </span>21<span style=\"white-space:pre\"> </span>288<span style=\"white-space:pre\"> </span>D:\\Project\\Augmented Reality\\Goblin\\GoblinXNAv3.3\\GoblinXNAv3.3\\src\\Device\\Capture\\DirectShowCapture.cs<span style=\"white-space:pre\"> </span>'DirectX.Capture.Capture' does not contain a definition for 'FrameEvent2' and no extension method 'FrameEvent2' accepting a first argument of type 'DirectX.Capture.Capture' could be found (are you missing a using directive or an assembly reference?)<span style=\"white-space:pre\"> </span>1<span style=\"white-space:pre\"> </span>Error</li>\r\n<li>GoblinXNA<span style=\"white-space:pre\"> </span>49<span style=\"white-space:pre\"> </span>288<span style=\"white-space:pre\"> </span>D:\\Project\\Augmented Reality\\Goblin\\GoblinXNAv3.3\\GoblinXNAv3.3\\src\\Device\\Capture\\DirectShowCapture.cs<span style=\"white-space:pre\"> </span>The type name 'HeFrame' does not exist in the type 'DirectX.Capture.Capture'<span style=\"white-space:pre\"> </span>2<span style=\"white-space:pre\"> </span>Error</li>\r\n<li>GoblinXNA<span style=\"white-space:pre\"> </span>21<span style=\"white-space:pre\"> </span>289<span style=\"white-space:pre\"> </span>D:\\Project\\Augmented Reality\\Goblin\\GoblinXNAv3.3\\GoblinXNAv3.3\\src\\Device\\Capture\\DirectShowCapture.cs<span style=\"white-space:pre\"> </span>'DirectX.Capture.Capture' does not contain a definition for 'GrapImg' and no extension method 'GrapImg' accepting a first argument of type 'DirectX.Capture.Capture' could be found (are you missing a using directive or an assembly reference?)<span style=\"white-space:pre\"> </span>3<span style=\"white-space:pre\"> </span>Error</li>\r\n</ul>\r\n<p>Thanks for replying because I think I am really stuck right know and I am really pulling my hair off</p>",
+    "PostedDate": "2010-02-16T10:09:40.61-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291455",
+    "ThreadId": "83077",
+    "Html": "<p>Ok, these errors look familiar. It's again because you're not using the right version of the DLLs. Make sure you download the DirectShow libraries from the link indicated in the installation manual. If you download from another link, even if the DLL's name is the same, their API interfaces are a little different. That's why you're getting those errors.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-16T14:57:32.437-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291496",
+    "ThreadId": "83077",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>In order to build DirectShow dll I need VS2008. Currently I only have VCS Express and VC++ Express in my laptop. Does VS2008 has a free version. Or is there any other way around this? perhaps can you send me the DirectShow dll? :)</p>\r\n<p>thanks</p>",
+    "PostedDate": "2010-02-16T16:36:50.02-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291536",
+    "ThreadId": "83077",
+    "Html": "<p>Well, you definitely need VS2008 either Express or Pro version to run Goblin XNA. VS2008 Express version is free, which I believe you already have, and it's capable of building DirectShowNET dlls. Unfortunately, I can't send the dlls directly because our lab doesn't want to get into any troubles.</p>\r\n<p>Ohan&nbsp;</p>",
+    "PostedDate": "2010-02-16T19:49:50.41-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291739",
+    "ThreadId": "83077",
+    "Html": "<p>I understand that. I was kidding ;)</p>\r\n<p>I downloaded the OpenCV version 1.0 and went smooth.</p>\r\n<p>Also, I downloaded the DirectShow.Net package. After zipping it, I didn't find the CaptureTest.sln. Instead I used the DirectX.Capture.sln. Followed the instructions and still received some warnings.</p>\r\n<p>But I still able to see the DirectX.Capture.dll and DShowNet.dll inside the bin\\Release folder nonetheless.</p>\r\n<p>I will tell you, perhaps tomorrow if I'm able to completely build the GoblinXNA</p>\r\n<p>&nbsp;</p>\r\n<p>thanks&nbsp;</p>",
+    "PostedDate": "2010-02-17T08:13:32.21-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291771",
+    "ThreadId": "83077",
+    "Html": "<p>You need to get the code from <span style=\"font-size:12pt\"><span style=\"font-size:11pt\"><a href=\"http://www.codeproject.com/cs/media/DirXVidStrm.asp?df=100&forumid=73014&exp=0&select=1780522\">http://www.codeproject.com/cs/media/DirXVidStrm.asp?df=100&amp;forumid=73014&amp;exp=0&amp;select=1780522</a>&nbsp;as noted on the installation guide.</span></span></p>\r\n<p><span style=\"font-size:medium\"><span><span style=\"font-size:small\"><span>There is a prior version to this, and if you're downloading that, then it has some missing functionalities.&nbsp;</span></span></span></span></p>\r\n<p><span style=\"font-size:medium\"><span><span style=\"font-size:small\"><span>Ohan</span></span></span></span></p>",
+    "PostedDate": "2010-02-17T09:29:20.74-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "292430",
+    "ThreadId": "83077",
+    "Html": "<p>Thank God and to you too. I've finally managed to get the GoblinXNA.dll with some warnings. I presumed you have said earlier that I can disregard all the warnings since it has got to do with XML right?</p>\r\n<p>Anyway, thanks a lot for helping me to sort this thing out. I will start looking into the tutorial now and wondering what will be coming in my way after this :)</p>",
+    "PostedDate": "2010-02-18T16:40:51.013-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "417931",
+    "ThreadId": "83077",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>Arrezes wrote:</strong><br>\r\n<p>Hi Ohan,</p>\r\n<p>You're correct my OpenCV is version 2.0. I will download the version 1.0 and retry. Anyway these are the errors:</p>\r\n<ul>\r\n<li>GoblinXNA<span style=\"white-space:pre\"> </span>21<span style=\"white-space:pre\"> </span>288<span style=\"white-space:pre\"> </span>D:\\Project\\Augmented Reality\\Goblin\\GoblinXNAv3.3\\GoblinXNAv3.3\\src\\Device\\Capture\\DirectShowCapture.cs<span style=\"white-space:pre\"> </span>'DirectX.Capture.Capture' does not contain a definition for 'FrameEvent2' and no extension method 'FrameEvent2' accepting a first argument of type 'DirectX.Capture.Capture' could be found (are you missing a using directive or an assembly reference?)<span style=\"white-space:pre\"> </span>1<span style=\"white-space:pre\"> </span>Error</li>\r\n<li>GoblinXNA<span style=\"white-space:pre\"> </span>49<span style=\"white-space:pre\"> </span>288<span style=\"white-space:pre\"> </span>D:\\Project\\Augmented Reality\\Goblin\\GoblinXNAv3.3\\GoblinXNAv3.3\\src\\Device\\Capture\\DirectShowCapture.cs<span style=\"white-space:pre\"> </span>The type name 'HeFrame' does not exist in the type 'DirectX.Capture.Capture'<span style=\"white-space:pre\"> </span>2<span style=\"white-space:pre\"> </span>Error</li>\r\n<li>GoblinXNA<span style=\"white-space:pre\"> </span>21<span style=\"white-space:pre\"> </span>289<span style=\"white-space:pre\"> </span>D:\\Project\\Augmented Reality\\Goblin\\GoblinXNAv3.3\\GoblinXNAv3.3\\src\\Device\\Capture\\DirectShowCapture.cs<span style=\"white-space:pre\"> </span>'DirectX.Capture.Capture' does not contain a definition for 'GrapImg' and no extension method 'GrapImg' accepting a first argument of type 'DirectX.Capture.Capture' could be found (are you missing a using directive or an assembly reference?)<span style=\"white-space:pre\"> </span>3<span style=\"white-space:pre\"> </span>Error</li>\r\n</ul>\r\n<p>Thanks for replying because I think I am really stuck right know and I am really pulling my hair off</p>\r\n</blockquote>\r\n<p>&nbsp;Hi,</p>\r\n<p>I'm having the same problem, i&acute;ve already downloaded several versions of <span style=\"color:#000000\">DirectX.Capture Class Library but always get the same errors.</span></p>\r\n<p><span style=\"color:#000000\">The link provided on the instalation manual isn't working so i don't know how to solve this now.</span></p>\r\n<p><span style=\"color:#000000\">Any help on where i can get the latest version of the library would be very nice.</span></p>\r\n<p><span style=\"color:#000000\">Thanks.</span></p>",
+    "PostedDate": "2010-03-14T09:46:38.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "418068",
+    "ThreadId": "83077",
+    "Html": "<p>Hi,</p>\r\n<p>I just found out that <span style=\"font-size:12pt\"><span style=\"font-size:11pt\"><a href=\"http://www.codeproject.com/cs/media/DirXVidStrm.asp?df=100&forumid=73014&exp=0&select=1780522\">http://www.codeproject.com/cs/media/DirXVidStrm.asp?df=100&amp;forumid=73014&amp;exp=0&amp;select=1780522</a>&nbsp;page does not exist anymore. Thanks for letting me know. I need to talk to my advisor how we want to deal this case before making any decisions.</span></span></p>\r\n<p><span style=\"font-size:12pt\"><span style=\"font-size:11pt\">Ohan</span></span></p>",
+    "PostedDate": "2010-03-14T21:56:46.84-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "418154",
+    "ThreadId": "83077",
+    "Html": "<p>Ok thanks for the fast reply.</p>\r\n<p>Looking forward for an update.</p>",
+    "PostedDate": "2010-03-15T04:08:54.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "419916",
+    "ThreadId": "83077",
+    "Html": "<p>hey...</p>\r\n<p>I spend one whole day doing google for missing DirectShow.Net library. &nbsp;Finally I got a project developed by &quot;<strong><a id=\"ctl00_AboutAuthorRptr_ctl00_AboutAuthor_memberProfileLink\" style=\"text-decoration:none\" href=\"http://www.codeproject.com/Members/hpAng\">hpAng</a></strong>&quot; where he did a very very minor change (in code ..to improve it) in the <strong>ORIGINAL</strong> code. &nbsp;So I just downloaded his <a href=\"http://www.codeproject.com/KB/directx/DirXVidStrm.aspx?msg=2727292\">source code</a>...compiled it exactly how it is described in original Goblin XNA manual. &nbsp;and afterwards everything worked fine.&nbsp;</p>\r\n<p><a href=\"http://www.codeproject.com/KB/directx/DirXVidStrm.aspx?msg=2727292\">http://www.codeproject.com/KB/directx/DirXVidStrm.aspx?msg=2727292</a></p>\r\n<p>&nbsp;</p>\r\n<p>I hope till Ohanoda provides us any update it will help.&nbsp;</p>",
+    "PostedDate": "2010-03-18T11:58:14.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "420072",
+    "ThreadId": "83077",
+    "Html": "Great! I'm in the middle of compiling the MarkerLayout tools of ALVAR and still reading the manual. Hope can get this project off early. <br><br>I'm still new in this. It's nice to talk with you<br><br><div>\r\nOn Fri, Mar 19, 2010 at 2:58 AM, atu8 <span dir=ltr>&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br><blockquote style=\"margin:0pt 0pt 0pt 0.8ex;padding-left:1ex\">\r\n   <div> <p>From: atu8</p> <div><p>hey...</p>\r\n<p>I spend one whole day doing google for missing DirectShow.Net library.  Finally I got a project developed by &quot;<b><a style=\"text-decoration:none\" href=\"http://www.codeproject.com/Members/hpAng\">hpAng</a></b>&quot; where he did a very very minor change (in code ..to improve it) in the <b>ORIGINAL</b> code.  So I just downloaded his <a href=\"http://www.codeproject.com/KB/directx/DirXVidStrm.aspx?msg=2727292\">source code</a>...compiled it exactly how it is described in original Goblin XNA manual.  and afterwards everything worked fine. </p>\r\n\r\n<p><a href=\"http://www.codeproject.com/KB/directx/DirXVidStrm.aspx?msg=2727292\">http://www.codeproject.com/KB/directx/DirXVidStrm.aspx?msg=2727292</a></p>\r\n<p> </p>\r\n<p>I hope till Ohanoda provides us any update it will help. </p></div><div> <div> <p>Read the <a href=\"http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=83077&ANCHOR#Post419916\">full discussion online</a>.</p>\r\n <p>To add a post to this discussion, reply to this email (<a href=\"mailto:goblinxna@discussions.codeplex.com?subject=[goblinxna:83077]\">goblinxna@discussions.codeplex.com</a>)</p> <p>To start a new discussion for this project, email <a href=\"mailto:goblinxna@discussions.codeplex.com\">goblinxna@discussions.codeplex.com</a></p>\r\n <p>You are receiving this email because you subscribed to this discussion on CodePlex. You can <a href=\"http://www.codeplex.com/site/discussions/thread/unsubscribe/83077\">unsubscribe</a> on CodePlex.com.</p>\r\n <p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at CodePlex.com</p> </div> </div></div> </blockquote></div><br><br clear=all><br>-- <br>Make quick and easy money in 24 hours <a href=\"http://searchforyou.ws/tissa.htm\">http://searchforyou.ws/tissa.htm</a><br>\r\nEarn USD$30 per referral http://Acme-People-Search.com/signup.php?ref=1244733303ZDAZ <br><br>",
+    "PostedDate": "2010-03-18T18:49:17.92-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "540608",
+    "ThreadId": "83077",
+    "Html": "\r\n<p>At the beginning of this thread was a post asking why he couldn't find MarkerDetector.h. I'm having the same problem; I've downloaded Alvar 1.4 for the new beta Goblin XNA and the folders for the wrapper do not contain this file.</p>\r\n",
+    "PostedDate": "2010-12-26T11:50:48.043-08:00",
+    "UserRole": "Editor",
+    "MarkedAsAnswerDate": null
+  }
+]

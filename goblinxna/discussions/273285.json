@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "674565",
+    "ThreadId": "273285",
+    "Html": "\r\n<p>Hi, i need some help on adjusting the goblin code. The reason is when i run&nbsp; my .fbx model in tutorial 14, the model animation some how look like it have been offset.</p>\r\n<p><a href=\"http://www.youtube.com/watch?v=bhvjQq3GyX0\" target=\"_blank\">http://www.youtube.com/watch?v=bhvjQq3GyX0</a></p>\r\n<p>&nbsp;</p>\r\n<p>But when i run in SkinningSample,&nbsp; the animation run normally.</p>\r\n",
+    "PostedDate": "2011-09-21T00:44:38.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "675043",
+    "ThreadId": "273285",
+    "Html": "<p>how does it look with SkinningSample?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-21T19:31:24.307-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "675070",
+    "ThreadId": "273285",
+    "Html": "<p>hi ohan,</p>\r\n<p>Thanks for the reply.</p>\r\n<p>In SkinnedModelExtensions_ARCHIVE_3_1, my model run properly without any animation problems.</p>\r\n<p><a href=\"http://www.youtube.com/watch?v=OSpxEu2aU1Q\" target=\"_blank\">http://www.youtube.com/watch?v=OSpxEu2aU1Q</a></p>",
+    "PostedDate": "2011-09-21T21:57:57.683-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "676433",
+    "ThreadId": "273285",
+    "Html": "<p>Hi com97779!</p>\n<p>I found the same problem when i use Blender to make the models.</p>\n<p>This is&nbsp;because you have moved your&nbsp;<span style=\"text-decoration: underline;\">root bone</span>&nbsp;in your animation process.(sorry the poor english).</p>\n<p>I see that your model open and close the eyes and still moving your legs.</p>\n<p>I guess Goblin apply the vectors and matrices in the root bone (making this 'fixed', and performing all bone animations around it).</p>\n<p>If you translate or rotate the root bone, Goblin will make him at 'zero' position and animate all the other parts around it.</p>\n<p>I guess Xna uses a little diferent way to perform this. If you take a look in tutorial 14 you'll see that the Dude model have this behavior too but less than&nbsp;your pet. (see Dude body's in tutorial 14 and in SkinningSample).&nbsp;</p>\n<p>To solve this, you have to reanimate the dog  leaving the root bone untouched&nbsp;without scales, translations or rotations of any kind, extending a conection like a 'tail'&nbsp;to your model, and animate him, but again, <span style=\"text-decoration: underline;\">leaving the root bone at 'zero' position.</span></p>\n<p>This works for me and i really hope that this helps you.(sorry the english again)</p>\n<p>&nbsp;</p>\n<p>Eduardo.</p>",
+    "PostedDate": "2011-09-25T14:01:13.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "676534",
+    "ThreadId": "273285",
+    "Html": "<p>Thanks for the pointing Eduardo. I actually intended to make it work the same as the XNA SkinningModel sample program, so if it behaves differently, then it's Goblin's fault. Since I don't have time to take look at the problem and fix it, it'll be great if someone can post a fix here that makes Goblin behave the same way as the XNA sample program. I believe the fixes can be done within the Tutorial 14. If not, it's going to be a harder problem.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-25T23:40:26.617-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "679800",
+    "ThreadId": "273285",
+    "Html": "<p>Hi!</p>\n<p>In the AnimatedModel class, in the render function :</p>\n<p>foreach (ModelMesh modelMesh in this.mesh) &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\n<p>{ &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</p>\n<p>Matrix.Multiply(ref transforms[<span style=\"text-decoration: underline;\">modelMesh.ParentBone.Index</span>], ref renderMatrix, out tmpMat1);</p>\n<p>If you change &nbsp;'modelMesh.ParentBone.Index' code to '<span style=\"text-decoration: underline;\">modelMesh.ParentBone.Children.Count</span>', Goblin will handle the models without this behavior.<br /> But i only have tested this with the fbx Dude, 'Player Marine' and 'EnemyBeast' (models from XNAnimation library), since i have made all my models in Blender (2.49b) to work with the original configuration.</p>\n<p>This change don't work with the Tiny.X, i don't know why.&nbsp;</p>\n<p>The Softimage Mod Tool 7.5 also have a set of functions specially&nbsp;designed to XNA that works perfectly to Goblin.&nbsp;&nbsp;But is free just to non commercial use.</p>\n<p>I don't think this is Goblin's fault, Ohan, this way to handle models by the rootbone makes perfect sense to me.</p>\n<p>Thanks for your attention.</p>\n<p>Eduardo.&nbsp;</p>",
+    "PostedDate": "2011-10-04T07:23:10.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "679931",
+    "ThreadId": "273285",
+    "Html": "<p>Thanks Eduardo. I will take look at your suggested solution sometime soon. I've never made an animated model myself, so I never really tested the animation code much with other than the Dude model. It's good to hear you have tested the code with other models, and we appreciate for the information regarding which modeling software to use.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-04T11:19:47.037-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "681170",
+    "ThreadId": "273285",
+    "Html": "<p>Thanks ohanoda and Eduardo for the help. Your comment helped me with the animation. Now 13 out of 17&nbsp;model animation is work fine.</p>",
+    "PostedDate": "2011-10-07T00:18:55.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

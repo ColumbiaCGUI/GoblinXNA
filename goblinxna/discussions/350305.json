@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "816501",
+    "ThreadId": "350305",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I used the &quot;MarkerLayout&quot; tool to generate a marker pattern of 9 markers and the corresponding .xml-config-file. The reason for using multiple markers in my case is to make the tracking more stable in case of partly occluded markers. If the entire field\r\n of 9 markers is completely visible, i get a correct transformation of the marker field. When 6 out of the 9 markers are partly or completely occluded, so that for example only the 3 markers at the left border stay visible, i get a strange behaviour of the\r\n transformation. When turning the marker field, it seems as if sometimes the transformation flips over/is mirrored. I have no idea where this effect might come from. Maybe you have an idea what is the reason for this behaviour and could help me.</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2012-03-28T05:12:42.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "816645",
+    "ThreadId": "350305",
+    "Html": "<p>Yes, that's a known problem of any square-marker based tracking libraries. When it sees less markers, especially when the camera is parallel to the marker plane, the tracking system sometimes get confused with which direction the marker is facing. If you want more detailed explanation of this problem, you can directly contact folks at VTT who developed the tracking library. This can be solved by having the marker arrays orient in different directions. We have a version of marker layout tool internally that allows people to make the markers orient in different directions, but we haven't cleaned it up for distribution yet. We will probably include this tool in the coming releases.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-28T09:29:16.31-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "818180",
+    "ThreadId": "350305",
+    "Html": "<p>There is one more thing that is strange with this setup: when only one of the 9 markers is visible, there is no flipping anymore, but if two or three are visible then flipping and unstableness starts again. What could be the explanation for this. Im using Goblin XNA 3.6.</p>\r\n<p>electron8000</p>",
+    "PostedDate": "2012-03-31T09:48:59.857-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "818869",
+    "ThreadId": "350305",
+    "Html": "<p>Again, this has nothing to do with the versioning of Goblin, since it depends on the tracking library. For detailed explanation of any weird tracking behavior, please ask folks at VTT who developed the ALVAR library.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-04-02T10:21:38.1-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

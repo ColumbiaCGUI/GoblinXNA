@@ -1,0 +1,74 @@
+<div class="wikidoc">
+<h1 style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><strong><span style="font-family:'Century Schoolbook'">Calibrating your Camera with calib.xml</span></strong></h1>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><strong><span style="font-family:'Century Schoolbook'">Option Two, the ALVAR Calibration Tool</span></strong></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">(If you can, we recommend you use the GoblinXNA calibrator instead.)</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">To generate calib.xml you will need to compile and run the example program provided by Alvar, &quot;SampleCamCalib&quot;.
+ To this end you will need to install a variety of utilities and programs, including OpenCV 1.0, GLUT 3.7, and CMake 2.6. OpenCV will have been installed already if you followed the directions in the GoblinXNA Installation Guide to install Alvar. In addition,
+ to compile the program you will need either Microsoft Visual Studio 2003, 2005, or 2008, or MinGW and GNU Make.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Let's start off by obtaining the GLUT libraries. A variety of compiled and uncompiled code can be found
+ at <a href="http://www.opengl.org/resources/libraries/glut/glut_downloads.php"><span style="color:blue">http://www.opengl.org/resources/libraries/glut/glut_downloads.php</span></a>, and for Intel systems the precompiled libraries can be found at
+<a href="http://www.opengl.org/resources/libraries/glut/glutdlls37beta.zip"><span style="color:blue">http://www.opengl.org/resources/libraries/glut/glutdlls37beta.zip</span></a>. Unzip these to your desired location (you will point to them later.)</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218939" border="0" alt="" width="434" height="372" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span style="font-size:10.0pt; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Next install CMake 2.6, found at
+<a href="http://www.cmake.org/files/v2.6/cmake-2.6.4-win32-x86.exe"><span style="color:blue">http://www.cmake.org/files/v2.6/cmake-2.6.4-win32-x86.exe</span></a>. When you are asked, choose to save the file and then launch it. In Google Chrome it looks like
+ this (see the bottom of the screen shot):</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218940" border="0" alt="" width="434" height="302" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">When asked if you wish to allow the program to run, choose &quot;Yes&quot;.</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218941" border="0" alt="" width="352" height="199" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">On the first screen click &quot;Next&quot;, and on the next screen click &quot;I Agree&quot; (after carefully reading the disclaimer
+ and pondering its ramifications, of course). Then you need to tell it to add itself to the path for the current user (or all users if you wish):
+</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218942" border="0" alt="" width="387" height="301" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">You can accept the default installation location or choose one of your own. Likewise, you can select the
+ Start Menu folder. Then click Install. If all goes well you should see this screen, and can click &quot;Finish&quot;.</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218943" alt=""></span><span style="font-size:10.0pt; font-family:&quot;Century Schoolbook&quot;"><span>&nbsp;</span></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">At this point you probably need to log off and on again so that your environment variables are reloaded
+ and the CMake executable will be in your path. Next you can generate the development environment by locating the build script in the Alvar installation directory, located here on my machine (don't launch it yet):
+</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri">&lt;!--[if gte vml 1]&gt;&lt;v:shape id=&quot;_x0000_i1034&quot; type=&quot;#_x0000_t75&quot; style='width:6in;height:320pt'&gt; &lt;v:imagedata src=&quot;ALVAR4_files/image019.wmz&quot;
+ o:title=&quot;&quot; /&gt; &lt;/v:shape&gt;&lt;![endif]--&gt;<img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218945" border="0" alt="" width="434" height="322" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">To run this you need to be an administrator. Using the Start Menu, find the Command Terminal in the menu
+ and right-click it:</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218946" border="0" alt="" width="261" height="405" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">In the context menu that appears, choose to &quot;Run as administrator&quot;. Then navigate to the location of your
+ generate.bat file and run that. (Depending upon your path, you may need to surround the command in double quotes.) It will take a moment to build, but then you should see this:
+</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218949" border="0" alt="" width="434" height="220" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Next launch the GUI version of CMake:</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218950" border="0" alt="" width="243" height="403" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Before you proceed, note that you must not change the location where the binaries will be built. But fill
+ out the rest of the requirements as shown below (substituting your own paths for mine.)</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218951" border="0" alt="" width="434" height="327" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Click &quot;Configure&quot;, and then click &quot;Generate&quot;. This will create the sample projects - on my system, located
+ at C:\Program Files\Alvar 1.4.0\build\msvc90\build\sample. When you open the SampleCamCalib.vcproj file, you might witness this warning:</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218952" border="0" alt="" width="427" height="268" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Choose &quot;Restart Visual Studio under different credentials&quot;, then choose to allow this program to make changes
+ to your computer.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">To run the samplecamcalib.exe file, I recommend right-clicking the project on the right-hand side of the
+ screen,</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218953" border="0" alt="" width="434" height="263" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span style="font-size:10.0pt; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">... choosing &quot;Debug&quot; and &quot;Start new instance&quot;. On my system, the first time I run this I get a command
+ window with instructions on how to run it, but then I get a black window instead of the image viewable by my webcam. However, running it again launches the first command window followed by a series of dialogues asking you for parameters about your camera.
+ (For me, the defaults worked fine.) </span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Follow the directions using the checkerboard printout provided in the Alvar.pdf file, page 8. Once the
+ program recognizes the pattern, it will begin a series of passes to calibrate to your camera (your pose may differ if you are not actively writing a how-to):
+</span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span lang="EN" style="font-size:11.0pt; font-family:Calibri"><img src="http://download.codeplex.com/download?ProjectName=goblinxna&DownloadId=218954" border="0" alt="" width="434" height="272" style="border:0"></span></p>
+<p style="margin-bottom:10.0pt; text-autospace:none"><span style="font-size:10.0pt; font-family:&quot;Century Schoolbook&quot;">&nbsp;</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">Wait for the passes to complete. If it seems to be taking a long time, try shutting down all programs that
+ access your video camera (Skype, I'm looking at you.) Also make sure you have adequate lighting.</span></p>
+<p style="margin-bottom:10.0pt; line-height:150%; text-autospace:none"><span style="font-size:10.0pt; line-height:150%; font-family:&quot;Century Schoolbook&quot;">At the end of this process you'll have a spiffy new calib.xml file. Link to this file within your project
+ so it can find it, and you are ready to go. For example, for Tutorial 8 I put it in &quot;C:\Users\Colin\Documents\GoblinXNAv3.5\tutorials\Tutorial8 - Optical Marker Tracking.&quot;</span></p>
+</div><div class="ClearBoth"></div>

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "830083",
+    "ThreadId": "353990",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I try to combine GoblinXNA4 'Tutorial4 - 3D Object Selection' with 'Tutorial8 - Optical Marker Tracking'.</p>\r\n<p>but after using marker, the 3D objects cannot be selected again (using mouse click).</p>\r\n<p>is this case possible?</p>\r\n<p>Please advise.</p>\r\n<p>Thank you.</p>\r\n",
+    "PostedDate": "2012-04-30T01:43:55.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "830094",
+    "ThreadId": "353990",
+    "Html": "<p>Figure it out.. must add:</p>\r\n<p>Matrix viewMatrix = _groundMarkerNode.WorldTransformation * State.ViewMatrix;</p>",
+    "PostedDate": "2012-04-30T02:31:28.957-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

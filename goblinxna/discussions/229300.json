@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "501021",
+    "ThreadId": "229300",
+    "Html": "<p>Hi guys, sorry if this is a dumb question but while &nbsp;i was following the installation guide i couldnt find any folder like this, NewtonSDK/sdk/dll, instead i found a lot of folders in this path&nbsp;NewtonWin-2.16\\sdk\\x32 which are named like dll_double_vs7, &nbsp;&nbsp;dll_double_vs9, dll_vs7, dll_vs9, i have no idea what to do next, which one is the one i should use??</p>\r\n<p>Also i couldnt find any &quot;setup.exe&quot; to install it :S, im kinda lost here, any help?</p>",
+    "PostedDate": "2010-10-01T05:59:36.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "501271",
+    "ThreadId": "229300",
+    "Html": "<p>You need to download version 1.53, not the version 2 series. We do not officially support Newton2 yet.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-01T14:57:04.337-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

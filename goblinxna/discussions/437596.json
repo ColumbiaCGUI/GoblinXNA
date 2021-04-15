@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "1019377",
+    "ThreadId": "437596",
+    "Html": "Hi!<br />\n<br />\nI'm trying to add animated model to my soultion. It works, the model is animated and i can add to markers, but i can't solve the problem of the shadow. When i don't add shadow settings to the animated model's geometrynode it's working, but when i add it throws exception.<br />\n<br />\nHas anybody solved the animated model's shadow problem?<br />\n",
+    "PostedDate": "2013-03-22T02:01:19.95-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1039422",
+    "ThreadId": "437596",
+    "Html": "Hi, i have a similar problem, but have u use this lines:\r<br />\n<br />\n u must have this line   scene.ShadowMap = new MultiLightShadowMap(); before CreateObject(); also make sure u have MultiLightShadowMap.fx and SimpleShadowShader.fx in your content directory.\r<br />\n<br />\n in CreateGround()...<br />\n<pre><code>        groundNode.Model.ShadowAttribute = ShadowAttribute.ReceiveOnly;\n        groundNode.Model.Shader = new SimpleShadowShader(scene.ShadowMap);</code></pre>\n\nin CreateObject()...<br />\n<pre><code>        aNode.Model.ShadowAttribute = ShadowAttribute.ReceiveCast;\n        aNode.Model.Shader = new SimpleShadowShader(scene.ShadowMap);\n\n</code></pre>\n\nBtw, can you please explain me how did u get your animated model into the scene? did u use MAYA or 3dsmax? what exporter did u use? your model is .FBX or .X ? please help me with this. Is your model using bones? \r<br />\n<br />\nHope this can help u and hope u can help me :)\r<br />\n<br />\nBye<br />\n",
+    "PostedDate": "2013-05-04T13:34:38.067-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1047092",
+    "ThreadId": "437596",
+    "Html": "Dear Buskerone!<br />\n<br />\nSorry for the late reply, I had a lot of works in these weeks.<br />\n<br />\nI used to add these lines that you write, but it doesn't work yet. I think the GoblinXNA can't render shadows with animated models, so we have to wite an own fx file to manage animated model shadows, but i don't know how to do that. I asked a lot of times in this forum how to add animated model shadow, but no one replied. :((<br />\n<br />\nI didn't made animated models in 3DS Max, so I don't know how to do that. When I add animated model to my project I made some separated elements of the model and I animated these elements by code, like wind turbine etc. The wind turbine was 2 elements, and I rotate the turbine by code. <br />\nIf you want to animate models in the modelling programs (3DS Max or Maya), you have to add bones to your model.<br />\nRead this article how to do that in Maya:<br />\n<a href=\"http://graphics.cs.columbia.edu/wiki/doku.php?id=wiki:user:henderso:tutorials:fbxtoxna\" rel=\"nofollow\">http://graphics.cs.columbia.edu/wiki/doku.php?id=wiki:user:henderso:tutorials:fbxtoxna</a><br />\n<br />\nI searched but I didn't find article about how to make animated models in 3DS Max to GoblinXNA, if you find some, please share with me. :)<br />\n<br />\nBye and sorry again. ;)<br />\n",
+    "PostedDate": "2013-05-22T06:20:27.293-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

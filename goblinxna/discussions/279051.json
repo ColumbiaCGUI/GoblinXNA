@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "696745",
+    "ThreadId": "279051",
+    "Html": "\r\n<p>Hi, I would like to render 2d texture on my screen (not associate with the marker) but I can't see it:</p>\r\n<p>&nbsp;</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>\r\n        <span style=\"color:blue\">public</span> <span style=\"color:blue\">void</span> Draw(SpriteBatch spriteBatch)\r\n        {\r\n            <span style=\"color:green\">// If ground marker array is detected</span>\r\n            <span style=\"color:blue\">if</span> (groundMarker.MarkerFound)\r\n            {\r\n                transNodeRock.Translation = bulletPosition;\r\n                transNodeRock.Rotation = bulletRotation;\r\n\r\n                \r\n                <span style=\"color:green\">//Draw the negative space for the health bar</span>\r\n                spriteBatch.Draw(mHealthBar, <span style=\"color:blue\">new</span> Rectangle(game.Window.ClientBounds.Width / 2 - mHealthBar.Width / 2,\r\n\r\n                     30, mHealthBar.Width, 44), <span style=\"color:blue\">new</span> Rectangle(0, 45, mHealthBar.Width, 44), Color.Gray);\r\n\r\n\r\n                <span style=\"color:green\">//Draw the current health level based on the current Health</span>\r\n                spriteBatch.Draw(mHealthBar, <span style=\"color:blue\">new</span> Rectangle(game.Window.ClientBounds.Width / 2 - mHealthBar.Width / 2,\r\n                     30, (<span style=\"color:blue\">int</span>)(mHealthBar.Width * ((<span style=\"color:blue\">double</span>)mCurrentHealth / 100)), 44),\r\n                     <span style=\"color:blue\">new</span> Rectangle(0, 45, mHealthBar.Width, 44), Color.Red);\r\n\r\n                <span style=\"color:green\">//Draw the box around the health bar</span>\r\n                spriteBatch.Draw(mHealthBar, <span style=\"color:blue\">new</span> Rectangle(game.Window.ClientBounds.Width / 2 - mHealthBar.Width / 2,\r\n\r\n                    30, mHealthBar.Width, 44), <span style=\"color:blue\">new</span> Rectangle(0, 0, mHealthBar.Width, 44), Color.White);\r\n            }\r\n\r\n\r\n           \r\n        }\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>I don't know if we can do that with UI2DRenderer...</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-11-10T16:54:55.807-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "696747",
+    "ThreadId": "279051",
+    "Html": "<p>Oh haha, got it in 5 second.. just call that code, after the Base.Draw</p>",
+    "PostedDate": "2011-11-10T16:57:21.033-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

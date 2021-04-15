@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "435721",
+    "ThreadId": "210623",
+    "Html": "<p>Hi all!</p>\r\n<p>Congratulations, Ohan, great project!</p>\r\n<p>Goblin and other open source libs like the argumented reality libraries bazAR (<span style=\"text-decoration:underline\">not&nbsp;bazaar)</span>&nbsp;or (and) Bullet &nbsp;are possible?</p>\r\n<p>Sorry the english...</p>\r\n<p>Thanks.</p>",
+    "PostedDate": "2010-04-26T16:24:00.823-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437362",
+    "ThreadId": "210623",
+    "Html": "<p>Thanks.</p>\r\n<p>I guess you're asking whether it is possible to use other open source libraries with Goblin XNA?</p>\r\n<p>If so, the answer is yes. You can incorporate any libraries with Goblin XNA.</p>\r\n<p>If you want to use your own physics implementation using Bullet instead of the provided one using Newton, then simply</p>\r\n<p>implement your own IPhyics implementation that uses Bullet and assign your implementation to scene.PhysicsEngine when you use it.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-04-29T17:17:26.057-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "437934",
+    "ThreadId": "210623",
+    "Html": "Hi!\r\n\r\nYes, exactly.\r\n\r\nThanks for the reply and (again) sorry by the bad english....",
+    "PostedDate": "2010-05-01T16:38:57.68-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

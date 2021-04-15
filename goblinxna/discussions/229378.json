@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "501331",
+    "ThreadId": "229378",
+    "Html": "<p>I would like to use&nbsp; triangle mesh for physics of a low poly, non-convex, static object. I'm using Newton. I cannot get it to work. Here is what I am doing currently:</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre>pitNode.Model = pitModel;\r\npitNode.Physics.MeshProvider = pitModel;\r\npitNode.AddToPhysicsEngine = <span style=\"color:blue\">true</span>;\r\npitNode.Physics.Collidable = <span style=\"color:blue\">true</span>;\r\npitNode.Physics.Shape = ShapeType.TriangleMesh;\r\n\r\n</pre>\r\n</div>\r\nWith this, it does not detect any collisions. The pitmodel loads fine as a meshprovider. It's primitive type is a triangle list. How can I fix this?</p>",
+    "PostedDate": "2010-10-01T19:48:15.697-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "504939",
+    "ThreadId": "229378",
+    "Html": "<p>It should work. Did you initialize NewtonPhysics like in Tutorial 5?</p>\r\n<p>Also, is your pitModel a type of GoblinXNA.Model class, or your own IModel + IMeshProvider implementation?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-10T00:05:02.61-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "505072",
+    "ThreadId": "229378",
+    "Html": "<p>pitModel is a .x file. I use goblins implementations of everything.  It is initialized the same a tutorial 5. I have other physics like bounding box collisions working consistently well.</p>\r\n<p>&nbsp;</p>\r\n<p>it seems that it is the way I did my model. i have tried it with a few other models and it some times works for part of the model and then other parts it does not work. the pit model seems to be particularly bad perhaps because there are a lot of in-facing triangles (i.e., it&nbsp; is a UNC-style pit like from the classic presence experiments)? I also tried a model that I imported from Oblivion - a dragon. it mostly works as a triangle mesh but there were parts of the model that did not detect collisions. im pretty sure that all of those triangles have outward facing normals.</p>\r\n<p>do you have any suggestions of how to make models work for triangle meshes?</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-10-10T11:20:50.583-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "505104",
+    "ThreadId": "229378",
+    "Html": "<p>I thought I solved those issues on v3.4, but there might be some exceptions. You can probably turn on scene.RenderCollisionMesh to see if the physics mesh are correctly created in the physics engine. Even if the mesh is correct, if the winding is inconsistent, then it won't work correctly with Newton (it will work on Havok even if the windings are inconsistent). The .x models I've tried so far works correctly, and I use Google SketchUp's plug in to do conversion from other formats to .x format.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-10T13:15:56.853-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1035698",
+    "ThreadId": "229378",
+    "Html": "Hello,\r<br />\n<br />\nI have the same problem than &quot;jpq&quot;. I generated two mesh (format fbx) from google sketchup and I want to know when theses objects are collided.\r<br />\nI don't use MarkerNode as it is not an AR application.\r<br />\nI searched on different discussions but i did not find any solution.\r<br />\n<br />\nI initialized my Physisc engine as Tutorial 5 and then my code is more or less like this :<br />\n<pre><code>void initialize()\n{\n         //Object1 creation  \n          Model model = (Model)_modelLoader.Load(&quot;&quot;, &quot;myModel1&quot;);\n            _model1 = new GeometryNode(&quot;Model1&quot;);\n            _model1.Model = model;\n            ((Model)_model1.Model).UseInternalMaterials = true;\n            ((Model)_model1.Model).UseLighting = true;\n            _model1.Physics.Shape = GoblinXNA.Physics.ShapeType.TriangleMesh;\n            _model1.Physics.Pickable = true;\n            _model1.AddToPhysicsEngine = true;\n            _model1.Physics.Collidable = true;    \n\n         //Object2 creation  \n            model = (Model)_modelLoader.Load(&quot;&quot;, &quot;myModel2&quot;);\n            _model2 = new GeometryNode(&quot;Model2&quot;);\n            _model2 .Model = model;\n            ((Model)_model2 .Model).UseInternalMaterials = true;\n            ((Model)_model2 .Model).UseLighting = true;\n            _model2 .Physics.Shape = GoblinXNA.Physics.ShapeType.TriangleMesh;\n            _model2 .Physics.Pickable = true;\n            _model2 .AddToPhysicsEngine = true;\n            _model2 .Physics.Collidable = true;  \n\n            NewtonPhysics.CollisionPair pair = new NewtonPhysics.CollisionPair(_model1.Physics, _model2 .Physics);\n            ((NewtonPhysics)_scene.PhysicsEngine).AddCollisionCallback(pair, onCollision);\n\n          ..... /*add to transformeNode and to the scene */\n}\n\nvoid onCollision(NewtonPhysics.CollisionPair pair)\n{\n            UI2DRenderer.WriteText(new Vector2(100, 100), &quot;COLLISION&quot;, Color.Black, _font);\n}\n\nvoid update()\n{\n/* here I change my object transformation and update the scene*/\n}\n\nvoid draw()\n{\n            ((NewtonPhysics)_scene.PhysicsEngine).SetTransform(_model1.Physics, _model1.WorldTransformation);\n            ((NewtonPhysics)_scene.PhysicsEngine).SetTransform(_model2.Physics, _model2.WorldTransformation);\n\n/* here I draw the scene */\n}\n</code></pre>\n\nMy problem is, I never enter onCollision() method. Nonetheless, it works when I replace\r<br />\n<br />\n_model1 .Physics.Shape = GoblinXNA.Physics.ShapeType.TriangleMesh;\r<br />\nby\r<br />\n_model1.Physics.Shape = GoblinXNA.Physics.ShapeType.Box;\r<br />\n<br />\n<br />\nFor additional information the picking method and the shadow map work perfectly with those objects, that is why I suppose they are correct.\r<br />\n<br />\n<br />\nI also set the boolean at True of &quot;scene.RenderCollisionMesh&quot; and here you have a screenshot of the result.\r<br />\n<br />\n<img src=\"https://dl.dropboxusercontent.com/u/59089779/collision.png\" alt=\"Image\" />\r<br />\n<br />\n<br />\nPlease if you have an idea about this problem, let me know!\r<br />\nThank you very much.<br />\n",
+    "PostedDate": "2013-04-25T08:22:23.117-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

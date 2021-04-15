@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "286474",
+    "ThreadId": "83314",
+    "Html": "<p>HI</p>\r\n<p>Im loading a .fbx model with materials included , to load them i have set the UseInternalMaterials = true.</p>\r\n<p>But the model is loading without the materials on it .</p>\r\n<p>Am i missing something ?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2010-02-05T17:56:29.783-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "288526",
+    "ThreadId": "83314",
+    "Html": "<p>Its was a very stupid mistake, my bad :)</p>",
+    "PostedDate": "2010-02-10T17:02:35.667-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

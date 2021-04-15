@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "576416",
+    "ThreadId": "248651",
+    "Html": "\r\n<p>Hi everyone...</p>\r\n<p>I'm new in XNA and Goblin, so I already load a .X model but the textures is not showed here is the code where i load the model</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:green\">// Cargar el modelo de Alicia</span>\r\n            LuminaryModelLoader loader = <span style=\"color:blue\">new</span> LuminaryModelLoader();\r\n            aliciaModel = (LuminaryModel)loader.Load(<span style=\"color:#a31515\">&quot;&quot;</span>, <span style=\"color:#a31515\">&quot;Modelo/Alicia&quot;</span>);\r\n            \r\n            <span style=\"color:green\">// Creamos un GeometryNode con la geometria de alicia</span>\r\n            aliciaNodo = <span style=\"color:blue\">new</span> GeometryNode(<span style=\"color:#a31515\">&quot;Alicia&quot;</span>);\r\n            aliciaNodo.Model = aliciaModel;\r\n\r\n            aliciaNodo.AddToPhysicsEngine = <span style=\"color:blue\">true</span>;\r\n            aliciaNodo.Physics.Shape = ShapeType.Cylinder;\r\n            aliciaNodo.Model.CastShadows = <span style=\"color:blue\">true</span>;\r\n            aliciaNodo.Model.ReceiveShadows = <span style=\"color:blue\">true</span>;\r\n<span style=\"color:green\">// Posicionar el modelo de alicia </span>\r\n            TransformNode aliciaTransformNode = <span style=\"color:blue\">new</span> TransformNode();\r\n            aliciaTransformNode.Translation = <span style=\"color:blue\">new</span> Vector3(40, 26, 10);\r\n\r\n            <span style=\"color:green\">// Material solo de prueba nomas</span>\r\n            Material aliciaMaterial = <span style=\"color:blue\">new</span> Material();\r\n            <span style=\"color:green\">//aliciaMaterial.Diffuse = new Vector4(0, 0.5f, 0, 1);</span>\r\n            aliciaMaterial.Specular = Color.White.ToVector4();\r\n            aliciaMaterial.SpecularPower = 10;\r\n\r\n            aliciaNodo.Material = aliciaMaterial;\r\n\r\n            <span style=\"color:green\">// Agregar los nodos al grafo de la escena </span>\r\n            escena.RootNode.AddChild(groundMarkerNode);\r\n            groundMarkerNode.AddChild(aliciaTransformNode);\r\n            aliciaTransformNode.AddChild(aliciaNodo);\r\n</pre>\r\n</div>\r\n<p></p>\r\n<p>If you see in the line &nbsp;(<span style=\"font-family:Consolas,'Courier New',Courier,monospace; white-space:pre\">aliciaNodo.Material = aliciaMaterial;) I assign a material for debuggin, but if I remove that line, the model appear black...\r\n</span></p>\r\n<p><span style=\"font-family:Consolas,'Courier New',Courier,monospace; white-space:pre\">I know that XNA manages the information about textures, but I'm not sure how this work with Goblin...\r\n</span></p>\r\n<p>Thanks.</p>\r\n<p>PD. Sorry for the bad english, I'm spanish...</p>\r\n",
+    "PostedDate": "2011-03-06T17:17:00.957-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "576456",
+    "ThreadId": "248651",
+    "Html": "<p>you need to set</p>\r\n<p>((Model)aliciaModel).UseInternalMatrerials = true;</p>\r\n<p>assuming your LuminaryModel is extended from Model class.</p>\r\n<p>When you use the internal material associated with the model, whatever material you assign yourself is ignored except it's alpha value (material.Diffuse.W)</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-03-06T20:39:25.77-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "576459",
+    "ThreadId": "248651",
+    "Html": "<p>=) it works...</p>\r\n<p>thank you very much, i really appreciate your time and help...</p>\r\n<p>&nbsp;</p>\r\n<p>Carlos Lucero</p>",
+    "PostedDate": "2011-03-06T20:54:02.47-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

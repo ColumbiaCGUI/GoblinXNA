@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "723629",
+    "ThreadId": "285750",
+    "Html": "\r\n<p>When I try to run the tutorial 8 I get this error:</p>\r\n<p><span style=\"white-space:pre\"></span>XNA Framework Reach profile does not support vertex shader model 3.0.</p>\r\n<p>and then launches another error window:</p>\r\n<p><span style=\"white-space:pre\"></span>No suitable graphics card found</p>\r\n<p><span style=\"white-space:pre\"></span>Could not find a suitable direct3D devie that supports the XNA framework HiDef profile</p>\r\n<p>I have set the&nbsp;useStaticImage property to true</p>\r\n<p>can I run the tutorial?</p>\r\n",
+    "PostedDate": "2012-01-11T05:21:02.543-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "725810",
+    "ThreadId": "285750",
+    "Html": "<p>How is posible <strong>HiDef profile</strong> and <strong>Reach profile</strong> errors at the same time?</p>",
+    "PostedDate": "2012-01-16T08:36:19.413-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "682431",
+    "ThreadId": "275399",
+    "Html": "\r\n<p>i am trying to add a menu to my game. so I used the&nbsp;gamestatemanager example.</p>\r\n<p>i started getting this error when i try to do&nbsp;State.InitGoblin(graphics, Content, &quot;&quot;);</p>\r\n<p>The GraphicsDevice must not be null when creating new resources.Parameter name: graphicsDevice</p>\r\n",
+    "PostedDate": "2011-10-10T23:31:27.307-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684084",
+    "ThreadId": "275399",
+    "Html": "<p>I've successfully integrated GameStateManager example into GoblinXNA, so I can confirm that it's possible. &nbsp;I have</p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre>graphics = <span style=\"color: blue;\">new</span> GraphicsDeviceManager(<span style=\"color: blue;\">this</span>)\r\n                           {\r\n                               PreferredBackBufferWidth = 1280,\r\n                               PreferredBackBufferHeight = 720,\r\n                               PreferMultiSampling = <span style=\"color: blue;\">true</span>,\r\n                           };\r\n\r\n<span style=\"color: green;\">// Create the screen manager component.</span>\r\nScreenManager = <span style=\"color: blue;\">new</span> ScreenManager.ScreenManager(<span style=\"color: blue;\">this</span>)\r\n                                {\r\n                                    TraceEnabled = <span style=\"color: blue;\">false</span>\r\n                                };\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>inside my constructor, and then</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre> State.InitGoblin(graphics, Content, <span style=\"color: #a31515;\">\"settings.xml\"</span>);\r\n</pre>\r\n<pre><div style=\"color: black; background-color: white;\"><pre><span style=\"color: green;\">// Activate the first screens.</span>\r\nScreenManager.AddScreen(<span style=\"color: blue;\">new</span> Background(), <span style=\"color: blue;\">null</span>);\r\nScreenManager.AddScreen(<span style=\"color: blue;\">new</span> MainMenu(), <span style=\"color: blue;\">null</span>);\r\n\r\n<span style=\"color: blue;\">base</span>.Initialize();\r\n</pre>\r\n</div>\r\n</pre>\r\n</div>\r\n<p>inside my Initialize() function. &nbsp;Is this the order you've initialized your objects, too?</p>",
+    "PostedDate": "2011-10-13T19:04:43.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "947407",
+    "ThreadId": "275399",
+    "Html": "\r\n<p>How did u exactly integrate the GameStateManagementState example into GoblinXNA? I have a lot of problems with this. I think concepts problems maybe. Can u post the logic of the changes please or some type of explanation? Thank you very much!</p>\r\n",
+    "PostedDate": "2012-11-26T20:35:26.43-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "415309",
+    "ThreadId": "204139",
+    "Html": "<p>I'm interested in performing a point in polygon test based on the positions of three sets of markers. Think of it like Tutorial 8 except rather than just wanting to be able to move one red cube you want to be able to move three independent cubes/dots/whatever. I am interested purely if a point lies within that triangle or not. This is something I've prototyped before (for example, using Processing) but I've not attempted it in a 3d environment such as this and most definitely not with anything like fiducial markers. Would there be a good way to achieve this based on the Draw() code from Tutorial 8? Perhaps making use of the toolbarMarkerNode? Sorry for the noobish question, just trying to wrap my head around things.</p>",
+    "PostedDate": "2010-03-07T21:49:50.117-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "601050",
+    "ThreadId": "254836",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I have a marker which generates a sphere and I want to know X,Y&nbsp; of this sphere. I think I need what I require is the Screen Coordinates (640,480) image. Anyone who can help me out here?.</p>\r\n<p>Thanks</p>\r\n<p>Regards,</p>\r\n<p>Janidu</p>\r\n",
+    "PostedDate": "2011-04-21T08:23:57.997-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601137",
+    "ThreadId": "254836",
+    "Html": "<p>I assume your sphere is attached to a sphereTransformNode and the sphereTransformNode is attached to a markerNode.&nbsp; You can use the XNA's Viewport.Project method to get the screen coordinates of a 3D point in your scene.&nbsp; You can access the default Viewport  through Goblin's State class.&nbsp; It will look something like this:</p>\n<div style=\"color: black; background-color: white;\">\n<pre>var coor2d = State.Device.Viewport.Project(\n                     sphereTransformNode.Translation, <span style=\"color: green;\">// The 3D coordinates (Vector3) you want to project to screen space</span>\n                     State.ProjectionMatrix,          <span style=\"color: green;\">// Projection matrix of your camera</span>\n                     Matrix.Identity,                 <span style=\"color: green;\">// View matrix of your camera (since ALVAR camera is located at 0,0,0 we can just pass Identity)</span>\n                     markerNode.WorldTransformation); <span style=\"color: green;\">// The world transform of your Vector3.  We pass the marker's transform since it's attached to the marker</span>\n</pre>\n</div>\n<p>The Viewport.Project function will return a Vector3.&nbsp; The X and Y values will be your screen coordinates.&nbsp; The Z value will be between 0 and 1 and will specify the value of the 3d point in the depth buffer.&nbsp; Please refer to XNA's documentation if you need more  info.</p>",
+    "PostedDate": "2011-04-21T10:52:38.23-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601166",
+    "ThreadId": "254836",
+    "Html": "<p>Thank you so much it worked :) . I set the PreferredBackBufferWidth to 640 and PreferredBackBufferHeight to 480I hope that it does not make an negative effect for the coordinations.</p>\r\n<p>Really appriciate for taking your time,</p>\r\n<p>Regards,</p>\r\n<p>Janidu</p>",
+    "PostedDate": "2011-04-21T11:35:50.14-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

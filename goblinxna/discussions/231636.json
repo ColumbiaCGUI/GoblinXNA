@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "509944",
+    "ThreadId": "231636",
+    "Html": "<p>I'm trying to create a 2D GUI to use with sprites for a school project, but can't seem to get it right. I either get the GUI to show or I get the Sprites to show but not both. We are restricted to using Goblin UI and 2DGUI. I've looked everywhere I can but only seem to find info for Game Studio XNA. Any direction would be greatly appreciated.</p>",
+    "PostedDate": "2010-10-20T07:29:45.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "512110",
+    "ThreadId": "231636",
+    "Html": "\r\n<p>When you draw anything using SpriteBatch, you can pass depth of the 2D UI (ranging from 0 to 1). In Goblin XNA, they are all passed with 0, so they appear on the most front (please read XNA SpriteBatch API for details). The drawing happens when you call\r\n base.Draw(...) in your main Game's Draw function.</p>\r\n<p>If you draw a texture that covers the entire window after base.Draw(..) with layerDepth set to 0 (which is by default in SpriteBatch), then you'll overwrite all of the 2D stuff Goblin drew. If you want to simply have the texture appear behind the 2D UIs,\r\n then you should either set the layerDepth to something greater than 0 (e.g., 0.1f or 1). You shouldn't draw anything that appears in front of the 2D GUIs if you want to use Goblin UI (it's not the case if you want to use other UI system with Goblin XNA)</p>\r\n<p>The other way is to set the Scene.BackgroundTexture so it'll draw the background texture first before other 2D UIs.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-10-25T06:28:18.733-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

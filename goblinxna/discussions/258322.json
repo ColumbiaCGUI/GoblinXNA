@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "615578",
+    "ThreadId": "258322",
+    "Html": "\r\n<p>Is there any way to set the webcam image to be flipped like in a mirror?</p>\r\n<p>Artenatively, is there a way to get and modify the rendered data just before it's drawn? So far I only managed to flip the meshes by modifying the scene.CameraNode.Camera.View</p>\r\n<p>I tried this&nbsp; to get the image into a texture but this doesn't seems to work, the texture is always blank...</p>\r\n<p>&nbsp;</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:green\">//array to store info</span>\r\n<span style=\"color:blue\">int</span>[] picture =<span style=\"color:blue\">new</span> <span style=\"color:blue\">int</span> [scene.VideoCapture[0].Height*scene.VideoCapture[0].Width];\r\nIntPtr iptr = IntPtr.Zero;\r\n\r\nTexture2D text = <span style=\"color:blue\">new</span> Texture2D(<span style=\"color:blue\">this</span>.GraphicsDevice, scene.VideoCapture[0].Width, scene.VideoCapture[0].Height);\r\n            \r\n<span style=\"color:green\">//putting picture info into the array</span>\r\nscene.VideoCapture[0].GetImageTexture(picture,<span style=\"color:blue\">ref</span> iptr);\r\n\r\n<span style=\"color:green\">//making texture from the array</span>\r\ntext.SetData&lt;<span style=\"color:blue\">int</span>&gt;(picture);\r\n\r\nThanks for your help.\r\n</pre>\r\n</div>\r\n<p></p>\r\n",
+    "PostedDate": "2011-05-19T15:17:23.98-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "621135",
+    "ThreadId": "258322",
+    "Html": "<p>Are you going to do marker tracking? If not, you can simply change the RenderFormat (it only has get property, so you need to change the source code in Goblin XNA) of your capture device (e.g., DirectShowCapture) to flip horizontally. If you're doing marker tracking, it'll be more complicated since this flipping will not affect the image passed to the marker tracker. You will have to change your capture device's GetTexture(...) method as well for the IntPtr data.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-05-31T19:32:01.36-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "650268",
+    "ThreadId": "258322",
+    "Html": "<p>Is it possible to maybe do just marker tracking, but that it goes in 1st person, because, when you put your camera in front of you, your moves are kinda in the wrong way, if you understand me... For example, when I move my left arm to left, the me in the  monitor does the same thing to my right. So, what I'm trying to say is: Is it possible to have web camera collect marker data, and have another(virtual) camera attached to the marker(on my forehead :D ) so I could see my moves from 1st person?</p>\n<p>In short, what I'm trying to say is: Is it possible to have a primary virtual camera if physical camera is on and watching markers?</p>",
+    "PostedDate": "2011-07-31T11:57:17.52-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "653859",
+    "ThreadId": "258322",
+    "Html": "<p>Got it, had a bug in the code, sorry...</p>\n<p>It's very possible :D</p>",
+    "PostedDate": "2011-08-06T14:44:38.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "661334",
+    "ThreadId": "258322",
+    "Html": "<p>Can you tell me how you did it work?</p>\r\n<p>I am having troubles flipping the camera....I have a Logitech 910 HD, and when I flip it through the&nbsp;cam software, the objects in the marker go crazy...</p>\r\n<p>Any help would be appreciated.</p>\r\n<p>Thanks!</p>",
+    "PostedDate": "2011-08-21T17:11:32.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1014673",
+    "ThreadId": "258322",
+    "Html": "Hi mastermana!\r<br />\n<br />\nHow did you flip the tracking and the screen hotizontally? what did you change in the GetTexture method?<br />\n",
+    "PostedDate": "2013-03-13T09:02:44.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

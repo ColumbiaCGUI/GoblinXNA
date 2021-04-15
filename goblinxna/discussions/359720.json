@@ -1,0 +1,130 @@
+[
+  {
+    "Id": "849404",
+    "ThreadId": "359720",
+    "Html": "\r\n<p>HI Ohan,</p>\r\n<p>I've been figuring out last two days on how to use MataliPhysics inside GoblinXNA. My assumption is that to make it possible MataliPhysics code should be using the IPhysics interface. I end up to be so frustrated because I don't find any ways to integrate\r\n that. I think MataliPhysics could be the best physics engine to be used with GoblinXNA. It is managed and the forum is so active.</p>\r\n<p>Somehow today I found your source code which use MataliPhysics and it is already ready to be used with GoblinXNA. I've checked back the manual, installation guide and also the API documentation there are no evidence of MataliPhysics at all.</p>\r\n<p>How am I going to use MataliPhysics for my project? pls help</p>\r\n",
+    "PostedDate": "2012-06-15T01:00:48.053-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "849418",
+    "ThreadId": "359720",
+    "Html": "<p>In which source code do you see MataliPhysics in the current release?</p>\r\n<p>And, yes, we do support MataliPhysics in our internal version of Goblin XNA since we have several projects on Windows Phone 7.5, and MataliPhysics is the only option for the phone. However, we haven't released MataliPhysics to the public yet since we haven't released the Windows Phone support for Goblin XNA due to the lack of license-compatible tracking library written in C#.&nbsp;</p>\r\n<p>We may release the WinPhone support in our next release without any tracking capability, and in that case, we'll release MataliPhysics support as well. The next release is expected to come out by the end of June with ALVARWrapper 2.0 support.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-15T01:44:01.9-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "849427",
+    "ThreadId": "359720",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>ohanoda wrote:</strong><br />\r\n<p>In which source code do you see MataliPhysics in the current release?</p>\r\n<br /></blockquote>\r\n<p>i've found it here</p>\r\n<p>https://goblinxna.svn.codeplex.com/svn/tutorials/Tutorial9%20-%20Advanced%20Features/Tutorial9.cs</p>\r\n<p>anyway thanks for the explanation</p>",
+    "PostedDate": "2012-06-15T02:01:45.303-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "849747",
+    "ThreadId": "359720",
+    "Html": "<p>I see, ya, I left the windows phone version of the tutorial there. In any case, we hope to release it soon.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-15T20:00:10.983-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "854216",
+    "ThreadId": "359720",
+    "Html": "<p>It's been released</p>",
+    "PostedDate": "2012-06-27T01:22:15.273-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "856121",
+    "ThreadId": "359720",
+    "Html": "<blockquote style=\"border: solid .1em #ccc; font-style: italic; margin: .25em 1em 0 1em; padding: 0 .25em 0 .25em;\"><strong>ohanoda wrote:</strong><br />\r\n<p>It's been released</p>\r\n</blockquote>\r\n<p>cheers! thank you so much...hope this will speed up my development</p>",
+    "PostedDate": "2012-07-01T18:30:03.267-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "856138",
+    "ThreadId": "359720",
+    "Html": "<p>I've followed the installation manual and tried to run Tutorial 5. I got an error saying <em>\" the type of namespace name 'Matali' does not exist......(are you missing an assembly reference?)\"</em></p>\r\n<p>I double checked and everything was according to the installation manual. I've even add the .dll file to the project path (i knew it is not going to solve but just a try). Add the file as reference is no use either. I'm currently on Matali 1.8.0.0 however the current download is 1.9. Is there something missing?</p>",
+    "PostedDate": "2012-07-01T20:44:58.983-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "856479",
+    "ThreadId": "359720",
+    "Html": "<p>You should read the installation guide very carefully. See the bold sentence below.</p>\r\n<p>----------------------------------------------------------------------------------------------------------------</p>\r\n<p>(Needed if you want to use MataliPhysics) Download MataliPhysics 1.8 from http://www.mataliphysics.com/Download.aspx. After installed, copy MataliPhysics.dll from Komires\\MataliPhysics\\MataliPhysicsXNA\\MataliPhysics\\x86 (the directory where you installed the Matali SDK) to the GoblinXNAv4.1\\dlls\\managed\\ directory. <strong>Finally, add MataliCloth.cs, MataliObject.cs, MataliPhysics.cs, and MataliVehicle.cs classes to your project under Physics.Matali (this directory will automatically show if you add these classes as link) and recompile GoblinXNA.</strong> NOTE: To run Tutorial 5 with Matali instead of Newton, uncomment USE_MATALI macro on line 36 of Tutorial5.cs file.</p>\r\n<p>&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-07-02T11:55:53.07-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "856480",
+    "ThreadId": "359720",
+    "Html": "<p>You need to add those classes to the Goblin XNA project and recompile it.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-07-02T11:56:44.07-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "856830",
+    "ThreadId": "359720",
+    "Html": "<p>been thought about it but didn't managed to try it. thanks a lot. gonna nail it tonite</p>",
+    "PostedDate": "2012-07-03T07:37:39.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "857117",
+    "ThreadId": "359720",
+    "Html": "<p>I managed to compile GoblinXNA without any problems. However Tutorial5 is still giving me the same error after uncomment the USE_MATALI line 36.</p>\r\n<p>According to the installation guide the compiled GoblinXNA.dll will be under GoblinXNA/bin but I noticed that mine it resides under GoblinXNA/bin/X86. therefore I copied it to GoblinXNA/bin. nothing happened nevertheless. :(</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2012-07-03T19:06:01.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "857120",
+    "ThreadId": "359720",
+    "Html": "\r\n<p>Previously I have two errors</p>\r\n<p>at line 56 Tutorial5</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre><span style=\"color:blue\">using</span> GoblinXNA.Physics.Matali;\n</pre>\r\n</div>\r\n<p></p>\r\n<p>and at line 125</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>scene.PhysicsEngine = <span style=\"color:blue\">new</span> MataliPhysics();\n</pre>\r\n</div>\r\n<p></p>\r\n<p>after adding in the newly compiled GoblinXNA in the reference the error on line 125 is gone. but intellisense still cannot bring out Matali at line 56</p>\r\n",
+    "PostedDate": "2012-07-03T19:17:05.18-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "857570",
+    "ThreadId": "359720",
+    "Html": "<p>is it could be due to that I am using MataliPhysics V1.9 instead of V1.8? Please help</p>",
+    "PostedDate": "2012-07-04T16:32:11.02-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "857579",
+    "ThreadId": "359720",
+    "Html": "<p>Please follow the installation manual including the version. We cannot guarantee it will compile correctly if you download different version since they may change APIs. Also, it doesn't make sense that MataliPhysics class is recognized, but GoblinXNA.Physics.Matal is not recognized. My guess is that you didn't add Matali classes in Goblin XNA as links, but added directly. Please read the manual again carefully.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-07-04T17:11:38.167-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "858226",
+    "ThreadId": "359720",
+    "Html": "<p>managed to get back the version 1.8. and finally thanks for your help....what a relief :)</p>",
+    "PostedDate": "2012-07-06T01:30:31.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "863696",
+    "ThreadId": "359720",
+    "Html": "<p>Now I am trying to combine two objects using the CreateConstraint, but I am not able to achieve that. In the documentation it states like this</p>\r\n<p><strong>Create a constraint between two existing physical objects.</strong></p>\r\n<p><strong>The constraints are not actually added at this stage, but in the Update method</strong></p>\r\n<p>what do you mean by this?</p>",
+    "PostedDate": "2012-07-13T00:55:46.883-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

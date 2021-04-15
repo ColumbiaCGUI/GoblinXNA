@@ -1,0 +1,39 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "",
+    "ClosedDate": null,
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "I have tried in both Visual Studio 2013 and Visual Studio 2010. Visual Studio 2013 has a compatibility issue, but Visual Studio 2010 gives an error that it cannot run .csproj files. This error occurs even when I run  the .sln file.",
+    "LastUpdatedDate": "2015-07-29T10:35:26.24-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Unassigned",
+      "Severity": 0,
+      "Id": 0
+    },
+    "ProjectName": "goblinxna",
+    "ReportedDate": "2015-07-29T10:35:26.24-07:00",
+    "Status": {
+      "Name": "Proposed",
+      "Id": 1
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "Cannot run tutorials in Visual Studio",
+    "Type": {
+      "Name": "Unassigned",
+      "Id": 5
+    },
+    "VoteCount": 1,
+    "Id": 9611
+  },
+  "FileAttachments": [],
+  "Comments": []
+}

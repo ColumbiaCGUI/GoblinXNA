@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "486463",
+    "ThreadId": "225307",
+    "Html": "<p>Is it possible to put any animated object from 3ds Max in Goblin XNA?</p>",
+    "PostedDate": "2010-08-30T08:52:26.713-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "488158",
+    "ThreadId": "225307",
+    "Html": "<p>It is more of a XNA issue. Once your implement the right Importer and Processor for 3ds models, you can process the models to be used with Goblin XNA. You also need to implement something similar to the AnimateModel related classes in Tutorial 14. You probably want to try to make it work in XNA first.</p>\r\n<p>We do not support any Importers or Processors for extra model formats.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-02T04:22:30.233-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

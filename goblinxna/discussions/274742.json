@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "679910",
+    "ThreadId": "274742",
+    "Html": "\r\n<p>So i have been messing with adding objects into the scene and if you want to add something that is not attached to a markernode then it has to be added relative to the camera which as i understand it then is that the camera is the origin, but when adding\r\n marker node if you add something relative to that then the marker is considered the origin, I need a way to figure out the markers position relative to the scenes camera.&nbsp;</p>\r\n",
+    "PostedDate": "2011-10-04T10:42:45.623-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684314",
+    "ThreadId": "274742",
+    "Html": "<p>Marker position relative to the scene camera is exactly MarkerNode.WorldTransformation. If you mean camera position relative to the marker, then it's Inverse of MarkerNode.WorldTransformation.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-14T08:21:44.623-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

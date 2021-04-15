@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "465197",
+    "ThreadId": "218864",
+    "Html": "<p>I know that this might be brushed off since it's an ALVAR issue, but nobody is responding to my emails and there is no forum or troubleshooting over there.</p>\r\n<p>When running the SampleCamCalib demo, I get the error &quot;Could not initialize the selected capture backend.&quot;</p>\r\n<p>The other samples (that don't require calib.xml) work fine. &nbsp;This is my last resort, and any help would be appreciated.</p>",
+    "PostedDate": "2010-07-08T21:10:27.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "465561",
+    "ThreadId": "218864",
+    "Html": "<p>Actually, nevermind, &nbsp;they just got back to me. &nbsp;</p>",
+    "PostedDate": "2010-07-09T11:53:15.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "472184",
+    "ThreadId": "218864",
+    "Html": "i am having the same problem. how did you fix it?",
+    "PostedDate": "2010-07-24T10:55:47.447-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "472187",
+    "ThreadId": "218864",
+    "Html": "ok i figured it out. I just went into the code, commented out the Capture* cap =NULL; and uncommented one of the capture methods. Highgui worked for me but the others didn't. Search for &quot;Could not initialize the selected capture backend.&quot; in SampleCamCalib.cpp. its just above that.",
+    "PostedDate": "2010-07-24T11:20:24.297-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "472627",
+    "ThreadId": "218864",
+    "Html": "<p>Please uncomment at&nbsp;</p>\r\n<p><span style=\"font-size:x-small\">\r\n<p>Capture *cap = CaptureFactory::CreateCapture(CaptureFactory::CvCam);</p>\r\n<p>&nbsp;</p>\r\n</span></p>",
+    "PostedDate": "2010-07-26T05:31:53.34-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "489361",
+    "ThreadId": "218864",
+    "Html": "<p>it didn't work for me..i still found errors...</p>\r\n<p><img src=\"http://a.imageshack.us/img227/7774/error1s.png\" alt=\"\"></p>",
+    "PostedDate": "2010-09-04T21:32:08.637-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

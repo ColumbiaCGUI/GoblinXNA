@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "515728",
+    "ThreadId": "233114",
+    "Html": "\r\n<p>i want to ask about particle effect in goblin xna,</p>\r\n<p>now i've encontering a problem when i create ring of fire,,,</p>\r\n<p>here's the screenshot</p>\r\n<p><a href=\"http://azerdark.files.wordpress.com/2010/11/par1.png\"><img title=\"par1\" src=\"http://azerdark.files.wordpress.com/2010/11/par1.png\" alt=\"\" width=\"266\" height=\"194\"></a></p>\r\n<p>&nbsp;</p>\r\n<p>now i rotating the marker (ideally the fire ring will be rotated too..)</p>\r\n<p><a href=\"http://azerdark.files.wordpress.com/2010/11/par2.png\"><img title=\"par2\" src=\"http://azerdark.files.wordpress.com/2010/11/par2.png\" alt=\"\" width=\"266\" height=\"194\"></a></p>\r\n<p>as you can see, the fire ring always facing to the front, and it is not rotated !</p>\r\n<p>from what i got, rotation of particle effect determined by two things : view matrix and projection matrix</p>\r\n<p>and when i study goblin xna code, Render() method at ParticleShader class takes its view and projection matrix from State class,</p>\r\n<p>but value of view and projection matrix from State class itself always constant since i don't use any CameraNode</p>\r\n<p>somebody can explain me what should i do to rotate my ring ?</p>\r\n",
+    "PostedDate": "2010-11-01T21:47:21.677-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515738",
+    "ThreadId": "233114",
+    "Html": "\r\n<p>That was by design.</p>\r\n<p>From v3.5, it's been changed to move with the marker.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-01T22:23:22.997-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "515767",
+    "ThreadId": "233114",
+    "Html": "\r\n<p>oh thank you for the information, i'm using Goblin XNA 3.4</p>\r\n<p>so i must migrating to 3.5 right?</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2010-11-02T00:34:50.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

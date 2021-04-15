@@ -1,0 +1,98 @@
+[
+  {
+    "Id": "547333",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>Why sometimes I can't load a model when I call the loader.Load()?</p>\r\n<p>Sometimes it works, sometimes no!</p>\r\n<p>I use this code (with GoblinXNA 3.5.1)</p>\r\n<p>&nbsp;CaricaModello loader = new CaricaModello();<br>\r\n&nbsp;Model nome = (Model)loader.Load(&quot;&quot;, &quot;p1_wedge&quot;);<br>\r\n&nbsp;GeometryNode nodoNome = new GeometryNode(&quot;Navetta&quot;);<br>\r\n&nbsp;nodoNome.Model = nome;</p>\r\n<p>The code of class CaricaModello.cs is similar to ModelLoader.cs</p>\r\n<p>&nbsp; public class CaricaModello : IModelLoader<br>\r\n&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; public IModel Load(String path, String modelAssetName)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; path = (path.Equals(&quot;&quot;)) ? State.GetSettingVariable(&quot;ModelDirectory&quot;) : path;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; String filePath = Path.Combine(this.path, modelAssetName);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XNAModel xnaModel = State.Content.Load&lt;XNAModel&gt;(@&quot;&quot; &#43; filePath);<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Get matrix transformations of the model<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (xnaModel != null)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Matrix[] transforms = new Matrix[xnaModel.Bones.Count];<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; xnaModel.CopyAbsoluteBoneTransformsTo(transforms);<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; IModel model = new GoblinXNA.Graphics.Model(transforms,xnaModel.Meshes,null);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return model;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Log.Write(&quot;Il Modello &quot; &#43; filePath &#43; &quot; non esiste &quot;);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return null;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n&nbsp;&nbsp;&nbsp; }</p>\r\n<p>The Debug give me this error</p>\r\n<p>&nbsp;Error loading &quot;p1_wedge&quot;. GraphicsDevice component not found.</p>\r\n",
+    "PostedDate": "2011-01-11T08:10:40.743-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "547378",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>Which line number throws that exception?</p>\r\n<p>I never encountered the case where it sometimes load and sometimes not.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-01-11T09:14:20.76-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "547489",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>the line is: XNAModel xnaModel = State.Content.Load&lt;XNAModel&gt;(@&quot;&quot; &#43; filePath);</p>\r\n<p>I load the model in my augmented reality thesis project. By a button (in a windows form)&nbsp; I open a thread by the istruction</p>\r\n<p>&nbsp;using (game = new Game1(panel1.Handle))<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t1 = new Thread(new ThreadStart(game.Run));<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t1.Start();&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\r\n<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p>In the Game1 Constructor there are these instructions:</p>\r\n<p>IntPtr tempRif;</p>\r\n<p>&nbsp; public Game1(IntPtr handle)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; graphics = new GraphicsDeviceManager(this);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; graphics.PreparingDeviceSettings &#43;= new EventHandler&lt;PreparingDeviceSettingsEventArgs&gt;(graphics_PreparingDeviceSettings);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.Control.FromHandle((this.Window.Handle)).VisibleChanged &#43;= new EventHandler(Game1_VisibleChanged);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; tempRif = handle;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; //State.ThreadOption = (ushort)ThreadOptions.MarkerTracking;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Content.RootDirectory = &quot;Content&quot;;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p>then in the event handlers there are these istructions</p>\r\n<p>public void graphics_PreparingDeviceSettings(object sender, PreparingDeviceSettingsEventArgs e)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PresentationParameters pp = e.GraphicsDeviceInformation.PresentationParameters;<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; pp.DeviceWindowHandle = tempRif;<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; private void Game1_VisibleChanged(object sender, EventArgs e)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (System.Windows.Forms.Control.FromHandle((this.Window.Handle)).Visible == true)<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.Windows.Forms.Control.FromHandle((this.Window.Handle)).Visible = false;<br>\r\n<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p>In this way I can use a windows Form and a XNA game (the output of webcam it is on the panel) in the same time.</p>\r\n<p>Sometimes it works sometimes no!! (maybe it's a thread problem?)</p>\r\n<p>thanks for help</p>\r\n",
+    "PostedDate": "2011-01-11T11:20:06.683-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "547734",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>Yes, it is thread problem, and it's XNA related, not Goblin.</p>\r\n<p>The GraphicsDevice is not guaranteed to be initialized until the &quot;Initialize()&quot; function is called in the main Game class. If you start the thread in your Game constructor, then you can never guarantee the initialization of GraphicsDevice before you load\r\n any contents (or any operation that requires GraphicsDevice).</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-01-11T20:10:26.803-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "547871",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>If I load the model in the LoadContent method should work? I call the LoadContent Method and then the Create Objects() method in the Initialize method</p>\r\n<p>&nbsp;</p>\r\n<p>protected override void LoadContent()<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CaricaModello loader = new CaricaModello();<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; orco = (Model)loader.Load(&quot;&quot;, &quot;dude&quot;);<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; base.LoadContent();<br>\r\n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n",
+    "PostedDate": "2011-01-12T01:55:45.413-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "548027",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>Make sure your base.Initialize() function in your Initialize method is called at the very beginning of your Initialize method since LoadContent is called in the base.Initialize() function.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-01-12T06:54:42.09-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "549921",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>What if I want to do the same CaricaModello class&nbsp;..but I want to make it&nbsp;flexible&nbsp;by adding a &nbsp;.fbx files but not necessarily from the Content folder in the project..I mean from any directory..is that possible?</p>\r\n<p>in such case I will need to change this line of code:</p>\r\n<p>Microsoft.Xna.Framework.Graphics.Model xnaModel = State.Content.Load&lt;Microsoft.Xna.Framework.Graphics.Model&gt;(@&quot;&quot; &#43; filePath);</p>\r\n<p>&nbsp;</p>\r\n<p>how should it be?</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-01-15T12:33:35.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "550306",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>Content.Load method can only load things that are compiled to .xnb file.</p>\r\n<p>If you want to load .fbx or any model files on the fly, you either need to compile .xnb file on the fly (see&nbsp;<a href=\"http://create.msdn.com/en-US/education/catalog/sample/winforms_series_2\">http://create.msdn.com/en-US/education/catalog/sample/winforms_series_2</a>)\r\n or write your own method that parses the .fbx file.</p>\r\n<p>In case you write your own method that parses the .fbx file, you need to write your own Model class that renders the information (vertices, normals, etc) correctly, and you CANNOT use the existing XNA's Model or GoblinXNA's Model class because those classes\r\n have an assumption that the model is loaded from an .xnb file.</p>\r\n<p>It'll be more general to go with the .xnb conversion way, and that's what I recommend.</p>\r\n<p>&nbsp;</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-01-16T20:10:25.283-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "551596",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>Thanks a lot for your help..I really appreciate your reply.</p>\r\n<p>I just found it easier to follow the tutorial. However, there are some differences. I am not using a windows form, I am actually working on an Augmented Reality project in which I am using GoblinXna.</p>\r\n<p>I modified the code in the tutorial so that it can fit in my case by doing the following:</p>\r\n<p>--&gt; I have a virtual keyboard and a screen which displays the .fbx files that I need to import on the fly from a specific location on the desk,,,in such case I do not need the OpenFileDialog</p>\r\n<p>--&gt; I have also modified the LoadModel function to be as follows:</p>\r\n<p>public void LoadModel(string fileName)</p>\r\n<p>{</p>\r\n<p>&nbsp;&nbsp;ContentBuilder contentBuilder;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>ContentManager contentManager;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>&nbsp;ModelViewerControl modelViewerControl = new ModelViewerControl() ;<br>\r\n&nbsp;&nbsp;contentBuilder = new ContentBuilder();<br>\r\n&nbsp;&nbsp;contentManager = new ContentManager(modelViewerControl.Services,contentBuilder.OutputDirectory);<br>\r\n<br>\r\n&nbsp;&nbsp;// Unload any existing model.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>modelViewerControl.Model = null;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>contentManager.Unload();</p>\r\n<p>// Tell the ContentBuilder what to build. &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>&nbsp;contentBuilder.Clear();&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>contentBuilder.Add(fileName, &quot;Model&quot;, null, &quot;ModelProcessor&quot;);</p>\r\n<p>&nbsp;// Build this new model data.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>string buildError = contentBuilder.Build();<br>\r\n&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;if (string.IsNullOrEmpty(buildError))&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>&nbsp;{ &nbsp; &nbsp;// If the build succeeded, use the ContentManager to&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>&nbsp;&nbsp; // load the temporary .xnb file that we just created.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>&nbsp;modelViewerControl.Model = contentManager.Load&lt;Microsoft.Xna.Framework.Graphics.Model&gt;(&quot;Model&quot;);&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>}&nbsp;</p>\r\n<p>else&nbsp;</p>\r\n<p>{ // If the build failed, display an error message.&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>MessageBox.Show(buildError, &quot;Error&quot;);&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p>}</p>\r\n<p>}</p>\r\n<p>&nbsp;</p>\r\n<p>I call this LoadModel function from the &quot;Ok&quot; button event handler in the virtual keyboard</p>\r\n<p>&nbsp;</p>\r\n<p>I managed to do the references and to add the other classes correctly. However, I always get an error in &nbsp;<span style=\"color:#ff0000\">string buildError = contentBuilder.Build();\r\n</span>which says Missing Asset in the Temp location which the MSBuild should use. I used the project in the tutorial to import the same model and it was added&nbsp;successfully&nbsp;which ensures that there is no problem in loading the texture for example.</p>\r\n<p>There is just a small remark, the default folder location where my virtual screen and keyboard opens (instead of the FileOpenDialog) is saved in&nbsp;&nbsp;Properties.Settings.Default.Importpath and I do not pass it somehow to the LoadModel function, and\r\n I guess that the ContentManager Load function needs to have the path of the given file name. This problem is resolved with the OpenFileDialog because its properties are set including the filepath. However, I cannot use it in my case as I will have to have\r\n a virtual keyboard and I will use a datagloves that will capture the input inside the game screen.</p>\r\n<p>&nbsp;</p>\r\n<p>So, could you please advise me in this. I would really be very thankful. I am really sorry for such very long post.</p>\r\n<p>Thanks in advance</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2011-01-18T15:57:42.697-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "551606",
+    "ThreadId": "241317",
+    "Html": "\r\n<p>UPDATE: I tried to use OpenFileDialog for the time being until I can resolve that and now I have no problem with&nbsp;string buildError = contentBuilder.Build() it worked fine</p>\r\n<p>now the problem turned out to be in line</p>\r\n<p>modelViewerControl.Model = contentManager.Load&lt;Microsoft.Xna.Framework.Graphics.Model&gt;(&quot;Model&quot;);</p>\r\n<p>when I debugged it, I figured out that this line causes a runtime error when it goes through</p>\r\n<p>public object GetService(Type serviceType)&nbsp;&nbsp; &nbsp; &nbsp;</p>\r\n<p>&nbsp;{&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;object service;<br>\r\n&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;services.TryGetValue(serviceType, out service);<br>\r\n&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;return service;&nbsp;&nbsp; &nbsp; &nbsp;</p>\r\n<p>&nbsp;}</p>\r\n<p>I was not able to detect why this runtime error happened. could you please help me in that</p>\r\n",
+    "PostedDate": "2011-01-18T16:41:01.71-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "600982",
+    "ThreadId": "241317",
+    "Html": "<blockquote style=\"padding-bottom: 0px; font-style: italic; margin: 0.25em 1em 0px; padding-left: 0.25em; padding-right: 0.25em; padding-top: 0px; border: #ccc 0.1em solid;\"><strong>ohanoda wrote:</strong><br />\r\n<p>In case you write your own method that parses the .fbx file, you need to write your own Model class that renders the information (vertices, normals, etc) correctly, and you CANNOT use the existing XNA's Model or GoblinXNA's Model class because those classes have an assumption that the model is loaded from an .xnb file.</p>\r\n<p>It'll be more general to go with the .xnb conversion way, and that's what I recommend.</p>\r\n</blockquote>\r\n<p>Hi Ohan,</p>\r\n<p>Wouldn't it be possible to&nbsp;parse the file manually, and then construct&nbsp;a CustomMesh instance, and pass this in the constructor of a PrimitveModel?<span style=\"font-size: x-small;\"></span>\r\n<p>PrimitiveModel pyramidModel = new PrimitiveModel(pyramid);<br />GeometryNode pyramidNode = new GeometryNode();<br />pyramidNode.Model = pyramidModel;</p>\r\n<p>﻿I had this idea to combine this&nbsp;with <a title=\"Collada.net\" href=\"http://www.mogware.com/index.php?page=collada.NET\" target=\"_blank\">Collada.net</a>, to enable loading Collada files at run-time.</p>\r\n<p>What are your thoughts on this?</p>\r\n<p>Best regards,<br />Lex&nbsp;</p>\r\n</p>",
+    "PostedDate": "2011-04-21T06:44:33.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601122",
+    "ThreadId": "241317",
+    "Html": "<p>Yes, that sounds like it should be possible.&nbsp; Remember that files that contain 3D geometry can get really complicated really fast, so parsing the file manually and converting into a different format can prove to be difficult (this difficulty will probably  be correlated to the complexity of your 3D scene, so if you only have basic shapes, you might be OK).</p>\n<p>About a year ago, I took a piece of <a href=\"https://collada.org/public_forum/viewtopic.php?f=13&amp;t=676\"> Collada for XNA</a> code that I had found online and tweaked it to work within Goblin and specific set of COLLADA files I needed to load.&nbsp; It worked on the models I had to convert, but it didn't work on some of the other files I downloaded from the warehouse,  so we didn't include it into Goblin.&nbsp; However, if you're interested I might be able to share that code with you.&nbsp; By the way, the solution I am referring to an extension of the Content Pipeline, so we parsed the models at compile time.&nbsp; But you could use the  workflow described in this thread to make it load models at run-time.</p>\n<p>Please let us know if you make any progress.&nbsp; Building robust COLLADA support into GoblinXNA would be really nice.&nbsp;  That way we could load models from Google 3D Warehouse without having to  convert them to .FBX or .X, which is a painful process.</p>\n<p>Cheers,<br /> Mengu</p>",
+    "PostedDate": "2011-04-21T10:37:08.263-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

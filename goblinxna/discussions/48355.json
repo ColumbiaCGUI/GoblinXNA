@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "161371",
+    "ThreadId": "48355",
+    "Html": "Hello guys,<div><br></div><div>I've just installed all .dll and app to run Goblin XNA, but when I try to run tuto 8, I'm getting this msg:</div><div>&quot;It's not possible to load the DLL ARTagWrapper.dll. Fail ...&quot;</div><div><br></div><div>And I have this .dll in bin directory.</div><div><br></div><div>What should i do to make it work, please !?</div><div><br></div><div>Thanks very much,</div><div><br></div><div>Felipe</div>",
+    "PostedDate": "2009-02-24T04:26:43.363-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "161607",
+    "ThreadId": "48355",
+    "Html": "Hi Felipe,<br>\r\n<br>\r\nCan you post the exact error message? Also, do you have only VS 2008 installed, but don't have VS 2005 installed? As I mentioned on another discussion post, there is a known issue for ARTagWrapper.dll if you only have VS 2008 installed. We have asked Mark Fiala (ARTag developer) to have this issue fixed, and hopefully he will fix it soon.<br>\r\n<br>\r\nohan\r\n",
+    "PostedDate": "2009-02-24T12:46:56.383-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

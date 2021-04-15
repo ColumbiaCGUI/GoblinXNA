@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "734006",
+    "ThreadId": "288424",
+    "Html": "\r\n<p>We are using the GameStateManagement example for different screens of our game. However sometimes, going between screens, the application crashes and gives errors like &quot;System.ExecutionEngineException&quot; or &quot;Attempted to read or write protected memory. This\r\n is often an indication that other memory is corrupt.&quot;&nbsp;</p>\r\n<p>we think it is some problem with markers or game or alvar tracker ... not being disposed properly. We tried disposing, unloading but no success. Has anyone used different screens in their game and came across with these random crashes?</p>\r\n",
+    "PostedDate": "2012-01-31T22:50:27.67-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "735038",
+    "ThreadId": "288424",
+    "Html": "<p>Did you set the multithread option for marker tracking (State.ThreadOption)? If so, disable it. We had experience with weird crashes from v4.0 as well for some other cases when we enable the multithread option for marker tracking. It may solve your problem as well.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-01T10:30:35.043-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "740828",
+    "ThreadId": "288424",
+    "Html": "<p>thanks for that. ok this is promising. but still getting errors not the same places though.</p>\n<p>i got one<em> AccessViolationException</em> at</p>\n<p>&nbsp;<strong>XNAModel xnaModel = State.Content.Load&lt;XNAModel&gt;(@\"\" + filePath);</strong></p>\n<p>----------------------</p>\n<p><em>An unhandled exception of type 'System.StackOverflowException' occurred in Unknown Module.</em></p>\n<p>no place where it happened.</p>\n<p>---------------------</p>\n<p><em>Specified framerate or/and resolution is/are not supported for HP Webcam Splitter.&nbsp;</em></p>\n<p>this one is really strange. in the first game, camera works fine. then i exit to main menu. and go to another screen that has another game. there it gives me this error.&nbsp;</p>\n<p>edit: I think i solved this problem by disposing the IVideoCapture captureDevice. hasn't happened since.</p>",
+    "PostedDate": "2012-02-04T23:46:50.667-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "741113",
+    "ThreadId": "288424",
+    "Html": "<p>ok so i figured out this.</p>\n<p>i have 3 different goblin games basically in this menu system. if i go between these and dont show the markers to the camera, it never crashes. but if the camera sees a marker in one game, and if i exit to main menu and enter to another game, then the game  crashes and gives this error.&nbsp;</p>\n<p><strong>An unhandled exception of type 'System.ExecutionEngineException' occurred in GoblinXNA.dll</strong></p>\n<p>i think the other errors are somewhat related to this problem.</p>\n<p>any thought on this?</p>",
+    "PostedDate": "2012-02-05T03:49:30.597-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "743826",
+    "ThreadId": "288424",
+    "Html": "<p>What do you mean by \"3 different goblin games\"? Do you mean you have 3 GoblinXNA.SceneGraph.Scene instances?</p>\r\n<p>In that case, I've never tried running more than one Scene instance, so I do not know the outcome.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-06T13:58:54.54-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "744002",
+    "ThreadId": "288424",
+    "Html": "<p>yes i have 3 different scenes in 3 three different source files. I go between them through the menu. Should I do perhaps, all of this in one scene? Define one scene in a super class and use that in these 3 different games?</p>",
+    "PostedDate": "2012-02-06T15:50:45.04-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "754795",
+    "ThreadId": "288424",
+    "Html": "<p>I just remembered that I have used 3 different Scene instances in 3 different XNA Game classes organized through WPF, and I never had any problems. However, that was in XNA 3.1 version using Arcane library to integrate XNA with WPF. There is no easy way to manage XNA 4.0 contents with the latest WPF, so I'm not sure what's the best solution is.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-10T15:29:37.553-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "755000",
+    "ThreadId": "288424",
+    "Html": "<p>we are actually using XNA 3.1 as well.</p>\r\n<p>and this example for different screens&nbsp;<a href=\"http://create.msdn.com/en-US/education/catalog/sample/game_state_management\">http://create.msdn.com/en-US/education/catalog/sample/game_state_management</a>, 3.1 version.</p>\r\n<p>we couldn't get it to work, and have been working on it over a month.</p>\r\n<p>so decided to&nbsp;separate games, and get rid of the menu.</p>\r\n<p>but if you have any other suggestions, i would like to hear. we still have the crashing version. if it simply changing couple of lines, where we messed up, that would be awesome.</p>\r\n<p>the way we set it up right now is, each screen contains a Goblin scene. and every time you go into a screen you create a new Goblin scene.</p>\r\n<p>the problem comes down to i think with AlvarMarkerTracker.cs. As I said before, if the camera doesnt see a marker, we can switch back and forth between screens with no crash. But after this switching back and forth is done like 3 or 4 times, and the camera sees a marker, the program crashes. I think the AlvarMarkerTracker is not freeing a source that it is using. &nbsp;</p>",
+    "PostedDate": "2012-02-10T16:23:13.82-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "761313",
+    "ThreadId": "288424",
+    "Html": "<p>In that case, it's more of what's going on in the ALVARWrapper code in C++. There might be a memory leak that I'm not aware of, but if you find where it happens, I would appreciate it. Also, there is no plan for us to update 3.x versions since we moved most of our projects to 4.x version.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-13T13:18:18.307-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

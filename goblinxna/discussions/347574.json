@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "806538",
+    "ThreadId": "347574",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>Im working with the 3.6 version of goblin xna and have two questions:</p>\r\n<p>1) First question is about configuring the size of the markers. I have tried out &quot;MarkerLayout.exe&quot; from the tools subdirectory to get a self customized marker array. For this purpose i edited the file &quot;SampleLayout.xml&quot;. I am not sure if the parameter &quot;pixelPerInch&quot;\r\n is what i think it is: I thought this is the number of image pixels per printed inch on paper. The default value was set to &quot;10&quot; which seems quite small. The size of a single marker as given in the ALVAR raw-markers .png-files is already 108 pixels per edge,\r\n so this would result in a marker which has an edge length of 10,8 inches when printed on paper (big...). When i looked into the generated file &quot;ALVARConfigFromXML.xml&quot; i found out that all markers there actually had an edge length of 10,8 (i assume that the\r\n unit used in this file is also inches). Or does &quot;pixelPerInch&quot; stand for something different?</p>\r\n<p>2) I would like to know how and where the computed spacial metric coordinates of the marker (meters, millimeters, inches) are being transformed into xna-coordinates and what is the conversion factor.</p>\r\n<p>I would be very happy if you could help me and answer these questions.</p>\r\n<p>Thanks in advance,</p>\r\n<p>Simon</p>\r\n",
+    "PostedDate": "2012-03-06T15:53:39.523-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "806912",
+    "ThreadId": "347574",
+    "Html": "<p>1) Yes, your understanding is correct. 10 is just a sample number, so feel free to modify it to whatever the actual number should be. From v4.0, the notation has been changed though. You probably want to print out the paper first and measure the actual size of the marker. Then calculate pixelPerInch based on your measurement. By the way, even though it's called pixelPer'Inch', it can be cm or mm or whatever measure you like. It basically specifies the unit used in your app.</p>\r\n<p>2) If you use inches measure, then 10 unit in the XNA program means 10 inches. If you use millimeter measure, then 10 unit in the XNA program means 10 millimeters.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-07T08:01:36.21-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

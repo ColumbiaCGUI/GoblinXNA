@@ -1,0 +1,106 @@
+[
+  {
+    "Id": "261094",
+    "ThreadId": "76388",
+    "Html": "<p>&nbsp;</p>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">I cannot execute tutorial 13.</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">I was able to build tutorial 13 with no error.&nbsp;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">I am running this program,but I cannot see anything.&nbsp;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">What can I see by executing this program?</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">Any idea ?</div>\r\n<p>\r\n<p>I cannot execute tutorial 13.</p>\r\n<p>I was able to build tutorial 13 with no error.&nbsp;</p>\r\n<p>I am running this program,but I cannot see anything.&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>What can I see by executing this program?</p>\r\n<p>Any idea ?</p>\r\n<div></div>\r\n</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-11-27T01:53:30.92-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "261627",
+    "ThreadId": "76388",
+    "Html": "<p>Do you have Vuzix iWear VR920? As the name says, it's a tutorial program for iWear VR920, and it shows overlaid virtual contents on top of a marker array in stereo.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-11-29T11:31:04.723-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "261716",
+    "ThreadId": "76388",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>I do not have Vuzix iWear VR920.</p>\r\n<p>I understood about it.</p>\r\n<p>Thanks for your help.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-11-29T22:08:08.91-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "440557",
+    "ThreadId": "76388",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>I was not able to recognize any stereoscopic view while trying this tutorial.</p>\r\n<p>Everything seems to compile fine, and the vuzix iWear VR920, I am assuming it is installed correctly, because I can its Stereoscopy ready and enabled when I run the iWear Monitor.</p>\r\n<p>When I debugged the code, I found that the variable iTracker.ProductID is equal to&nbsp; IWR_PROD_None.</p>\r\n<p>&nbsp;</p>\r\n<p>Any idea?</p>\r\n<p>Michael</p>",
+    "PostedDate": "2010-05-07T20:26:11.21-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "440791",
+    "ThreadId": "76388",
+    "Html": "<p>That is probably you do not have the latest software patch from Vuzix. I'm not sure it's publicly available, but if not, then just modify the code to use VR920 code since Wrap920AR device is still not publicly available anyway.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-05-09T06:36:37.22-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "441154",
+    "ThreadId": "76388",
+    "Html": "Thanks for the reply....\r\n\r\nIt worked fine when I hard coded the ID of  VR920.\r\n\r\nThank You",
+    "PostedDate": "2010-05-10T10:48:38.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "450295",
+    "ThreadId": "76388",
+    "Html": "<p>Hey Ohan,&nbsp;</p>\r\n<p>I have similar problem to Michael,&nbsp;&nbsp;iTracker.ProductID is detected as IWR_PROD_NONE so i've commented out this</p>\r\n<p>(line 194, Tutorial13.cs)</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">if</span> (iTracker.ProductID == iWearDllBridge.IWRProductID.IWR_PROD_VR920)</pre>\r\n</div>\r\n<p>to make it full screen. (I do have iWareVR920 and it works with my applications that &nbsp;are using GoblinXNA.dll 3.3)</p>\r\n<p>However i have a bigger problem. When i run Tutorial13 it shows me the following error</p>\r\n<p><em>Index was out of range. Must be non-negative and less than the size of the collection.Parameter name: index</em></p>\r\n<p>(line 1800, Scene.cs)</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">if</span> (leftEyeVideoID != rightEyeVideoID)\r\nvideoCaptures[actualRightEyeVideoID].GetImageTexture(\r\nbufferedVideoImages[1][curVideoBufferIndex],\r\n                                        <span style=\"color:blue\">ref</span> nullPtr);\r\n</pre>\r\n<pre><br></pre>\r\n<pre><br>since both <em>rightEyeVideoID = -1 &amp; actualRightEyeVideoID = -1</em></pre>\r\n</div>\r\n<p>How do i make it work?</p>\r\n<p>Thanks,</p>\r\n<p>Alexey.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-06-01T14:33:36.4-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "450860",
+    "ThreadId": "76388",
+    "Html": "<p>If it's VR920, it shouldn't be using rightEyeVideoID since there is only 1 camera attached to VR920 with CamAR. rightEyeVideoID is used with Wrap920AR which has 2 integrated webcams. Make sure your code doesn't go into Wrap920AR part.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-06-02T14:43:14.093-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "451287",
+    "ThreadId": "76388",
+    "Html": "<p>From what i understand if i set</p>\r\n<p>&nbsp;<em>bool stereoMode = ture;</em></p>\r\n<p>in Tutorial 13, it sets&nbsp;<em>cameraNode.Stereo (in Scene.cs)</em> to be true</p>\r\n<p>which causes error after it gets to&nbsp;<em>&nbsp;if (leftEyeVideoID != rightEyeVideoID) (line 1799, in Scene.cs)</em></p>\r\n<p>that's where i get confused. does <em>cameraNode.Stereo</em> referes to virtual camera or the real capturing device?</p>\r\n<p>&nbsp;</p>\r\n<p>Answering your previous post it doesn't come close to&nbsp;Wrap920AR code since my&nbsp;<em>&nbsp;iTracker.ProductID</em> is detected as <em>IWR_PROD_NONE </em>as i mentioned before.</p>\r\n<p>So all i wanna do is enable stereoscopic view for my&nbsp;VR920 iWear with an underlying mono-video stream from a SINGLE capturing device.</p>\r\n<p>&nbsp;</p>\r\n<p>Alexey.</p>",
+    "PostedDate": "2010-06-03T09:59:02.543-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "453251",
+    "ThreadId": "76388",
+    "Html": "<p>I forgot to add the following codes:</p>\r\n<p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">if</span> (iTracker.ProductID == iWearDllBridge.IWRProductID.IWR_PROD_WRAP920)\r\n            {\r\n                scene.LeftEyeVideoID = 0;\r\n                scene.RightEyeVideoID = 1;\r\n                scene.TrackerVideoID = 0;\r\n            }\r\n            <span style=\"color:blue\">else</span>\r\n            {\r\n                scene.LeftEyeVideoID = 0;\r\n                scene.RightEyeVideoID = 0;\r\n                scene.TrackerVideoID = 0;\r\n            }\r\n</pre>\r\n</div>\r\n</p>\r\n<p>Adding the else phrase around lines 224~229 will make it work.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-06-08T17:05:27.553-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "453602",
+    "ThreadId": "76388",
+    "Html": "<p>Tnx, Ohan!</p>\r\n<p><em>To whoever is following this:</em></p>\r\n<p>I modified Tutorial13.SetupMarkerTracking()</p>\r\n<p>old code:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">if</span> (iTracker.ProductID == iWearDllBridge.IWRProductID.IWR_PROD_WRAP920)\r\n{\r\n    scene.LeftEyeVideoID = 0;\r\n    scene.RightEyeVideoID = 1;\r\n    scene.TrackerVideoID = 0;\r\n}\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>new code:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">if</span> (iTracker.ProductID == iWearDllBridge.IWRProductID.IWR_PROD_WRAP920)\r\n{\r\n    scene.LeftEyeVideoID = 0;\r\n    scene.RightEyeVideoID = 1;\r\n    scene.TrackerVideoID = 0;\r\n}\r\n<span style=\"color:blue\">else</span>\r\n{\r\n    scene.LeftEyeVideoID = 0;\r\n    scene.RightEyeVideoID = 0;\r\n    scene.TrackerVideoID = 0;\r\n}\r\n</pre>\r\n<pre><span style=\"font-family:'Segoe UI', 'Microsoft Sans Serif', Arial, Geneva, sans-serif\"><span style=\"white-space:normal\"><span style=\"font-family:Consolas, 'Courier New', Courier, monospace\"><span style=\"white-space:pre\"><br></span></span></span></span></pre>\r\n<pre><span style=\"font-family:'Segoe UI', 'Microsoft Sans Serif', Arial, Geneva, sans-serif\"><span style=\"white-space:normal\"><span style=\"font-family:Consolas, 'Courier New', Courier, monospace\"><span style=\"white-space:pre\">This helped me to get rid of the error. However, as i mentioned before my </span></span></span></span></pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<pre>iTracker.ProductID is detected as <em>IWR_PROD_NONE</em>, thus it did not output anything to my iWear (if you walk trough all the calls in <em>Draw()</em>).</pre>\r\n<pre><br></pre>\r\n<pre>This small fix helped me make it work:</pre>\r\n<pre>1) allow property iWearTracker.iWearDllBridge.IWRProductID to be <strong><em>SET</em></strong></pre>\r\n<pre><div style=\"color:black;background-color:white\"><pre><span style=\"color:blue\">public</span> iWearDllBridge.IWRProductID ProductID\r\n{\r\n  <span style=\"color:blue\">get</span> { <span style=\"color:blue\">return</span> productID; }\r\n  <span style=\"color:blue\">set</span> { productID = value; }\r\n}\r\n</pre>\r\n</div>\r\n<br></pre>\r\n<pre>2) in <em>Tutorial13.Initializa()</em> add following line after <em>iTracker.Initialize();</em></pre>\r\n<pre><em><div style=\"color:black;background-color:white\"><pre>iTracker.ProductID = iWearDllBridge.IWRProductID.IWR_PROD_VR920;\r\n</pre>\r\n</div>\r\n<br></em></pre>\r\n<pre>Thanks again Ohan. Hope you take into account this issue for next release!</pre>\r\n<pre><br></pre>\r\n<pre>Alexey.</pre>",
+    "PostedDate": "2010-06-09T09:33:25.5-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "453660",
+    "ThreadId": "76388",
+    "Html": "<p>Maybe the official release of iWear driver doesn't have the correct product ID setting yet, but the new driver should be able to set the product ID to correct one once Wrap92AR becomes available.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-06-09T11:56:48.527-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "453670",
+    "ThreadId": "76388",
+    "Html": "<p>let's hope it does! =)</p>\r\n<p>btw, had to add one more line to make it work in MONO mode as well</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:black;background-color:white\">\r\n<pre><span style=\"color:blue\">if</span> (stereoMode)\r\n{\r\n    <span style=\"color:blue\">if</span> (iTracker.ProductID == iWearDllBridge.IWRProductID.IWR_PROD_WRAP920)\r\n    {\r\n        scene.LeftEyeVideoID = 0;\r\n        scene.RightEyeVideoID = 1;\r\n        scene.TrackerVideoID = 0;\r\n    }\r\n    <span style=\"color:blue\">else</span>\r\n    {\r\n        scene.LeftEyeVideoID = 0;\r\n        scene.RightEyeVideoID = 0;\r\n        scene.TrackerVideoID = 0;\r\n    }\r\n}\r\n</pre>\r\n<pre><br></pre>\r\n<pre>Alexey.</pre>\r\n</div>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-06-09T12:23:15.04-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

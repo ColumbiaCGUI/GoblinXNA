@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "711328",
+    "ThreadId": "282756",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I wanna ask a question..&nbsp; I am trying to rotate my object Node which has children, i do that by changing the Rotation of that Node.. It works fine, the children also rotate perfectly, but if I rotate it when the physics simulation is running, all objects\r\n position are back to the beginning,,</p>\r\n<p>Is there any way to rotate my parent Node without resetting the position of other object?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks before</p>\r\n",
+    "PostedDate": "2011-12-13T02:17:42.683-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "711639",
+    "ThreadId": "282756",
+    "Html": "<p>That's by design. In general, you should not change the parent TransformNode of a GeometryNode which is already added to the physics engine. You should change only when you want to reset their initial position (which is why I reset them if you change). If you simply want to change their transform in physics engine, use NewtonPhysics.SetTransform to do so. Also, if you wanna have any proper physical responses between other physical objects, you should apply force and torque to move them.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-12-13T11:36:37.49-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

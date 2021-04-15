@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "819822",
+    "ThreadId": "351171",
+    "Html": "\r\n<p>Hi, I'm editing tutorial 8, I've successfully added a 3d model on the marker. But when I'm going to add another model its throwing an exception, may be I'm not getting the parent child relationship in this. I've uploaded the code on drop box and here is\r\n the link :: http://dl.dropbox.com/u/4876897/torus.txt ....</p>\r\n<p>Please help me out drawing two models thanks.</p>\r\n",
+    "PostedDate": "2012-04-04T06:52:13.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "820030",
+    "ThreadId": "351171",
+    "Html": "<p>I've figured it out. But thanks anyway .. your toolkit is really helping me out doing my project. Thanks a lot</p>",
+    "PostedDate": "2012-04-04T12:56:21.423-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "829608",
+    "ThreadId": "351171",
+    "Html": "<p>&nbsp;</p>\r\n<h3 class=\"groups title\">I am a final year student reading for the Software Engineering degree offered at Informatics Institute of Technology in collaboration with University of Westminster.Please fill this questionaire.</h3>\r\n<p class=\"summary\">I am a final year student reading for the Software Engineering degree offered at Informatics Institute of Technology in collaboration with University of Westminster. I have developed an interactive Augmented Reality System for Virtual Dissecting of Human Stomach. The purpose of this application is to provide interactive learning experiences for dissecting a virtual 3D stomach while identifying the main parts which are inside the stomach. Users can use their hands to interact with the virtual stomach with the help of markers.</p>\r\n<p class=\"summary\">Please comment on technology selection(Goblin)<br /><br />Please be kind enough to fill the question air attached here<a rel=\"nofollow\" href=\"http://www.linkedin.com/redirect?url=https%3A%2F%2Fdocs%2Egoogle%2Ecom%2Fspreadsheet%2Fviewform%3Fformkey%3DdHhxU3FqNUZBc21SdDVmemVyZ3NpT1E6MQ&amp;urlhash=3Fbv&amp;_t=tracking_anet\" target=\"blank\">https://docs.google.com/spreadsheet/viewform?formkey=dHhxU3FqNUZBc21SdDVmemVyZ3NpT1E6MQ</a><br /><br />The prototype can be seen in this link&nbsp;<a rel=\"nofollow\" href=\"http://www.linkedin.com/redirect?url=http%3A%2F%2Fwww%2Eyoutube%2Ecom%2Fwatch%3Fv%3DsAcKA7vCJ3I%26feature%3Dyoutu%2Ebe&amp;urlhash=vWDh&amp;_t=tracking_anet\" target=\"blank\">http://www.youtube.com/watch?v=sAcKA7vCJ3I&amp;feature=youtu.be</a></p>",
+    "PostedDate": "2012-04-27T23:20:08.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

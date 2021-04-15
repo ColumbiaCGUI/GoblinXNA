@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "261009",
+    "ThreadId": "76359",
+    "Html": "<p>&nbsp;</p>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">set /p start= &quot;Start #?&quot;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">set /p end= &quot;End #?&quot;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">for /l %%X in (%start%, 1, %end%) do samplemarkercreatord.exe %%X</div>\r\n<p>\r\n<p>Just make a text file cut and past the following code in, and save it as a .bat or .cmd put it in your alvar1.2.0/bin/msvc90 dir&nbsp;</p>\r\n<p>it will allow you to create Alvar png files for any sequence you want.</p>\r\n<p>&nbsp;</p>\r\n<p>set /p start= &quot;Start #?&quot;</p>\r\n<p>set /p end= &quot;End #?&quot;</p>\r\n<p>for /l %%X in (%start%, 1, %end%) do samplemarkercreatord.exe %%X</p>\r\n</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-11-26T16:48:08.547-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "505116",
+    "ThreadId": "76359",
+    "Html": "<p>This is great! But... what do you do next?</p>\r\n<p>&nbsp;</p>\r\n<p>Sorry for picking up an old thread, but I'm new here.</p>\r\n<p>-Fanfan</p>",
+    "PostedDate": "2010-10-10T13:50:23.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

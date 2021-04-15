@@ -1,0 +1,90 @@
+[
+  {
+    "Id": "171031",
+    "ThreadId": "51035",
+    "Html": "I am getting the error in the title when trying to set the Scene.ShowCameraImage value to true. I am not using the camera with any other application. Any idea what the problem might be? I am using the integrated webcam of my Dell Inspiron.<br>\r\nThanks! \r\n",
+    "PostedDate": "2009-03-23T14:24:06.767-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "171444",
+    "ThreadId": "51035",
+    "Html": "If you only have one camera connected (in your case, it's the integrated webcam on your Dell computer), then ID 0 should be the device ID to use. The error message means that it can't access the web-camera for some reason. I wonder if it has anything to do with the audio device ID, but I accidentally left it as 0 (the 2nd parameter of InitVideoCapture method), but it should be set to -1. Please try -1 for the audio device ID and see if that works. We've tested with integrated webcams before and it worked fine. I can't think of any other problems.<br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-24T12:05:55.823-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "171532",
+    "ThreadId": "51035",
+    "Html": "Ohan, I tried changing the audio device, but the problem remains. What's interesting is that the first time I run the application after I start the computer it works fine, there's no error, but every time afterwards the error occurs, I don't know if you have an idea of what could caus this kind of behaviour. I am going to try using an external webcam to see if it solves the problem.<br>\r\n",
+    "PostedDate": "2009-03-24T13:53:08.923-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "171986",
+    "ThreadId": "51035",
+    "Html": "Do you have any virtual camera installed on your machine? If you do, probably you want to uninstall all of your virtual cameras from the machine. <br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-25T11:55:30.953-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "416033",
+    "ThreadId": "51035",
+    "Html": "<p>I&acute;m having the same problem as him, but i didnt discovery any solution do fix it yet.</p>\r\n<p>I need to change DirectShowCapture.cs codce?</p>",
+    "PostedDate": "2010-03-09T10:45:52.483-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "416059",
+    "ThreadId": "51035",
+    "Html": "<p>My camera (Logitech for Notebooks or something like that) comes with software that gets automatically launched when the camera is used by a program (this is the software that lets you change camera settings like exposure, focus, etc.).&nbsp; When your GoblinXNA program launches for the first time, do you notice any other programs launch (either in the taskbar or in another window behind your active one)?&nbsp; It may be the case that when your GoblinXNA program quits, the camera software does not quit properly and that's why when you launch your GoblinXNA program a second time, it complains that the camera is already being used by another program.</p>",
+    "PostedDate": "2010-03-09T11:53:52.39-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "416455",
+    "ThreadId": "51035",
+    "Html": "<p>I thought about it, but i closed all softwares that use the webcam, but didnt work&acute;s.</p>\r\n<p>Ahh I change some code, and sometimes function, but sometimes no.It alleatory....Hhahahaa. I really dont know how to solve this problem.</p>",
+    "PostedDate": "2010-03-10T09:05:32.747-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "417702",
+    "ThreadId": "51035",
+    "Html": "<p>Same problem here. I'm sure that my webcam isn't used by another application.</p>\r\n<p>But if I start my XNA program a second time I get the same error.</p>",
+    "PostedDate": "2010-03-12T20:27:55.573-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "417788",
+    "ThreadId": "51035",
+    "Html": "<p>the 3.2 version works fine....its something that you changed in this new version...</p>",
+    "PostedDate": "2010-03-13T12:02:40.143-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "418067",
+    "ThreadId": "51035",
+    "Html": "<p>I think I answered this somewhere else, but don't remember where. If you got to DirectShowCapture.cs class, there is a FAILURE_THRESHOLD or something that is set to 100. If it can't acquire the video image for more than 100 frames, it'll think the webcam is accessed by another application. However, there are cases that it takes more than 100 frame time for the webcam to initialize, so if you change this to 1000, it should work. It'll be changed to 1000 from v3.4.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-14T21:52:49.947-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "418996",
+    "ThreadId": "51035",
+    "Html": "<p>Now it works fine, thank you!</p>",
+    "PostedDate": "2010-03-16T20:36:29.89-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

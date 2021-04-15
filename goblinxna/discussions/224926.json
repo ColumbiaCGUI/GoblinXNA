@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "485104",
+    "ThreadId": "224926",
+    "Html": "<p>Hi,</p>\r\n<p>Has anybody tried to integrate motion detection with the marker detection code available with Goblin XNA? Currently, my team has developed a code on Goblin XNA framework which overlays 3D objects on a marker and those objects respond to the event of a mouse click. The current requirement is to increase its functionality to make the code raise events with the movement of a physical object (a finger in my case). For this, we need to implement motion detection with the marker detection in the Goblin XNa framework. There is a source code already available in code project for motion detection (<a href=\"http://www.codeproject.com/KB/audio-video/Motion_Detection.aspx\">http://www.codeproject.com/KB/audio-video/Motion_Detection.aspx</a>), but I am having difficulty in implementing that because the way it accesses the camera object is different from the way Goblin XNA works. This code uses the avifil32.dll internally. The Goblin Xna uses DShowNET dll. I am stuck at how to integrate these two. Does anybody has any idea about this. Can this be done. Any help is much appreciated.</p>\r\n<p>Regards,</p>\r\n<p>Anshu Dutta</p>\r\n<p><span style=\"color:#a31515;font-size:x-small\"><span style=\"color:#a31515;font-size:x-small\">\r\n<p>&nbsp;</p>\r\n</span></span></p>",
+    "PostedDate": "2010-08-26T04:28:21.29-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "488154",
+    "ThreadId": "224926",
+    "Html": "<p>Please see&nbsp;<a href=\"http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=209740\">http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=209740</a>&nbsp;for the best way to access the camera image in Goblin XNA.</p>\r\n<p>Access the RGB byte array in IntPtr image to perform any image processing you need.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-02T04:18:07.28-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

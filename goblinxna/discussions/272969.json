@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "673288",
+    "ThreadId": "272969",
+    "Html": "\r\n<p>Hello,</p>\r\n<p>I'm new in AR and I need some help here.</p>\r\n<p>I try to make a 3D maze game with AR, after some exploration with GoblinXNA I have managed to load some objects (like balls etc). When I try to use newton physics to move the ball when I tilt the marker, the ball won't move. I tried to just using newton\r\n (not with AR), i load a box (as the ground) and put some balls above it, when I tilt the box the ball move. I am very confused how to move the ball when I tilt the marker, any help would be appreciated.. thanks before :)</p>\r\n",
+    "PostedDate": "2011-09-18T03:39:47.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "675041",
+    "ThreadId": "272969",
+    "Html": "<p>It won't move just by tilting it. If you search about 'physics' on this discussion forum, you'll find some of comments regarding how physics work with the marker. You basically need to change the direction of the gravity based on the orientation of the marker board as well as the vuzix iWear. So yes, you will need the vuzix iwear to make it work perfectly. Otherwise, you have to make an assumption of which direction your camera is facing.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-21T19:26:43.47-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "675176",
+    "ThreadId": "272969",
+    "Html": "<p>i assume you use regular webcam and i think you can calculate&nbsp;centre&nbsp;of gravity by calculate matrix transformation of your marker relative to your camera.</p>",
+    "PostedDate": "2011-09-22T02:41:19.73-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "675294",
+    "ThreadId": "272969",
+    "Html": "<p>Thank you for your reply Mr Ohan and azer89 :)</p>",
+    "PostedDate": "2011-09-22T07:06:19.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

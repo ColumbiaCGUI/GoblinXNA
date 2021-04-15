@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1015795",
+    "ThreadId": "436742",
+    "Html": "Hey guys,\r<br />\n<br />\nI'm currently working on the rotation of my whole scene. The probleme that i m experiencing is that if i rotate around X or Z it seems like the axis are also rotating; I cannot show any pictures but what i do is basically this:<br />\n<pre><code>_rotValue = 0;\n_sceneAngleZ = v.X * 2;\n_sceneAngleX = v.Z * 2;\n_rotation *= Quaternion.CreateFromAxisAngle(Vector3.UnitZ, _sceneAngleZ);\n_rotation *= Quaternion.CreateFromAxisAngle(Vector3.UnitX, _sceneAngleX);</code></pre>\n\nand then this in the update method:<br />\n<pre><code>_sceneTransformNodeZ.Rotation *= _rotation;\n_rotValue = _rotValue + 0.2;\n_rotation = Quaternion.Lerp(_rotation, Quaternion.Identity, (float)_rotValue);</code></pre>\n\nThe _sceneTransformNodeZ is a TransformNode to which i add all my objects that are shown and drawn in the scene.\r<br />\n<br />\nIts not rotating intuitive e.g. a rotation around Z with 45 degree (up-axis) of a rectangle is correct in the first approach but if i then rotate this around X with again 45 degree its thenm rotating around Y and not on the orginal X axis. Can someone help me ?\r<br />\n<br />\ncheers, LordTribual<br />\n",
+    "PostedDate": "2013-03-15T02:46:47.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

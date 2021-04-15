@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "523012",
+    "ThreadId": "234965",
+    "Html": "\r\n<p>Hi Ohan,</p>\r\n<p>I am trying to get the results of mouse click points and GeometryNode sizes in the same unit. The two options available are converting the pixels to GeometryNode scale or the vice versa. So far I have not been able to work this out. Is this possible? If\r\n so, can you please show how?</p>\r\n<p>Thanks in advance</p>\r\n<p>Gayani</p>\r\n",
+    "PostedDate": "2010-11-16T18:05:06.267-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "523457",
+    "ThreadId": "234965",
+    "Html": "\r\n<p>Sorry, but I do not understand your question.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-17T13:17:02.527-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "523463",
+    "ThreadId": "234965",
+    "Html": "Let me clarify.<br>\r\nI would like to measure the size of a GeometricNode in pixels (from the display area) so that I can measure the relative width of the object and the current mouse position (mouse click position). Does that clarify what I want to achieve?<br clear=\"all\">\r\n<br>\r\nThanks<br>\r\nGayani<br>\r\n",
+    "PostedDate": "2010-11-17T13:29:48.01-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

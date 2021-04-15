@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "241998",
+    "ThreadId": "70980",
+    "Html": "<p>Hi,</p>\r\n<p>I'm trying to make Scene Graph Display to work in my own project, so I can fix a bug in it.</p>\r\n<p>For this, I follow the User Manual but when I activate the Scene Graph Display, the form opens but after this it freezes and doesn't throw me an exception.</p>\r\n<p>To activate the Display I suscribed to the key pressed event to call the method that makes and instance, launches fs.RunTool();, etc.</p>\r\n<p>I wondered if there was a especific order that you have to call things to get this work, like call fs.UpdatePickedObjectDrawing(); after base.Draw();, or the other way round. Or if someone know how to solve these.</p>\r\n<p>Thank U for u`re time.</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-10-04T20:10:38.397-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242674",
+    "ThreadId": "70980",
+    "Html": "<p>Please check out the code posted on this thread: <a href=\"http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=52464\">http://goblinxna.codeplex.com/Thread/View.aspx?ThreadId=52464</a>&nbsp;</p>\r\n<p>Please let me know if it still doesn't solve your problem.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-06T12:20:32.4-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

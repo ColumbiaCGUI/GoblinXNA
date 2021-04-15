@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "609417",
+    "ThreadId": "256862",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I'm wondering if it's possible to use regular images instead of special markers using openCV surf algorithm in goblinXNA.</p>\r\n",
+    "PostedDate": "2011-05-09T01:59:31.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "609495",
+    "ThreadId": "256862",
+    "Html": "<p>The current version of goblin uses opencv 1.0. Surf has been introduced in opencv 1.1, so probably you'll have to wait untill opencv is officially supported or integrate the feature yourself.</p>",
+    "PostedDate": "2011-05-09T05:39:25.527-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "610819",
+    "ThreadId": "256862",
+    "Html": "<p>Been doing some minor research for you. If you manage to get a newer opencv running with goblin, you should create a new markertracker. This one should implement IMarkerTracker found in&nbsp;GoblinXNA.Device.Vision.Marker. Then if you add that one as a tracker to your scene and if your math is allright, it should work. You should be expecting official support for opencv 2.1 in the next 2 months. (note: this is just my estimation. I'm not an official developer for goblin or anything)</p>",
+    "PostedDate": "2011-05-11T03:06:48.333-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

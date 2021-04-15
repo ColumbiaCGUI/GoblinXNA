@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "956489",
+    "ThreadId": "406876",
+    "Html": "\r\n<p>I try to make a XNA application that takes info about Facebook users (posts,images) and display them on scene. I installed Facebook SDK but it doesn't work in XNA.</p>\r\n<p>Can someone help me?</p>\r\n",
+    "PostedDate": "2012-12-15T08:58:51.61-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "997083",
+    "ThreadId": "406876",
+    "Html": "I solved this by making a simple C# class that connects to facebook and returns the desired results,then i added the class in xna.<br />\n",
+    "PostedDate": "2013-02-06T00:00:49.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

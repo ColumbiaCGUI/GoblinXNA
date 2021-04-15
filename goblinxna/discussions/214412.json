@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "449433",
+    "ThreadId": "214412",
+    "Html": "<p>Hi!</p>\r\n<p>I want to buy the Vuzix googles to display my Goblin XNA applications.&nbsp;&nbsp;&nbsp; Everywhere, it says we need &quot;Vuzix iWear VR920&quot;.&nbsp;&nbsp; Fine, but it seems that this model do not have a camera like the &quot;Vuzix CamAR&quot; model.&nbsp;&nbsp; If it is so, how can we make Augmented Reality without camera for the &quot;Reality&quot; part?</p>\r\n<p>It seems that VR920 is for virtual reality (no need to have a camera).</p>\r\n<p>And CamAR is for aumented reality (this one has a cam).</p>\r\n<p>So, since Goblin XNA is a library for Augemented Reality, how come we need the VR920 - Virtual Reality model?</p>\r\n<p>Unless this model has a hidden camera?</p>\r\n<p>In advance, thanks!</p>\r\n<p>S&eacute;bastien Dessureault</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-05-30T20:39:57.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "450858",
+    "ThreadId": "214412",
+    "Html": "<p>CamAR is simply a webcam that is suited with VR920, so you need both (or attach a separate webcam in front of VR920 if you want to save the money buying CamAR piece).&nbsp;</p>",
+    "PostedDate": "2010-06-02T14:40:46.873-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "450871",
+    "ThreadId": "214412",
+    "Html": "<p>Thanks!!</p>\r\n<p>S&eacute;bastien</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-06-02T15:02:31.3-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

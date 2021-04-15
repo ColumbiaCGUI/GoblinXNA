@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "246222",
+    "ThreadId": "72145",
+    "Html": "<p>Hi All,</p>\r\n<p>We released v3.3 today (10/15/09) that includes support for ALVAR marker tracking library. We'll support additional features such as natural featuring tracking once VTT releases a version that support them.&nbsp;</p>\r\n<p>The release notes can be found in the Download section.</p>\r\n<p>Please let me know if you find problems for the new release.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-15T13:42:20.003-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "246454",
+    "ThreadId": "72145",
+    "Html": "<p>Just a few notes:</p>\r\n<p>If you do not have Microsoft Visual 2008 Professional Edition, then you will need to download and install both Visual Studio C# &amp; C++ Express edition. C++ edition is needed to compile sample projects provided by ALVAR (or ARTag if you use ARTag) and the ALVARWrapper we provide.</p>\r\n<p>Before you run Tutorial 8, please make sure to read the README.pdf under Tutorial 8 directory as noted in the source code of Tutorial 8.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-16T03:24:01.617-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "246895",
+    "ThreadId": "72145",
+    "Html": "<p>For those who downloaded v3.3 before Oct 17th, I forgot to include a .suo file for ALVARWrapper that has information of include directories for header files and libraries. Please either get the .suo from the new distribution package or from the SVN.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-17T11:56:11.267-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "249492",
+    "ThreadId": "72145",
+    "Html": "<p>Did you do any work on including the XNanimation library in 3.3?</p>",
+    "PostedDate": "2009-10-25T10:28:22.9-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "249539",
+    "ThreadId": "72145",
+    "Html": "<p>Nope. I didn't do anything for the animation library yet. We'll include it if we need to do some animated models for our research.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-25T14:04:33.723-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

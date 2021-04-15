@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "682552",
+    "ThreadId": "275446",
+    "Html": "\r\n<p>Hi,</p>\r\n<p><span>When I</span>&nbsp;<span>debug</span>&nbsp;<span>the</span>&nbsp;<span>tutorial8</span><span>,</span>&nbsp;<span>I get the</span>&nbsp;<span>following error</span><span>:</span></p>\r\n<p><em><span>Unable to load</span>&nbsp;<span>DLL '</span>ALVARWrapper.dll':&nbsp;<span>The specified module</span>&nbsp;<span>could not be found</span>.<span>(</span>Exception&nbsp;<span>from HRESULT</span>:&nbsp;<span>0x8007007E</span>).</em></p>\r\n<p><span>How can I</span>&nbsp;<span>solve this</span>&nbsp;<span>problem?</span></p>\r\n<p>&nbsp;</p>\r\n<p><span>Thanks for Help.</span></p>\r\n<p><span>Silva</span></p>\r\n",
+    "PostedDate": "2011-10-11T05:37:34.6-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684086",
+    "ThreadId": "275446",
+    "Html": "<p>This seems to be a common issue. &nbsp;Please search the discussions for \"ALVARWrapper.dll\" and you should find several proposed solutions (for example:&nbsp;http://goblinxna.codeplex.com/discussions/271194).</p>\r\n<p>If you're still having problems, please post the steps you took.</p>",
+    "PostedDate": "2011-10-13T19:08:31.103-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684258",
+    "ThreadId": "275446",
+    "Html": "<p><span class=\"hps\">Problem solved</span><span>!</span></p>\r\n<p><span>&nbsp;</span><span class=\"hps\">I was</span> <span class=\"hps\">wrong to</span> <span class=\"hps\">put a</span> <span class=\"hps\">path</span> <span class=\"hps\">to include</span> <span class=\"hps\">the libraries</span><span>.</span><br /><span class=\"hps\">Now I have a</span> <span class=\"hps\">problem with</span> <span class=\"hps\">the camera</span><span>.</span>T<span class=\"hps\">he program detects</span> <span class=\"hps\">only the</span> <span class=\"hps\">webcam</span> <span class=\"hps\">notebook</span> <span class=\"hps\">(which</span> <span class=\"hps\">is uncomfortable</span> <span class=\"hps\">for my project</span> <span class=\"hps\">to use)</span> <span class=\"hps\">and while</span> <span class=\"hps\">the</span> <span class=\"hps\">external webcam</span> <span class=\"hps\">I have the</span> <span class=\"hps\">following exception</span><span>:</span></p>\r\n<p>&nbsp;</p>\r\n<p><br /><em><span class=\"hps atn\">\"</span>Could not <span class=\"hps\">start</span> <span class=\"hps\">video streams</span></em><br /><em><span class=\"hps\">Could not</span> <span class=\"hps\">setup</span> <span class=\"hps\">graph</span></em><br /><em><span class=\"hps\">Could not</span> <span class=\"hps\">change</span> <span class=\"hps\">the</span> <span class=\"hps\">resolution</span> <span class=\"hps\">to</span> <span class=\"hps\">640x480</span>. <span class=\"hps\">The</span> <span class=\"hps\">resolution</span> <span class=\"hps\">has</span> <span class=\"hps\">to</span> <span class=\"hps\">be</span> <span class=\"hps\">352x288</span> <span class=\"hps atn\">\"</span></em></p>\r\n<p><span class=\"hps\">how can I</span> <span class=\"hps\">fix this</span></p>\r\n<p><span>Thanks for Help.</span></p>\r\n<p><span>Silva</span></p>",
+    "PostedDate": "2011-10-14T05:50:49.287-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684308",
+    "ThreadId": "275446",
+    "Html": "<p>Currently, we do not support none regular resolution for the camera. You will need to add code to support 352x288 in DirectShowCapture.cs</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-14T08:14:09.653-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684449",
+    "ThreadId": "275446",
+    "Html": "<p><span id=\"result_box\" lang=\"en\"><span class=\"hps\">I did</span> <span class=\"hps\">as you</span> <span class=\"hps\">recommended me.</span></span></p>\r\n<p><span lang=\"en\"><span class=\"hps\">I also</span> <span class=\"hps\">set</span> <span class=\"hps\">the resolution</span> <span class=\"hps\">to</span> <span class=\"hps\">352x288</span> <span class=\"hps\">Tutorial8.cs</span> <span class=\"hps\">when</span> <span class=\"hps\">you execute the statement</span><span>:</span></span></p>\r\n<p><span lang=\"en\"><span>&nbsp;</span></span><span lang=\"en\"><br /><em><span class=\"hps\">captureDevice.InitVideoCapture</span> <span class=\"hps\">(0,</span> <span class=\"hps\">FrameRate._30Hz</span>, <span class=\"hps\">Resolution._352x288</span>, <span class=\"hps\">ImageFormat.R8G8B8_24</span>, <span class=\"hps\">false);</span></em></span><span lang=\"en\"><br /><span class=\"hps\">But doing this, the compiler</span>&nbsp;<span class=\"hps\">gives me</span> <span class=\"hps\">error because(as I understand)</span>&nbsp;I<span class=\"hps\"> should</span> <span class=\"hps\">add the value</span> <span class=\"hps\">352x288 </span><span class=\"hps\">in the&nbsp;<span class=\"hps\">public</span></span> <span class=\"hps\">enum</span> c<span class=\"hps\">alled</span> <span class=\"hps\">Resolution</span> <span class=\"hps\">in tha</span> <span class=\"hps\">GoblinXNA.dll.</span></span></p>\r\n<p>\r\n<p>&nbsp;</p>\r\n</p>\r\n<p>C<span lang=\"en\"><span class=\"hps\"><span class=\"hps\">hange the</span> <span class=\"hps\">dll</span><span>,</span> <span class=\"hps\">however,</span> <span class=\"hps\">is obviously not</span> <span class=\"hps\">granted</span> <span class=\"hps\">to me.</span></span></span></p>\r\n<p><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span class=\"hps\"><span class=\"hps\">What can I do?</span></span></span></span></span></p>\r\n<p><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span class=\"hps\"></span></span></span></span></span></span></p>\r\n<p><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span class=\"hps\"><span class=\"hps\">Thanks for help.</span></span></span></span></span></span></span></span></span></p>\r\n<p><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span lang=\"en\"><span class=\"hps\"><span class=\"hps\">Silva</span></span></span></span></span></span></span></span></span></span></span></p>",
+    "PostedDate": "2011-10-14T13:28:40.837-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684498",
+    "ThreadId": "275446",
+    "Html": "<p>It's open source project, so you can access any of the classes. You can take look at what I did for other resolutions in DirectShowCapture.cs and make it work for your specific resolution. You can add whatever resolution you like to the Resolution enum. After editing, just recompile GoblinXNA project.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-14T15:57:59.14-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

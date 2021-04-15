@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "486331",
+    "ThreadId": "225267",
+    "Html": "<p>Hi,</p>\r\n<p>I am currently trying to explore interaction of 3D AR objects with human beings. As an example, I have a project which overlays a mp3 player on a marker. The mp3 player has a Start button, Pause Button and Stop button. The code is designed to play music on the click of a mouse button on the start button, puse the music on the cick of pause button, etc. I wonder if the same can be achieved through human interaction instead of mouse. For example, can I play the music by &quot;touching&quot; the start button with my hand. It would require some kind of motion detection. Does anybody have any idea whether such a thing can be achieved?</p>\r\n<p>Regards,</p>\r\n<p>Anshu Dutta</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-08-30T02:29:15.113-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "502852",
+    "ThreadId": "225267",
+    "Html": "<p>i have similar idea like you, i want to creating a virtual game controller, my idea is using several markers that represent buttons, if a marker blocked by a finger (mean you push the marker) that button is pressed&nbsp;</p>",
+    "PostedDate": "2010-10-06T00:30:28.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "585801",
+    "ThreadId": "225267",
+    "Html": "<p>Having the same request and don't know how to handle this? azer89's idea is one of the option but still limited! Any help would be welcome!</p>",
+    "PostedDate": "2011-03-24T08:57:46.207-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

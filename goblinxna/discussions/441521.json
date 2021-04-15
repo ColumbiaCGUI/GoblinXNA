@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "1035526",
+    "ThreadId": "441521",
+    "Html": "Hi!\r<br />\n<br />\nI had a big problem with transparent textures. I have a plant with diffuse and opacity map (I set up the model in 3ds max), but when I import the model to Goblin XNA it looks like this:\r<br />\n<a href=\"https://dl.dropboxusercontent.com/u/28678913/goblinxna_epicfail.jpg\" rel=\"nofollow\">https://dl.dropboxusercontent.com/u/28678913/goblinxna_epicfail.jpg</a>\r<br />\n<br />\nWhat is the problem?\r<br />\nThe &quot;BlendState&quot; in &quot;GraphicsDevice&quot; is &quot;AlphaBlend&quot;.<br />\n",
+    "PostedDate": "2013-04-25T02:39:49.737-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1035543",
+    "ThreadId": "441521",
+    "Html": "What happened with this project? Is everybody out? :(<br />\n",
+    "PostedDate": "2013-04-25T03:13:30.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "256571",
+    "ThreadId": "74977",
+    "Html": "<p>If i have models sitting in waiting how do I not render them until I want them, and be able to hide them again. At the moment I just set its color to transparent. Vector4(1,1,1,0);</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2009-11-12T21:28:46.55-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "256614",
+    "ThreadId": "74977",
+    "Html": "<p>Every Node object has Enabled property including the GeometryNode. If you set this to false, that node will not be traversed including its children. If GeometryNode.Enabled is set to false, it won't be rendered.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-11-13T00:00:53.72-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

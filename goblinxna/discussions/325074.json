@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "777413",
+    "ThreadId": "325074",
+    "Html": "\r\n<p>Hi Ohan!</p>\r\n<p>In Vuzix page, Vuzix VR920 is a discontinued product...</p>\r\n<p>The tracking system of the new models (Wrap 920VR and 1200VR) work's the same way with Goblin?(sorry the english)</p>\r\n<p>Thanks for your attention.</p>\r\n<p>Eduardo.</p>\r\n",
+    "PostedDate": "2012-02-18T05:41:54.11-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "777627",
+    "ThreadId": "325074",
+    "Html": "<p>I'm not sure about 1200, but Wrap920 AR tracking is supported with Goblin since version 3.6</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-18T08:38:42.883-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

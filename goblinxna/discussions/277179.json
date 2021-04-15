@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "689201",
+    "ThreadId": "277179",
+    "Html": "\r\n<p>Hi, I have a question, maybe someone knows....</p>\r\n<p>When I hold the marker, I need the object that overlaps it to move only in one axis.&nbsp;For example, I move the marker in any direction, but the objects only takes in account the movement along the X axis (could be any axis, just an example).</p>\r\n<p>Does anybody know how to do this?</p>\r\n<p>Thanks in advance.</p>\r\n<p>Gon.-</p>\r\n",
+    "PostedDate": "2011-10-25T12:11:47.2-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "689387",
+    "ThreadId": "277179",
+    "Html": "<p>Just don't attach your GeometryNode to MarkerNode, but attach it to your TransformNode and assign it's Translation based on the info you get from MarkerNode. Don't forget to attach MarkerNode to the scene.RootNote, otherwise, it won't be updated.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-25T18:50:47.47-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "690414",
+    "ThreadId": "277179",
+    "Html": "<p>Thanks a lot Ohan, I will try it out this weekend.</p>\r\n<p>&nbsp;</p>\r\n<p>Gon.-</p>",
+    "PostedDate": "2011-10-27T11:18:06.083-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

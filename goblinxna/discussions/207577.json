@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "424696",
+    "ThreadId": "207577",
+    "Html": "<p>I am observing a strange behavior when using the removeChild / addChild methods to move a transformation node (and it's GeometryNode Child) from underneath 1 marker, and putting it under another marker. What I'm finding is that after the transfer, any attempt to modify the transformation node - such as change the translation, does not work. What appears to be happening is that the GeometryNode gets pushed to the new markers origin, even though the TransformationNode is the actual child of the marker node. If you try modify the translation on the geometry node's parent (the transformation node), there is a &quot;flicker&quot; on the object, as if it is temporarily popping to that new location, but then gets pulled back to the origin. I was wondering if what I'm doing is illegal, and if there were any best practices for transferring nodes between markers. I currently am getting around this by removing and destroying the object, and then creating an entirely new node underneath the destinationmarker.</p>",
+    "PostedDate": "2010-03-28T14:20:51.773-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "425165",
+    "ThreadId": "207577",
+    "Html": "<p>I just did a quick test, and it worked perfectly fine.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-29T16:41:53.173-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "680358",
+    "ThreadId": "274877",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>Is there a way to set the scene background to transparency. I mean most of the tutorial have the background color in light blue and I want it to be transparent?</p>\r\n<p>Make it like</p>\r\n<p>this.scene.BackgroundColor = new Color(255, 255, 255, 0); doesn't work.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2011-10-05T10:15:01.727-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684310",
+    "ThreadId": "274877",
+    "Html": "<p>I don't understand why you would make your background &nbsp;color transparent. The BackgroundColor is used for clearing up the screen using Graphics.Device.Clear(..) so it can never be transparent. You can however, set the BackgroundTexture to be transparent, but it will be alpha-blended with BackgroundColor.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-14T08:17:22.113-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684458",
+    "ThreadId": "274877",
+    "Html": "<p>Thank ohan,</p>\r\n<p>The reason I want to make it transparent is I'm trying to test GoblinXNA with the new see through Vuzix glass Star 1200. But you're right it can never be transparent.</p>\r\n<p>I found away around it by making it black, then it is kind of transparent.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Truyen</p>",
+    "PostedDate": "2011-10-14T13:41:48.133-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684499",
+    "ThreadId": "274877",
+    "Html": "<p>Yes, for optical see-through glasses, black color is treated as transparent color.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-14T15:59:03.987-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "287458",
+    "ThreadId": "83613",
+    "Html": "<p>Hi, I always thank your help.</p>\r\n<p>I am trying to draw a jpg image on groundmarker, but I don't know how to load jpg image.</p>\r\n<p>Is there some examples to load jpg image??</p>\r\n<p>This must be very easy&nbsp;if I know how to use&nbsp; it,&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :-D</p>",
+    "PostedDate": "2010-02-09T00:50:28.437-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290212",
+    "ThreadId": "83613",
+    "Html": "<p>What do you mean that you want to draw a jpg image on groundmarker? You want to overlay an image on top of a marker?</p>\r\n<p>If so, you can simply place a rectangle polygon on top of the marker with texture that has your jpg image.&nbsp;</p>\r\n<p>For making custom shape with textures, see tutorial 7.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-12T10:48:29.34-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

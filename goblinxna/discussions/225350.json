@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "486619",
+    "ThreadId": "225350",
+    "Html": "<p>Hi, when i try to build ALVARWrapper 1.3:</p>\r\n<p>------ Build started: Project: ALVARWrapper1.3, Configuration: Release Win32 ------Linking...LINK : fatal error LNK1181: cannot open input file 'alvar130.lib'Build log was saved at &quot;file://d:\\Realite augment&eacute;e\\GoblinXNA\\wrappers\\ALVARWrapper1.3\\ALVARWrapper\\Release\\BuildLog.htm&quot;ALVARWrapper1.3 - 1 error(s), 0 warning(s)========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========</p>\r\n<p>&nbsp;</p>\r\n<p>I tried to add&nbsp;D:\\Realite augment&eacute;e\\Alvar 1.3.0\\bin\\msvc90 in the additionnal directories but the error are the same ;(</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>Thank and sorry for my bad english&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-08-30T13:11:56.7-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "532159",
+    "ThreadId": "225350",
+    "Html": "\r\n<p>Hi, has anyone the answer to this problem ?</p>\r\n<p>I've encountered the same issue with the ALVAR Wrapper 1.3 and 1.4.</p>\r\n<p>Thank you.</p>\r\n",
+    "PostedDate": "2010-12-07T00:33:28.713-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "532189",
+    "ThreadId": "225350",
+    "Html": "\r\n<p>Ok, I've found.</p>\r\n<p>Go in your project properties --&gt; Configuration properties --&gt; Linker --&gt; General --&gt; Additional Library directories</p>\r\n<p>And change directories to match them with your install folders...</p>\r\n",
+    "PostedDate": "2010-12-07T02:31:43.04-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

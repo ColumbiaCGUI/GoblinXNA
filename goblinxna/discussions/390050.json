@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "894846",
+    "ThreadId": "390050",
+    "Html": "\r\n<p>In stead of using camera for Totorial16, I am using VGA2USB capture card (<a href=\"http://www.epiphan.com/products/frame-grabbers/vga2usb-lr/\">http://www.epiphan.com/products/frame-grabbers/vga2usb-lr/</a>) so that I can feed VGA.</p>\r\n<p>But when I tried with Tutorial16, it doesn't work very stable. 6 our of 10 times, it is ok to open VGA2USB successfully and display VGA signal from other machine just fine. The is a little delay to start up.</p>\r\n<p>The other 4 times I got black screen?</p>\r\n<p>I then tried this card in GoblinXNA 3.5. 10 out of 10, I can just open VGA2USB fine and no delay at all.</p>\r\n<p>Trying to compare the code of camera initialize between the two version, can't figure out why?</p>\r\n",
+    "PostedDate": "2012-08-02T12:36:16.82-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894918",
+    "ThreadId": "390050",
+    "Html": "<p>There is no change between 3.5 and 4.1 for DirectShowCapture class, so I don't know really why.</p>",
+    "PostedDate": "2012-08-02T15:27:14.763-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "894921",
+    "ThreadId": "390050",
+    "Html": "<p>From the code comment, I do see this<span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"></span></span>\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">// Create our video capture device that uses DirectShow library. Note that </span></p>\r\n</span></p>\r\n</span><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"></span></span>\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">// the combination of resolution and frame rate that are allowed depend on </span></p>\r\n</span></p>\r\n</span><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"></span></span>\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">// the particular video capture device. Thus, setting incorrect resolution </span></p>\r\n</span></p>\r\n</span><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"></span></span>\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">// and frame rate values might cause exception or simply be ignored, depending </span></p>\r\n</span></p>\r\n</span><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"></span></span>\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">// on the device driver. The values set here will work for a Microsoft VX 6000, </span></p>\r\n</span></p>\r\n</span><span style=\"font-family: Consolas; font-size: x-small;\"><span style=\"font-family: Consolas; font-size: x-small;\"></span></span>\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\">// any many other webcams.</span></p>\r\n</span></p>\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\"><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\"></span></span>And from the specs page of VGA2USB here <a href=\"http://www.epiphan.com/products/frame-grabbers/vga2usb-lr/specifications/\">http://www.epiphan.com/products/frame-grabbers/vga2usb-lr/specifications/</a></p>\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\"></span>I see that the combination of Resolution: 800x600 and Frame Rate 22.6-60 FPS. I set it to 30, Should be ok but I don't know why it is very unstable.</p>\r\n<p><span style=\"font-family: Consolas; color: #008000; font-size: x-small;\"></span>But in 3.5, it is extremely stable.</p>\r\n</span></p>\r\n</p>\r\n</p>\r\n</p>\r\n</p>\r\n</p>\r\n</p>",
+    "PostedDate": "2012-08-02T15:30:59.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "895204",
+    "ThreadId": "390050",
+    "Html": "\r\n<p>Further investigate this morning showing that Goblin XNA is also unstable with VGA2USB capture card. Sometime it can capture the camera and sometime it not.</p>\r\n<p>The exception is the same as 4.1.</p>\r\n<p>&quot;Video capture device ID: 1, Name: VGA2USB LR V3U46942 is used by other application, and can not be accessed&quot;</p>\r\n<p>This is an exeption throw from DirectShowCapture at line 391. Please see the image</p>\r\n<p><a href=\"http://www.flickr.com/photos/74025721@N05/7704678598/in/photostream\">http://www.flickr.com/photos/74025721@N05/7704678598/in/photostream</a></p>\r\n<p>Although I close all application and there is no other is using the capture card.</p>\r\n<p>I do see that the first time it start it is always fine but the second time and the following does have issue.</p>\r\n<p>Does it because we don't release the camera whent he application exit? Don't see where in the code doing that?</p>\r\n<p>I think the scene.Dispose() under Dispose(bool disposing) should take care of resouce releasing including the capture card?</p>\r\n<p>Thanks</p>\r\n<p>Truyen</p>\r\n",
+    "PostedDate": "2012-08-03T08:10:38.773-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "895603",
+    "ThreadId": "390050",
+    "Html": "<p>The dispose of each individual devices are taken care of by the device class's dispose method. In this case, it's the DirectShowCapture class's dispose class. Since it works fine for regular webcam, I believe it disposes for VGA2USB as well.</p>\r\n<p>One possibility is that it takes a while to start from the 2nd time. The mechanism I use to detect whether the capture device is used by another application or not is to try to connect to the capture device for a constant number of times (I believe it's set to 1000 at the moment, and you can see this number in DirectShowCapture). If it fails to access within this number of times, it'll assume it's used right now since there is no other way to tell. For certain camera devices, it takes time to dispose and restart, which won't usually happen with a regular webcam. If this is the case for you, you can increase the number used to large number instead of 1000. Try to see if this solves your problem.</p>\r\n<p>By the way, I won't have much time from now on since I need to finish my Ph.D thesis.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-08-04T14:22:19.747-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "895611",
+    "ThreadId": "390050",
+    "Html": "<p>Thank Ohann for the help.</p>\r\n<p>That's what I did, I already increase that to 5000. It have more change to open the VGA2USB capture but still fail. Said 4 our of 10.</p>\r\n<p>All the best for your thesis Ohan. I will do further testing and see if I can improve this. I'll post back for sure to share just in case other facing the same issue.</p>\r\n<p>Truyen</p>",
+    "PostedDate": "2012-08-04T15:31:25.07-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "895644",
+    "ThreadId": "390050",
+    "Html": "<p>Please try a regular webcam as well just to make sure it only happens with VGA2USB interface. If it happens to webcam as well, then it might be something to do with the system since it doesn't happen to us.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-08-04T20:05:43.073-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "895798",
+    "ThreadId": "390050",
+    "Html": "<p>Yeah, I tried with normal webcam. It's only having issue with VGA2USB and not happen to normal webcam at all.</p>\r\n<p>Wishing that somebody already tried this capture card and can report back if the issue exist.</p>\r\n<p>Thank Ohan.</p>",
+    "PostedDate": "2012-08-05T14:08:19.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "895804",
+    "ThreadId": "390050",
+    "Html": "<p>By the way, you're always welcome to implement your own IVideoCapture interface if that makes more sense. There might be specific library that works better with VGS2USB than DirectShow library.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-08-05T14:47:54.917-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "896069",
+    "ThreadId": "390050",
+    "Html": "<p>Thank Ohan, I'll see what I can do to improve this.</p>",
+    "PostedDate": "2012-08-06T08:05:33.043-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1039303",
+    "ThreadId": "442539",
+    "Html": "Hey guys,\r<br />\n<br />\nim currently working on an ar application with some other colleagues and we r onviously using Goblin XNA for the all the 3D elements in our tool. For the navigation and settings i have already implemented a state-based solution that every setting view has its own state in the state maschine. However, the user should be able to play around with the light in the scene and therefore i'd like to have a preview of the whole scene, including the capturing device, the ground marker etc. How is that possible? Can someone please help me and give me some helpful tipps?\r<br />\n<br />\nI have already tried to reset the default viewport but this also effects other GRaphicDevices and not only the one of the scene. I simply want to have the &quot;Game&quot; a little bit smaller on top of a setting state. So the setting state is rendered before and on that i want to put somewhere the preview.\r<br />\n<br />\ncheers, LordTribual<br />\n",
+    "PostedDate": "2013-05-04T01:10:19.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

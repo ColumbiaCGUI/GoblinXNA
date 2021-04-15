@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "285577",
+    "ThreadId": "83089",
+    "Html": "<p>HI</p>\r\n<p>I dont know if this is a valid question or not but I was wondering if we could &nbsp;react to markers as buttons, ie have multiple markers and then few could be used for &nbsp;tracking and the rest as buttons?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-03T17:50:44.41-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "285627",
+    "ThreadId": "83089",
+    "Html": "<p>You can simulate a button press using markers by hiding &amp; showing the marker. But you need to be careful since the loss of tracking of the button marker may not necessary mean the user hid it.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-03T20:56:02.797-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "290300",
+    "ThreadId": "83089",
+    "Html": "<p>Hi Ohan</p>\r\n<p>Since Im taking in an array of&nbsp; markers , how do i detect or hide&nbsp; a marker within that ?</p>\r\n<p>&nbsp;</p>\r\n<p>if (scene.MarkerTracker.FindMarker(2))<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Console.WriteLine(&quot;MARKER detectedr 2&quot;);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</p>\r\n<p>does not seem to work ?</p>",
+    "PostedDate": "2010-02-12T13:20:11.933-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291061",
+    "ThreadId": "83089",
+    "Html": "<p>Using Tutorial 8 as an example, even though marker IDs 0 through 27 are used for the ground marker array, you can create another MarkerNode that tracks a marker ID within this range (e.g., ID 1). Then you can check MarkerNode.MarkerFound property to see if that marker is detected.</p>\r\n<p>You shouldn't call MarkerTracker.FindMarker yourself since it won't give you a reliable result. We internally call these methods in synchronized way.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-15T17:40:38.227-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "414748",
+    "ThreadId": "83089",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>ohanoda wrote:</strong><br>\r\n<p>But you need to be careful since the loss of tracking of the button marker may not necessary mean the user hid it.</p>\r\n<p>Ohan</p>\r\n</blockquote>\r\n<p>can you suggest a way to improve this?, im taking a marker ARRAY OF 9 , and in this i add one of the markers to the scene and perform the interaction,</p>",
+    "PostedDate": "2010-03-05T13:28:48.883-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

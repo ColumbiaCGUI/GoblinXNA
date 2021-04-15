@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "502721",
+    "ThreadId": "229726",
+    "Html": "<p>Hey,</p>\r\n<p>I'm new to Goblin XNA and using the Vuzix iWear VR920 and CamAR bundle. I was wondering if there is a way of calculating the size of a marker as seen by the camera? Essentially, I want to put a marker on an object and render an image a certain distance from the marker that is still within the dimensions of the object. However, since the further you get from the marker, the smaller the marker and object appear, is there a way of calculating the size of the marker as it appears through the camera? This will allow me to render the image in the same location each time. I would put another marker on that spot, but I don't want to have an enormous amount of markers on an object, as my project is a proof-of-concept to be used commercially.</p>\r\n<p>THanks.</p>",
+    "PostedDate": "2010-10-05T14:54:33.46-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "504942",
+    "ThreadId": "229726",
+    "Html": "<p>The size of the marker is pre-defined by the developer in the marker config file, so I don't understand why you need to calculate it on the fly. If u need the distance of the marker from the camera, it's simply Vector3.Distance(markerNode.WorldTransformation.Translation).</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-10T00:13:11.707-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "691880",
+    "ThreadId": "229726",
+    "Html": "<p>The last parameter of InitTracker() is to determine the markerSize. If you say the XML file that we have provided in the parameter has defined the markerSize why do we need to provide it again for the last parameter?</p>\r\n<p>thanks</p>",
+    "PostedDate": "2011-10-31T16:29:15.05-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "691918",
+    "ThreadId": "229726",
+    "Html": "<p>It defines the default marker size for markers you pass in as individual marker instead of as a marker array. The marker size for for the marker array is defined (or automatically computed based on the 4 corners) in the .xml file.</p>\r\n<p>So if you use just the marker 0 (ID = 0) using MarkerNode(scene.MarkerTracker, 0) signature, then the marker size for marker 0 will use the default marker size. You can of course define the marker size for individual marker using MarkerNode(scene.MarkerTracker, 0, markerSize) signature.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-31T18:30:52.633-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

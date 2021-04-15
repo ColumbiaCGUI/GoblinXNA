@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "526010",
+    "ThreadId": "235763",
+    "Html": "\r\n<p>Hi. Im a spanish student, and i have doing my poject.</p>\r\n<p>I have a problem with the tutorial 13. When i run it,&nbsp; it &#65279;&#65279;&#65279;compile without&nbsp;&nbsp;mistakes but&nbsp;the result is a black screen.</p>\r\n<p>I&nbsp; had a integrated webcam in my desktop Dell. Dont work...and i disabled it.</p>\r\n<p>I put other webcam,( Pleomax webcam) and download a new software...&#65279;neither it works...</p>\r\n<p>I dont know what can i do....Please, i need some help!! thankkks&nbsp; ;-)</p>\r\n<p>&nbsp;</p>\r\n",
+    "PostedDate": "2010-11-23T11:09:46.263-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "526118",
+    "ThreadId": "235763",
+    "Html": "\r\n<p>Tutorial 13 will show black screen by design if you don't have iWear VR920 or Wrap920AR (head-worn display from Vuzix Corp.) plugged in.&nbsp;</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-23T14:30:27.34-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "527867",
+    "ThreadId": "235763",
+    "Html": "\r\n<p>Thanks....but a think that not is the problem because in other desktop the program run.</p>\r\n<p>Besides tutorial8 dont run, and this is necesary for the tutorial 13 work, isnt it?</p>\r\n<p>I need one file named calib.xml, and i dont know how generate it.</p>\r\n<p>I have the other librarys: wrapped, alvar, directshow.....but i dont have Calib.xml.</p>\r\n<p>Do you know how can i get it?</p>\r\n<p>Thanks</p>\r\n",
+    "PostedDate": "2010-11-28T05:50:19.69-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "528596",
+    "ThreadId": "235763",
+    "Html": "\r\n<p>Please see the README in tutorial 8. You should generate calib.xml yourself since the camera parameters change depending on what webcam you're using. You can either generate it by running SampleCameraCalib project that comes with ALVAR distribution or run\r\n the CameraCalibration program under /tools/ directory of Goblin distribution.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-29T19:51:45.553-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

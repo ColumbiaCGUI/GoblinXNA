@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "518336",
+    "ThreadId": "233778",
+    "Html": "\r\n<p>I am trying to load a texture to a panel that I've created here is the following code:</p>\r\n<p></p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre> G2DPanel playerPic = <span style=\"color:blue\">new</span> G2DPanel();\r\n playerPic.Bounds = <span style=\"color:blue\">new</span> Rectangle(10,50,100,100);\r\n playerPic.Texture = Content.Load&lt;Texture2D&gt;(<span style=\"color:#a31515\">&quot;images\\\\MikuAvatar&quot;</span>);\r\n</pre>\r\n<pre><br></pre>\r\n<pre>this there something that I am doing wrong? </pre>\r\n</div>\r\n<p></p>\r\n",
+    "PostedDate": "2010-11-07T02:16:27.88-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "518423",
+    "ThreadId": "233778",
+    "Html": "\r\n<p>It looks correct. What is the problem?</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-07T10:21:42.057-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "519027",
+    "ThreadId": "233778",
+    "Html": "\r\n<p>Well after I ran this code to create the panel it did not appear when I ran the code, I knew that I've added to the scene correctly. By the way I am using GoblinXNA v3.4. &nbsp;Also this image is a .png file I wonder if GoblinXNA supports it if not are there\r\n any formats that it likes. also do I need to add this:</p>\r\n<pre><div style=\"color:black; background-color:white\"><pre>player.Pic.DrawBackground = <span style=\"color:blue\">true</span>;\r\n</pre>\r\n</div>\r\n</pre>\r\n<pre><br></pre>\r\n<pre>If so that does not work either.</pre>\r\n<pre>Thanks!</pre>\r\n",
+    "PostedDate": "2010-11-08T14:54:44.343-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "519068",
+    "ThreadId": "233778",
+    "Html": "\r\n<p>Goblin supports any image type supported by XNA.</p>\r\n<p>You don't need to set DrawBackground to true.</p>\r\n<p>Are you sure you adding your panel to the scene correctly?</p>\r\n<p>I just tried to simply add a texture in Tutorial 3 by adding the following code right after line 160 (frame.Border = ....)</p>\r\n<p></p>\r\n<pre>frame.Texture = Content.Load(&quot;brick_wall_14&quot;);</pre>\r\n<p></p>\r\n<p>And this works perfectly fine.</p>\r\n<p>Note that the brick wall texture is in the /data/Textures folder.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2010-11-08T16:28:57.723-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

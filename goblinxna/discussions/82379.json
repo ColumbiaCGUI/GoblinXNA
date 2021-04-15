@@ -1,0 +1,74 @@
+[
+  {
+    "Id": "283036",
+    "ThreadId": "82379",
+    "Html": "<p>Okay, so now I've got something else that's baffling me. I'm trying to build and debug a project, all the code checks out fine, but every time I build the project, I get an error in ALVARMarkerTracker.cs.</p>\r\n<p>This bit of code is highlighted:</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; int ret = ALVARDllBridge.alvar_init_camera(configFilename, img_width, img_height);</p>\r\n<p>with an error message saying:</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Unable to load DLL 'ALVARWrapper.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)</p>\r\n<p>I've tried to add a reference to the ALVARWrapper.dll in my project, but it won't let me. It gives me this error when I try to import it:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A reference to 'C:\\Users\\Desktop\\GoblinXNAv3.3\\bin\\ALVARWrapper.dll' could not be added. Please make sure that the file is accessible, and that it is a valid assembly or COM component.</p>\r\n<p>&nbsp;</p>\r\n<p>I really have no clue what's going on here. And help?</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-01-28T16:34:36.62-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "283041",
+    "ThreadId": "82379",
+    "Html": "<p>Put the ALVARWrapper.dll and alvar120.dll in the same folder as your executable.. Actually you need almost all of the dlls from the /bin folder. It would be a good idea to change the output path of your project to the GoblinXNA bin folder so that you have all the needed dlls. Or just copy them to your output directory.</p>",
+    "PostedDate": "2010-01-28T16:42:04.963-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "283433",
+    "ThreadId": "82379",
+    "Html": "<p>You will also need (to be safe) all of the DLLs from your OpenCV 1.0 installation under the /bin directory (cxcore100.dll, cv100.dll, etc).</p>\r\n<p>In addition to alvar120.dll, you will also need alvarplatform120.dll in your project's bin directory.</p>\r\n<p>You won't be able to add any of these DLLs including ALVARWrapper.dll to your project under the Reference section since they are not managed DLLs.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-01-29T11:54:28.567-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "283435",
+    "ThreadId": "82379",
+    "Html": "<p>okay, that fixed it. Thanks!</p>",
+    "PostedDate": "2010-01-29T11:56:37.977-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "426754",
+    "ThreadId": "82379",
+    "Html": "<p>i have another problem now. Newton library gives me a headache. In my solution explorer it was at first looked like a shortcut file. I removed it and added it again without the shortcut symbol.</p>\r\n<p>It gave me error ever since.</p>",
+    "PostedDate": "2010-04-02T01:24:05.49-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "426834",
+    "ThreadId": "82379",
+    "Html": "<p>Make sure you set its &quot;output&quot; property to &quot;copy if newer&quot;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-04-02T08:08:29.143-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "427257",
+    "ThreadId": "82379",
+    "Html": "<blockquote style=\"border:solid .1em #ccc;font-style:italic;margin:.25em 1em 0 1em;padding:0 .25em 0 .25em\"><strong>ohanoda wrote:</strong><br>\r\n<p>Make sure you set its &quot;output&quot; property to &quot;copy if newer&quot;</p>\r\n<p>Ohan</p>\r\n</blockquote>\r\n<p>Did that. But I hv another problem. Error &quot;video capture device id xxxx is used by other applications , and cannot be accessed&quot;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-04-04T11:57:23.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "427533",
+    "ThreadId": "82379",
+    "Html": "<p>The reason why it's complaining that it can't access the device is<br>probably due to slow access to the device. I set the connection trial<br>number to be 100, and if it can't access the device within this 100<br>trials, it'll assume that the device is used by another application,<br>and throws that exception. If you know that the device is not used by<br>another application, then increasing this trail number should fix the<br>problem. Try to change line # 87 of DirectShowCapture.cs under<br>GoblinXNA.Device.Capture to something larger (e.g.,&nbsp;<span style=\"background-image:initial;background-attachment:initial;background-color:#bbdafd;background-position:initial initial;background-repeat:initial initial\">1000</span>), and then<br>recompile Goblin XNA.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-04-05T10:30:46.843-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "427655",
+    "ThreadId": "82379",
+    "Html": "<p>not successful. maybe i need to buy a web cam.</p>\r\n<p>I used my old digital camera and connect to my laptop as a webcam. I tried this camera with ARMirai previously and it worked.</p>\r\n<p>Besides the resolution is not good. Without enough lighting everything will look blurry.</p>",
+    "PostedDate": "2010-04-05T18:09:22.59-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

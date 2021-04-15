@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "843401",
+    "ThreadId": "357934",
+    "Html": "\r\n<p>This message arisen when I was going through&nbsp;Goblin XNA v4.0 Installation Guide.&nbsp;</p>\r\n<p>Error<span> </span>2<span> </span>fatal error C1083: Cannot open include file: 'MarkerDetector.h': No such file or directory<span>\r\n</span>e:\\goblinxna v4\\goblinxnav4.0\\wrappers\\alvarwrapper1.5\\alvarwrapper\\markerdetectorwrapper.cpp<span>\r\n</span>36<span> </span>ALVARWrapper1.5</p>\r\n<p>I did all the above steps before compiling AlvarWrapper1.5 and when I built AlvarWrapper1.5 this error occurred. &nbsp;</p>\r\n<p>Help me to solve this error</p>\r\n",
+    "PostedDate": "2012-05-31T22:33:02.43-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843402",
+    "ThreadId": "357934",
+    "Html": "<p>I am using MS Visual studio 2008 and windows 7</p>",
+    "PostedDate": "2012-05-31T22:34:23.477-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843463",
+    "ThreadId": "357934",
+    "Html": "<p>Please read through the installation guide carefully again. You're missing some steps.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-01T02:18:19.23-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843843",
+    "ThreadId": "357934",
+    "Html": "<p>Thanks Ohan but I can make sure I did it correctly and I downloaded all required software. I tried compiling Getting started but it says GoblinXNA namespace does not exist. What must be the problem.? &nbsp;</p>",
+    "PostedDate": "2012-06-02T04:37:36.473-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843851",
+    "ThreadId": "357934",
+    "Html": "<p>Ohan I have the first problem as in this discussion</p>\r\n<p><a href=\"http://goblinxna.codeplex.com/discussions/83077\">http://goblinxna.codeplex.com/discussions/83077</a></p>",
+    "PostedDate": "2012-06-02T05:52:57.893-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843858",
+    "ThreadId": "357934",
+    "Html": "<p>hey ohan It;s working now. It was a problem with the path in Additional Library directories</p>",
+    "PostedDate": "2012-06-02T07:20:35.39-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "843937",
+    "ThreadId": "357934",
+    "Html": "<p>Yes, as it says \"When you compile, make sure that the &ldquo;Additional Include Directories&rdquo; under Configurations Properties &rarr; C/C++ &rarr; General and the &ldquo;Additional Library Directories&rdquo; under Configurations Properties &rarr; Linker &rarr; General in the project settings have the correct path for the ALVAR 1.5.0 and OpenCV 1.0 installations.\" in the installation guide.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-02T18:04:28.873-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "988247",
+    "ThreadId": "357934",
+    "Html": "\r\n<p>Hi Ohan,</p>\r\n<p>Sorry to resurrect old Threads, but I am having the problem&nbsp;<strong>shafrazrahim</strong>&nbsp;was having; only I cannot find where the paths in Additional Library Directories for both ALVAR 1.5.0 and OpenCV installations. I have tracked down the missing\r\n file(s), MarkerDetector.h which was located in<span style=\"text-decoration:underline\"> C:/Program Files (x86)/Alvar 1.5.0/include/MarkerDetector.h</span>, but when the&nbsp;&ldquo;Additional Include Directories&rdquo; under Configurations Properties &rarr;\r\n C/C&#43;&#43; &rarr; General and the &ldquo;Additional Library Directories&rdquo; is 'pathed' to this location, I receive a different error:</p>\r\n<p>&quot;error C1083: Cannot open include file: 'MultiMarkerEx.h': No such file or directory&quot;</p>\r\n<p>I've located this file too, in&nbsp;<span style=\"text-decoration:underline\">C:/Program Files (x86)/Alvar 1.5.0/include/pro/MultiMarkerEx.h</span>, but do not know how to solve the problem of locating them both. Any suggestions? I feel I've followed the instruction's\r\n so closely, down to the last detail.</p>\r\n<p>If necessary, I will begin a new Thread for this.</p>\r\n<p>Thanks, Jon.</p>\r\n<p>&nbsp;</p>\r\n<p>EDIT: I'm using GoblinXNA v4.1, I don't know if that makes a difference.</p>\r\n<p>EDIT 2: I've even tried taking all files out of /pro folder and placing them with the MarkerDetector.h in /include, but I just get the error &quot;error LNK1181: cannot open input file 'alvar150.lib'&quot;</p>\r\n",
+    "PostedDate": "2013-01-17T09:15:11.15-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

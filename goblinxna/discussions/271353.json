@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "667097",
+    "ThreadId": "271353",
+    "Html": "\r\n<p>Is there an easy way to make Texture2D objects (basically jpg file) appear on ground? I am trying to follow Tutorial 8, but as far as I understand, in order to make objects appear on ground, you need to add them to a MarkerNode, and it seems like they need\r\n to be 3D objects created by GeometryNode.&nbsp;</p>\r\n",
+    "PostedDate": "2011-09-02T23:43:45.347-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "672532",
+    "ThreadId": "271353",
+    "Html": "<p>It's quite simple to do it. Create a quad that has texture coordinate (e.g., VertexPositionNormalTexture) just like Tutorial 7, and then assign your quad (assuming it's a class that extends PrimitiveModel) to GeometryNode.Model. Then add that to a MarkerNode. Make sure the size of the quad as well as the triangle drawing order is correct.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-15T21:50:38.427-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "672538",
+    "ThreadId": "271353",
+    "Html": "<p>thanks. although i ended up with 3d boxes like in tutorial 8, it might be useful later.&nbsp;</p>",
+    "PostedDate": "2011-09-15T22:22:17.25-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

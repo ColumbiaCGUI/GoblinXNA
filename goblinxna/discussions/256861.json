@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "609416",
+    "ThreadId": "256861",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>For a small demo i want to use the camera (of my laptop) with an external usb orientation sensor, and skip the markertracking for a while. But for some reason, i only get the camera image in the game view when i add a tracker, and the 3D object i want to\r\n display is lost from view. Is there a way to show the webcam image without using a tracker and use a regular scenegraph.Camera?</p>\r\n",
+    "PostedDate": "2011-05-09T01:57:47.877-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

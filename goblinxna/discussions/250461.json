@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "583467",
+    "ThreadId": "250461",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I was wondering if there is any way to track the marker positions in the real world? &nbsp;I am trying to build and interactive chess game for a school project, so I need to know when two markers are touching or are within a certain distance of each other.\r\n If anyone could help me with this that would be great!</p>\r\n<p>Thank you!</p>\r\n<p>Brittany</p>\r\n",
+    "PostedDate": "2011-03-20T18:09:31.497-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "584598",
+    "ThreadId": "250461",
+    "Html": "<p>Never mind, I just figured it out. :)</p>",
+    "PostedDate": "2011-03-22T13:35:36.663-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "587078",
+    "ThreadId": "250461",
+    "Html": "<p>We are having the same problem as like you.... Since you have figured it out... It would be very kind if you could share it with us...... (either explain it or send the code) :)</p>",
+    "PostedDate": "2011-03-26T19:31:41.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "587220",
+    "ThreadId": "250461",
+    "Html": "<p>For a distance, it's simply Vector3.Distance(markerNode1.WorldTransform.Translation, markerNode2.WorldTransform.Translation) assuming they have the same metrics.</p>\r\n<p>If two of your marker configurations in the .xml or .txt does not match the correct scaling of the physical markers, then the above code will be incorrect.</p>\r\n<p>Ohan&nbsp;</p>",
+    "PostedDate": "2011-03-27T11:20:20.43-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "587223",
+    "ThreadId": "250461",
+    "Html": "Thanx a lot for the kind reply. Goblin XNA is a awesome framework. Please keep on working and update the framework. We will try this collision method. Thanx alot sir for the reply.\r\n<br>\r\n<br>\r\n<div>On Sun, Mar 27, 2011 at 11:50 PM, ohanoda <span dir=\"ltr\">&lt;<a href=\"mailto:notifications@codeplex.com\">notifications@codeplex.com</a>&gt;</span> wrote:<br>\r\n<blockquote style=\"margin:0 0 0 .8ex; border-left:1px #ccc solid; padding-left:1ex\">\r\n<div>\r\n<p>From: ohanoda</p>\r\n<div>\r\n<p>For a distance, it's simply Vector3.Distance(markerNode1.WorldTransform.Translation, markerNode2.WorldTransform.Translation) assuming they have the same metrics.</p>\r\n<p>If two of your marker configurations in the .xml or .txt does not match the correct scaling of the physical markers, then the above code will be incorrect.</p>\r\n<p>Ohan </p>\r\n</div>\r\n<div>\r\n<p>Read the <a href=\"http://goblinxna.codeplex.com/discussions/250461#post587220\" target=\"_blank\">\r\nfull discussion online</a>.</p>\r\n<p>To add a post to this discussion, reply to this email (<a href=\"mailto:goblinxna@discussions.codeplex.com?subject=[goblinxna:250461]\" target=\"_blank\">goblinxna@discussions.codeplex.com</a>)</p>\r\n<p>To start a new discussion for this project, email <a href=\"mailto:goblinxna@discussions.codeplex.com\" target=\"_blank\">\r\ngoblinxna@discussions.codeplex.com</a></p>\r\n<p>You are receiving this email because you subscribed to this discussion on CodePlex. You can\r\n<a href=\"https://goblinxna.codeplex.com/discussions/250461/unsubscribe/\" target=\"_blank\">\r\nunsubscribe</a> on CodePlex.com.</p>\r\n<p>Please note: Images and attachments will be removed from emails. Any posts to this discussion will also be available online at CodePlex.com</p>\r\n</div>\r\n</div>\r\n</blockquote>\r\n</div>\r\n<br>\r\n<br clear=\"all\">\r\n<br>\r\n-- <br>\r\nThank you!<br>\r\nK.Raathigeshan<br>\r\n",
+    "PostedDate": "2011-03-27T11:27:01.22-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

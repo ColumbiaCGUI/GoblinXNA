@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1030814",
+    "ThreadId": "440371",
+    "Html": "Hi,<br />\n<br />\n   I am new to Goblin XNA. Can some body help me on the following.<br />\n<pre><code>  &quot;about tutorial 16&quot;</code></pre>\n\nI want to create scenario to link two markers with each other <br />\non the first marker appears the 3d model <br />\nthe second marker i want to use it as (&quot;ToolBar Marker&quot;)<br />\nwhen the system detect the second marker (besides that the first marker is detected), i want to move the model on the first marker in linear movement with determined velocity<br />\n<br />\n<br />\n<br />\nThanks<br />\n",
+    "PostedDate": "2013-04-15T13:35:27.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

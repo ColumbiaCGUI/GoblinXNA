@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "423332",
+    "ThreadId": "207222",
+    "Html": "<p>Has anyone using a LifeCame VX-3000 run into an issue where 640X480 video capture displays a double image - but if you set it to 320X240 it works? It appears that the video capture class can't retrieve the proper data for 640X480</p>",
+    "PostedDate": "2010-03-24T18:15:40.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "423778",
+    "ThreadId": "207222",
+    "Html": "<p>If you read a discussion post I posted a few days ago, it gives an explanation. If someone figures out how to make DirectShow change resolution under x86 configuration, then it's possible to change the resolution. Otherwise, it needs another implementation of IVideoCapture that can modify the resolution from the default one (in this case, the default one is 320x240).</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-25T14:25:04.28-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "423782",
+    "ThreadId": "207222",
+    "Html": "<p>If I think of it, it seems like the resolution change stops working for DirectShow since I moved to Windows 7 64-bit edition. It may work on 32-bit editions. Anyone has non-default camera resolution working on 32-bit machines?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-03-25T14:31:50.91-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

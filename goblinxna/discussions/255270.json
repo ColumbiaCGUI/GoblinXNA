@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "602841",
+    "ThreadId": "255270",
+    "Html": "\r\n<p>Whats a good workflow when combining goblin XNA with SVN? How do you reference to the unmanaged dll's? and how do you do the 3D models, does the 3D artist check out the content folder for the xna project, or does the programmer reimport the model every time\r\n theres an update?</p>\r\n",
+    "PostedDate": "2011-04-26T04:02:48.647-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

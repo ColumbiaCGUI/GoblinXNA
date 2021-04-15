@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "854218",
+    "ThreadId": "361079",
+    "Html": "\r\n<p><span>We're pleased to announce that we have released v4.1 today.</span><br>\r\n<br>\r\n<span>This release contains a wrapper for ALVAR 2.0. From this version, you</span><br>\r\n<span>do not need to download and install Visual Studio 2008 for compiling</span><br>\r\n<span>ALVAR wrapper anymore since VS 2010 is supported from ALVAR 2.0.</span><br>\r\n<br>\r\n<span>We've also added support for Windows Phone development.</span><br>\r\n<br>\r\n<span>We've included a tutorial that demonstrates how to perform</span><br>\r\n<span>feature-based tracking using ALVAR 2.0 with Goblin XNA.</span><br>\r\n<br>\r\n<span>There are several other changes and additions. Please read the</span><br>\r\n<span>ReleaseNotes.txt for details.</span></p>\r\n",
+    "PostedDate": "2012-06-27T01:23:11.12-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

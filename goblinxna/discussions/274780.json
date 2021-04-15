@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "680068",
+    "ThreadId": "274780",
+    "Html": "\r\n<p>when i create a model ie exactly like in tutorial 8 i say boxnode.Model=new Box(4); it creates a box that looks fine in X and Y but the Z direction is very stretched and i cannot figure out why i end up having to set it to Box(4,4,.4f) to look normal any\r\n ideas as to why this is?</p>\r\n",
+    "PostedDate": "2011-10-04T16:59:36.013-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "684311",
+    "ThreadId": "274780",
+    "Html": "<p>the Box(float size) constructor does exactly what Box(float a, float b, float c) constructor does. I've never experienced a problem with Box(float size) constructor.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-10-14T08:18:56.943-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "686136",
+    "ThreadId": "274780",
+    "Html": "<p>solved it issue was the unmanaged Dlls were copied from another computer when replaced with the correct ones i had compiled locally the problem was fixed</p>",
+    "PostedDate": "2011-10-18T20:03:52.017-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

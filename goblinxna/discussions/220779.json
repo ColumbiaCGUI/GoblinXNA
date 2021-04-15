@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "471139",
+    "ThreadId": "220779",
+    "Html": "After following all of the instructions for installation and successfully building project 8 (Optical Marker Tracking) from the included tutorials, I encountered this error message:\r\n\r\nUnable to find an entry point named 'NewtonWorldFreezeBody' in DLL 'Newton.dll'.\r\n\r\n\r\nIf anyone could shed some light on a solution to this error, it would be much obliged.",
+    "PostedDate": "2010-07-22T11:03:29.613-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "471276",
+    "ThreadId": "220779",
+    "Html": "<p>It's most likely you're using Newton 2.0, but you should use Newton 1.53. The API is quite different.</p>\r\n<p>Next release will contain a wrapper for Newton 2.0 as well, but current release only contains wrapper for 1.53.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-07-22T17:29:12.303-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

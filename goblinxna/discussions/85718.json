@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "291918",
+    "ThreadId": "85718",
+    "Html": "<p>Hi</p>\r\n<p>Im using the latest realase and i want the window size to be 1380 X 768 or more,</p>\r\n<p>&nbsp;but it gives me an error!What should i do to achieve this</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Tim</p>",
+    "PostedDate": "2010-02-17T15:21:58.167-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "292464",
+    "ThreadId": "85718",
+    "Html": "<p>The default screen resolution is 800x600.&nbsp;</p>\r\n<p>You can simply set the window resolution like the following in your Game constructor:</p>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">graphics.PreferredBackBufferWidth = 1200;</div>\r\n<div id=\"_mcePaste\" style=\"left:-10000px;top:0px;width:1px;height:1px;overflow-x:hidden;overflow-y:hidden\">&nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;graphics.PreferredBackBufferHeight = 900</div>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>graphics.PreferredBackBufferWidth = 1440;\r\ngraphics.PreferredBackBufferHeight = 900;\r\n</pre>\r\n</div>\r\n<p>If you simple want the stuff to appear in full screen mode, do:</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>graphics.IsFullScreen = <span style=\"color:Blue\">true</span>;\r\n</pre>\r\n</div>\r\n<p>If you want to call these codes other than in the constructor, then you need to call:</p>\r\n<p>&nbsp;</p>\r\n<div style=\"color:Black;background-color:White\">\r\n<pre>graphics.ApplyChanges();\r\n</pre>\r\n</div>\r\n<p>After the above code.</p>\r\n<p>Ohan</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-18T18:52:28.41-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

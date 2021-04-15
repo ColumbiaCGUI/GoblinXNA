@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "213300",
+    "ThreadId": "62834",
+    "Html": "<p>Now I'm using Newton 1.53 as adviced, but again encountered another problem.</p>\r\n<p>The section that uses Freeze something function had no problem now, but with some projects (tutorial) compiler says it can't load Newton.dll.</p>\r\n<p>I'm using VS 2008 Profession, and the Newton.dll is in <strong>~\\GoblinXNA\\bin</strong> as instructed.</p>\r\n<p>Much strange is that some tutorials such as tutorial 5 (Simple Physics) just don't work without any error messages when compile time/runtime. The balls that are expected to bounce on the floor just stop still on the air.</p>\r\n<p>Obviously this problem may as well related to Newton library's functionalities.</p>\r\n<p>My question is, how can I figure out the place from where compiler references Newton.dll, or at least the place where Newton.dll supposed to be placed.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance.</p>\r\n<p>&nbsp;</p>\r\n<p>--------------------------------------------------------------------------</p>\r\n<p>p.s I encounter several AccessViolationException on GoblinXNA.dll when running tutorial 8 (Optical Marker Tracking). Is it OK to ignore them, or does it mean there are some problems in dll?</p>",
+    "PostedDate": "2009-07-17T22:15:04.413-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "213514",
+    "ThreadId": "62834",
+    "Html": "<p>Now I found out that there is some strange behavior depending on the version of Newton.dll.</p>\r\n<p>If I use version 1.53, every tutorial that seem to use Newtion physics (SimplePhysics, Advanced Physics, Advanced features) just doesn't work. Even in debugging mode, I couldn't get any error/warning messages. Balls are on the air everlastingly.</p>\r\n<p>In constrast when I use most recent version, 2.03, those above works well, but now as the interface of Newton.dll has changed, the function NewtonWorldFreezeBody() doesn't work on the tutorial 8 (optical marker tracking)</p>\r\n<p>Is there any solution for this situation????</p>",
+    "PostedDate": "2009-07-18T23:31:13.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "213523",
+    "ThreadId": "62834",
+    "Html": "<p>Hmm... I finally solved those problems by recompiling everything from the ground. (Used XNA3.1, Newton 1.53, VS 2008 Professional) Don't bother to answer my questions.</p>",
+    "PostedDate": "2009-07-19T01:47:41.763-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

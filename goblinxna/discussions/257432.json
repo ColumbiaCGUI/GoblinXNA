@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "611982",
+    "ThreadId": "257432",
+    "Html": "\r\n<p>Hi, we are a team of students using goblin XNA for a project.</p>\r\n<p>As our project advances we wanted to integrate some 3D assets and have a hard time importing it with animations working.</p>\r\n<p>We tried to follow the tutorial from another user (http://graphics.cs.columbia.edu/wiki/doku.php?id=wiki:user:henderso:tutorials:fbxtoxna), but as it is designed for Maya and we work with 3DS Max, it's hard to see what's wrong with our assets.</p>\r\n<p>We managed to succesfully load up a model with the skinnedModelProcessor from tutorial 14, but it won't show up. Goblin gives a warning saying that &quot;one of the meshes has no skinning data&quot;, whereas the model seems to be correctly skinned.</p>\r\n<p>Have anybody already successfully imported an animated mesh from 3DS Max?</p>\r\n<p>Here is the .fbx file, can somebody see what's wrong with it?</p>\r\n<p>http://www.megaupload.com/?d=714I5GU8</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you for reading me and for your help.</p>\r\n",
+    "PostedDate": "2011-05-12T13:07:03.143-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "614469",
+    "ThreadId": "257432",
+    "Html": "<p>I finally managed to fix this.</p>\r\n<p>When exporting from 3DS Max, bake your animation and make sure you export to FBX200602_MB75.</p>",
+    "PostedDate": "2011-05-18T02:20:46.693-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

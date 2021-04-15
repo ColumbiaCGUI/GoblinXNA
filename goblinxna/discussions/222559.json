@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "476786",
+    "ThreadId": "222559",
+    "Html": "<p>Does anyone has any idea , How to do motion detection in Goblin XNA application? We have one Implementation of Motion Detection done by AForge Team but there framework is totally different from Goblin . So facing lots of problem in implementing it..</p>",
+    "PostedDate": "2010-08-05T03:42:16.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "502855",
+    "ThreadId": "222559",
+    "Html": "<p>never tried it.. but a library for motion detection called Touchless sdk seems promising...</p>",
+    "PostedDate": "2010-10-06T00:37:09.42-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "504947",
+    "ThreadId": "222559",
+    "Html": "<p>v3.5 contains functionalities that let you set the callback function for DirectShowCapture whenever a new image is grabbed. You can use that to perform any image analysis.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-10T00:22:16.53-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

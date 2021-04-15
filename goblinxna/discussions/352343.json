@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "823976",
+    "ThreadId": "352343",
+    "Html": "\r\n<p>Hello all,</p>\r\n<p>Is it possible to display model with camera background? so it doesn't need any marker to be detected for the position.</p>\r\n<p>sample case:</p>\r\n<p>* http://www.youtube.com/watch?v=TL62txWNFMY</p>\r\n<p>Maybe it still use yellow marker, but imagine there's no yellow marker.. it only display 3d models at the position we set.<br>\r\nthe camera won't go anywhere either :)</p>\r\n<p>* http://www.youtube.com/watch?v=9_GwtKZh-c0&amp;feature=related</p>\r\n<p>Maybe it is more like this.. the models only use camera background.</p>\r\n<p>&nbsp;</p>\r\n<p>any ideas? :)</p>\r\n",
+    "PostedDate": "2012-04-15T04:35:26.483-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "824004",
+    "ThreadId": "352343",
+    "Html": "<p>Figure it out.. using directshow :p</p>",
+    "PostedDate": "2012-04-15T07:21:45.783-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "827908",
+    "ThreadId": "352343",
+    "Html": "<p>I'm trying to manage something like that. If i do it, i will explain you :D</p>",
+    "PostedDate": "2012-04-24T08:23:25.187-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

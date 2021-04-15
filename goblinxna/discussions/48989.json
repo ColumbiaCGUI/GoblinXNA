@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "163645",
+    "ThreadId": "48989",
+    "Html": "I just realized that for certain situations, the resolution of the video capture device is fixed to 640x480 even if you set it to different resolution (assuming the camera supports other than 640x480 resolution), and it will throw an exception. <br>\r\n<br>\r\nHere's the problems and solutions to the problems:<br>\r\n<br>\r\n1. If you're using Microsoft Lifecam Series, then you should use older driver such as version 1.4. If you use the latest driver (as of now, it's 2.04) downloadable from Microsoft website, for some reason, it doesn't allow you to change the resolution with DirectX.Capture library (maybe the way of changing the resolution changed from version 1 to version 2?). Note that the software that comes with the driver 2.04 lets you change the resolution, but it doesn't work with DirectX.Capture library which we use.<br>\r\n<br>\r\n2. If you set the audio device ID to 0 when you use DirectShowCapture class, it forces the resolution to be 640x480 for some reason. To fix this problem, simply set the audio device ID to -1 when you initialize DirectShowCapture (in tutorial 8, I accidentally left it to be 0, but you should set it to -1). Note that this problem only applies to GoblinXNAv3.1, but not v3.0 since we don't let you set the audio device ID from Scene.InitVideoCapture in v3.0 (though you can still set the audio device ID if you directly initialize the VideoCapture class). <br>\r\n<br>\r\nohan\r\n",
+    "PostedDate": "2009-03-02T16:11:27.03-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1228012",
+    "ThreadId": "48989",
+    "Html": "Ohan, I know that this is a problem for a lot of people. I can't get older driver such as version 1.4. Do you have some link? Microsoft only have the latest one. \r<br />\n<br />\nThanks.\r<br />\n<br />\nC.K<br />\n",
+    "PostedDate": "2014-03-28T15:42:18.513-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

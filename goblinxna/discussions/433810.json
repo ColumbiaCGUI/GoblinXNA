@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "1004003",
+    "ThreadId": "433810",
+    "Html": "Hi!\r<br />\n<br />\nIf i make a face recognition algorithm is that possible to adding it to the ALVARMarkertracker.cs? So i want to us the ALVARMarkerTracker but in the same time with the face recognition. The eyes, nose and lips give points of the face and theese gives the direction of the face for the model drawing. In the same tame i would like to use the other markers to settings the property of the object which follows my face's controll points.\r<br />\n<br />\nThe problem in nutshell: I would like to show a mask modell in my face, and i've got a six sided dice with alvar markers. Six side equals six mask model. The mask follows my face and the side of dice gives which maks of the six follows my face.<br />\n",
+    "PostedDate": "2013-02-20T06:17:53.517-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

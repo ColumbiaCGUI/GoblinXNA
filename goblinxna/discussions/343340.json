@@ -1,0 +1,42 @@
+[
+  {
+    "Id": "797639",
+    "ThreadId": "343340",
+    "Html": "\r\n<p>Dear all,</p>\r\n<p>I've just started with GoblinXNAv4.0beta3, when I compiled the Tutorial8 project in vs2010, there are the following errors:</p>\r\n<p>&nbsp;</p>\r\n<p>C:\\GoblinXNAv4.0beta3\\data\\Shaders\\SimpleShadowShader.fx(170,18): error : Errors compiling C:\\GoblinXNAv4.0beta3\\data\\Shaders\\SimpleShadowShader.fx:C:\\GoblinXNAv4.0beta3\\data\\Shaders\\SimpleShadowShader.fx(170,18): error : (170,18): warning X3571: pow(f,\r\n e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect themC:\\GoblinXNAv4.0beta3\\data\\Shaders\\SimpleShadowShader.fx(170,18): error : (220,23): ID3DXEffectCompiler::CompileEffect: There was an error compiling expressionC:\\GoblinXNAv4.0beta3\\data\\Shaders\\SimpleShadowShader.fx(170,18):\r\n error : ID3DXEffectCompiler: Compilation failed</p>\r\n<p>&nbsp;</p>\r\n<p>All the other tutorials examples run fine on my computer. Is there anyone could help or have experienced similar problem?</p>\r\n<p>Best,</p>\r\n<p>Zhen</p>\r\n",
+    "PostedDate": "2012-02-23T06:45:44.123-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "798064",
+    "ThreadId": "343340",
+    "Html": "<p>Hmm.. that's very strange. I never had that issue, and haven't heard from anyone else so far.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-02-23T11:29:40.24-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "805942",
+    "ThreadId": "343340",
+    "Html": "<p>This problem seems to depend on the DirectX SDK installed on the machine. I just run into this problem on one of my machine after Windows Update, but not on other machines. Trying to figure out what is the cause. In any case, this is supposed to be a warning rather than error for most cases, but for certain case, it treats it as an error for some reason.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-05T20:45:11.293-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "806494",
+    "ThreadId": "343340",
+    "Html": "<p>Interestingly, if you compile it in Debug mode, it won't have the compilation problem, but it will show that error in Release mode. Never was like this before, very strange.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-03-06T14:11:29.183-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "858255",
+    "ThreadId": "343340",
+    "Html": "<p>I've read on some other forums that this is a bug in VS compiler, so unless Microsoft has an update, it'll be there. I believe we can get rid of by turning off some of the compiler flag, but I don't have time to look into it. If someone figures out, please let me know.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-07-06T02:30:01.39-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

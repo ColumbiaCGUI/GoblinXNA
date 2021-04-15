@@ -1,0 +1,60 @@
+{
+  "WorkItem": {
+    "AffectedComponent": {
+      "Name": "",
+      "DisplayName": ""
+    },
+    "ClosedComment": "Yup, the latest manual (updated on 2/5) has the fix.",
+    "ClosedDate": "2009-02-06T13:12:21.337-08:00",
+    "CommentCount": 0,
+    "Custom": null,
+    "Description": "Small error in the user manual:\n \n1.2, Step 2:  Under the Visual C# project type, select 'XNA Game Studio 2.0' --> should be 3.0",
+    "LastUpdatedDate": "2013-05-16T03:36:42.38-07:00",
+    "PlannedForRelease": "",
+    "ReleaseVisibleToPublic": false,
+    "Priority": {
+      "Name": "Low",
+      "Severity": 50,
+      "Id": 1
+    },
+    "ProjectName": "goblinxna",
+    "ReportedDate": "2009-02-06T08:19:05.663-08:00",
+    "Status": {
+      "Name": "Closed",
+      "Id": 4
+    },
+    "ReasonClosed": {
+      "Name": "Unassigned"
+    },
+    "Summary": "From scratch directions in user manual",
+    "Type": {
+      "Name": "Issue",
+      "Id": 3
+    },
+    "VoteCount": 1,
+    "Id": 907
+  },
+  "FileAttachments": [],
+  "Comments": [
+    {
+      "Message": "This is CLOSED (I was referencing an old copy of the manual)",
+      "PostedDate": "2009-02-06T09:11:27.573-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2009-02-06T13:12:21.337-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-02-14T13:44:47.31-08:00",
+      "Id": -2147483648
+    },
+    {
+      "Message": "",
+      "PostedDate": "2013-05-16T03:36:42.38-07:00",
+      "Id": -2147483648
+    }
+  ]
+}

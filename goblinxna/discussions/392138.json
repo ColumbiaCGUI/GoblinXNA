@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "901027",
+    "ThreadId": "392138",
+    "Html": "\r\n<p>Hello there,</p>\r\n<p>When I finish linking the DLLs, the very last one is for the WindowsPhone is copying the MataliPhysics&nbsp;wp dll, but before that There is a Problem when I want to&nbsp;Rebuild&nbsp;the Project.</p>\r\n<p>I keep getting this message when I rebuild, and it fails</p>\r\n<p></p>\r\n<pre>Error\t1\tFeature 'optional parameter' cannot be used because it is not part of the 3.0 C# language specification\\</pre>\r\n<pre>D:\\Documnets\\Visual Studio 2010\\Projects\\Goblin XNA\\GoblinXNAv4.1\\src\\Helpers\\AnimationHelper.cs\t301\t63\tGoblinXNAWindowsPhone</pre>\r\n<p></p>\r\n",
+    "PostedDate": "2012-08-18T05:43:55.72-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "901095",
+    "ThreadId": "392138",
+    "Html": "<p>Huh! No Reply, but I found the Soultion in case a fellow Dev faces same issue!</p>\r\n<p>&nbsp;</p>\r\n<p>1- Do This :&nbsp;</p>\r\n<h3 class=\"procedureSubHeading\">To set this compiler option in the Visual Studio development environment</h3>\r\n<div class=\"subSection\"><ol>\r\n<li>\r\n<p>Open the project's&nbsp;<span class=\"label\">Properties</span>&nbsp;page.</p>\r\n</li>\r\n<li>\r\n<p>Click the&nbsp;<span class=\"label\">Build</span>&nbsp;property page.</p>\r\n</li>\r\n<li>\r\n<p>Click the&nbsp;<span class=\"label\">Advanced</span>&nbsp;button.</p>\r\n</li>\r\n<li>\r\n<p>Modify the&nbsp;<span class=\"label\">Language Version</span>&nbsp;property.</p>\r\n</li>\r\n</ol></div>\r\n<p><a href=\"http://msdn.microsoft.com/en-us/library/f4ckecs0.aspx\">Source&nbsp;</a></p>\r\n<p>Since the 1.8 is no more available, you need to change some methods for the &nbsp;Latest Version:</p>\r\n<p>I went through the History Page for Updates for&nbsp;mataliphysics:</p>\r\n<p>This is What I found:</p>\r\n<p>&nbsp;</p>\r\n<p><span>- Names of properties and methods in the PhysicsObject class:</span></p>\r\n<blockquote>* AddPhysicsObject -&gt; AddChildPhysicsObject</blockquote>\r\n<p>&nbsp;</p>\r\n<p>And</p>\r\n<p><span>- The CreatePlane method replaces the methods: CreatePlaneX, CreatePlaneY and CreatePlaneZ</span></p>\r\n<p><span>For the CreatPlane This is how I resolved it :</span></p>\r\n<p><span>&nbsp;</span></p>\r\n<div style=\"color: black; background-color: white;\">\r\n<pre> <span style=\"color: blue;\">case</span> ExtraShapeType.Plane:\r\n                               <span style=\"color: green;\">//Change</span>\r\n                                primitive.CreatePlane(<span style=\"color: blue;\">new</span> Vector3(physObj.ShapeData[0]), physObj.ShapeData[1]);\r\n                                <span style=\"color: blue;\">break</span>;\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>Hope That Works for everyone facing same problem!</p>\r\n<p>&nbsp;</p>\r\n<p>This&nbsp;project&nbsp;is way cool!</p>",
+    "PostedDate": "2012-08-18T10:11:41.6-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "901173",
+    "ThreadId": "392138",
+    "Html": "<p>Thanks for posting the solution!! Yes, we forgot to remove the optional argument stuff in the WindowsPhone project. For MataliPhysics, if you download the version mentioned in the installation guide, you won't have any problems. We can't catch up the new APIs since MataliPhysics update quite frequently. If you want to be trouble-free, please follow the version mentioned in the installation guide.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-08-18T14:30:32.323-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

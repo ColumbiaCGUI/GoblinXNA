@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "264878",
+    "ThreadId": "77460",
+    "Html": "<p>We're working with the ALVAR optical marker tracking library and GoblinXNA but we've encountered several problems.</p>\r\n<p>We've got some questions regarding the tracking of a single marker.</p>\r\n<p>The user manual (page 14) specifies to use an integer as a first (and only?) parameter to track a marker with that ID asscociated with it?</p>\r\n<p>How does this work? When using:</p>\r\n<p>groundMarkerNode = new MarkerNode(scene.MarkerTracker, 2);</p>\r\n<p>&nbsp;</p>\r\n<p>no markers are detected.</p>\r\n<p>&nbsp;</p>\r\n<p>Second question:</p>\r\n<p>When using a marker array we created with the MarkerLayout tool our unique marker array gets detected but nothing is drawn even when simply replacing the ALVARGroundArray.txt file the cube and sphere are not drawn.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks in advance&nbsp;</p>",
+    "PostedDate": "2009-12-08T04:20:19.6-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "265345",
+    "ThreadId": "77460",
+    "Html": "<p>I'm pretty occupied till the end of the next month for demos and paper deadline, so I probably won't have time to take look at your problem closely, but here are some quick responses:</p>\r\n<p>For single marker, are you sure you have marker ID 2 present in your video image?</p>\r\n<p>For multi-maker, if the array is detected, it should draw something on top of it. Make sure you have your GeometryNode attached on the MarkerNode you specified, and make sure your marker coordinates are neither too small or too big.</p>\r\n<p>The best thing to do is to have a good understanding of ALVAR itself, so please play around with the ALVAR distribution, and take look at my C# codes as well as the wrapper code.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-12-09T07:33:07.43-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "289970",
+    "ThreadId": "77460",
+    "Html": "<p>hI</p>\r\n<p>Im having the same probelm with a single marker!Can you please guide me</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-02-11T21:03:16.91-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "291059",
+    "ThreadId": "77460",
+    "Html": "<p>Hi guys,</p>\r\n<p>I just figured out that when I did some optimization step for the ALVARMarkerTracker.cs, I forgot to include a couple of lines of code for the situation of MarkerNode(IMarkerTracker, (int) markerID) signature. I will fix this for the next release, so for now, please use the MarkerNode(IMarkerTracker, (int) markerID, (double) markerSize) signature (e.g., MarkerNode(scene.MarkerTracker, 2, 9.0)). This will work for single marker detection.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-02-15T17:33:31.803-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

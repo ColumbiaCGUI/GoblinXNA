@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "480743",
+    "ThreadId": "223641",
+    "Html": "<p>hi,</p>\r\n<p>I was wondering whether there will be ALVAR 1.4 support for future versions of GoblinXNA?</p>\r\n<p>Since unfortunately ARTag libraries will stop function on 31. December 2010 and ALVAR 1.3 is due to expire on 05. Februar 2011.</p>\r\n<p>I really love the GoblinXNA project and i hope it will still be possible to use it in the future, or is there maybe even a workaround the make</p>\r\n<p>the marker libraries work beyond that point in time?</p>\r\n<p>&nbsp;</p>\r\n<p>best regards</p>\r\n<p>tom</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-08-15T12:57:39.177-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "480817",
+    "ThreadId": "223641",
+    "Html": "I haven't tried version 1.4 yet, but will update the wrapper when the next release comes out, which will be before Feb 05 2011.\r\n\r\nOhan",
+    "PostedDate": "2010-08-15T22:53:34.237-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

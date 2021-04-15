@@ -1,0 +1,66 @@
+[
+  {
+    "Id": "985136",
+    "ThreadId": "429200",
+    "Html": "\r\n<p>Hy.I want to display 2 images over 2 different markers and draw a line between them. how can i get the x and y possition of the marker.thanks!</p>\r\n",
+    "PostedDate": "2013-01-10T12:22:43.923-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "996176",
+    "ThreadId": "429200",
+    "Html": "Hi ionutzzzusv!\r<br />\n<br />\nI got the same question. Did you solve that?<br />\n",
+    "PostedDate": "2013-02-04T07:58:13.883-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "997052",
+    "ThreadId": "429200",
+    "Html": "Hi!\r<br />\n<br />\nHope you can find your answers here:\r<br />\n<br />\n<a href=\"http://goblinxna.codeplex.com/discussions/250461\" rel=\"nofollow\">http://goblinxna.codeplex.com/discussions/250461</a>\r<br />\n<br />\nand here:\r<br />\n<br />\n<a href=\"http://goblinxna.codeplex.com/discussions/350138\" rel=\"nofollow\">http://goblinxna.codeplex.com/discussions/350138</a>\r<br />\n<br />\n<br />\nEduardo.<br />\n",
+    "PostedDate": "2013-02-05T22:44:46.703-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "997777",
+    "ThreadId": "429200",
+    "Html": "Thanks your reply Edd1138!\r<br />\n<br />\nTheese are already been tried, but when I decompose the toolbar's worldtransformation, there is some problem with the components (X, Y, Z). I draw a circle to the X and Y position of the marker and the position of the circle and the marker position not the same... how did you solved this?<br />\n",
+    "PostedDate": "2013-02-07T01:23:15.583-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "997818",
+    "ThreadId": "429200",
+    "Html": "hi,<br />\ntry this<br />\n<pre><code> var coor2d = State.Device.Viewport.Project(\n                     vect, // The 3D coordinates (Vector3) you want to project to screen space\n                     State.ProjectionMatrix,          // Projection matrix of your camera\n                     Matrix.Identity,                 // View matrix of your camera (since ALVAR camera is located at 0,0,0 we can just pass Identity)\n                    groundMarkerNode.WorldTransformation);\n           \n            \n            if (groundMarkerNode.MarkerFound)\n                DrawText(&quot;merge&quot;, Convert.ToInt32(coor2d.X), Convert.ToInt32(coor2d.Y));\n\n\n private void DrawText(string nume_text, int x, int y)\n        {\n\n            spriteBatch.Begin();\n            spriteBatch.DrawString(font, nume_text, new Vector2(x, y), Color.Black);\n            spriteBatch.End();\n        }</code></pre>\n\n",
+    "PostedDate": "2013-02-07T02:41:30.917-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1000457",
+    "ThreadId": "429200",
+    "Html": "Hi  ionutzzzusv and bedarob!<br />\n<br />\nionutzzzusv, thank you, by the code!!<br />\n <br />\nThis code made the word &quot;Follow&quot; move in 2D screen space with the toolbarMarkerNode.<br />\n<br />\nIn Tutorial8 , after the &quot;scene.Draw...............&quot; in Draw method:<br />\n<pre><code>            string  word = &quot;Follow&quot;;\n\n            Matrix view2 = groundMarkerNode.WorldTransformation * State.ViewMatrix;\n\n            Vector3 anyname = new Vector3(0, 0, 10);\n\n           //to solve the &quot;wrong location&quot; problem, just apply the same principle of the red Cube explained in the same tutorial.\n            Matrix yourmatrix = Matrix.CreateTranslation(anyname) *\n                       toolbarMarkerNode.WorldTransformation *\n                       Matrix.Invert(groundMarkerNode.WorldTransformation);\n\n            Vector3 coord2d = graphics.GraphicsDevice.Viewport.Project(yourmatrix.Translation,\n            State.ProjectionMatrix, view2, Matrix.Identity);\n\n            if (toolbarMarkerNode.MarkerFound)\n        {\n            spriteBatch.Begin();\n            spriteBatch.DrawString(yourfont, word, new Vector2(coord2d.X, coord2d.Y), Color.YellowGreen);\n            spriteBatch.End();\n        }\n</code></pre>\n\nHope you can find the solution here.<br />\n<br />\nEduardo.<br />\n",
+    "PostedDate": "2013-02-13T01:29:52.99-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1000466",
+    "ThreadId": "429200",
+    "Html": "Hi Guys!\r<br />\n<br />\nThis was the best solution for me:<br />\n<pre><code>Vector3 toolbarCoordinates = graphics.GraphicsDevice.Viewport.Project(\n                            toolbarMarker.WorldTransformation.Translation,\n                            State.ProjectionMatrix,\n                            State.ViewMatrix,\n                            Matrix.Identity);</code></pre>\n\nThe toolbarCoordinates' X and Y property gets the marker's X and Y coordinate in the screen. I draw a red circle in the middle of the toolbarMarker with it. Thanks your help! ;)<br />\n",
+    "PostedDate": "2013-02-13T01:46:16.697-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "1000467",
+    "ThreadId": "429200",
+    "Html": "Hi!\r<br />\n<br />\nYes!\r<br />\nMuch more simple, thank you!<br />\n",
+    "PostedDate": "2013-02-13T01:53:04.453-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

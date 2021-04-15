@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "667746",
+    "ThreadId": "271526",
+    "Html": "\r\n<p>I've just started to use the Goblin XNA framework, currently trying to use the CameraCalibration.sln to calibrate my camera, but once I build and debug it I get the following error:&nbsp;</p>\r\n<p></p>\r\n<pre>Unable to load DLL 'ALVARWrapper.dll': The application has failed to start because its side-by-side configuration is incorrect. Please see the application event log or use the command-line sxstrace.exe tool for more detail. (Exception from HRESULT: 0x800736B1)</pre>\r\n<p></p>\r\n<p>In dependency walker I loaded 'ALVARWrapper.dll' and I get the following errors:</p>\r\n<p></p>\r\n<pre>Error: The Side-by-Side configuration information for &quot;d:\\my documents\\**user**\\ar-demo\\goblinxnav3.6\\dlls\\unmanaged\\ALVAR150D.DLL&quot; contains errors. The application has failed to start because its side-by-side configuration is incorrect. Please see the application event log or use the command-line sxstrace.exe tool for more detail (14001).\r\n</pre>\r\n<pre>Warning: At least one module has an unresolved import due to a missing export function in a delay-load dependent module.</pre>\r\n<p></p>\r\n<p>How do I solve this problem?</p>\r\n<p>Thank you!</p>\r\n<p>Tom</p>\r\n",
+    "PostedDate": "2011-09-05T07:49:14.56-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "667994",
+    "ThreadId": "271526",
+    "Html": "<p>Ok I solved the problem, please close/delete topic. I didn't compile ALVARWrapper.dll as Release, I did it as Debug and that was the problem. So I compiled in Release and the problem was solved :).</p>",
+    "PostedDate": "2011-09-06T02:05:15.653-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

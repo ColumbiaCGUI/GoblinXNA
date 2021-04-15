@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "673941",
+    "ThreadId": "273134",
+    "Html": "<p>Im using 3.6. I'm trying to use the SceneGraphDisplay in tutorial 8. I mapped it to a key to make sure the scene graph was built. for some reason it freezes the whole program when I try to show the scene graph. Has anyone had this happen before?</p>",
+    "PostedDate": "2011-09-19T16:30:53.457-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

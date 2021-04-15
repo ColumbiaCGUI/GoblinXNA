@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "253077",
+    "ThreadId": "73988",
+    "Html": "<p>Hi all,</p>\r\n<p>I'm trying to add a texture to a cube y my program for this I use the following code,</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GeometryNode groundNode = new GeometryNode(&quot;Ground&quot;);</p>\r\n<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundNode.Model = new Box(1);</p>\r\n<p><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Material groundMaterial = new Material();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundMaterial.Diffuse = Color.White.ToVector4();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundMaterial.Specular = Color.White.ToVector4();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundMaterial.SpecularPower = 20;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundMaterial.Texture = Content.Load&lt;Texture2D&gt;(&quot;pc_tiedown&quot;);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundNode.Material = groundMaterial;<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TransformNode groundTransform = new TransformNode();<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundTransform.Rotation = Quaternion.Identity;<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundTransform.Translation = new Vector3(0,0,0);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundTransform.Scale = new Vector3(1, 1, 1);<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; groundTransform.AddChild(groundNode);<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; scene.RootNode.AddChild(groundTransform);</p>\r\n<p>the problem is that I don't get what I've expected, I mean, I can't see the texture in the box, I get a plain grey box. The texture I use in fact is gray but has disigns in it an these aren't shown in my box.</p>\r\n<p>For these I wanted to ask wheather the files used as textures must have a especific file format? I'm using a 512x512, png format image.</p>\r\n<p>Thank you for u're time.</p>\r\n<p>Felipe del R&iacute;o</p>",
+    "PostedDate": "2009-11-03T19:20:54.967-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "253360",
+    "ThreadId": "73988",
+    "Html": "<p>Hi Felipe,</p>\r\n<p>As mentioned somewhere in the user manual, we do not support texture mapping automatically for the primitive shapes we provide (Box, Sphere, Cone, etc), because we have no idea how exactly you want to texture map it. You need to specify the texture coordinates for each of the vertices if you want to texture map anything to a geometry.&nbsp;</p>\r\n<p>Please see Tutorial 7 to see how you can create your own shape with specific texture. For a box geometry, you can see how I created it in the Goblin source.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-11-04T09:19:39.45-08:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

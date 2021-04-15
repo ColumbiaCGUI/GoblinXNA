@@ -1,0 +1,82 @@
+[
+  {
+    "Id": "226464",
+    "ThreadId": "66640",
+    "Html": "<p>EDIT:</p>\r\n<p>i now have everything working and installed - although i have a problem with the tracker;</p>\r\n<p>http://up2go.us/static/img/Error_1.png</p>\r\n<p>I have placed all the required files in the &quot;\\bin\\x86\\Debug&quot; folder as instructed and i still get this error (this includes the NewARTag.cf file)</p>\r\n<p>&nbsp;</p>\r\n<p>Regards</p>\r\n<p>Matthew</p>",
+    "PostedDate": "2009-08-21T11:37:24.81-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227511",
+    "ThreadId": "66640",
+    "Html": "<p>Hi Mattew,</p>\r\n<p>From the error message, it looks like you're not using the expected ARTagWrapper.dll.&nbsp;</p>\r\n<p>Where did you get the ARTagWrapper.dll? It should be the one from the current ARTag distribution (<a href=\"http://www.artag.net/sdk_download/artag_sdk_download.php\">http://www.artag.net/sdk_download/artag_sdk_download.php</a>)</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-08-25T08:34:16.92-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227616",
+    "ThreadId": "66640",
+    "Html": "<p>Yes i did use the ARTag from that address;</p>\r\n<p>It is very unusual i dont see any reason for it not too work.</p>",
+    "PostedDate": "2009-08-25T12:52:01.057-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "227787",
+    "ThreadId": "66640",
+    "Html": "<p>Hmm... that's very weird.</p>\r\n<p>I've never encountered the same error before, so I'm not exactly sure what the problem is...&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-08-25T23:42:03.297-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "228124",
+    "ThreadId": "66640",
+    "Html": "<p>Could the problem be that i am on 64-bit? i know some older win32 dll files have troubles with 64-bit operating systems;</p>\r\n<p>i am on vista x64 home premium.</p>\r\n<p>&nbsp;</p>\r\n<p>Regards,</p>\r\n<p>Matthew</p>",
+    "PostedDate": "2009-08-26T13:28:06.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "228908",
+    "ThreadId": "66640",
+    "Html": "<p>I've never tested it on 64-bit Vista machine, so I'm not exactly sure if that's the problem, but it's possible that some of the libraries used by ARTagWrapper.dll does not work under 64-bit machines.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-08-29T00:07:58.41-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "239665",
+    "ThreadId": "66640",
+    "Html": "<p>How do I get the ARTag SDK? I don't own that book nor do I have an evaluation code.<br>Is this the only way the SDK and the wrapper are distributed?</p>",
+    "PostedDate": "2009-09-28T12:11:05.91-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "239689",
+    "ThreadId": "66640",
+    "Html": "<p>Yes, unfortunately for ARTag, that's the only way, and we don't have control over it.</p>\r\n<p>We will release the next version v3.3 quite soon with another marker tracking library called ALVAR once we get final agreement with the developer how they want us to distribute the wrapper, so probably it's better for you to wait for the coming release.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-09-28T13:05:49.773-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "241986",
+    "ThreadId": "66640",
+    "Html": "<p>I'm going to evaluate v3.2 this week (got my hands on the SDK). But as ARTag can only be used until the end of december (as of it's licence) I am interested in v3.3, of course.<br>Any idea when you'll release it?</p>",
+    "PostedDate": "2009-10-04T18:22:24.557-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "242668",
+    "ThreadId": "66640",
+    "Html": "<p>VTT expects to release their new version, which would allow us to distribute our wrapped version of ALVAR with Goblin, by mid-October. As soon as they do that, we can release v3.3, so please expect v3.3 to be released around mid-October.&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2009-10-06T12:11:04.173-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

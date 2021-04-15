@@ -1,0 +1,50 @@
+[
+  {
+    "Id": "656772",
+    "ThreadId": "268747",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I am new to GoblinXNA. I followed the installation steps closely and I tried to run a few of the&nbsp;tutorials. The one that interest me most is tutorial 13 that gives me this error:</p>\r\n<p>&#65279;&#65279;&#65279;&#65279;GoblinXNA/SceneGraph/Scene.cs line 1813&nbsp;</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre> videoTextures[id] = <span style=\"color:blue\">new</span> Texture2D(State.Device, videoDevice.Width, videoDevice.Height,\r\n                    1, TextureUsage.None, SurfaceFormat.Bgr32);\r\n</pre>\r\n</div>\r\n<p>I get NullReferenceException was&nbsp;unhandled.&nbsp;</p>\r\n<pre>videoTextures[0] = nul </pre>\r\n<p>&nbsp;</p>\r\n<p>Does anyone have any idea how to fix it or what is wrong?</p>\r\n<p>I am using GoblinXNA v3.6 and Microsoft Visual C#/C&#43;&#43; 2008 Express to compile and run the project on Windows XP sp3</p>\r\n<p>Thank you.</p>\r\n<p>&nbsp;</p>\r\n<p>Thank you.</p>\r\n",
+    "PostedDate": "2011-08-11T11:52:38.077-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "658626",
+    "ThreadId": "268747",
+    "Html": "<p>Do you have everything setup for your Vuzix iWear? Like the driver and so on?</p>\r\n<p>It's kind of strange that it throws a null exception on that line. Can you tell me what exactly is null in that line?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-08-15T18:14:42.04-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "659589",
+    "ThreadId": "268747",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>Yes I do have everything set up for the Vuzix iWear:</p>\r\n<p>Vuzix VR Manager that comes with them&nbsp;</p>\r\n<p>Vuzix SDK 3.1.1</p>\r\n<p>Please take a look at this <a href=\"https://picasaweb.google.com/lh/photo/SwcIkgyGRXjrSNRTvZ45y_HPcvYkEa4GzQ6lBvo9VXA?feat=directlink\" target=\"_blank\">screen shoot</a> to see the values of all the parameters involved and the actual error.</p>\r\n<p>Thank you&nbsp;</p>",
+    "PostedDate": "2011-08-17T12:32:59.787-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "659772",
+    "ThreadId": "268747",
+    "Html": "<p>Hmm... the error doesn't make sense since it's 'new'ing at the line. Nothing in the initialization call seems to be null from the values.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-08-17T22:27:54.817-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "660212",
+    "ThreadId": "268747",
+    "Html": "<p>ok... so what should I do next?</p>\r\n<p>Roxana&nbsp;</p>",
+    "PostedDate": "2011-08-18T12:33:04.617-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "660311",
+    "ThreadId": "268747",
+    "Html": "<p>Hmmm... Since I don't encounter the exception on my computer, I can't really do anything with it.</p>\r\n<p>Does anyone else has the same problem for Tutorial 13?</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-08-18T18:32:34.717-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

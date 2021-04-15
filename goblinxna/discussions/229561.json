@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "502087",
+    "ThreadId": "229561",
+    "Html": "<p>Hello everybody,</p>\r\n<p>is it possible to know the position of the marker when it is tracked?</p>\r\n<p>&nbsp;</p>\r\n<p>Regards,</p>\r\n<p>crash</p>",
+    "PostedDate": "2010-10-04T08:50:58.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "502845",
+    "ThreadId": "229561",
+    "Html": "<p>I noticed you can read a WorldTransformation matrix from the markerNode (and from other nodes too), but can't understand if it could be useful or not for my aim.</p>\r\n<p>I did some tries involving matricial calculations but couldn't get to a solution.</p>\r\n<p>Any help, please?</p>\r\n<p>&nbsp;</p>\r\n<p>Regards</p>",
+    "PostedDate": "2010-10-06T00:16:17.407-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "504943",
+    "ThreadId": "229561",
+    "Html": "<p>MarkerNode.WorldTransformation gives your exactly what you need for the position of the marker relative to your camera (it's relative position, not absolute).&nbsp;</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-10-10T00:15:09.847-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "505837",
+    "ThreadId": "229561",
+    "Html": "<p>Ok, so i'll need to multiply markernode.WorldTransformation and scene.CameraNode.WorldTransformation?</p>\r\n<p>This way i'll get a 4x4 matrix where only the first 2 rows and columns are of my interest, right?</p>",
+    "PostedDate": "2010-10-12T00:51:22.47-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

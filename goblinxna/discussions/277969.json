@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "692463",
+    "ThreadId": "277969",
+    "Html": "\r\n<p>Hi i am trying to add A 2D texture to a geometry node (the ground node)</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;groundNode = new GeometryNode(&quot;Ground&quot;);<br>\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; groundNode.Model = new Box(50, 120, 0.1f);<br>\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Set this ground model to act as an occluder so that it appears transparent&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>groundNode.IsOccluder = false;<br>\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; // Make the ground model to receive shadow casted by other objects with&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>&nbsp; // CastShadows set to true&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>groundNode.Model.ReceiveShadows = true;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;<br>\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Material groundMaterial = new Material();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>groundMaterial.Diffuse = Color.White.ToVector4();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>groundMaterial.Specular = Color.Blue.ToVector4();&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>groundMaterial.SpecularPower = 10;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>\r\n<p><span style=\"white-space:pre\"></span>groundMaterial.Texture = Content.Load&lt;Texture2D&gt;(&quot;brick_wall_14&quot;);<br>\r\n<br>\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; groundNode.Material = groundMaterial;<br>\r\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; groundMarkerNode.AddChild(groundNode);</p>\r\n<p>&nbsp;</p>\r\n<p>brick_wall_14 is added to the content and set to always copy when doing this nothing seems to happen the ground does not change to the texture not sure what i am missing</p>\r\n",
+    "PostedDate": "2011-11-01T16:39:14.74-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "692491",
+    "ThreadId": "277969",
+    "Html": "<p>Geometries in Graphics.Geometry package does not include texture coordinates info. Reasons are mentioned in the User Manual. See how you need to do texture mapping in Tutorial 7.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-11-01T18:44:19.787-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

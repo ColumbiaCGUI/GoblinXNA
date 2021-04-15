@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "497445",
+    "ThreadId": "228302",
+    "Html": "<p>Hi,</p>\r\n<p>&nbsp;</p>\r\n<p>In the program I'm writing, I'd like to be able to show only specific bones (or move them)&nbsp;of a model depending on some variables (in this case if certain markers are visible). And I would like to accomplish this with the GoblinXNA model class if possible because of how well it works with the rest of GoblinXNA,&nbsp;is there a way to do this?</p>\r\n<p>Thanks for your time</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2010-09-23T02:44:45.66-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "498679",
+    "ThreadId": "228302",
+    "Html": "<p>You probably want to write your own class that extends the existing GoblinXNA Model class to do that. It is definitely possible, but we don't have a support for that since we never needed it for our research.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2010-09-26T16:40:37.963-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

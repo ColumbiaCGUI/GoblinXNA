@@ -1,0 +1,10 @@
+[
+  {
+    "Id": "172515",
+    "ThreadId": "51449",
+    "Html": "In case you're using the Networking features, I just found out that the Lidgren library released on 10/16/2008 has some problems for client connection. It disconnects from the server for no reason after certain connection time. The latest release which is on 3/19/2009, does not have this problem, so if you're using Networking features with Lidgren library, I strongly recommend that you download the latest version of Lidgren and recompile Goblin XNA with the newer .dll. <br>\r\n<br>\r\nOhan\r\n",
+    "PostedDate": "2009-03-26T14:22:00.6-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

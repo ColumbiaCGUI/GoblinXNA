@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "912241",
+    "ThreadId": "395420",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I am able to play the video in my app using VideoPlayer (XNA). But the control over the video is kind of limited. I mean if I only want to play a portion of the video, I don't have a way (or at least I don't know) to do it.</p>\r\n<p>Let say if I want to jump in and start play from the middle of the video instead of the beging and then end the video somewhere before the ending of the video. I have been trying to figure out if there is a work around but couldn't find anything.</p>\r\n<p>I also consider to integrate VLC to the app, but seems can't find a clue to start?</p>\r\n<p>If anyone has done this or any clue, please help to share?</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks&nbsp;</p>\r\n",
+    "PostedDate": "2012-09-13T07:56:56.743-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "912263",
+    "ThreadId": "395420",
+    "Html": "<p>If it's XNA issue, you probably get better answer in the XNA community (e.g., App Hub) rather than here.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-09-13T08:44:14.903-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "912264",
+    "ThreadId": "395420",
+    "Html": "<p>Hi Ohan,</p>\r\n<p>&nbsp;</p>\r\n<p>How is your thesis going on?</p>\r\n<p>I did post there but still want to post here just in case someone here face it and if I can get answer from XNA, I'll also update here.</p>\r\n<p>Thanks</p>",
+    "PostedDate": "2012-09-13T08:46:59.44-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

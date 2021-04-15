@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "845334",
+    "ThreadId": "358520",
+    "Html": "\r\n<p>Hi Ohan,</p>\r\n<p>Error Occurred when I tried to debug CameraCalibration under GoblinXNA tools.&nbsp;</p>\r\n<p>Unable to load DLL 'ALVARWrapper.dll': The specified module could not be found. (Exception from HRESULT: 0x8007007E)</p>\r\n<p>How to solve?&nbsp;</p>\r\n<p>All the paths been created and all the dlls been copied to unmanaged library</p>\r\n",
+    "PostedDate": "2012-06-05T22:01:05.537-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "845338",
+    "ThreadId": "358520",
+    "Html": "<p>when I tried to look for dependencies by using depends.exe I opened CameraCalibration.sln and I got this error message</p>\r\n<p>Error: At least one file was not a 32-bit or 64-bit Windows module.</p>\r\n<p>is it depends.exe can only retrieve info from .exes? If so how can I look for dependencies by using depends.exe for Camera Calibration?&nbsp;</p>",
+    "PostedDate": "2012-06-05T22:22:09.987-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "845693",
+    "ThreadId": "358520",
+    "Html": "<p>Have you tried writing the absolute paths in AlvarDllBridge.cs (in the GoblinXNA project)</p>",
+    "PostedDate": "2012-06-06T11:56:44.19-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "845844",
+    "ThreadId": "358520",
+    "Html": "<p>You don't need the absolute paths. It's likely that you haven't installed OpenCV 1.0 or the environment variables for OpenCV is not set properly. Read through the installation guide again carefully.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-06-06T20:10:24.71-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "601395",
+    "ThreadId": "254916",
+    "Html": "\r\n<p>I've followed the instructions exactly and somehow the Models are not showing... When I tilt the marker to extremes, such as putting it close to camera and putting it towards the edge of the screen, sometimes partially broken(culled) model shows...</p>\r\n<p>It it possible that this is camera configuration issue?</p>\r\n",
+    "PostedDate": "2011-04-21T23:46:27.433-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "601750",
+    "ThreadId": "254916",
+    "Html": "<p>Do you have a ground plane geometry node like in Tutorial 8?&nbsp; Does it have the IsOccluder property set to true?&nbsp; It sounds like you have a ground plane that is an occluder and your model is placed underneath the ground plane (that's probably why you can see parts of the model when you tilt the marker to extreme angles).&nbsp; Try to adjust the Z-value of your models transform to bring it above the marker board.</p>\r\n<p>As a quick note: When you have a geometry that is an occluder, the geometry (for example a plane, like in Tut 8, that is exactly as big as the marker board) becomes invisible, but anything behind it is occluded (i.e. not rendered).&nbsp; We usually put occluding planes on top of marker boards, so that you can still see the marker board itself in the video image (not a virtual representation) and if there are virtual stuff covered by the marker, they get properly occluded.</p>",
+    "PostedDate": "2011-04-22T16:02:33.937-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

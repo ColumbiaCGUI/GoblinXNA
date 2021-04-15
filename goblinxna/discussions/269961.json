@@ -1,0 +1,26 @@
+[
+  {
+    "Id": "661578",
+    "ThreadId": "269961",
+    "Html": "\r\n<p>Hi Ohan, in this thread <a href=\"http://goblinxna.codeplex.com/discussions/258322\">\r\nhttp://goblinxna.codeplex.com/discussions/258322</a>&nbsp;you mention that if you want to flip the image and the marker traking you will have to change the GetImageTexture() from GoblinXNA. My question is how do you have to change it?</p>\r\n<p>Thanks again!!</p>\r\n",
+    "PostedDate": "2011-08-22T08:14:41.137-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "661804",
+    "ThreadId": "269961",
+    "Html": "<p>The problem is that if I flip only the background, then when I try to use a marker, it doesn't display anything, but it's still working because I'm able to detect the collisions with the objects in it, in spite of them not being rendered....</p>",
+    "PostedDate": "2011-08-22T15:26:57.84-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "662389",
+    "ThreadId": "269961",
+    "Html": "<p>Ok, I solved it. I mirrored the camera with it's software. The problem was that I had to flip the images on the&nbsp;markers also.</p>\r\n<p>Maybe this post will be usefull for somenone looking for the same solution.</p>\r\n<p>&nbsp;</p>\r\n<p>Thanks anyway!</p>\r\n<p>Gon..-</p>",
+    "PostedDate": "2011-08-23T16:29:06.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

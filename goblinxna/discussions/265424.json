@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "643350",
+    "ThreadId": "265424",
+    "Html": "<p>I have a Laptop with a cam, and a normal webcam, how can I switch from one to another in my project.</p>\n<p>With my webcam I get the error :&nbsp;Failed to set the resolution to 640x480..</p>\n<p>P.S: For the model, why we must have the .xnb.</p>",
+    "PostedDate": "2011-07-16T16:05:12.58-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "644138",
+    "ThreadId": "265424",
+    "Html": "<p>You switch camera by passing different video ID to IVideoCapture.InitVideoCapture(...) function. If you have two cameras, you can try ID 0 and 1.</p>\r\n<p>.xnb is XNA format. You don't have to load from the .xnb file, but that's the standard way for XNA. For details, please search on the XNA forums (e.g., App Hub).</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-07-18T23:35:24.353-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "644698",
+    "ThreadId": "265424",
+    "Html": "<p>Ya got it! Thats really cool! You rock!</p>",
+    "PostedDate": "2011-07-19T16:40:00.907-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "864843",
+    "ThreadId": "265424",
+    "Html": "<p>Thank ohan for the clue.</p>\r\n<p>But I have a question, I got camera 0 and 1. Follows your instruction, I can switch from 0 to 1. But then I can't switch it back from 1 to 0 by using IVideoCapture.InitVideoCapture(...). It said that it is already init and in the scence.</p>\r\n<p>Is there away to overcome this?</p>\r\n<p>Thank.</p>",
+    "PostedDate": "2012-07-13T08:39:38.277-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

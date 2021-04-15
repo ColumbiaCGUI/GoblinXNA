@@ -1,0 +1,34 @@
+[
+  {
+    "Id": "643050",
+    "ThreadId": "265336",
+    "Html": "\r\n<p>This is the last release of Goblin XNA 3.x series which is based on XNA Game Studio 3.1. The next releases will be based on XNA Game Studio 4.0.</p>\r\n<p>Ohan</p>\r\n",
+    "PostedDate": "2011-07-15T10:39:13.44-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "643147",
+    "ThreadId": "265336",
+    "Html": "<p>Hi i'm a student and I never used goblin Xna... the code for programming with the version 3.6 in visual studio will it be the same that for the goblin 4.0?</p>",
+    "PostedDate": "2011-07-15T15:03:08.41-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "643164",
+    "ThreadId": "265336",
+    "Html": "<p>Yes, mostly. There will be many changes internally, but the API for Goblin XNA doesn't change (except for a few functions).</p>\r\n<p>However, there are many API changes from XNA 3.1 to 4.0, so if you use XNA functions, it may require you change a lot.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-07-15T15:59:51.213-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "643272",
+    "ThreadId": "265336",
+    "Html": "<p>Oh and I think I have a problem with the Calibrating Camera, because all seems perfectly, I see myself and show the groundAlvar pdf image, perpendiculary to the camera, but it never recognize it, all the square are seen by the camera...It does nothing...  Or I got the wrong markers..?</p>\n<p>&nbsp;</p>\n<p>&nbsp;</p>\n<p>Edit: Oh I got it! It was the checkerboard from C:/ProgramFiles/Alvar1.5/doc</p>",
+    "PostedDate": "2011-07-16T07:23:07.797-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]

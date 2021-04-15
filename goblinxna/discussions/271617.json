@@ -1,0 +1,18 @@
+[
+  {
+    "Id": "668050",
+    "ThreadId": "271617",
+    "Html": "\r\n<p>Hi,</p>\r\n<p>I have a question regarding the robustness of the marker tracking. As far as i am informed, the marker system that is being used by ALVAR is ArTag. I have read the paper from &quot;Mark Fiala&quot; titled &quot;Designing Highly Reliable Fiducial Markers&quot; where there is\r\n a statement that single ArTag-markers are robust to partial occlusions, for example if you put a pen on the markers border (in contrast to ARToolkit markers). I tried out to lower the sensitivity to errors by increasing ALVARMarkerTracker.MaxMarkerError and\r\n ALVARMarkerTracker.MaxTrackError. But the results were the same as with the default values. The Marker detection is still very sensitive to even small occlusions of the markers borders. If i occlude a part of the border with a pen, the tracking gets lost.\r\n I would really appreciate if someone could tell me if i got something wrong with the usage of the two fields mentioned above or if the ArTag version that is used does not completely fullfill the specifications of ArTag.</p>\r\n<p>Thanks, electron8000</p>\r\n",
+    "PostedDate": "2011-09-06T05:20:43.553-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "673421",
+    "ThreadId": "271617",
+    "Html": "<p>ALVAR is not ARTag. ARTag implemented by Mark Fiala works with partial occlusion, but the tracking is less stable due to this capability. ALVAR or ARToolkit doesn't work with partial occlusion, but their tracking is more stable.</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2011-09-18T17:47:17.253-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  }
+]

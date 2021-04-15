@@ -1,0 +1,58 @@
+[
+  {
+    "Id": "824028",
+    "ThreadId": "352356",
+    "Html": "\r\n<p>Hello,<br>\r\n<br>\r\nI'm trying to put model from fbx file into the scene and render it with shadows, the ones that textured primitives use.&nbsp;<br>\r\nHere is the code I use:<br>\r\n<br>\r\n</p>\r\n<div style=\"color:black; background-color:white\">\r\n<pre>ModelLoader loader = <span style=\"color:blue\">new</span> ModelLoader();\r\n\r\nModel teapotModel = (Model)loader.Load(<span style=\"color:#a31515\">&quot;&quot;</span>, <span style=\"color:#a31515\">&quot;teapot_modeltest&quot;</span>);\r\n\r\nteapotNode = <span style=\"color:blue\">new</span> GeometryNode(<span style=\"color:#a31515\">&quot;teapot&quot;</span>);\r\n\r\nteapotNode.Model = teapotModel;\r\n\r\n((Model)teapotNode.Model).UseInternalMaterials = <span style=\"color:blue\">true</span>;\r\n\r\n((Model)teapotNode.Model).ShadowAttribute = ShadowAttribute.ReceiveCast;\r\n\r\n((Model)teapotNode.Model).Shader = <span style=\"color:blue\">new</span> SimpleShadowShader(scene.ShadowMap);�\r\n\r\nteapotNode.Model.ShowBoundingBox = <span style=\"color:blue\">true</span>; �\r\n\r\ngroundMarkerNode = <span style=\"color:blue\">new</span> MarkerNode(scene.MarkerTracker, <span style=\"color:#a31515\">&quot;ALVARGroundArray.xml&quot;</span>); � � �\r\n\r\nscene.RootNode.AddChild(groundMarkerNode);groundMarkerNode.AddChild(teapotNode); �\r\n</pre>\r\n</div>\r\n<p>&nbsp;</p>\r\n<p>It throws this exception:</p>\r\n<p><strong>An unhandled exception of type 'System.ArgumentNullException' occurred in Microsoft.Xna.Framework.Graphics.dllAdditional information: This method does not accept null for this parameter.</strong></p>\r\n<p>At this line:</p>\r\n<p></p>\r\n<pre>scene.Draw(gameTime.ElapsedGameTime, gameTime.IsRunningSlowly);</pre>\r\n<p></p>\r\n<p>If I remove this line:</p>\r\n<pre>((Model)teapotNode.Model).Shader = <span>new</span> SimpleShadowShader(scene.ShadowMap);</pre>\r\n<p>Model appears but there is no shadow. I'm new in this library, been using it for two weeks or so.</p>\r\n<p>Any help would be appreciated, cause it is a really great library to work with.</p>\r\n",
+    "PostedDate": "2012-04-15T08:40:44.79-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "825456",
+    "ThreadId": "352356",
+    "Html": "<p>It actually may not work with regular Model class right now. I've only tested with PrimitiveModel types for shadow mapping, if I remember correctly since that's what I needed for my research purpose. In any case, make sure scene.ShadowMap is not null first of all. If that's not a cause of an issue, then there's probably some bug in the SimpleShadowShader. In that case, please send me your teapot model so that I can do more testing later on. It'll probably be after ISMAR deadline though (late May)</p>\r\n<p>Ohan</p>",
+    "PostedDate": "2012-04-18T08:01:42.557-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "827380",
+    "ThreadId": "352356",
+    "Html": "<p>Well yes it works perfectly on primitiveModel types like spheres boxes and stuff like that. Anyway I added more models to scene like boxes and shadows appeared, but as soon as I assign shader to model from Max it crashes. And about that teapot model it's  just a simple teapot exported from Max in fbx format. I was trying to make it work first and then I would move on with my vehicle model I did earlier. <br />I found that shadows in version 3.6 works fine so I switch back to it, or maybe there is a simple way to use that *.fx in 4 version?, but probably it require shader recompiling since it is different VS and PS versions.<br /><br /> Thank you for answer anyway :).</p>",
+    "PostedDate": "2012-04-23T08:31:07.363-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "924686",
+    "ThreadId": "352356",
+    "Html": "<p>Unfortunately, I have the same problem. :( Is there any solution?</p>",
+    "PostedDate": "2012-10-10T07:17:07.967-07:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "931970",
+    "ThreadId": "352356",
+    "Html": "<p>I've made them to work only for primitive models with textures. XNA 4.0 is strict on the requirement of what vertex contains (normal, color, texture coord, binormal, etc) so you will need to extend&nbsp;MultiLightShadowMap.fx for regular model with whatever vertex info is included. We only needed simple primitive models, so I didn't create bunch of .fx that works with regular models.</p>\r\n<p><span>Ohan</span></p>",
+    "PostedDate": "2012-10-24T13:11:07.3-07:00",
+    "UserRole": "Owner",
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "937510",
+    "ThreadId": "352356",
+    "Html": "<p>Dear Ohan, I think i figured out why it throws that exception for shadow casting for FBX models.</p>\r\n<p>There is this line in Tutorial 8:</p>\r\n<div>\r\n<pre>geometryNode.Model.ShaderTechnique = <span>\"DrawWithShadowMap\"</span>\r\n</pre>\r\n</div>\r\n<p>When I copy this line into my code, it works, for non-primitive models too! ;)</p>\r\n<p>&nbsp;</p>",
+    "PostedDate": "2012-11-06T13:09:20.56-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  },
+  {
+    "Id": "938074",
+    "ThreadId": "352356",
+    "Html": "\r\n<p>Hi bedarob!</p>\r\n<p>Works to me, many thanks for sharing!</p>\r\n<p>Regards.</p>\r\n<p>Eduardo</p>\r\n",
+    "PostedDate": "2012-11-07T10:19:22.97-08:00",
+    "UserRole": null,
+    "MarkedAsAnswerDate": null
+  }
+]
