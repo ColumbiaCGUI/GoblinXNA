@@ -25,12 +25,12 @@ _Goblin XNA was funded in part by a generous gift from Microsoft Research._
 _This material is also based in part upon work supported by the National Science Foundation under Grant No. 0905569._  
 _Any opinions, findings, and conclusions or recommendations expressed in this material are those of the author(s) and do not necessarily reflect the views of the National Science Foundation._  
 
-![armonica.jpg](/projects/goblinxna/fb23b1d0-5c73-4b6e-b625-7cf030c32bc9 "armonica.jpg")  
+![armonica.jpg](/fb23b1d0-5c73-4b6e-b625-7cf030c32bc9 "armonica.jpg")  
 
-![armable.jpg](/projects/goblinxna/d68469e6-781f-4daa-acf6-9c68ce713d3a "armable.jpg")  
+![armable.jpg](/d68469e6-781f-4daa-acf6-9c68ce713d3a "armable.jpg")  
 
-![ardomino.jpg](/projects/goblinxna/6c8b64e6-b053-4e74-9d78-14f530fbff64 "ardomino.jpg")  
+![ardomino.jpg](/6c8b64e6-b053-4e74-9d78-14f530fbff64 "ardomino.jpg")  
 
-![armodeler.jpg](/projects/goblinxna/1741cb49-8451-4fd9-be66-bd71aaf1d4c8 "armodeler.jpg")  
+![armodeler.jpg](/1741cb49-8451-4fd9-be66-bd71aaf1d4c8 "armodeler.jpg")  
 
-![arracing.jpg](/projects/goblinxna/a8601e1f-d6f6-4a71-a164-e50b275c3697 "arracing.jpg")</div>
+![arracing.jpg](/a8601e1f-d6f6-4a71-a164-e50b275c3697 "arracing.jpg")</div>
